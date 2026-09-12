@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 3.16)
+project(ADAPT_coursework_reproduction LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+set(UPSTREAM "${CMAKE_CURRENT_SOURCE_DIR}/ADAPT-upstream" CACHE PATH "Unmodified author repository")
+find_path(BOOST_HEADERS boost/math/distributions/students_t.hpp
+  HINTS "${CMAKE_CURRENT_SOURCE_DIR}/deps/boost/usr/include" REQUIRED)
+foreach(module offline-planning simulation online-planning)
+  file(GLOB sources CONFIGURE_DEPENDS "${UPSTREAM}/src/${module}/*.cpp")
+  add_executable(${module} ${sources})
+endforeach()
+target_include_directories(online-planning SYSTEM PRIVATE "${BOOST_HEADERS}")
