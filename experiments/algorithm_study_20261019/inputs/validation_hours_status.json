@@ -1,0 +1,28 @@
+{
+  "retrieved_date": "2026-10-19",
+  "finished_at_utc": "2026-10-19T19:02:42.454249+00:00",
+  "source": "TouringPlans.com public date-specific Animal Kingdom normal park-hours pages",
+  "requested": 115,
+  "retrieved": 115,
+  "failed": 0,
+  "max_concurrency": 3,
+  "requested_first_date": "2018-04-02",
+  "requested_last_date": "2018-07-25",
+  "split_sha256": "5055929d66b1549a330c12d7d257ac352eb7d9d4ce48e5bd3a73ee094c96666f",
+  "reused_parser_sha256": "fede3e7ac2faff8f9440e065e52105ec474060ad54faf41e9e4ca4fd19cd71e1",
+  "csv_sha256": "eaf947ea4a8ac9b3e08778fdcca3f3bc6223312b1d803d0e8891e28686458f4f",
+  "date_heading_verified_successes": 115,
+  "date_heading_conflicts": [],
+  "independent_cross_source_calendar_check_performed": false,
+  "source_conflicts": "Not independently assessed; successful extraction/date-heading checks are not cross-source agreement.",
+  "failures": [],
+  "fallback_policy": "No fallback hours written. Parent protocol may use an explicitly labeled 20:00 analysis deadline for failed source dates; that is not asserted to be historical park closing time.",
+  "limitations": [
+    "Published secondary-source historical schedules are not independently verified operating logs.",
+    "Normal public park hours exclude early-entry Extra Magic Hours.",
+    "Park hours do not establish individual attraction opening or closing times.",
+    "No ride waits or validation outcomes are used to retrieve or select dates.",
+    "Source pages may be revised; each fetched HTML response is SHA-256 hashed."
+  ],
+  "preserved_inputs_unchanged": true
+}

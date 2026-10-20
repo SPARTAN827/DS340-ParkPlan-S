@@ -1,0 +1,5288 @@
+{
+  "data_credit": "TouringPlans.com",
+  "source_repository": "https://github.com/TouringPlans/DisneyAnimalKingdomWaitTimes",
+  "source_commit": "933161b8bebb7cd50e0d54bcb3578484875487fa",
+  "source_archive_sha256": "23eca800b048aecd4b3a2469e78f63f24f64637eb785c8401386e219a177f812",
+  "timestamp_semantics": "Pinned README explicitly defines actual datetime as queue-entry time; all timestamps US Eastern",
+  "comparison": "posted minus realized actual user wait; strictly as-of source timestamp, no future posted values",
+  "primary_age_tolerance_minutes": 10,
+  "same_timestamp_post_availability_caveat": "Source observation timestamp is used as availability; ingestion latency is not recorded",
+  "source_counts_by_ride": {
+    "AK07": {
+      "rows": 229916,
+      "posted_nonblank": 225032,
+      "actual_nonblank": 4884,
+      "repeated_actual_date_time_value_rows": 156,
+      "posted_duplicate_timestamps": 3432,
+      "posted_new_conflicting_value_rows": 308,
+      "posted_conflicting_timestamp_groups": 308
+    },
+    "AK11": {
+      "rows": 243694,
+      "posted_nonblank": 236903,
+      "actual_nonblank": 6791,
+      "repeated_actual_date_time_value_rows": 309,
+      "posted_duplicate_timestamps": 4115,
+      "posted_new_conflicting_value_rows": 580,
+      "posted_conflicting_timestamp_groups": 579
+    },
+    "AK14": {
+      "rows": 200621,
+      "posted_nonblank": 199507,
+      "actual_nonblank": 1114,
+      "repeated_actual_date_time_value_rows": 36,
+      "posted_duplicate_timestamps": 3477,
+      "posted_new_conflicting_value_rows": 130,
+      "posted_conflicting_timestamp_groups": 129
+    },
+    "AK18": {
+      "rows": 222497,
+      "posted_nonblank": 217461,
+      "posted_duplicate_timestamps": 3142,
+      "posted_new_conflicting_value_rows": 262,
+      "actual_nonblank": 5036,
+      "repeated_actual_date_time_value_rows": 281,
+      "posted_conflicting_timestamp_groups": 261
+    },
+    "AK85": {
+      "rows": 83018,
+      "posted_nonblank": 81414,
+      "actual_nonblank": 1604,
+      "repeated_actual_date_time_value_rows": 55,
+      "posted_duplicate_timestamps": 687,
+      "posted_new_conflicting_value_rows": 115,
+      "posted_conflicting_timestamp_groups": 113
+    },
+    "AK86": {
+      "rows": 83674,
+      "posted_nonblank": 81966,
+      "actual_nonblank": 1708,
+      "repeated_actual_date_time_value_rows": 71,
+      "posted_duplicate_timestamps": 810,
+      "posted_new_conflicting_value_rows": 140,
+      "posted_conflicting_timestamp_groups": 140
+    }
+  },
+  "source_date_coverage_by_ride": {
+    "AK07": {
+      "raw_date_range": [
+        "2012-01-01",
+        "2019-02-24"
+      ],
+      "raw_date_count": 2600,
+      "actual_date_range": [
+        "2012-01-01",
+        "2019-02-24"
+      ],
+      "actual_date_count": 2046
+    },
+    "AK11": {
+      "raw_date_range": [
+        "2012-01-01",
+        "2019-02-24"
+      ],
+      "raw_date_count": 2604,
+      "actual_date_range": [
+        "2012-01-01",
+        "2019-02-24"
+      ],
+      "actual_date_count": 2139
+    },
+    "AK14": {
+      "raw_date_range": [
+        "2012-01-01",
+        "2019-01-06"
+      ],
+      "raw_date_count": 2301,
+      "actual_date_range": [
+        "2012-01-01",
+        "2019-01-05"
+      ],
+      "actual_date_count": 788
+    },
+    "AK18": {
+      "raw_date_range": [
+        "2012-01-01",
+        "2019-02-24"
+      ],
+      "raw_date_count": 2486,
+      "actual_date_range": [
+        "2012-01-02",
+        "2019-02-24"
+      ],
+      "actual_date_count": 1955
+    },
+    "AK85": {
+      "raw_date_range": [
+        "2017-05-26",
+        "2019-02-24"
+      ],
+      "raw_date_count": 638,
+      "actual_date_range": [
+        "2017-05-27",
+        "2019-02-24"
+      ],
+      "actual_date_count": 564
+    },
+    "AK86": {
+      "raw_date_range": [
+        "2017-05-26",
+        "2019-02-24"
+      ],
+      "raw_date_count": 638,
+      "actual_date_range": [
+        "2017-05-26",
+        "2019-02-24"
+      ],
+      "actual_date_count": 541
+    }
+  },
+  "raw_common_dates": 550,
+  "route_test_dates": {
+    "count": 165,
+    "first": "2018-07-26",
+    "last": "2019-01-06"
+  },
+  "same_row_pairs": {
+    "AK07": {
+      "pairs": 0,
+      "dates": 0,
+      "date_range": [
+        null,
+        null
+      ],
+      "posted_mean_minutes": null,
+      "actual_mean_minutes": null,
+      "actual_range_minutes": [
+        null,
+        null
+      ],
+      "signed_error_mean_minutes": null,
+      "absolute_error_mean_minutes": null,
+      "signed_error_quantiles_minutes": {
+        "min": null,
+        "p10": null,
+        "p25": null,
+        "median": null,
+        "p75": null,
+        "p90": null,
+        "max": null
+      },
+      "absolute_error_p90_minutes": null,
+      "post_age_median_minutes": null,
+      "sign_counts": {
+        "overposted": 0,
+        "equal": 0,
+        "underposted": 0
+      },
+      "within_absolute_error_counts": {
+        "5": 0,
+        "10": 0,
+        "15": 0
+      },
+      "date_balanced_signed_error_mean_minutes": null,
+      "date_balanced_absolute_error_mean_minutes": null,
+      "arithmetic_sums_minutes": {
+        "signed_error": 0,
+        "absolute_error": 0
+      }
+    },
+    "AK11": {
+      "pairs": 0,
+      "dates": 0,
+      "date_range": [
+        null,
+        null
+      ],
+      "posted_mean_minutes": null,
+      "actual_mean_minutes": null,
+      "actual_range_minutes": [
+        null,
+        null
+      ],
+      "signed_error_mean_minutes": null,
+      "absolute_error_mean_minutes": null,
+      "signed_error_quantiles_minutes": {
+        "min": null,
+        "p10": null,
+        "p25": null,
+        "median": null,
+        "p75": null,
+        "p90": null,
+        "max": null
+      },
+      "absolute_error_p90_minutes": null,
+      "post_age_median_minutes": null,
+      "sign_counts": {
+        "overposted": 0,
+        "equal": 0,
+        "underposted": 0
+      },
+      "within_absolute_error_counts": {
+        "5": 0,
+        "10": 0,
+        "15": 0
+      },
+      "date_balanced_signed_error_mean_minutes": null,
+      "date_balanced_absolute_error_mean_minutes": null,
+      "arithmetic_sums_minutes": {
+        "signed_error": 0,
+        "absolute_error": 0
+      }
+    },
+    "AK14": {
+      "pairs": 0,
+      "dates": 0,
+      "date_range": [
+        null,
+        null
+      ],
+      "posted_mean_minutes": null,
+      "actual_mean_minutes": null,
+      "actual_range_minutes": [
+        null,
+        null
+      ],
+      "signed_error_mean_minutes": null,
+      "absolute_error_mean_minutes": null,
+      "signed_error_quantiles_minutes": {
+        "min": null,
+        "p10": null,
+        "p25": null,
+        "median": null,
+        "p75": null,
+        "p90": null,
+        "max": null
+      },
+      "absolute_error_p90_minutes": null,
+      "post_age_median_minutes": null,
+      "sign_counts": {
+        "overposted": 0,
+        "equal": 0,
+        "underposted": 0
+      },
+      "within_absolute_error_counts": {
+        "5": 0,
+        "10": 0,
+        "15": 0
+      },
+      "date_balanced_signed_error_mean_minutes": null,
+      "date_balanced_absolute_error_mean_minutes": null,
+      "arithmetic_sums_minutes": {
+        "signed_error": 0,
+        "absolute_error": 0
+      }
+    },
+    "AK18": {
+      "pairs": 0,
+      "dates": 0,
+      "date_range": [
+        null,
+        null
+      ],
+      "posted_mean_minutes": null,
+      "actual_mean_minutes": null,
+      "actual_range_minutes": [
+        null,
+        null
+      ],
+      "signed_error_mean_minutes": null,
+      "absolute_error_mean_minutes": null,
+      "signed_error_quantiles_minutes": {
+        "min": null,
+        "p10": null,
+        "p25": null,
+        "median": null,
+        "p75": null,
+        "p90": null,
+        "max": null
+      },
+      "absolute_error_p90_minutes": null,
+      "post_age_median_minutes": null,
+      "sign_counts": {
+        "overposted": 0,
+        "equal": 0,
+        "underposted": 0
+      },
+      "within_absolute_error_counts": {
+        "5": 0,
+        "10": 0,
+        "15": 0
+      },
+      "date_balanced_signed_error_mean_minutes": null,
+      "date_balanced_absolute_error_mean_minutes": null,
+      "arithmetic_sums_minutes": {
+        "signed_error": 0,
+        "absolute_error": 0
+      }
+    },
+    "AK85": {
+      "pairs": 0,
+      "dates": 0,
+      "date_range": [
+        null,
+        null
+      ],
+      "posted_mean_minutes": null,
+      "actual_mean_minutes": null,
+      "actual_range_minutes": [
+        null,
+        null
+      ],
+      "signed_error_mean_minutes": null,
+      "absolute_error_mean_minutes": null,
+      "signed_error_quantiles_minutes": {
+        "min": null,
+        "p10": null,
+        "p25": null,
+        "median": null,
+        "p75": null,
+        "p90": null,
+        "max": null
+      },
+      "absolute_error_p90_minutes": null,
+      "post_age_median_minutes": null,
+      "sign_counts": {
+        "overposted": 0,
+        "equal": 0,
+        "underposted": 0
+      },
+      "within_absolute_error_counts": {
+        "5": 0,
+        "10": 0,
+        "15": 0
+      },
+      "date_balanced_signed_error_mean_minutes": null,
+      "date_balanced_absolute_error_mean_minutes": null,
+      "arithmetic_sums_minutes": {
+        "signed_error": 0,
+        "absolute_error": 0
+      }
+    },
+    "AK86": {
+      "pairs": 0,
+      "dates": 0,
+      "date_range": [
+        null,
+        null
+      ],
+      "posted_mean_minutes": null,
+      "actual_mean_minutes": null,
+      "actual_range_minutes": [
+        null,
+        null
+      ],
+      "signed_error_mean_minutes": null,
+      "absolute_error_mean_minutes": null,
+      "signed_error_quantiles_minutes": {
+        "min": null,
+        "p10": null,
+        "p25": null,
+        "median": null,
+        "p75": null,
+        "p90": null,
+        "max": null
+      },
+      "absolute_error_p90_minutes": null,
+      "post_age_median_minutes": null,
+      "sign_counts": {
+        "overposted": 0,
+        "equal": 0,
+        "underposted": 0
+      },
+      "within_absolute_error_counts": {
+        "5": 0,
+        "10": 0,
+        "15": 0
+      },
+      "date_balanced_signed_error_mean_minutes": null,
+      "date_balanced_absolute_error_mean_minutes": null,
+      "arithmetic_sums_minutes": {
+        "signed_error": 0,
+        "absolute_error": 0
+      }
+    }
+  },
+  "scope_results": {
+    "all_available": {
+      "age_sensitivity": {
+        "5": {
+          "pooled": {
+            "pairs": 17961,
+            "dates": 2479,
+            "date_range": [
+              "2012-01-01",
+              "2019-02-24"
+            ],
+            "posted_mean_minutes": 32.03,
+            "actual_mean_minutes": 24.636,
+            "actual_range_minutes": [
+              0,
+              4338
+            ],
+            "signed_error_mean_minutes": 7.394,
+            "absolute_error_mean_minutes": 12.768,
+            "signed_error_quantiles_minutes": {
+              "min": -4143,
+              "p10": -7.0,
+              "p25": 0.0,
+              "median": 6.0,
+              "p75": 13.0,
+              "p90": 26.0,
+              "max": 227
+            },
+            "absolute_error_p90_minutes": 28.0,
+            "post_age_median_minutes": 1.0,
+            "sign_counts": {
+              "overposted": 13198,
+              "equal": 666,
+              "underposted": 4097
+            },
+            "within_absolute_error_counts": {
+              "5": 6835,
+              "10": 11292,
+              "15": 13604
+            },
+            "date_balanced_signed_error_mean_minutes": 6.737,
+            "date_balanced_absolute_error_mean_minutes": 11.502,
+            "arithmetic_sums_minutes": {
+              "signed_error": 132798,
+              "absolute_error": 229324
+            }
+          },
+          "by_ride": {
+            "AK07": {
+              "name": "Kilimanjaro Safaris",
+              "pairs": 4145,
+              "dates": 1915,
+              "date_range": [
+                "2012-01-03",
+                "2019-02-24"
+              ],
+              "posted_mean_minutes": 24.39,
+              "actual_mean_minutes": 20.147,
+              "actual_range_minutes": [
+                0,
+                206
+              ],
+              "signed_error_mean_minutes": 4.242,
+              "absolute_error_mean_minutes": 9.998,
+              "signed_error_quantiles_minutes": {
+                "min": -161,
+                "p10": -10.0,
+                "p25": -2.0,
+                "median": 4.0,
+                "p75": 10.0,
+                "p90": 19.0,
+                "max": 119
+              },
+              "absolute_error_p90_minutes": 22.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 2660,
+                "equal": 171,
+                "underposted": 1314
+              },
+              "within_absolute_error_counts": {
+                "5": 1642,
+                "10": 2842,
+                "15": 3362
+              },
+              "date_balanced_signed_error_mean_minutes": 4.309,
+              "date_balanced_absolute_error_mean_minutes": 10.21,
+              "arithmetic_sums_minutes": {
+                "signed_error": 17585,
+                "absolute_error": 41441
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 4884,
+                "prior_post_stale": 581,
+                "matched_with_reported_closure_during_wait": 13,
+                "no_prior_post_same_service_date": 92,
+                "ambiguous_latest_post_timestamp": 53,
+                "fresh_prior_post_reports_closure": 13
+              }
+            },
+            "AK11": {
+              "name": "Expedition Everest",
+              "pairs": 5701,
+              "dates": 2006,
+              "date_range": [
+                "2012-01-01",
+                "2019-02-24"
+              ],
+              "posted_mean_minutes": 22.35,
+              "actual_mean_minutes": 15.492,
+              "actual_range_minutes": [
+                0,
+                114
+              ],
+              "signed_error_mean_minutes": 6.858,
+              "absolute_error_mean_minutes": 8.856,
+              "signed_error_quantiles_minutes": {
+                "min": -43,
+                "p10": -3.0,
+                "p25": 1.0,
+                "median": 5.0,
+                "p75": 11.0,
+                "p90": 19.0,
+                "max": 105
+              },
+              "absolute_error_p90_minutes": 19.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 4477,
+                "equal": 256,
+                "underposted": 968
+              },
+              "within_absolute_error_counts": {
+                "5": 2634,
+                "10": 4122,
+                "15": 4859
+              },
+              "date_balanced_signed_error_mean_minutes": 7.008,
+              "date_balanced_absolute_error_mean_minutes": 9.194,
+              "arithmetic_sums_minutes": {
+                "signed_error": 39100,
+                "absolute_error": 50488
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 6791,
+                "matched_with_reported_closure_during_wait": 9,
+                "prior_post_stale": 864,
+                "no_prior_post_same_service_date": 90,
+                "fresh_prior_post_reports_closure": 34,
+                "ambiguous_latest_post_timestamp": 102
+              }
+            },
+            "AK14": {
+              "name": "Kali River Rapids",
+              "pairs": 924,
+              "dates": 670,
+              "date_range": [
+                "2012-01-06",
+                "2019-01-05"
+              ],
+              "posted_mean_minutes": 30.335,
+              "actual_mean_minutes": 20.398,
+              "actual_range_minutes": [
+                0,
+                89
+              ],
+              "signed_error_mean_minutes": 9.937,
+              "absolute_error_mean_minutes": 13.959,
+              "signed_error_quantiles_minutes": {
+                "min": -45,
+                "p10": -7.0,
+                "p25": 1.0,
+                "median": 8.0,
+                "p75": 17.25,
+                "p90": 28.0,
+                "max": 89
+              },
+              "absolute_error_p90_minutes": 29.7,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 719,
+                "equal": 20,
+                "underposted": 185
+              },
+              "within_absolute_error_counts": {
+                "5": 239,
+                "10": 479,
+                "15": 610
+              },
+              "date_balanced_signed_error_mean_minutes": 9.539,
+              "date_balanced_absolute_error_mean_minutes": 13.633,
+              "arithmetic_sums_minutes": {
+                "signed_error": 9182,
+                "absolute_error": 12898
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 1114,
+                "prior_post_stale": 163,
+                "matched_with_reported_closure_during_wait": 12,
+                "no_prior_post_same_service_date": 9,
+                "ambiguous_latest_post_timestamp": 10,
+                "fresh_prior_post_reports_closure": 8
+              }
+            },
+            "AK18": {
+              "name": "Dinosaur",
+              "pairs": 4287,
+              "dates": 1817,
+              "date_range": [
+                "2012-01-02",
+                "2019-02-24"
+              ],
+              "posted_mean_minutes": 22.085,
+              "actual_mean_minutes": 16.276,
+              "actual_range_minutes": [
+                0,
+                285
+              ],
+              "signed_error_mean_minutes": 5.81,
+              "absolute_error_mean_minutes": 9.301,
+              "signed_error_quantiles_minutes": {
+                "min": -265,
+                "p10": -6.0,
+                "p25": 0.0,
+                "median": 5.0,
+                "p75": 11.0,
+                "p90": 19.0,
+                "max": 97
+              },
+              "absolute_error_p90_minutes": 20.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 3171,
+                "equal": 163,
+                "underposted": 953
+              },
+              "within_absolute_error_counts": {
+                "5": 1827,
+                "10": 2953,
+                "15": 3542
+              },
+              "date_balanced_signed_error_mean_minutes": 5.708,
+              "date_balanced_absolute_error_mean_minutes": 9.171,
+              "arithmetic_sums_minutes": {
+                "signed_error": 24906,
+                "absolute_error": 39874
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 5036,
+                "matched_with_reported_closure_during_wait": 55,
+                "no_prior_post_same_service_date": 37,
+                "prior_post_stale": 613,
+                "ambiguous_latest_post_timestamp": 65,
+                "fresh_prior_post_reports_closure": 34
+              }
+            },
+            "AK85": {
+              "name": "Na'Vi River Journey",
+              "pairs": 1442,
+              "dates": 549,
+              "date_range": [
+                "2017-05-27",
+                "2019-02-24"
+              ],
+              "posted_mean_minutes": 47.34,
+              "actual_mean_minutes": 34.069,
+              "actual_range_minutes": [
+                0,
+                140
+              ],
+              "signed_error_mean_minutes": 13.272,
+              "absolute_error_mean_minutes": 17.92,
+              "signed_error_quantiles_minutes": {
+                "min": -78,
+                "p10": -8.0,
+                "p25": 1.0,
+                "median": 11.0,
+                "p75": 24.0,
+                "p90": 38.0,
+                "max": 114
+              },
+              "absolute_error_p90_minutes": 40.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 1106,
+                "equal": 35,
+                "underposted": 301
+              },
+              "within_absolute_error_counts": {
+                "5": 333,
+                "10": 595,
+                "15": 796
+              },
+              "date_balanced_signed_error_mean_minutes": 13.348,
+              "date_balanced_absolute_error_mean_minutes": 18.012,
+              "arithmetic_sums_minutes": {
+                "signed_error": 19138,
+                "absolute_error": 25840
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 1604,
+                "matched_with_reported_closure_during_wait": 36,
+                "prior_post_stale": 124,
+                "fresh_prior_post_reports_closure": 11,
+                "no_prior_post_same_service_date": 6,
+                "ambiguous_latest_post_timestamp": 21
+              }
+            },
+            "AK86": {
+              "name": "Avatar: Flight of Passage",
+              "pairs": 1462,
+              "dates": 513,
+              "date_range": [
+                "2017-05-26",
+                "2019-02-24"
+              ],
+              "posted_mean_minutes": 106.566,
+              "actual_mean_minutes": 90.912,
+              "actual_range_minutes": [
+                1,
+                4338
+              ],
+              "signed_error_mean_minutes": 15.655,
+              "absolute_error_mean_minutes": 40.207,
+              "signed_error_quantiles_minutes": {
+                "min": -4143,
+                "p10": -26.0,
+                "p25": -1.0,
+                "median": 20.5,
+                "p75": 42.0,
+                "p90": 67.0,
+                "max": 227
+              },
+              "absolute_error_p90_minutes": 71.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 1065,
+                "equal": 21,
+                "underposted": 376
+              },
+              "within_absolute_error_counts": {
+                "5": 160,
+                "10": 301,
+                "15": 435
+              },
+              "date_balanced_signed_error_mean_minutes": 14.55,
+              "date_balanced_absolute_error_mean_minutes": 41.281,
+              "arithmetic_sums_minutes": {
+                "signed_error": 22887,
+                "absolute_error": 58783
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 1708,
+                "matched_with_reported_closure_during_wait": 61,
+                "prior_post_stale": 171,
+                "no_prior_post_same_service_date": 41,
+                "fresh_prior_post_reports_closure": 15,
+                "ambiguous_latest_post_timestamp": 19
+              }
+            }
+          },
+          "identical_actual_row_dedup_sensitivity": {
+            "pairs": 17180,
+            "dates": 2479,
+            "date_range": [
+              "2012-01-01",
+              "2019-02-24"
+            ],
+            "posted_mean_minutes": 32.095,
+            "actual_mean_minutes": 24.727,
+            "actual_range_minutes": [
+              0,
+              4338
+            ],
+            "signed_error_mean_minutes": 7.368,
+            "absolute_error_mean_minutes": 12.805,
+            "signed_error_quantiles_minutes": {
+              "min": -4143,
+              "p10": -7.0,
+              "p25": 0.0,
+              "median": 6.0,
+              "p75": 13.0,
+              "p90": 26.0,
+              "max": 227
+            },
+            "absolute_error_p90_minutes": 28.0,
+            "post_age_median_minutes": 1.0,
+            "sign_counts": {
+              "overposted": 12619,
+              "equal": 627,
+              "underposted": 3934
+            },
+            "within_absolute_error_counts": {
+              "5": 6502,
+              "10": 10771,
+              "15": 12998
+            },
+            "date_balanced_signed_error_mean_minutes": 6.731,
+            "date_balanced_absolute_error_mean_minutes": 11.534,
+            "arithmetic_sums_minutes": {
+              "signed_error": 126582,
+              "absolute_error": 219982
+            }
+          },
+          "match_accounting": {
+            "eligible_actual_samples": 21137,
+            "prior_post_stale": 2516,
+            "matched_with_reported_closure_during_wait": 186,
+            "no_prior_post_same_service_date": 275,
+            "ambiguous_latest_post_timestamp": 270,
+            "fresh_prior_post_reports_closure": 115
+          },
+          "dates_with_at_least_one_matched_actual_for_every_ride": 95
+        },
+        "10": {
+          "pooled": {
+            "pairs": 19650,
+            "dates": 2492,
+            "date_range": [
+              "2012-01-01",
+              "2019-02-24"
+            ],
+            "posted_mean_minutes": 32.073,
+            "actual_mean_minutes": 24.639,
+            "actual_range_minutes": [
+              0,
+              4338
+            ],
+            "signed_error_mean_minutes": 7.434,
+            "absolute_error_mean_minutes": 12.806,
+            "signed_error_quantiles_minutes": {
+              "min": -4143,
+              "p10": -7.0,
+              "p25": 0.0,
+              "median": 5.0,
+              "p75": 13.0,
+              "p90": 26.0,
+              "max": 227
+            },
+            "absolute_error_p90_minutes": 28.0,
+            "post_age_median_minutes": 1.0,
+            "sign_counts": {
+              "overposted": 14427,
+              "equal": 719,
+              "underposted": 4504
+            },
+            "within_absolute_error_counts": {
+              "5": 7468,
+              "10": 12289,
+              "15": 14825
+            },
+            "date_balanced_signed_error_mean_minutes": 6.698,
+            "date_balanced_absolute_error_mean_minutes": 11.553,
+            "arithmetic_sums_minutes": {
+              "signed_error": 146071,
+              "absolute_error": 251641
+            }
+          },
+          "by_ride": {
+            "AK07": {
+              "name": "Kilimanjaro Safaris",
+              "pairs": 4530,
+              "dates": 1974,
+              "date_range": [
+                "2012-01-01",
+                "2019-02-24"
+              ],
+              "posted_mean_minutes": 24.351,
+              "actual_mean_minutes": 20.147,
+              "actual_range_minutes": [
+                0,
+                206
+              ],
+              "signed_error_mean_minutes": 4.204,
+              "absolute_error_mean_minutes": 10.048,
+              "signed_error_quantiles_minutes": {
+                "min": -161,
+                "p10": -10.0,
+                "p25": -3.0,
+                "median": 4.0,
+                "p75": 10.0,
+                "p90": 19.0,
+                "max": 119
+              },
+              "absolute_error_p90_minutes": 22.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 2890,
+                "equal": 195,
+                "underposted": 1445
+              },
+              "within_absolute_error_counts": {
+                "5": 1796,
+                "10": 3093,
+                "15": 3665
+              },
+              "date_balanced_signed_error_mean_minutes": 4.235,
+              "date_balanced_absolute_error_mean_minutes": 10.261,
+              "arithmetic_sums_minutes": {
+                "signed_error": 19045,
+                "absolute_error": 45519
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 4884,
+                "matched_with_reported_closure_during_wait": 15,
+                "prior_post_stale": 194,
+                "no_prior_post_same_service_date": 92,
+                "ambiguous_latest_post_timestamp": 54,
+                "fresh_prior_post_reports_closure": 14
+              }
+            },
+            "AK11": {
+              "name": "Expedition Everest",
+              "pairs": 6274,
+              "dates": 2070,
+              "date_range": [
+                "2012-01-01",
+                "2019-02-24"
+              ],
+              "posted_mean_minutes": 22.356,
+              "actual_mean_minutes": 15.431,
+              "actual_range_minutes": [
+                0,
+                114
+              ],
+              "signed_error_mean_minutes": 6.925,
+              "absolute_error_mean_minutes": 9.01,
+              "signed_error_quantiles_minutes": {
+                "min": -55,
+                "p10": -3.0,
+                "p25": 1.0,
+                "median": 5.0,
+                "p75": 11.0,
+                "p90": 19.0,
+                "max": 105
+              },
+              "absolute_error_p90_minutes": 20.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 4928,
+                "equal": 271,
+                "underposted": 1075
+              },
+              "within_absolute_error_counts": {
+                "5": 2876,
+                "10": 4496,
+                "15": 5315
+              },
+              "date_balanced_signed_error_mean_minutes": 7.004,
+              "date_balanced_absolute_error_mean_minutes": 9.274,
+              "arithmetic_sums_minutes": {
+                "signed_error": 43449,
+                "absolute_error": 56531
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 6791,
+                "matched_with_reported_closure_during_wait": 13,
+                "prior_post_stale": 282,
+                "no_prior_post_same_service_date": 90,
+                "fresh_prior_post_reports_closure": 40,
+                "ambiguous_latest_post_timestamp": 105
+              }
+            },
+            "AK14": {
+              "name": "Kali River Rapids",
+              "pairs": 1029,
+              "dates": 740,
+              "date_range": [
+                "2012-01-06",
+                "2019-01-05"
+              ],
+              "posted_mean_minutes": 30.01,
+              "actual_mean_minutes": 20.149,
+              "actual_range_minutes": [
+                0,
+                89
+              ],
+              "signed_error_mean_minutes": 9.861,
+              "absolute_error_mean_minutes": 13.917,
+              "signed_error_quantiles_minutes": {
+                "min": -45,
+                "p10": -7.0,
+                "p25": 1.0,
+                "median": 8.0,
+                "p75": 17.0,
+                "p90": 28.0,
+                "max": 89
+              },
+              "absolute_error_p90_minutes": 30.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 794,
+                "equal": 22,
+                "underposted": 213
+              },
+              "within_absolute_error_counts": {
+                "5": 279,
+                "10": 536,
+                "15": 682
+              },
+              "date_balanced_signed_error_mean_minutes": 9.483,
+              "date_balanced_absolute_error_mean_minutes": 13.627,
+              "arithmetic_sums_minutes": {
+                "signed_error": 10147,
+                "absolute_error": 14321
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 1114,
+                "prior_post_stale": 57,
+                "matched_with_reported_closure_during_wait": 13,
+                "no_prior_post_same_service_date": 9,
+                "ambiguous_latest_post_timestamp": 10,
+                "fresh_prior_post_reports_closure": 9
+              }
+            },
+            "AK18": {
+              "name": "Dinosaur",
+              "pairs": 4645,
+              "dates": 1876,
+              "date_range": [
+                "2012-01-02",
+                "2019-02-24"
+              ],
+              "posted_mean_minutes": 22.119,
+              "actual_mean_minutes": 16.302,
+              "actual_range_minutes": [
+                0,
+                285
+              ],
+              "signed_error_mean_minutes": 5.817,
+              "absolute_error_mean_minutes": 9.353,
+              "signed_error_quantiles_minutes": {
+                "min": -265,
+                "p10": -6.0,
+                "p25": 0.0,
+                "median": 5.0,
+                "p75": 11.0,
+                "p90": 19.0,
+                "max": 97
+              },
+              "absolute_error_p90_minutes": 20.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 3437,
+                "equal": 170,
+                "underposted": 1038
+              },
+              "within_absolute_error_counts": {
+                "5": 1982,
+                "10": 3191,
+                "15": 3825
+              },
+              "date_balanced_signed_error_mean_minutes": 5.704,
+              "date_balanced_absolute_error_mean_minutes": 9.278,
+              "arithmetic_sums_minutes": {
+                "signed_error": 27020,
+                "absolute_error": 43444
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 5036,
+                "matched_with_reported_closure_during_wait": 61,
+                "no_prior_post_same_service_date": 37,
+                "prior_post_stale": 244,
+                "ambiguous_latest_post_timestamp": 67,
+                "fresh_prior_post_reports_closure": 43
+              }
+            },
+            "AK85": {
+              "name": "Na'Vi River Journey",
+              "pairs": 1556,
+              "dates": 558,
+              "date_range": [
+                "2017-05-27",
+                "2019-02-24"
+              ],
+              "posted_mean_minutes": 47.956,
+              "actual_mean_minutes": 34.429,
+              "actual_range_minutes": [
+                0,
+                162
+              ],
+              "signed_error_mean_minutes": 13.527,
+              "absolute_error_mean_minutes": 18.098,
+              "signed_error_quantiles_minutes": {
+                "min": -78,
+                "p10": -8.0,
+                "p25": 1.0,
+                "median": 11.0,
+                "p75": 24.0,
+                "p90": 39.0,
+                "max": 131
+              },
+              "absolute_error_p90_minutes": 40.5,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 1194,
+                "equal": 39,
+                "underposted": 323
+              },
+              "within_absolute_error_counts": {
+                "5": 358,
+                "10": 640,
+                "15": 854
+              },
+              "date_balanced_signed_error_mean_minutes": 13.769,
+              "date_balanced_absolute_error_mean_minutes": 18.369,
+              "arithmetic_sums_minutes": {
+                "signed_error": 21048,
+                "absolute_error": 28160
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 1604,
+                "matched_with_reported_closure_during_wait": 40,
+                "fresh_prior_post_reports_closure": 12,
+                "no_prior_post_same_service_date": 6,
+                "prior_post_stale": 9,
+                "ambiguous_latest_post_timestamp": 21
+              }
+            },
+            "AK86": {
+              "name": "Avatar: Flight of Passage",
+              "pairs": 1616,
+              "dates": 531,
+              "date_range": [
+                "2017-05-26",
+                "2019-02-24"
+              ],
+              "posted_mean_minutes": 106.071,
+              "actual_mean_minutes": 90.376,
+              "actual_range_minutes": [
+                1,
+                4338
+              ],
+              "signed_error_mean_minutes": 15.694,
+              "absolute_error_mean_minutes": 39.397,
+              "signed_error_quantiles_minutes": {
+                "min": -4143,
+                "p10": -25.5,
+                "p25": -1.0,
+                "median": 20.0,
+                "p75": 41.0,
+                "p90": 66.0,
+                "max": 227
+              },
+              "absolute_error_p90_minutes": 70.5,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 1184,
+                "equal": 22,
+                "underposted": 410
+              },
+              "within_absolute_error_counts": {
+                "5": 177,
+                "10": 333,
+                "15": 484
+              },
+              "date_balanced_signed_error_mean_minutes": 15.784,
+              "date_balanced_absolute_error_mean_minutes": 39.79,
+              "arithmetic_sums_minutes": {
+                "signed_error": 25362,
+                "absolute_error": 63666
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 1708,
+                "matched_with_reported_closure_during_wait": 71,
+                "no_prior_post_same_service_date": 41,
+                "prior_post_stale": 16,
+                "fresh_prior_post_reports_closure": 16,
+                "ambiguous_latest_post_timestamp": 19
+              }
+            }
+          },
+          "identical_actual_row_dedup_sensitivity": {
+            "pairs": 18810,
+            "dates": 2492,
+            "date_range": [
+              "2012-01-01",
+              "2019-02-24"
+            ],
+            "posted_mean_minutes": 32.161,
+            "actual_mean_minutes": 24.741,
+            "actual_range_minutes": [
+              0,
+              4338
+            ],
+            "signed_error_mean_minutes": 7.419,
+            "absolute_error_mean_minutes": 12.86,
+            "signed_error_quantiles_minutes": {
+              "min": -4143,
+              "p10": -7.0,
+              "p25": 0.0,
+              "median": 6.0,
+              "p75": 13.0,
+              "p90": 26.0,
+              "max": 227
+            },
+            "absolute_error_p90_minutes": 28.0,
+            "post_age_median_minutes": 1.0,
+            "sign_counts": {
+              "overposted": 13803,
+              "equal": 676,
+              "underposted": 4331
+            },
+            "within_absolute_error_counts": {
+              "5": 7104,
+              "10": 11721,
+              "15": 14166
+            },
+            "date_balanced_signed_error_mean_minutes": 6.702,
+            "date_balanced_absolute_error_mean_minutes": 11.596,
+            "arithmetic_sums_minutes": {
+              "signed_error": 139554,
+              "absolute_error": 241888
+            }
+          },
+          "match_accounting": {
+            "eligible_actual_samples": 21137,
+            "matched_with_reported_closure_during_wait": 213,
+            "prior_post_stale": 802,
+            "no_prior_post_same_service_date": 275,
+            "ambiguous_latest_post_timestamp": 276,
+            "fresh_prior_post_reports_closure": 134
+          },
+          "dates_with_at_least_one_matched_actual_for_every_ride": 120
+        },
+        "15": {
+          "pooled": {
+            "pairs": 19965,
+            "dates": 2500,
+            "date_range": [
+              "2012-01-01",
+              "2019-02-24"
+            ],
+            "posted_mean_minutes": 31.967,
+            "actual_mean_minutes": 24.555,
+            "actual_range_minutes": [
+              0,
+              4338
+            ],
+            "signed_error_mean_minutes": 7.412,
+            "absolute_error_mean_minutes": 12.79,
+            "signed_error_quantiles_minutes": {
+              "min": -4143,
+              "p10": -7.0,
+              "p25": 0.0,
+              "median": 5.0,
+              "p75": 13.0,
+              "p90": 26.0,
+              "max": 227
+            },
+            "absolute_error_p90_minutes": 28.0,
+            "post_age_median_minutes": 1.0,
+            "sign_counts": {
+              "overposted": 14653,
+              "equal": 728,
+              "underposted": 4584
+            },
+            "within_absolute_error_counts": {
+              "5": 7577,
+              "10": 12480,
+              "15": 15064
+            },
+            "date_balanced_signed_error_mean_minutes": 6.687,
+            "date_balanced_absolute_error_mean_minutes": 11.588,
+            "arithmetic_sums_minutes": {
+              "signed_error": 147983,
+              "absolute_error": 255345
+            }
+          },
+          "by_ride": {
+            "AK07": {
+              "name": "Kilimanjaro Safaris",
+              "pairs": 4612,
+              "dates": 1988,
+              "date_range": [
+                "2012-01-01",
+                "2019-02-24"
+              ],
+              "posted_mean_minutes": 24.378,
+              "actual_mean_minutes": 20.215,
+              "actual_range_minutes": [
+                0,
+                206
+              ],
+              "signed_error_mean_minutes": 4.162,
+              "absolute_error_mean_minutes": 10.069,
+              "signed_error_quantiles_minutes": {
+                "min": -161,
+                "p10": -10.0,
+                "p25": -3.0,
+                "median": 4.0,
+                "p75": 10.0,
+                "p90": 19.0,
+                "max": 119
+              },
+              "absolute_error_p90_minutes": 22.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 2940,
+                "equal": 197,
+                "underposted": 1475
+              },
+              "within_absolute_error_counts": {
+                "5": 1824,
+                "10": 3146,
+                "15": 3725
+              },
+              "date_balanced_signed_error_mean_minutes": 4.209,
+              "date_balanced_absolute_error_mean_minutes": 10.281,
+              "arithmetic_sums_minutes": {
+                "signed_error": 19197,
+                "absolute_error": 46439
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 4884,
+                "matched_with_reported_closure_during_wait": 15,
+                "prior_post_stale": 112,
+                "no_prior_post_same_service_date": 92,
+                "ambiguous_latest_post_timestamp": 54,
+                "fresh_prior_post_reports_closure": 14
+              }
+            },
+            "AK11": {
+              "name": "Expedition Everest",
+              "pairs": 6380,
+              "dates": 2082,
+              "date_range": [
+                "2012-01-01",
+                "2019-02-24"
+              ],
+              "posted_mean_minutes": 22.387,
+              "actual_mean_minutes": 15.425,
+              "actual_range_minutes": [
+                0,
+                114
+              ],
+              "signed_error_mean_minutes": 6.963,
+              "absolute_error_mean_minutes": 9.056,
+              "signed_error_quantiles_minutes": {
+                "min": -55,
+                "p10": -3.0,
+                "p25": 1.0,
+                "median": 5.0,
+                "p75": 11.0,
+                "p90": 19.0,
+                "max": 105
+              },
+              "absolute_error_p90_minutes": 20.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 5008,
+                "equal": 275,
+                "underposted": 1097
+              },
+              "within_absolute_error_counts": {
+                "5": 2915,
+                "10": 4559,
+                "15": 5394
+              },
+              "date_balanced_signed_error_mean_minutes": 7.026,
+              "date_balanced_absolute_error_mean_minutes": 9.334,
+              "arithmetic_sums_minutes": {
+                "signed_error": 44421,
+                "absolute_error": 57779
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 6791,
+                "matched_with_reported_closure_during_wait": 13,
+                "prior_post_stale": 173,
+                "no_prior_post_same_service_date": 90,
+                "fresh_prior_post_reports_closure": 42,
+                "ambiguous_latest_post_timestamp": 106
+              }
+            },
+            "AK14": {
+              "name": "Kali River Rapids",
+              "pairs": 1055,
+              "dates": 751,
+              "date_range": [
+                "2012-01-06",
+                "2019-01-05"
+              ],
+              "posted_mean_minutes": 29.858,
+              "actual_mean_minutes": 20.122,
+              "actual_range_minutes": [
+                0,
+                89
+              ],
+              "signed_error_mean_minutes": 9.736,
+              "absolute_error_mean_minutes": 13.853,
+              "signed_error_quantiles_minutes": {
+                "min": -45,
+                "p10": -7.6,
+                "p25": 1.0,
+                "median": 7.0,
+                "p75": 17.0,
+                "p90": 28.0,
+                "max": 89
+              },
+              "absolute_error_p90_minutes": 29.6,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 813,
+                "equal": 22,
+                "underposted": 220
+              },
+              "within_absolute_error_counts": {
+                "5": 284,
+                "10": 550,
+                "15": 703
+              },
+              "date_balanced_signed_error_mean_minutes": 9.391,
+              "date_balanced_absolute_error_mean_minutes": 13.615,
+              "arithmetic_sums_minutes": {
+                "signed_error": 10271,
+                "absolute_error": 14615
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 1114,
+                "prior_post_stale": 31,
+                "matched_with_reported_closure_during_wait": 13,
+                "no_prior_post_same_service_date": 9,
+                "ambiguous_latest_post_timestamp": 10,
+                "fresh_prior_post_reports_closure": 9
+              }
+            },
+            "AK18": {
+              "name": "Dinosaur",
+              "pairs": 4735,
+              "dates": 1893,
+              "date_range": [
+                "2012-01-02",
+                "2019-02-24"
+              ],
+              "posted_mean_minutes": 22.082,
+              "actual_mean_minutes": 16.247,
+              "actual_range_minutes": [
+                0,
+                285
+              ],
+              "signed_error_mean_minutes": 5.836,
+              "absolute_error_mean_minutes": 9.355,
+              "signed_error_quantiles_minutes": {
+                "min": -265,
+                "p10": -6.0,
+                "p25": 0.0,
+                "median": 5.0,
+                "p75": 11.0,
+                "p90": 19.0,
+                "max": 97
+              },
+              "absolute_error_p90_minutes": 20.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 3507,
+                "equal": 172,
+                "underposted": 1056
+              },
+              "within_absolute_error_counts": {
+                "5": 2017,
+                "10": 3250,
+                "15": 3901
+              },
+              "date_balanced_signed_error_mean_minutes": 5.703,
+              "date_balanced_absolute_error_mean_minutes": 9.309,
+              "arithmetic_sums_minutes": {
+                "signed_error": 27632,
+                "absolute_error": 44294
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 5036,
+                "matched_with_reported_closure_during_wait": 61,
+                "no_prior_post_same_service_date": 37,
+                "prior_post_stale": 153,
+                "ambiguous_latest_post_timestamp": 67,
+                "fresh_prior_post_reports_closure": 44
+              }
+            },
+            "AK85": {
+              "name": "Na'Vi River Journey",
+              "pairs": 1561,
+              "dates": 558,
+              "date_range": [
+                "2017-05-27",
+                "2019-02-24"
+              ],
+              "posted_mean_minutes": 47.931,
+              "actual_mean_minutes": 34.415,
+              "actual_range_minutes": [
+                0,
+                162
+              ],
+              "signed_error_mean_minutes": 13.516,
+              "absolute_error_mean_minutes": 18.078,
+              "signed_error_quantiles_minutes": {
+                "min": -78,
+                "p10": -8.0,
+                "p25": 1.0,
+                "median": 11.0,
+                "p75": 24.0,
+                "p90": 39.0,
+                "max": 131
+              },
+              "absolute_error_p90_minutes": 40.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 1197,
+                "equal": 40,
+                "underposted": 324
+              },
+              "within_absolute_error_counts": {
+                "5": 360,
+                "10": 642,
+                "15": 857
+              },
+              "date_balanced_signed_error_mean_minutes": 13.724,
+              "date_balanced_absolute_error_mean_minutes": 18.324,
+              "arithmetic_sums_minutes": {
+                "signed_error": 21098,
+                "absolute_error": 28220
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 1604,
+                "matched_with_reported_closure_during_wait": 40,
+                "fresh_prior_post_reports_closure": 12,
+                "no_prior_post_same_service_date": 6,
+                "prior_post_stale": 4,
+                "ambiguous_latest_post_timestamp": 21
+              }
+            },
+            "AK86": {
+              "name": "Avatar: Flight of Passage",
+              "pairs": 1622,
+              "dates": 532,
+              "date_range": [
+                "2017-05-26",
+                "2019-02-24"
+              ],
+              "posted_mean_minutes": 106.088,
+              "actual_mean_minutes": 90.451,
+              "actual_range_minutes": [
+                1,
+                4338
+              ],
+              "signed_error_mean_minutes": 15.637,
+              "absolute_error_mean_minutes": 39.456,
+              "signed_error_quantiles_minutes": {
+                "min": -4143,
+                "p10": -25.9,
+                "p25": -1.0,
+                "median": 20.0,
+                "p75": 41.75,
+                "p90": 66.0,
+                "max": 227
+              },
+              "absolute_error_p90_minutes": 70.9,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 1188,
+                "equal": 22,
+                "underposted": 412
+              },
+              "within_absolute_error_counts": {
+                "5": 177,
+                "10": 333,
+                "15": 484
+              },
+              "date_balanced_signed_error_mean_minutes": 15.766,
+              "date_balanced_absolute_error_mean_minutes": 39.808,
+              "arithmetic_sums_minutes": {
+                "signed_error": 25364,
+                "absolute_error": 63998
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 1708,
+                "matched_with_reported_closure_during_wait": 71,
+                "no_prior_post_same_service_date": 41,
+                "fresh_prior_post_reports_closure": 17,
+                "prior_post_stale": 9,
+                "ambiguous_latest_post_timestamp": 19
+              }
+            }
+          },
+          "identical_actual_row_dedup_sensitivity": {
+            "pairs": 19109,
+            "dates": 2500,
+            "date_range": [
+              "2012-01-01",
+              "2019-02-24"
+            ],
+            "posted_mean_minutes": 32.051,
+            "actual_mean_minutes": 24.651,
+            "actual_range_minutes": [
+              0,
+              4338
+            ],
+            "signed_error_mean_minutes": 7.4,
+            "absolute_error_mean_minutes": 12.84,
+            "signed_error_quantiles_minutes": {
+              "min": -4143,
+              "p10": -7.0,
+              "p25": 0.0,
+              "median": 6.0,
+              "p75": 13.0,
+              "p90": 26.0,
+              "max": 227
+            },
+            "absolute_error_p90_minutes": 28.0,
+            "post_age_median_minutes": 1.0,
+            "sign_counts": {
+              "overposted": 14021,
+              "equal": 684,
+              "underposted": 4404
+            },
+            "within_absolute_error_counts": {
+              "5": 7207,
+              "10": 11904,
+              "15": 14395
+            },
+            "date_balanced_signed_error_mean_minutes": 6.694,
+            "date_balanced_absolute_error_mean_minutes": 11.628,
+            "arithmetic_sums_minutes": {
+              "signed_error": 141404,
+              "absolute_error": 245352
+            }
+          },
+          "match_accounting": {
+            "eligible_actual_samples": 21137,
+            "matched_with_reported_closure_during_wait": 213,
+            "prior_post_stale": 482,
+            "no_prior_post_same_service_date": 275,
+            "ambiguous_latest_post_timestamp": 277,
+            "fresh_prior_post_reports_closure": 138
+          },
+          "dates_with_at_least_one_matched_actual_for_every_ride": 120
+        }
+      }
+    },
+    "six_ride_common_dates": {
+      "age_sensitivity": {
+        "5": {
+          "pooled": {
+            "pairs": 6355,
+            "dates": 547,
+            "date_range": [
+              "2017-05-26",
+              "2019-01-06"
+            ],
+            "posted_mean_minutes": 47.547,
+            "actual_mean_minutes": 37.569,
+            "actual_range_minutes": [
+              0,
+              4338
+            ],
+            "signed_error_mean_minutes": 9.978,
+            "absolute_error_mean_minutes": 18.22,
+            "signed_error_quantiles_minutes": {
+              "min": -4143,
+              "p10": -9.0,
+              "p25": 0.0,
+              "median": 8.0,
+              "p75": 19.0,
+              "p90": 37.0,
+              "max": 227
+            },
+            "absolute_error_p90_minutes": 41.0,
+            "post_age_median_minutes": 1.0,
+            "sign_counts": {
+              "overposted": 4709,
+              "equal": 211,
+              "underposted": 1435
+            },
+            "within_absolute_error_counts": {
+              "5": 1806,
+              "10": 3126,
+              "15": 4022
+            },
+            "date_balanced_signed_error_mean_minutes": 9.571,
+            "date_balanced_absolute_error_mean_minutes": 18.01,
+            "arithmetic_sums_minutes": {
+              "signed_error": 63408,
+              "absolute_error": 115788
+            }
+          },
+          "by_ride": {
+            "AK07": {
+              "name": "Kilimanjaro Safaris",
+              "pairs": 954,
+              "dates": 423,
+              "date_range": [
+                "2017-05-26",
+                "2019-01-05"
+              ],
+              "posted_mean_minutes": 29.617,
+              "actual_mean_minutes": 21.794,
+              "actual_range_minutes": [
+                0,
+                206
+              ],
+              "signed_error_mean_minutes": 7.824,
+              "absolute_error_mean_minutes": 12.182,
+              "signed_error_quantiles_minutes": {
+                "min": -161,
+                "p10": -7.0,
+                "p25": 0.0,
+                "median": 7.0,
+                "p75": 15.0,
+                "p90": 25.0,
+                "max": 107
+              },
+              "absolute_error_p90_minutes": 26.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 710,
+                "equal": 29,
+                "underposted": 215
+              },
+              "within_absolute_error_counts": {
+                "5": 293,
+                "10": 530,
+                "15": 692
+              },
+              "date_balanced_signed_error_mean_minutes": 8.027,
+              "date_balanced_absolute_error_mean_minutes": 12.493,
+              "arithmetic_sums_minutes": {
+                "signed_error": 7464,
+                "absolute_error": 11622
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 1059,
+                "prior_post_stale": 85,
+                "matched_with_reported_closure_during_wait": 4,
+                "ambiguous_latest_post_timestamp": 8,
+                "fresh_prior_post_reports_closure": 10,
+                "no_prior_post_same_service_date": 2
+              }
+            },
+            "AK11": {
+              "name": "Expedition Everest",
+              "pairs": 1378,
+              "dates": 475,
+              "date_range": [
+                "2017-05-26",
+                "2019-01-05"
+              ],
+              "posted_mean_minutes": 26.016,
+              "actual_mean_minutes": 18.02,
+              "actual_range_minutes": [
+                0,
+                101
+              ],
+              "signed_error_mean_minutes": 7.996,
+              "absolute_error_mean_minutes": 10.176,
+              "signed_error_quantiles_minutes": {
+                "min": -42,
+                "p10": -3.0,
+                "p25": 1.0,
+                "median": 6.0,
+                "p75": 12.0,
+                "p90": 22.0,
+                "max": 95
+              },
+              "absolute_error_p90_minutes": 22.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 1095,
+                "equal": 69,
+                "underposted": 214
+              },
+              "within_absolute_error_counts": {
+                "5": 560,
+                "10": 914,
+                "15": 1109
+              },
+              "date_balanced_signed_error_mean_minutes": 7.765,
+              "date_balanced_absolute_error_mean_minutes": 10.232,
+              "arithmetic_sums_minutes": {
+                "signed_error": 11018,
+                "absolute_error": 14022
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 1542,
+                "matched_with_reported_closure_during_wait": 2,
+                "prior_post_stale": 135,
+                "ambiguous_latest_post_timestamp": 21,
+                "fresh_prior_post_reports_closure": 8
+              }
+            },
+            "AK14": {
+              "name": "Kali River Rapids",
+              "pairs": 246,
+              "dates": 170,
+              "date_range": [
+                "2017-05-28",
+                "2019-01-05"
+              ],
+              "posted_mean_minutes": 33.496,
+              "actual_mean_minutes": 24.305,
+              "actual_range_minutes": [
+                0,
+                83
+              ],
+              "signed_error_mean_minutes": 9.191,
+              "absolute_error_mean_minutes": 14.703,
+              "signed_error_quantiles_minutes": {
+                "min": -42,
+                "p10": -9.0,
+                "p25": -1.0,
+                "median": 8.0,
+                "p75": 17.75,
+                "p90": 29.0,
+                "max": 89
+              },
+              "absolute_error_p90_minutes": 33.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 175,
+                "equal": 8,
+                "underposted": 63
+              },
+              "within_absolute_error_counts": {
+                "5": 64,
+                "10": 124,
+                "15": 153
+              },
+              "date_balanced_signed_error_mean_minutes": 8.759,
+              "date_balanced_absolute_error_mean_minutes": 14.293,
+              "arithmetic_sums_minutes": {
+                "signed_error": 2261,
+                "absolute_error": 3617
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 287,
+                "matched_with_reported_closure_during_wait": 5,
+                "prior_post_stale": 34,
+                "fresh_prior_post_reports_closure": 5,
+                "ambiguous_latest_post_timestamp": 2
+              }
+            },
+            "AK18": {
+              "name": "Dinosaur",
+              "pairs": 1180,
+              "dates": 443,
+              "date_range": [
+                "2017-05-26",
+                "2019-01-06"
+              ],
+              "posted_mean_minutes": 25.996,
+              "actual_mean_minutes": 21.125,
+              "actual_range_minutes": [
+                0,
+                96
+              ],
+              "signed_error_mean_minutes": 4.87,
+              "absolute_error_mean_minutes": 9.928,
+              "signed_error_quantiles_minutes": {
+                "min": -58,
+                "p10": -10.0,
+                "p25": -1.0,
+                "median": 5.0,
+                "p75": 11.0,
+                "p90": 19.0,
+                "max": 50
+              },
+              "absolute_error_p90_minutes": 21.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 790,
+                "equal": 54,
+                "underposted": 336
+              },
+              "within_absolute_error_counts": {
+                "5": 452,
+                "10": 748,
+                "15": 953
+              },
+              "date_balanced_signed_error_mean_minutes": 4.661,
+              "date_balanced_absolute_error_mean_minutes": 9.923,
+              "arithmetic_sums_minutes": {
+                "signed_error": 5747,
+                "absolute_error": 11715
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 1327,
+                "matched_with_reported_closure_during_wait": 33,
+                "prior_post_stale": 107,
+                "ambiguous_latest_post_timestamp": 27,
+                "fresh_prior_post_reports_closure": 12,
+                "no_prior_post_same_service_date": 1
+              }
+            },
+            "AK85": {
+              "name": "Na'Vi River Journey",
+              "pairs": 1254,
+              "dates": 469,
+              "date_range": [
+                "2017-05-27",
+                "2019-01-06"
+              ],
+              "posted_mean_minutes": 47.069,
+              "actual_mean_minutes": 33.997,
+              "actual_range_minutes": [
+                0,
+                140
+              ],
+              "signed_error_mean_minutes": 13.073,
+              "absolute_error_mean_minutes": 17.768,
+              "signed_error_quantiles_minutes": {
+                "min": -78,
+                "p10": -8.0,
+                "p25": 1.0,
+                "median": 11.0,
+                "p75": 23.0,
+                "p90": 38.0,
+                "max": 114
+              },
+              "absolute_error_p90_minutes": 40.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 965,
+                "equal": 31,
+                "underposted": 258
+              },
+              "within_absolute_error_counts": {
+                "5": 285,
+                "10": 527,
+                "15": 707
+              },
+              "date_balanced_signed_error_mean_minutes": 13.071,
+              "date_balanced_absolute_error_mean_minutes": 17.767,
+              "arithmetic_sums_minutes": {
+                "signed_error": 16393,
+                "absolute_error": 22281
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 1396,
+                "matched_with_reported_closure_during_wait": 29,
+                "prior_post_stale": 108,
+                "fresh_prior_post_reports_closure": 11,
+                "no_prior_post_same_service_date": 4,
+                "ambiguous_latest_post_timestamp": 19
+              }
+            },
+            "AK86": {
+              "name": "Avatar: Flight of Passage",
+              "pairs": 1343,
+              "dates": 451,
+              "date_range": [
+                "2017-05-26",
+                "2019-01-06"
+              ],
+              "posted_mean_minutes": 104.33,
+              "actual_mean_minutes": 89.047,
+              "actual_range_minutes": [
+                1,
+                4338
+              ],
+              "signed_error_mean_minutes": 15.283,
+              "absolute_error_mean_minutes": 39.115,
+              "signed_error_quantiles_minutes": {
+                "min": -4143,
+                "p10": -26.0,
+                "p25": -1.0,
+                "median": 20.0,
+                "p75": 41.0,
+                "p90": 66.8,
+                "max": 227
+              },
+              "absolute_error_p90_minutes": 70.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 974,
+                "equal": 20,
+                "underposted": 349
+              },
+              "within_absolute_error_counts": {
+                "5": 152,
+                "10": 283,
+                "15": 408
+              },
+              "date_balanced_signed_error_mean_minutes": 12.624,
+              "date_balanced_absolute_error_mean_minutes": 39.875,
+              "arithmetic_sums_minutes": {
+                "signed_error": 20525,
+                "absolute_error": 52531
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 1568,
+                "matched_with_reported_closure_during_wait": 57,
+                "prior_post_stale": 158,
+                "no_prior_post_same_service_date": 34,
+                "fresh_prior_post_reports_closure": 15,
+                "ambiguous_latest_post_timestamp": 18
+              }
+            }
+          },
+          "identical_actual_row_dedup_sensitivity": {
+            "pairs": 6044,
+            "dates": 547,
+            "date_range": [
+              "2017-05-26",
+              "2019-01-06"
+            ],
+            "posted_mean_minutes": 47.756,
+            "actual_mean_minutes": 37.844,
+            "actual_range_minutes": [
+              0,
+              4338
+            ],
+            "signed_error_mean_minutes": 9.913,
+            "absolute_error_mean_minutes": 18.279,
+            "signed_error_quantiles_minutes": {
+              "min": -4143,
+              "p10": -9.0,
+              "p25": 0.0,
+              "median": 8.0,
+              "p75": 19.0,
+              "p90": 37.0,
+              "max": 227
+            },
+            "absolute_error_p90_minutes": 40.0,
+            "post_age_median_minutes": 1.0,
+            "sign_counts": {
+              "overposted": 4484,
+              "equal": 197,
+              "underposted": 1363
+            },
+            "within_absolute_error_counts": {
+              "5": 1710,
+              "10": 2969,
+              "15": 3825
+            },
+            "date_balanced_signed_error_mean_minutes": 9.509,
+            "date_balanced_absolute_error_mean_minutes": 18.091,
+            "arithmetic_sums_minutes": {
+              "signed_error": 59912,
+              "absolute_error": 110476
+            }
+          },
+          "match_accounting": {
+            "eligible_actual_samples": 7179,
+            "prior_post_stale": 627,
+            "matched_with_reported_closure_during_wait": 130,
+            "ambiguous_latest_post_timestamp": 95,
+            "fresh_prior_post_reports_closure": 61,
+            "no_prior_post_same_service_date": 41
+          },
+          "dates_with_at_least_one_matched_actual_for_every_ride": 95
+        },
+        "10": {
+          "pooled": {
+            "pairs": 6932,
+            "dates": 547,
+            "date_range": [
+              "2017-05-26",
+              "2019-01-06"
+            ],
+            "posted_mean_minutes": 47.778,
+            "actual_mean_minutes": 37.749,
+            "actual_range_minutes": [
+              0,
+              4338
+            ],
+            "signed_error_mean_minutes": 10.028,
+            "absolute_error_mean_minutes": 18.263,
+            "signed_error_quantiles_minutes": {
+              "min": -4143,
+              "p10": -9.0,
+              "p25": 0.0,
+              "median": 8.0,
+              "p75": 19.0,
+              "p90": 37.0,
+              "max": 227
+            },
+            "absolute_error_p90_minutes": 41.0,
+            "post_age_median_minutes": 1.0,
+            "sign_counts": {
+              "overposted": 5128,
+              "equal": 221,
+              "underposted": 1583
+            },
+            "within_absolute_error_counts": {
+              "5": 1955,
+              "10": 3378,
+              "15": 4356
+            },
+            "date_balanced_signed_error_mean_minutes": 9.678,
+            "date_balanced_absolute_error_mean_minutes": 18.193,
+            "arithmetic_sums_minutes": {
+              "signed_error": 69516,
+              "absolute_error": 126598
+            }
+          },
+          "by_ride": {
+            "AK07": {
+              "name": "Kilimanjaro Safaris",
+              "pairs": 1034,
+              "dates": 432,
+              "date_range": [
+                "2017-05-26",
+                "2019-01-06"
+              ],
+              "posted_mean_minutes": 29.715,
+              "actual_mean_minutes": 21.905,
+              "actual_range_minutes": [
+                0,
+                206
+              ],
+              "signed_error_mean_minutes": 7.809,
+              "absolute_error_mean_minutes": 12.332,
+              "signed_error_quantiles_minutes": {
+                "min": -161,
+                "p10": -7.0,
+                "p25": 0.0,
+                "median": 7.0,
+                "p75": 15.0,
+                "p90": 25.0,
+                "max": 107
+              },
+              "absolute_error_p90_minutes": 26.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 764,
+                "equal": 31,
+                "underposted": 239
+              },
+              "within_absolute_error_counts": {
+                "5": 318,
+                "10": 570,
+                "15": 748
+              },
+              "date_balanced_signed_error_mean_minutes": 7.825,
+              "date_balanced_absolute_error_mean_minutes": 12.653,
+              "arithmetic_sums_minutes": {
+                "signed_error": 8075,
+                "absolute_error": 12751
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 1059,
+                "matched_with_reported_closure_during_wait": 5,
+                "ambiguous_latest_post_timestamp": 8,
+                "fresh_prior_post_reports_closure": 11,
+                "no_prior_post_same_service_date": 2,
+                "prior_post_stale": 4
+              }
+            },
+            "AK11": {
+              "name": "Expedition Everest",
+              "pairs": 1505,
+              "dates": 485,
+              "date_range": [
+                "2017-05-26",
+                "2019-01-05"
+              ],
+              "posted_mean_minutes": 26.09,
+              "actual_mean_minutes": 18.105,
+              "actual_range_minutes": [
+                0,
+                101
+              ],
+              "signed_error_mean_minutes": 7.985,
+              "absolute_error_mean_minutes": 10.354,
+              "signed_error_quantiles_minutes": {
+                "min": -50,
+                "p10": -4.0,
+                "p25": 1.0,
+                "median": 6.0,
+                "p75": 13.0,
+                "p90": 22.0,
+                "max": 95
+              },
+              "absolute_error_p90_minutes": 23.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 1189,
+                "equal": 71,
+                "underposted": 245
+              },
+              "within_absolute_error_counts": {
+                "5": 602,
+                "10": 986,
+                "15": 1198
+              },
+              "date_balanced_signed_error_mean_minutes": 7.767,
+              "date_balanced_absolute_error_mean_minutes": 10.429,
+              "arithmetic_sums_minutes": {
+                "signed_error": 12017,
+                "absolute_error": 15583
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 1542,
+                "matched_with_reported_closure_during_wait": 6,
+                "prior_post_stale": 7,
+                "ambiguous_latest_post_timestamp": 21,
+                "fresh_prior_post_reports_closure": 9
+              }
+            },
+            "AK14": {
+              "name": "Kali River Rapids",
+              "pairs": 276,
+              "dates": 191,
+              "date_range": [
+                "2017-05-28",
+                "2019-01-05"
+              ],
+              "posted_mean_minutes": 32.681,
+              "actual_mean_minutes": 23.837,
+              "actual_range_minutes": [
+                0,
+                83
+              ],
+              "signed_error_mean_minutes": 8.844,
+              "absolute_error_mean_minutes": 14.322,
+              "signed_error_quantiles_minutes": {
+                "min": -42,
+                "p10": -9.0,
+                "p25": -1.0,
+                "median": 7.0,
+                "p75": 17.0,
+                "p90": 28.5,
+                "max": 89
+              },
+              "absolute_error_p90_minutes": 31.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 197,
+                "equal": 8,
+                "underposted": 71
+              },
+              "within_absolute_error_counts": {
+                "5": 76,
+                "10": 142,
+                "15": 176
+              },
+              "date_balanced_signed_error_mean_minutes": 8.281,
+              "date_balanced_absolute_error_mean_minutes": 13.915,
+              "arithmetic_sums_minutes": {
+                "signed_error": 2441,
+                "absolute_error": 3953
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 287,
+                "matched_with_reported_closure_during_wait": 6,
+                "prior_post_stale": 3,
+                "fresh_prior_post_reports_closure": 6,
+                "ambiguous_latest_post_timestamp": 2
+              }
+            },
+            "AK18": {
+              "name": "Dinosaur",
+              "pairs": 1279,
+              "dates": 457,
+              "date_range": [
+                "2017-05-26",
+                "2019-01-06"
+              ],
+              "posted_mean_minutes": 26.224,
+              "actual_mean_minutes": 21.378,
+              "actual_range_minutes": [
+                0,
+                96
+              ],
+              "signed_error_mean_minutes": 4.845,
+              "absolute_error_mean_minutes": 10.131,
+              "signed_error_quantiles_minutes": {
+                "min": -58,
+                "p10": -10.0,
+                "p25": -1.0,
+                "median": 5.0,
+                "p75": 12.0,
+                "p90": 19.0,
+                "max": 65
+              },
+              "absolute_error_p90_minutes": 21.2,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 855,
+                "equal": 55,
+                "underposted": 369
+              },
+              "within_absolute_error_counts": {
+                "5": 485,
+                "10": 800,
+                "15": 1021
+              },
+              "date_balanced_signed_error_mean_minutes": 4.669,
+              "date_balanced_absolute_error_mean_minutes": 10.279,
+              "arithmetic_sums_minutes": {
+                "signed_error": 6197,
+                "absolute_error": 12957
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 1327,
+                "matched_with_reported_closure_during_wait": 39,
+                "ambiguous_latest_post_timestamp": 28,
+                "prior_post_stale": 6,
+                "fresh_prior_post_reports_closure": 13,
+                "no_prior_post_same_service_date": 1
+              }
+            },
+            "AK85": {
+              "name": "Na'Vi River Journey",
+              "pairs": 1352,
+              "dates": 477,
+              "date_range": [
+                "2017-05-27",
+                "2019-01-06"
+              ],
+              "posted_mean_minutes": 47.637,
+              "actual_mean_minutes": 34.288,
+              "actual_range_minutes": [
+                0,
+                162
+              ],
+              "signed_error_mean_minutes": 13.348,
+              "absolute_error_mean_minutes": 17.97,
+              "signed_error_quantiles_minutes": {
+                "min": -78,
+                "p10": -8.0,
+                "p25": 1.0,
+                "median": 11.0,
+                "p75": 23.0,
+                "p90": 39.0,
+                "max": 131
+              },
+              "absolute_error_p90_minutes": 40.9,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 1039,
+                "equal": 35,
+                "underposted": 278
+              },
+              "within_absolute_error_counts": {
+                "5": 306,
+                "10": 566,
+                "15": 758
+              },
+              "date_balanced_signed_error_mean_minutes": 13.61,
+              "date_balanced_absolute_error_mean_minutes": 18.222,
+              "arithmetic_sums_minutes": {
+                "signed_error": 18047,
+                "absolute_error": 24295
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 1396,
+                "matched_with_reported_closure_during_wait": 33,
+                "fresh_prior_post_reports_closure": 12,
+                "no_prior_post_same_service_date": 4,
+                "prior_post_stale": 9,
+                "ambiguous_latest_post_timestamp": 19
+              }
+            },
+            "AK86": {
+              "name": "Avatar: Flight of Passage",
+              "pairs": 1486,
+              "dates": 467,
+              "date_range": [
+                "2017-05-26",
+                "2019-01-06"
+              ],
+              "posted_mean_minutes": 103.795,
+              "actual_mean_minutes": 88.493,
+              "actual_range_minutes": [
+                1,
+                4338
+              ],
+              "signed_error_mean_minutes": 15.302,
+              "absolute_error_mean_minutes": 38.398,
+              "signed_error_quantiles_minutes": {
+                "min": -4143,
+                "p10": -26.0,
+                "p25": -1.0,
+                "median": 20.0,
+                "p75": 41.0,
+                "p90": 65.0,
+                "max": 227
+              },
+              "absolute_error_p90_minutes": 69.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 1084,
+                "equal": 21,
+                "underposted": 381
+              },
+              "within_absolute_error_counts": {
+                "5": 168,
+                "10": 314,
+                "15": 455
+              },
+              "date_balanced_signed_error_mean_minutes": 14.201,
+              "date_balanced_absolute_error_mean_minutes": 38.304,
+              "arithmetic_sums_minutes": {
+                "signed_error": 22739,
+                "absolute_error": 57059
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 1568,
+                "matched_with_reported_closure_during_wait": 65,
+                "no_prior_post_same_service_date": 34,
+                "prior_post_stale": 15,
+                "fresh_prior_post_reports_closure": 15,
+                "ambiguous_latest_post_timestamp": 18
+              }
+            }
+          },
+          "identical_actual_row_dedup_sensitivity": {
+            "pairs": 6602,
+            "dates": 547,
+            "date_range": [
+              "2017-05-26",
+              "2019-01-06"
+            ],
+            "posted_mean_minutes": 48.016,
+            "actual_mean_minutes": 38.032,
+            "actual_range_minutes": [
+              0,
+              4338
+            ],
+            "signed_error_mean_minutes": 9.984,
+            "absolute_error_mean_minutes": 18.348,
+            "signed_error_quantiles_minutes": {
+              "min": -4143,
+              "p10": -9.0,
+              "p25": 0.0,
+              "median": 8.0,
+              "p75": 19.0,
+              "p90": 37.0,
+              "max": 227
+            },
+            "absolute_error_p90_minutes": 41.0,
+            "post_age_median_minutes": 1.0,
+            "sign_counts": {
+              "overposted": 4889,
+              "equal": 207,
+              "underposted": 1506
+            },
+            "within_absolute_error_counts": {
+              "5": 1851,
+              "10": 3207,
+              "15": 4142
+            },
+            "date_balanced_signed_error_mean_minutes": 9.631,
+            "date_balanced_absolute_error_mean_minutes": 18.29,
+            "arithmetic_sums_minutes": {
+              "signed_error": 65912,
+              "absolute_error": 121136
+            }
+          },
+          "match_accounting": {
+            "eligible_actual_samples": 7179,
+            "matched_with_reported_closure_during_wait": 154,
+            "ambiguous_latest_post_timestamp": 96,
+            "fresh_prior_post_reports_closure": 66,
+            "no_prior_post_same_service_date": 41,
+            "prior_post_stale": 44
+          },
+          "dates_with_at_least_one_matched_actual_for_every_ride": 120
+        },
+        "15": {
+          "pooled": {
+            "pairs": 6951,
+            "dates": 547,
+            "date_range": [
+              "2017-05-26",
+              "2019-01-06"
+            ],
+            "posted_mean_minutes": 47.798,
+            "actual_mean_minutes": 37.784,
+            "actual_range_minutes": [
+              0,
+              4338
+            ],
+            "signed_error_mean_minutes": 10.014,
+            "absolute_error_mean_minutes": 18.276,
+            "signed_error_quantiles_minutes": {
+              "min": -4143,
+              "p10": -9.0,
+              "p25": 0.0,
+              "median": 8.0,
+              "p75": 19.0,
+              "p90": 37.0,
+              "max": 227
+            },
+            "absolute_error_p90_minutes": 41.0,
+            "post_age_median_minutes": 1.0,
+            "sign_counts": {
+              "overposted": 5142,
+              "equal": 222,
+              "underposted": 1587
+            },
+            "within_absolute_error_counts": {
+              "5": 1963,
+              "10": 3386,
+              "15": 4367
+            },
+            "date_balanced_signed_error_mean_minutes": 9.653,
+            "date_balanced_absolute_error_mean_minutes": 18.189,
+            "arithmetic_sums_minutes": {
+              "signed_error": 69610,
+              "absolute_error": 127034
+            }
+          },
+          "by_ride": {
+            "AK07": {
+              "name": "Kilimanjaro Safaris",
+              "pairs": 1034,
+              "dates": 432,
+              "date_range": [
+                "2017-05-26",
+                "2019-01-06"
+              ],
+              "posted_mean_minutes": 29.715,
+              "actual_mean_minutes": 21.905,
+              "actual_range_minutes": [
+                0,
+                206
+              ],
+              "signed_error_mean_minutes": 7.809,
+              "absolute_error_mean_minutes": 12.332,
+              "signed_error_quantiles_minutes": {
+                "min": -161,
+                "p10": -7.0,
+                "p25": 0.0,
+                "median": 7.0,
+                "p75": 15.0,
+                "p90": 25.0,
+                "max": 107
+              },
+              "absolute_error_p90_minutes": 26.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 764,
+                "equal": 31,
+                "underposted": 239
+              },
+              "within_absolute_error_counts": {
+                "5": 318,
+                "10": 570,
+                "15": 748
+              },
+              "date_balanced_signed_error_mean_minutes": 7.825,
+              "date_balanced_absolute_error_mean_minutes": 12.653,
+              "arithmetic_sums_minutes": {
+                "signed_error": 8075,
+                "absolute_error": 12751
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 1059,
+                "matched_with_reported_closure_during_wait": 5,
+                "ambiguous_latest_post_timestamp": 8,
+                "fresh_prior_post_reports_closure": 11,
+                "no_prior_post_same_service_date": 2,
+                "prior_post_stale": 4
+              }
+            },
+            "AK11": {
+              "name": "Expedition Everest",
+              "pairs": 1509,
+              "dates": 486,
+              "date_range": [
+                "2017-05-26",
+                "2019-01-05"
+              ],
+              "posted_mean_minutes": 26.06,
+              "actual_mean_minutes": 18.083,
+              "actual_range_minutes": [
+                0,
+                101
+              ],
+              "signed_error_mean_minutes": 7.977,
+              "absolute_error_mean_minutes": 10.34,
+              "signed_error_quantiles_minutes": {
+                "min": -50,
+                "p10": -4.0,
+                "p25": 1.0,
+                "median": 6.0,
+                "p75": 13.0,
+                "p90": 22.0,
+                "max": 95
+              },
+              "absolute_error_p90_minutes": 23.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 1193,
+                "equal": 71,
+                "underposted": 245
+              },
+              "within_absolute_error_counts": {
+                "5": 605,
+                "10": 989,
+                "15": 1202
+              },
+              "date_balanced_signed_error_mean_minutes": 7.718,
+              "date_balanced_absolute_error_mean_minutes": 10.375,
+              "arithmetic_sums_minutes": {
+                "signed_error": 12037,
+                "absolute_error": 15603
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 1542,
+                "matched_with_reported_closure_during_wait": 6,
+                "ambiguous_latest_post_timestamp": 21,
+                "prior_post_stale": 3,
+                "fresh_prior_post_reports_closure": 9
+              }
+            },
+            "AK14": {
+              "name": "Kali River Rapids",
+              "pairs": 278,
+              "dates": 191,
+              "date_range": [
+                "2017-05-28",
+                "2019-01-05"
+              ],
+              "posted_mean_minutes": 32.662,
+              "actual_mean_minutes": 23.853,
+              "actual_range_minutes": [
+                0,
+                83
+              ],
+              "signed_error_mean_minutes": 8.809,
+              "absolute_error_mean_minutes": 14.248,
+              "signed_error_quantiles_minutes": {
+                "min": -42,
+                "p10": -9.0,
+                "p25": -1.0,
+                "median": 7.0,
+                "p75": 17.0,
+                "p90": 28.3,
+                "max": 89
+              },
+              "absolute_error_p90_minutes": 31.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 199,
+                "equal": 8,
+                "underposted": 71
+              },
+              "within_absolute_error_counts": {
+                "5": 78,
+                "10": 144,
+                "15": 178
+              },
+              "date_balanced_signed_error_mean_minutes": 8.272,
+              "date_balanced_absolute_error_mean_minutes": 13.906,
+              "arithmetic_sums_minutes": {
+                "signed_error": 2449,
+                "absolute_error": 3961
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 287,
+                "matched_with_reported_closure_during_wait": 6,
+                "fresh_prior_post_reports_closure": 6,
+                "ambiguous_latest_post_timestamp": 2,
+                "prior_post_stale": 1
+              }
+            },
+            "AK18": {
+              "name": "Dinosaur",
+              "pairs": 1281,
+              "dates": 457,
+              "date_range": [
+                "2017-05-26",
+                "2019-01-06"
+              ],
+              "posted_mean_minutes": 26.233,
+              "actual_mean_minutes": 21.385,
+              "actual_range_minutes": [
+                0,
+                96
+              ],
+              "signed_error_mean_minutes": 4.849,
+              "absolute_error_mean_minutes": 10.127,
+              "signed_error_quantiles_minutes": {
+                "min": -58,
+                "p10": -10.0,
+                "p25": -1.0,
+                "median": 5.0,
+                "p75": 12.0,
+                "p90": 19.0,
+                "max": 65
+              },
+              "absolute_error_p90_minutes": 21.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 856,
+                "equal": 55,
+                "underposted": 370
+              },
+              "within_absolute_error_counts": {
+                "5": 486,
+                "10": 801,
+                "15": 1023
+              },
+              "date_balanced_signed_error_mean_minutes": 4.672,
+              "date_balanced_absolute_error_mean_minutes": 10.282,
+              "arithmetic_sums_minutes": {
+                "signed_error": 6211,
+                "absolute_error": 12973
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 1327,
+                "matched_with_reported_closure_during_wait": 39,
+                "ambiguous_latest_post_timestamp": 28,
+                "prior_post_stale": 4,
+                "fresh_prior_post_reports_closure": 13,
+                "no_prior_post_same_service_date": 1
+              }
+            },
+            "AK85": {
+              "name": "Na'Vi River Journey",
+              "pairs": 1357,
+              "dates": 477,
+              "date_range": [
+                "2017-05-27",
+                "2019-01-06"
+              ],
+              "posted_mean_minutes": 47.609,
+              "actual_mean_minutes": 34.273,
+              "actual_range_minutes": [
+                0,
+                162
+              ],
+              "signed_error_mean_minutes": 13.336,
+              "absolute_error_mean_minutes": 17.948,
+              "signed_error_quantiles_minutes": {
+                "min": -78,
+                "p10": -8.0,
+                "p25": 1.0,
+                "median": 11.0,
+                "p75": 23.0,
+                "p90": 39.0,
+                "max": 131
+              },
+              "absolute_error_p90_minutes": 40.4,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 1042,
+                "equal": 36,
+                "underposted": 279
+              },
+              "within_absolute_error_counts": {
+                "5": 308,
+                "10": 568,
+                "15": 761
+              },
+              "date_balanced_signed_error_mean_minutes": 13.557,
+              "date_balanced_absolute_error_mean_minutes": 18.17,
+              "arithmetic_sums_minutes": {
+                "signed_error": 18097,
+                "absolute_error": 24355
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 1396,
+                "matched_with_reported_closure_during_wait": 33,
+                "fresh_prior_post_reports_closure": 12,
+                "no_prior_post_same_service_date": 4,
+                "prior_post_stale": 4,
+                "ambiguous_latest_post_timestamp": 19
+              }
+            },
+            "AK86": {
+              "name": "Avatar: Flight of Passage",
+              "pairs": 1492,
+              "dates": 468,
+              "date_range": [
+                "2017-05-26",
+                "2019-01-06"
+              ],
+              "posted_mean_minutes": 103.824,
+              "actual_mean_minutes": 88.582,
+              "actual_range_minutes": [
+                1,
+                4338
+              ],
+              "signed_error_mean_minutes": 15.242,
+              "absolute_error_mean_minutes": 38.466,
+              "signed_error_quantiles_minutes": {
+                "min": -4143,
+                "p10": -26.0,
+                "p25": -1.0,
+                "median": 20.0,
+                "p75": 41.0,
+                "p90": 65.0,
+                "max": 227
+              },
+              "absolute_error_p90_minutes": 69.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 1088,
+                "equal": 21,
+                "underposted": 383
+              },
+              "within_absolute_error_counts": {
+                "5": 168,
+                "10": 314,
+                "15": 455
+              },
+              "date_balanced_signed_error_mean_minutes": 14.184,
+              "date_balanced_absolute_error_mean_minutes": 38.328,
+              "arithmetic_sums_minutes": {
+                "signed_error": 22741,
+                "absolute_error": 57391
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 1568,
+                "matched_with_reported_closure_during_wait": 65,
+                "no_prior_post_same_service_date": 34,
+                "fresh_prior_post_reports_closure": 16,
+                "prior_post_stale": 8,
+                "ambiguous_latest_post_timestamp": 18
+              }
+            }
+          },
+          "identical_actual_row_dedup_sensitivity": {
+            "pairs": 6621,
+            "dates": 547,
+            "date_range": [
+              "2017-05-26",
+              "2019-01-06"
+            ],
+            "posted_mean_minutes": 48.037,
+            "actual_mean_minutes": 38.067,
+            "actual_range_minutes": [
+              0,
+              4338
+            ],
+            "signed_error_mean_minutes": 9.969,
+            "absolute_error_mean_minutes": 18.362,
+            "signed_error_quantiles_minutes": {
+              "min": -4143,
+              "p10": -9.0,
+              "p25": 0.0,
+              "median": 8.0,
+              "p75": 19.0,
+              "p90": 37.0,
+              "max": 227
+            },
+            "absolute_error_p90_minutes": 41.0,
+            "post_age_median_minutes": 1.0,
+            "sign_counts": {
+              "overposted": 4903,
+              "equal": 208,
+              "underposted": 1510
+            },
+            "within_absolute_error_counts": {
+              "5": 1859,
+              "10": 3215,
+              "15": 4153
+            },
+            "date_balanced_signed_error_mean_minutes": 9.605,
+            "date_balanced_absolute_error_mean_minutes": 18.285,
+            "arithmetic_sums_minutes": {
+              "signed_error": 66006,
+              "absolute_error": 121572
+            }
+          },
+          "match_accounting": {
+            "eligible_actual_samples": 7179,
+            "matched_with_reported_closure_during_wait": 154,
+            "ambiguous_latest_post_timestamp": 96,
+            "fresh_prior_post_reports_closure": 67,
+            "no_prior_post_same_service_date": 41,
+            "prior_post_stale": 24
+          },
+          "dates_with_at_least_one_matched_actual_for_every_ride": 120
+        }
+      }
+    },
+    "route_test_dates_all_times": {
+      "age_sensitivity": {
+        "5": {
+          "pooled": {
+            "pairs": 1937,
+            "dates": 164,
+            "date_range": [
+              "2018-07-26",
+              "2019-01-06"
+            ],
+            "posted_mean_minutes": 42.189,
+            "actual_mean_minutes": 34.965,
+            "actual_range_minutes": [
+              0,
+              2911
+            ],
+            "signed_error_mean_minutes": 7.224,
+            "absolute_error_mean_minutes": 15.966,
+            "signed_error_quantiles_minutes": {
+              "min": -2776,
+              "p10": -9.0,
+              "p25": 0.0,
+              "median": 7.0,
+              "p75": 16.0,
+              "p90": 30.0,
+              "max": 153
+            },
+            "absolute_error_p90_minutes": 33.0,
+            "post_age_median_minutes": 1.0,
+            "sign_counts": {
+              "overposted": 1424,
+              "equal": 65,
+              "underposted": 448
+            },
+            "within_absolute_error_counts": {
+              "5": 565,
+              "10": 998,
+              "15": 1285
+            },
+            "date_balanced_signed_error_mean_minutes": 6.744,
+            "date_balanced_absolute_error_mean_minutes": 16.045,
+            "arithmetic_sums_minutes": {
+              "signed_error": 13992,
+              "absolute_error": 30926
+            }
+          },
+          "by_ride": {
+            "AK07": {
+              "name": "Kilimanjaro Safaris",
+              "pairs": 294,
+              "dates": 131,
+              "date_range": [
+                "2018-07-27",
+                "2019-01-05"
+              ],
+              "posted_mean_minutes": 31.616,
+              "actual_mean_minutes": 22.245,
+              "actual_range_minutes": [
+                0,
+                124
+              ],
+              "signed_error_mean_minutes": 9.371,
+              "absolute_error_mean_minutes": 12.847,
+              "signed_error_quantiles_minutes": {
+                "min": -36,
+                "p10": -5.7,
+                "p25": 1.25,
+                "median": 8.0,
+                "p75": 16.75,
+                "p90": 27.7,
+                "max": 61
+              },
+              "absolute_error_p90_minutes": 28.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 231,
+                "equal": 7,
+                "underposted": 56
+              },
+              "within_absolute_error_counts": {
+                "5": 87,
+                "10": 155,
+                "15": 204
+              },
+              "date_balanced_signed_error_mean_minutes": 9.697,
+              "date_balanced_absolute_error_mean_minutes": 12.546,
+              "arithmetic_sums_minutes": {
+                "signed_error": 2755,
+                "absolute_error": 3777
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 326,
+                "matched_with_reported_closure_during_wait": 1,
+                "fresh_prior_post_reports_closure": 4,
+                "prior_post_stale": 26,
+                "ambiguous_latest_post_timestamp": 2
+              }
+            },
+            "AK11": {
+              "name": "Expedition Everest",
+              "pairs": 429,
+              "dates": 145,
+              "date_range": [
+                "2018-07-27",
+                "2019-01-05"
+              ],
+              "posted_mean_minutes": 24.219,
+              "actual_mean_minutes": 18.413,
+              "actual_range_minutes": [
+                0,
+                101
+              ],
+              "signed_error_mean_minutes": 5.807,
+              "absolute_error_mean_minutes": 8.939,
+              "signed_error_quantiles_minutes": {
+                "min": -42,
+                "p10": -5.0,
+                "p25": 0.0,
+                "median": 5.0,
+                "p75": 10.0,
+                "p90": 17.2,
+                "max": 66
+              },
+              "absolute_error_p90_minutes": 20.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 321,
+                "equal": 20,
+                "underposted": 88
+              },
+              "within_absolute_error_counts": {
+                "5": 185,
+                "10": 301,
+                "15": 361
+              },
+              "date_balanced_signed_error_mean_minutes": 5.7,
+              "date_balanced_absolute_error_mean_minutes": 9.014,
+              "arithmetic_sums_minutes": {
+                "signed_error": 2491,
+                "absolute_error": 3835
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 466,
+                "matched_with_reported_closure_during_wait": 2,
+                "prior_post_stale": 28,
+                "ambiguous_latest_post_timestamp": 6,
+                "fresh_prior_post_reports_closure": 3
+              }
+            },
+            "AK14": {
+              "name": "Kali River Rapids",
+              "pairs": 89,
+              "dates": 55,
+              "date_range": [
+                "2018-07-26",
+                "2019-01-05"
+              ],
+              "posted_mean_minutes": 29.213,
+              "actual_mean_minutes": 24.135,
+              "actual_range_minutes": [
+                0,
+                82
+              ],
+              "signed_error_mean_minutes": 5.079,
+              "absolute_error_mean_minutes": 12.921,
+              "signed_error_quantiles_minutes": {
+                "min": -42,
+                "p10": -14.0,
+                "p25": -4.0,
+                "median": 6.0,
+                "p75": 16.0,
+                "p90": 24.2,
+                "max": 50
+              },
+              "absolute_error_p90_minutes": 28.2,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 58,
+                "equal": 3,
+                "underposted": 28
+              },
+              "within_absolute_error_counts": {
+                "5": 25,
+                "10": 49,
+                "15": 59
+              },
+              "date_balanced_signed_error_mean_minutes": 4.165,
+              "date_balanced_absolute_error_mean_minutes": 12.424,
+              "arithmetic_sums_minutes": {
+                "signed_error": 452,
+                "absolute_error": 1150
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 99,
+                "matched_with_reported_closure_during_wait": 2,
+                "prior_post_stale": 7,
+                "fresh_prior_post_reports_closure": 2,
+                "ambiguous_latest_post_timestamp": 1
+              }
+            },
+            "AK18": {
+              "name": "Dinosaur",
+              "pairs": 382,
+              "dates": 139,
+              "date_range": [
+                "2018-07-27",
+                "2019-01-06"
+              ],
+              "posted_mean_minutes": 25.641,
+              "actual_mean_minutes": 19.861,
+              "actual_range_minutes": [
+                0,
+                71
+              ],
+              "signed_error_mean_minutes": 5.78,
+              "absolute_error_mean_minutes": 10.33,
+              "signed_error_quantiles_minutes": {
+                "min": -38,
+                "p10": -9.0,
+                "p25": -0.75,
+                "median": 7.0,
+                "p75": 12.0,
+                "p90": 18.0,
+                "max": 50
+              },
+              "absolute_error_p90_minutes": 19.9,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 272,
+                "equal": 14,
+                "underposted": 96
+              },
+              "within_absolute_error_counts": {
+                "5": 125,
+                "10": 232,
+                "15": 311
+              },
+              "date_balanced_signed_error_mean_minutes": 5.804,
+              "date_balanced_absolute_error_mean_minutes": 10.024,
+              "arithmetic_sums_minutes": {
+                "signed_error": 2208,
+                "absolute_error": 3946
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 434,
+                "prior_post_stale": 31,
+                "matched_with_reported_closure_during_wait": 12,
+                "ambiguous_latest_post_timestamp": 12,
+                "fresh_prior_post_reports_closure": 9
+              }
+            },
+            "AK85": {
+              "name": "Na'Vi River Journey",
+              "pairs": 354,
+              "dates": 138,
+              "date_range": [
+                "2018-07-26",
+                "2019-01-06"
+              ],
+              "posted_mean_minutes": 41.977,
+              "actual_mean_minutes": 29.144,
+              "actual_range_minutes": [
+                0,
+                131
+              ],
+              "signed_error_mean_minutes": 12.833,
+              "absolute_error_mean_minutes": 15.975,
+              "signed_error_quantiles_minutes": {
+                "min": -67,
+                "p10": -3.7,
+                "p25": 3.0,
+                "median": 11.0,
+                "p75": 22.0,
+                "p90": 31.0,
+                "max": 73
+              },
+              "absolute_error_p90_minutes": 32.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 291,
+                "equal": 11,
+                "underposted": 52
+              },
+              "within_absolute_error_counts": {
+                "5": 86,
+                "10": 151,
+                "15": 200
+              },
+              "date_balanced_signed_error_mean_minutes": 11.676,
+              "date_balanced_absolute_error_mean_minutes": 15.429,
+              "arithmetic_sums_minutes": {
+                "signed_error": 4543,
+                "absolute_error": 5655
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 385,
+                "matched_with_reported_closure_during_wait": 5,
+                "fresh_prior_post_reports_closure": 4,
+                "prior_post_stale": 22,
+                "ambiguous_latest_post_timestamp": 5
+              }
+            },
+            "AK86": {
+              "name": "Avatar: Flight of Passage",
+              "pairs": 389,
+              "dates": 136,
+              "date_range": [
+                "2018-07-28",
+                "2019-01-06"
+              ],
+              "posted_mean_minutes": 89.409,
+              "actual_mean_minutes": 85.442,
+              "actual_range_minutes": [
+                5,
+                2911
+              ],
+              "signed_error_mean_minutes": 3.967,
+              "absolute_error_mean_minutes": 32.296,
+              "signed_error_quantiles_minutes": {
+                "min": -2776,
+                "p10": -26.2,
+                "p25": -8.0,
+                "median": 10.0,
+                "p75": 28.0,
+                "p90": 48.0,
+                "max": 153
+              },
+              "absolute_error_p90_minutes": 53.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 251,
+                "equal": 10,
+                "underposted": 128
+              },
+              "within_absolute_error_counts": {
+                "5": 57,
+                "10": 110,
+                "15": 150
+              },
+              "date_balanced_signed_error_mean_minutes": 8.248,
+              "date_balanced_absolute_error_mean_minutes": 29.294,
+              "arithmetic_sums_minutes": {
+                "signed_error": 1543,
+                "absolute_error": 12563
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 429,
+                "matched_with_reported_closure_during_wait": 20,
+                "prior_post_stale": 33,
+                "ambiguous_latest_post_timestamp": 5,
+                "fresh_prior_post_reports_closure": 2
+              }
+            }
+          },
+          "identical_actual_row_dedup_sensitivity": {
+            "pairs": 1824,
+            "dates": 164,
+            "date_range": [
+              "2018-07-26",
+              "2019-01-06"
+            ],
+            "posted_mean_minutes": 42.404,
+            "actual_mean_minutes": 35.084,
+            "actual_range_minutes": [
+              0,
+              2911
+            ],
+            "signed_error_mean_minutes": 7.32,
+            "absolute_error_mean_minutes": 16.05,
+            "signed_error_quantiles_minutes": {
+              "min": -2776,
+              "p10": -9.0,
+              "p25": 0.0,
+              "median": 7.0,
+              "p75": 17.0,
+              "p90": 30.0,
+              "max": 153
+            },
+            "absolute_error_p90_minutes": 33.0,
+            "post_age_median_minutes": 1.0,
+            "sign_counts": {
+              "overposted": 1351,
+              "equal": 59,
+              "underposted": 414
+            },
+            "within_absolute_error_counts": {
+              "5": 536,
+              "10": 942,
+              "15": 1210
+            },
+            "date_balanced_signed_error_mean_minutes": 6.763,
+            "date_balanced_absolute_error_mean_minutes": 16.225,
+            "arithmetic_sums_minutes": {
+              "signed_error": 13352,
+              "absolute_error": 29276
+            }
+          },
+          "match_accounting": {
+            "eligible_actual_samples": 2139,
+            "matched_with_reported_closure_during_wait": 42,
+            "fresh_prior_post_reports_closure": 24,
+            "prior_post_stale": 147,
+            "ambiguous_latest_post_timestamp": 31
+          },
+          "dates_with_at_least_one_matched_actual_for_every_ride": 31
+        },
+        "10": {
+          "pooled": {
+            "pairs": 2079,
+            "dates": 164,
+            "date_range": [
+              "2018-07-26",
+              "2019-01-06"
+            ],
+            "posted_mean_minutes": 42.362,
+            "actual_mean_minutes": 35.019,
+            "actual_range_minutes": [
+              0,
+              2911
+            ],
+            "signed_error_mean_minutes": 7.342,
+            "absolute_error_mean_minutes": 16.091,
+            "signed_error_quantiles_minutes": {
+              "min": -2776,
+              "p10": -10.0,
+              "p25": 0.0,
+              "median": 7.0,
+              "p75": 17.0,
+              "p90": 30.0,
+              "max": 153
+            },
+            "absolute_error_p90_minutes": 33.0,
+            "post_age_median_minutes": 1.0,
+            "sign_counts": {
+              "overposted": 1527,
+              "equal": 66,
+              "underposted": 486
+            },
+            "within_absolute_error_counts": {
+              "5": 595,
+              "10": 1056,
+              "15": 1368
+            },
+            "date_balanced_signed_error_mean_minutes": 6.856,
+            "date_balanced_absolute_error_mean_minutes": 16.269,
+            "arithmetic_sums_minutes": {
+              "signed_error": 15265,
+              "absolute_error": 33453
+            }
+          },
+          "by_ride": {
+            "AK07": {
+              "name": "Kilimanjaro Safaris",
+              "pairs": 319,
+              "dates": 134,
+              "date_range": [
+                "2018-07-27",
+                "2019-01-06"
+              ],
+              "posted_mean_minutes": 31.677,
+              "actual_mean_minutes": 22.398,
+              "actual_range_minutes": [
+                0,
+                124
+              ],
+              "signed_error_mean_minutes": 9.279,
+              "absolute_error_mean_minutes": 12.884,
+              "signed_error_quantiles_minutes": {
+                "min": -36,
+                "p10": -7.0,
+                "p25": 1.0,
+                "median": 8.0,
+                "p75": 16.5,
+                "p90": 27.2,
+                "max": 61
+              },
+              "absolute_error_p90_minutes": 28.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 245,
+                "equal": 8,
+                "underposted": 66
+              },
+              "within_absolute_error_counts": {
+                "5": 93,
+                "10": 167,
+                "15": 223
+              },
+              "date_balanced_signed_error_mean_minutes": 9.488,
+              "date_balanced_absolute_error_mean_minutes": 12.579,
+              "arithmetic_sums_minutes": {
+                "signed_error": 2960,
+                "absolute_error": 4110
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 326,
+                "matched_with_reported_closure_during_wait": 1,
+                "fresh_prior_post_reports_closure": 5,
+                "ambiguous_latest_post_timestamp": 2
+              }
+            },
+            "AK11": {
+              "name": "Expedition Everest",
+              "pairs": 457,
+              "dates": 146,
+              "date_range": [
+                "2018-07-27",
+                "2019-01-05"
+              ],
+              "posted_mean_minutes": 24.201,
+              "actual_mean_minutes": 18.702,
+              "actual_range_minutes": [
+                0,
+                101
+              ],
+              "signed_error_mean_minutes": 5.499,
+              "absolute_error_mean_minutes": 9.144,
+              "signed_error_quantiles_minutes": {
+                "min": -50,
+                "p10": -6.0,
+                "p25": 0.0,
+                "median": 5.0,
+                "p75": 10.0,
+                "p90": 18.4,
+                "max": 66
+              },
+              "absolute_error_p90_minutes": 20.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 337,
+                "equal": 20,
+                "underposted": 100
+              },
+              "within_absolute_error_counts": {
+                "5": 196,
+                "10": 318,
+                "15": 381
+              },
+              "date_balanced_signed_error_mean_minutes": 5.415,
+              "date_balanced_absolute_error_mean_minutes": 9.248,
+              "arithmetic_sums_minutes": {
+                "signed_error": 2513,
+                "absolute_error": 4179
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 466,
+                "matched_with_reported_closure_during_wait": 3,
+                "ambiguous_latest_post_timestamp": 6,
+                "fresh_prior_post_reports_closure": 3
+              }
+            },
+            "AK14": {
+              "name": "Kali River Rapids",
+              "pairs": 94,
+              "dates": 58,
+              "date_range": [
+                "2018-07-26",
+                "2019-01-05"
+              ],
+              "posted_mean_minutes": 28.936,
+              "actual_mean_minutes": 23.33,
+              "actual_range_minutes": [
+                0,
+                82
+              ],
+              "signed_error_mean_minutes": 5.606,
+              "absolute_error_mean_minutes": 13.117,
+              "signed_error_quantiles_minutes": {
+                "min": -42,
+                "p10": -12.8,
+                "p25": -3.75,
+                "median": 6.0,
+                "p75": 17.5,
+                "p90": 24.7,
+                "max": 50
+              },
+              "absolute_error_p90_minutes": 28.7,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 62,
+                "equal": 3,
+                "underposted": 29
+              },
+              "within_absolute_error_counts": {
+                "5": 26,
+                "10": 51,
+                "15": 61
+              },
+              "date_balanced_signed_error_mean_minutes": 4.78,
+              "date_balanced_absolute_error_mean_minutes": 12.721,
+              "arithmetic_sums_minutes": {
+                "signed_error": 527,
+                "absolute_error": 1233
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 99,
+                "matched_with_reported_closure_during_wait": 2,
+                "fresh_prior_post_reports_closure": 3,
+                "prior_post_stale": 1,
+                "ambiguous_latest_post_timestamp": 1
+              }
+            },
+            "AK18": {
+              "name": "Dinosaur",
+              "pairs": 411,
+              "dates": 143,
+              "date_range": [
+                "2018-07-26",
+                "2019-01-06"
+              ],
+              "posted_mean_minutes": 25.973,
+              "actual_mean_minutes": 20.012,
+              "actual_range_minutes": [
+                0,
+                71
+              ],
+              "signed_error_mean_minutes": 5.961,
+              "absolute_error_mean_minutes": 10.657,
+              "signed_error_quantiles_minutes": {
+                "min": -38,
+                "p10": -9.0,
+                "p25": 0.0,
+                "median": 7.0,
+                "p75": 12.5,
+                "p90": 19.0,
+                "max": 65
+              },
+              "absolute_error_p90_minutes": 21.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 295,
+                "equal": 14,
+                "underposted": 102
+              },
+              "within_absolute_error_counts": {
+                "5": 130,
+                "10": 246,
+                "15": 331
+              },
+              "date_balanced_signed_error_mean_minutes": 6.439,
+              "date_balanced_absolute_error_mean_minutes": 10.627,
+              "arithmetic_sums_minutes": {
+                "signed_error": 2450,
+                "absolute_error": 4380
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 434,
+                "matched_with_reported_closure_during_wait": 16,
+                "ambiguous_latest_post_timestamp": 12,
+                "fresh_prior_post_reports_closure": 9,
+                "prior_post_stale": 2
+              }
+            },
+            "AK85": {
+              "name": "Na'Vi River Journey",
+              "pairs": 376,
+              "dates": 141,
+              "date_range": [
+                "2018-07-26",
+                "2019-01-06"
+              ],
+              "posted_mean_minutes": 42.566,
+              "actual_mean_minutes": 29.434,
+              "actual_range_minutes": [
+                0,
+                131
+              ],
+              "signed_error_mean_minutes": 13.133,
+              "absolute_error_mean_minutes": 16.191,
+              "signed_error_quantiles_minutes": {
+                "min": -67,
+                "p10": -3.5,
+                "p25": 3.0,
+                "median": 12.0,
+                "p75": 22.25,
+                "p90": 31.5,
+                "max": 73
+              },
+              "absolute_error_p90_minutes": 32.5,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 311,
+                "equal": 11,
+                "underposted": 54
+              },
+              "within_absolute_error_counts": {
+                "5": 86,
+                "10": 156,
+                "15": 208
+              },
+              "date_balanced_signed_error_mean_minutes": 12.19,
+              "date_balanced_absolute_error_mean_minutes": 15.67,
+              "arithmetic_sums_minutes": {
+                "signed_error": 4938,
+                "absolute_error": 6088
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 385,
+                "matched_with_reported_closure_during_wait": 5,
+                "fresh_prior_post_reports_closure": 4,
+                "ambiguous_latest_post_timestamp": 5
+              }
+            },
+            "AK86": {
+              "name": "Avatar: Flight of Passage",
+              "pairs": 422,
+              "dates": 139,
+              "date_range": [
+                "2018-07-28",
+                "2019-01-06"
+              ],
+              "posted_mean_minutes": 88.874,
+              "actual_mean_minutes": 84.427,
+              "actual_range_minutes": [
+                5,
+                2911
+              ],
+              "signed_error_mean_minutes": 4.448,
+              "absolute_error_mean_minutes": 31.903,
+              "signed_error_quantiles_minutes": {
+                "min": -2776,
+                "p10": -26.0,
+                "p25": -7.0,
+                "median": 10.5,
+                "p75": 28.0,
+                "p90": 47.9,
+                "max": 153
+              },
+              "absolute_error_p90_minutes": 53.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 277,
+                "equal": 10,
+                "underposted": 135
+              },
+              "within_absolute_error_counts": {
+                "5": 64,
+                "10": 118,
+                "15": 164
+              },
+              "date_balanced_signed_error_mean_minutes": 8.651,
+              "date_balanced_absolute_error_mean_minutes": 30.077,
+              "arithmetic_sums_minutes": {
+                "signed_error": 1877,
+                "absolute_error": 13463
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 429,
+                "matched_with_reported_closure_during_wait": 22,
+                "ambiguous_latest_post_timestamp": 5,
+                "fresh_prior_post_reports_closure": 2
+              }
+            }
+          },
+          "identical_actual_row_dedup_sensitivity": {
+            "pairs": 1961,
+            "dates": 164,
+            "date_range": [
+              "2018-07-26",
+              "2019-01-06"
+            ],
+            "posted_mean_minutes": 42.585,
+            "actual_mean_minutes": 35.133,
+            "actual_range_minutes": [
+              0,
+              2911
+            ],
+            "signed_error_mean_minutes": 7.453,
+            "absolute_error_mean_minutes": 16.201,
+            "signed_error_quantiles_minutes": {
+              "min": -2776,
+              "p10": -9.0,
+              "p25": 0.0,
+              "median": 8.0,
+              "p75": 17.0,
+              "p90": 30.0,
+              "max": 153
+            },
+            "absolute_error_p90_minutes": 33.0,
+            "post_age_median_minutes": 1.0,
+            "sign_counts": {
+              "overposted": 1450,
+              "equal": 60,
+              "underposted": 451
+            },
+            "within_absolute_error_counts": {
+              "5": 564,
+              "10": 996,
+              "15": 1288
+            },
+            "date_balanced_signed_error_mean_minutes": 6.876,
+            "date_balanced_absolute_error_mean_minutes": 16.447,
+            "arithmetic_sums_minutes": {
+              "signed_error": 14615,
+              "absolute_error": 31771
+            }
+          },
+          "match_accounting": {
+            "eligible_actual_samples": 2139,
+            "matched_with_reported_closure_during_wait": 49,
+            "fresh_prior_post_reports_closure": 26,
+            "ambiguous_latest_post_timestamp": 31,
+            "prior_post_stale": 3
+          },
+          "dates_with_at_least_one_matched_actual_for_every_ride": 36
+        },
+        "15": {
+          "pooled": {
+            "pairs": 2079,
+            "dates": 164,
+            "date_range": [
+              "2018-07-26",
+              "2019-01-06"
+            ],
+            "posted_mean_minutes": 42.362,
+            "actual_mean_minutes": 35.019,
+            "actual_range_minutes": [
+              0,
+              2911
+            ],
+            "signed_error_mean_minutes": 7.342,
+            "absolute_error_mean_minutes": 16.091,
+            "signed_error_quantiles_minutes": {
+              "min": -2776,
+              "p10": -10.0,
+              "p25": 0.0,
+              "median": 7.0,
+              "p75": 17.0,
+              "p90": 30.0,
+              "max": 153
+            },
+            "absolute_error_p90_minutes": 33.0,
+            "post_age_median_minutes": 1.0,
+            "sign_counts": {
+              "overposted": 1527,
+              "equal": 66,
+              "underposted": 486
+            },
+            "within_absolute_error_counts": {
+              "5": 595,
+              "10": 1056,
+              "15": 1368
+            },
+            "date_balanced_signed_error_mean_minutes": 6.856,
+            "date_balanced_absolute_error_mean_minutes": 16.269,
+            "arithmetic_sums_minutes": {
+              "signed_error": 15265,
+              "absolute_error": 33453
+            }
+          },
+          "by_ride": {
+            "AK07": {
+              "name": "Kilimanjaro Safaris",
+              "pairs": 319,
+              "dates": 134,
+              "date_range": [
+                "2018-07-27",
+                "2019-01-06"
+              ],
+              "posted_mean_minutes": 31.677,
+              "actual_mean_minutes": 22.398,
+              "actual_range_minutes": [
+                0,
+                124
+              ],
+              "signed_error_mean_minutes": 9.279,
+              "absolute_error_mean_minutes": 12.884,
+              "signed_error_quantiles_minutes": {
+                "min": -36,
+                "p10": -7.0,
+                "p25": 1.0,
+                "median": 8.0,
+                "p75": 16.5,
+                "p90": 27.2,
+                "max": 61
+              },
+              "absolute_error_p90_minutes": 28.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 245,
+                "equal": 8,
+                "underposted": 66
+              },
+              "within_absolute_error_counts": {
+                "5": 93,
+                "10": 167,
+                "15": 223
+              },
+              "date_balanced_signed_error_mean_minutes": 9.488,
+              "date_balanced_absolute_error_mean_minutes": 12.579,
+              "arithmetic_sums_minutes": {
+                "signed_error": 2960,
+                "absolute_error": 4110
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 326,
+                "matched_with_reported_closure_during_wait": 1,
+                "fresh_prior_post_reports_closure": 5,
+                "ambiguous_latest_post_timestamp": 2
+              }
+            },
+            "AK11": {
+              "name": "Expedition Everest",
+              "pairs": 457,
+              "dates": 146,
+              "date_range": [
+                "2018-07-27",
+                "2019-01-05"
+              ],
+              "posted_mean_minutes": 24.201,
+              "actual_mean_minutes": 18.702,
+              "actual_range_minutes": [
+                0,
+                101
+              ],
+              "signed_error_mean_minutes": 5.499,
+              "absolute_error_mean_minutes": 9.144,
+              "signed_error_quantiles_minutes": {
+                "min": -50,
+                "p10": -6.0,
+                "p25": 0.0,
+                "median": 5.0,
+                "p75": 10.0,
+                "p90": 18.4,
+                "max": 66
+              },
+              "absolute_error_p90_minutes": 20.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 337,
+                "equal": 20,
+                "underposted": 100
+              },
+              "within_absolute_error_counts": {
+                "5": 196,
+                "10": 318,
+                "15": 381
+              },
+              "date_balanced_signed_error_mean_minutes": 5.415,
+              "date_balanced_absolute_error_mean_minutes": 9.248,
+              "arithmetic_sums_minutes": {
+                "signed_error": 2513,
+                "absolute_error": 4179
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 466,
+                "matched_with_reported_closure_during_wait": 3,
+                "ambiguous_latest_post_timestamp": 6,
+                "fresh_prior_post_reports_closure": 3
+              }
+            },
+            "AK14": {
+              "name": "Kali River Rapids",
+              "pairs": 94,
+              "dates": 58,
+              "date_range": [
+                "2018-07-26",
+                "2019-01-05"
+              ],
+              "posted_mean_minutes": 28.936,
+              "actual_mean_minutes": 23.33,
+              "actual_range_minutes": [
+                0,
+                82
+              ],
+              "signed_error_mean_minutes": 5.606,
+              "absolute_error_mean_minutes": 13.117,
+              "signed_error_quantiles_minutes": {
+                "min": -42,
+                "p10": -12.8,
+                "p25": -3.75,
+                "median": 6.0,
+                "p75": 17.5,
+                "p90": 24.7,
+                "max": 50
+              },
+              "absolute_error_p90_minutes": 28.7,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 62,
+                "equal": 3,
+                "underposted": 29
+              },
+              "within_absolute_error_counts": {
+                "5": 26,
+                "10": 51,
+                "15": 61
+              },
+              "date_balanced_signed_error_mean_minutes": 4.78,
+              "date_balanced_absolute_error_mean_minutes": 12.721,
+              "arithmetic_sums_minutes": {
+                "signed_error": 527,
+                "absolute_error": 1233
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 99,
+                "matched_with_reported_closure_during_wait": 2,
+                "fresh_prior_post_reports_closure": 3,
+                "prior_post_stale": 1,
+                "ambiguous_latest_post_timestamp": 1
+              }
+            },
+            "AK18": {
+              "name": "Dinosaur",
+              "pairs": 411,
+              "dates": 143,
+              "date_range": [
+                "2018-07-26",
+                "2019-01-06"
+              ],
+              "posted_mean_minutes": 25.973,
+              "actual_mean_minutes": 20.012,
+              "actual_range_minutes": [
+                0,
+                71
+              ],
+              "signed_error_mean_minutes": 5.961,
+              "absolute_error_mean_minutes": 10.657,
+              "signed_error_quantiles_minutes": {
+                "min": -38,
+                "p10": -9.0,
+                "p25": 0.0,
+                "median": 7.0,
+                "p75": 12.5,
+                "p90": 19.0,
+                "max": 65
+              },
+              "absolute_error_p90_minutes": 21.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 295,
+                "equal": 14,
+                "underposted": 102
+              },
+              "within_absolute_error_counts": {
+                "5": 130,
+                "10": 246,
+                "15": 331
+              },
+              "date_balanced_signed_error_mean_minutes": 6.439,
+              "date_balanced_absolute_error_mean_minutes": 10.627,
+              "arithmetic_sums_minutes": {
+                "signed_error": 2450,
+                "absolute_error": 4380
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 434,
+                "matched_with_reported_closure_during_wait": 16,
+                "ambiguous_latest_post_timestamp": 12,
+                "fresh_prior_post_reports_closure": 9,
+                "prior_post_stale": 2
+              }
+            },
+            "AK85": {
+              "name": "Na'Vi River Journey",
+              "pairs": 376,
+              "dates": 141,
+              "date_range": [
+                "2018-07-26",
+                "2019-01-06"
+              ],
+              "posted_mean_minutes": 42.566,
+              "actual_mean_minutes": 29.434,
+              "actual_range_minutes": [
+                0,
+                131
+              ],
+              "signed_error_mean_minutes": 13.133,
+              "absolute_error_mean_minutes": 16.191,
+              "signed_error_quantiles_minutes": {
+                "min": -67,
+                "p10": -3.5,
+                "p25": 3.0,
+                "median": 12.0,
+                "p75": 22.25,
+                "p90": 31.5,
+                "max": 73
+              },
+              "absolute_error_p90_minutes": 32.5,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 311,
+                "equal": 11,
+                "underposted": 54
+              },
+              "within_absolute_error_counts": {
+                "5": 86,
+                "10": 156,
+                "15": 208
+              },
+              "date_balanced_signed_error_mean_minutes": 12.19,
+              "date_balanced_absolute_error_mean_minutes": 15.67,
+              "arithmetic_sums_minutes": {
+                "signed_error": 4938,
+                "absolute_error": 6088
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 385,
+                "matched_with_reported_closure_during_wait": 5,
+                "fresh_prior_post_reports_closure": 4,
+                "ambiguous_latest_post_timestamp": 5
+              }
+            },
+            "AK86": {
+              "name": "Avatar: Flight of Passage",
+              "pairs": 422,
+              "dates": 139,
+              "date_range": [
+                "2018-07-28",
+                "2019-01-06"
+              ],
+              "posted_mean_minutes": 88.874,
+              "actual_mean_minutes": 84.427,
+              "actual_range_minutes": [
+                5,
+                2911
+              ],
+              "signed_error_mean_minutes": 4.448,
+              "absolute_error_mean_minutes": 31.903,
+              "signed_error_quantiles_minutes": {
+                "min": -2776,
+                "p10": -26.0,
+                "p25": -7.0,
+                "median": 10.5,
+                "p75": 28.0,
+                "p90": 47.9,
+                "max": 153
+              },
+              "absolute_error_p90_minutes": 53.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 277,
+                "equal": 10,
+                "underposted": 135
+              },
+              "within_absolute_error_counts": {
+                "5": 64,
+                "10": 118,
+                "15": 164
+              },
+              "date_balanced_signed_error_mean_minutes": 8.651,
+              "date_balanced_absolute_error_mean_minutes": 30.077,
+              "arithmetic_sums_minutes": {
+                "signed_error": 1877,
+                "absolute_error": 13463
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 429,
+                "matched_with_reported_closure_during_wait": 22,
+                "ambiguous_latest_post_timestamp": 5,
+                "fresh_prior_post_reports_closure": 2
+              }
+            }
+          },
+          "identical_actual_row_dedup_sensitivity": {
+            "pairs": 1961,
+            "dates": 164,
+            "date_range": [
+              "2018-07-26",
+              "2019-01-06"
+            ],
+            "posted_mean_minutes": 42.585,
+            "actual_mean_minutes": 35.133,
+            "actual_range_minutes": [
+              0,
+              2911
+            ],
+            "signed_error_mean_minutes": 7.453,
+            "absolute_error_mean_minutes": 16.201,
+            "signed_error_quantiles_minutes": {
+              "min": -2776,
+              "p10": -9.0,
+              "p25": 0.0,
+              "median": 8.0,
+              "p75": 17.0,
+              "p90": 30.0,
+              "max": 153
+            },
+            "absolute_error_p90_minutes": 33.0,
+            "post_age_median_minutes": 1.0,
+            "sign_counts": {
+              "overposted": 1450,
+              "equal": 60,
+              "underposted": 451
+            },
+            "within_absolute_error_counts": {
+              "5": 564,
+              "10": 996,
+              "15": 1288
+            },
+            "date_balanced_signed_error_mean_minutes": 6.876,
+            "date_balanced_absolute_error_mean_minutes": 16.447,
+            "arithmetic_sums_minutes": {
+              "signed_error": 14615,
+              "absolute_error": 31771
+            }
+          },
+          "match_accounting": {
+            "eligible_actual_samples": 2139,
+            "matched_with_reported_closure_during_wait": 49,
+            "fresh_prior_post_reports_closure": 26,
+            "ambiguous_latest_post_timestamp": 31,
+            "prior_post_stale": 3
+          },
+          "dates_with_at_least_one_matched_actual_for_every_ride": 36
+        }
+      }
+    },
+    "route_test_dates_10_17": {
+      "age_sensitivity": {
+        "5": {
+          "pooled": {
+            "pairs": 820,
+            "dates": 154,
+            "date_range": [
+              "2018-07-26",
+              "2019-01-06"
+            ],
+            "posted_mean_minutes": 48.372,
+            "actual_mean_minutes": 40.88,
+            "actual_range_minutes": [
+              0,
+              217
+            ],
+            "signed_error_mean_minutes": 7.491,
+            "absolute_error_mean_minutes": 14.47,
+            "signed_error_quantiles_minutes": {
+              "min": -67,
+              "p10": -13.0,
+              "p25": -1.0,
+              "median": 7.5,
+              "p75": 16.0,
+              "p90": 29.0,
+              "max": 73
+            },
+            "absolute_error_p90_minutes": 31.1,
+            "post_age_median_minutes": 1.0,
+            "sign_counts": {
+              "overposted": 575,
+              "equal": 25,
+              "underposted": 220
+            },
+            "within_absolute_error_counts": {
+              "5": 207,
+              "10": 410,
+              "15": 540
+            },
+            "date_balanced_signed_error_mean_minutes": 6.801,
+            "date_balanced_absolute_error_mean_minutes": 14.67,
+            "arithmetic_sums_minutes": {
+              "signed_error": 6143,
+              "absolute_error": 11865
+            }
+          },
+          "by_ride": {
+            "AK07": {
+              "name": "Kilimanjaro Safaris",
+              "pairs": 118,
+              "dates": 82,
+              "date_range": [
+                "2018-07-27",
+                "2019-01-03"
+              ],
+              "posted_mean_minutes": 43.263,
+              "actual_mean_minutes": 32.466,
+              "actual_range_minutes": [
+                0,
+                109
+              ],
+              "signed_error_mean_minutes": 10.797,
+              "absolute_error_mean_minutes": 16.254,
+              "signed_error_quantiles_minutes": {
+                "min": -36,
+                "p10": -14.0,
+                "p25": 1.0,
+                "median": 9.0,
+                "p75": 22.5,
+                "p90": 35.3,
+                "max": 61
+              },
+              "absolute_error_p90_minutes": 36.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 89,
+                "equal": 3,
+                "underposted": 26
+              },
+              "within_absolute_error_counts": {
+                "5": 25,
+                "10": 51,
+                "15": 72
+              },
+              "date_balanced_signed_error_mean_minutes": 10.359,
+              "date_balanced_absolute_error_mean_minutes": 15.798,
+              "arithmetic_sums_minutes": {
+                "signed_error": 1274,
+                "absolute_error": 1918
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 130,
+                "matched_with_reported_closure_during_wait": 0,
+                "prior_post_stale": 12
+              }
+            },
+            "AK11": {
+              "name": "Expedition Everest",
+              "pairs": 167,
+              "dates": 90,
+              "date_range": [
+                "2018-07-31",
+                "2019-01-05"
+              ],
+              "posted_mean_minutes": 33.054,
+              "actual_mean_minutes": 26.06,
+              "actual_range_minutes": [
+                0,
+                101
+              ],
+              "signed_error_mean_minutes": 6.994,
+              "absolute_error_mean_minutes": 10.802,
+              "signed_error_quantiles_minutes": {
+                "min": -42,
+                "p10": -6.4,
+                "p25": 0.5,
+                "median": 7.0,
+                "p75": 13.0,
+                "p90": 22.0,
+                "max": 66
+              },
+              "absolute_error_p90_minutes": 22.4,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 125,
+                "equal": 3,
+                "underposted": 39
+              },
+              "within_absolute_error_counts": {
+                "5": 56,
+                "10": 104,
+                "15": 130
+              },
+              "date_balanced_signed_error_mean_minutes": 6.619,
+              "date_balanced_absolute_error_mean_minutes": 11.26,
+              "arithmetic_sums_minutes": {
+                "signed_error": 1168,
+                "absolute_error": 1804
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 187,
+                "matched_with_reported_closure_during_wait": 0,
+                "prior_post_stale": 14,
+                "ambiguous_latest_post_timestamp": 5,
+                "fresh_prior_post_reports_closure": 1
+              }
+            },
+            "AK14": {
+              "name": "Kali River Rapids",
+              "pairs": 75,
+              "dates": 47,
+              "date_range": [
+                "2018-07-26",
+                "2019-01-05"
+              ],
+              "posted_mean_minutes": 31.333,
+              "actual_mean_minutes": 26.413,
+              "actual_range_minutes": [
+                1,
+                82
+              ],
+              "signed_error_mean_minutes": 4.92,
+              "absolute_error_mean_minutes": 13.107,
+              "signed_error_quantiles_minutes": {
+                "min": -42,
+                "p10": -14.0,
+                "p25": -5.0,
+                "median": 6.0,
+                "p75": 17.0,
+                "p90": 24.0,
+                "max": 37
+              },
+              "absolute_error_p90_minutes": 27.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 48,
+                "equal": 2,
+                "underposted": 25
+              },
+              "within_absolute_error_counts": {
+                "5": 19,
+                "10": 39,
+                "15": 48
+              },
+              "date_balanced_signed_error_mean_minutes": 3.831,
+              "date_balanced_absolute_error_mean_minutes": 13.446,
+              "arithmetic_sums_minutes": {
+                "signed_error": 369,
+                "absolute_error": 983
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 81,
+                "matched_with_reported_closure_during_wait": 1,
+                "prior_post_stale": 4,
+                "fresh_prior_post_reports_closure": 1,
+                "ambiguous_latest_post_timestamp": 1
+              }
+            },
+            "AK18": {
+              "name": "Dinosaur",
+              "pairs": 234,
+              "dates": 109,
+              "date_range": [
+                "2018-07-27",
+                "2019-01-06"
+              ],
+              "posted_mean_minutes": 30.855,
+              "actual_mean_minutes": 24.397,
+              "actual_range_minutes": [
+                1,
+                71
+              ],
+              "signed_error_mean_minutes": 6.457,
+              "absolute_error_mean_minutes": 11.312,
+              "signed_error_quantiles_minutes": {
+                "min": -38,
+                "p10": -9.0,
+                "p25": -0.75,
+                "median": 8.0,
+                "p75": 14.0,
+                "p90": 19.0,
+                "max": 50
+              },
+              "absolute_error_p90_minutes": 22.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 165,
+                "equal": 10,
+                "underposted": 59
+              },
+              "within_absolute_error_counts": {
+                "5": 64,
+                "10": 130,
+                "15": 180
+              },
+              "date_balanced_signed_error_mean_minutes": 6.673,
+              "date_balanced_absolute_error_mean_minutes": 10.909,
+              "arithmetic_sums_minutes": {
+                "signed_error": 1511,
+                "absolute_error": 2647
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 269,
+                "prior_post_stale": 22,
+                "matched_with_reported_closure_during_wait": 7,
+                "ambiguous_latest_post_timestamp": 10,
+                "fresh_prior_post_reports_closure": 3
+              }
+            },
+            "AK85": {
+              "name": "Na'Vi River Journey",
+              "pairs": 72,
+              "dates": 54,
+              "date_range": [
+                "2018-07-27",
+                "2019-01-03"
+              ],
+              "posted_mean_minutes": 69.375,
+              "actual_mean_minutes": 56.278,
+              "actual_range_minutes": [
+                1,
+                105
+              ],
+              "signed_error_mean_minutes": 13.097,
+              "absolute_error_mean_minutes": 19.458,
+              "signed_error_quantiles_minutes": {
+                "min": -67,
+                "p10": -9.0,
+                "p25": 0.0,
+                "median": 9.5,
+                "p75": 25.75,
+                "p90": 45.5,
+                "max": 73
+              },
+              "absolute_error_p90_minutes": 46.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 50,
+                "equal": 5,
+                "underposted": 17
+              },
+              "within_absolute_error_counts": {
+                "5": 20,
+                "10": 30,
+                "15": 36
+              },
+              "date_balanced_signed_error_mean_minutes": 10.923,
+              "date_balanced_absolute_error_mean_minutes": 18.293,
+              "arithmetic_sums_minutes": {
+                "signed_error": 943,
+                "absolute_error": 1401
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 79,
+                "matched_with_reported_closure_during_wait": 1,
+                "prior_post_stale": 6,
+                "ambiguous_latest_post_timestamp": 1
+              }
+            },
+            "AK86": {
+              "name": "Avatar: Flight of Passage",
+              "pairs": 154,
+              "dates": 83,
+              "date_range": [
+                "2018-08-08",
+                "2019-01-01"
+              ],
+              "posted_mean_minutes": 93.994,
+              "actual_mean_minutes": 88.292,
+              "actual_range_minutes": [
+                17,
+                217
+              ],
+              "signed_error_mean_minutes": 5.701,
+              "absolute_error_mean_minutes": 20.208,
+              "signed_error_quantiles_minutes": {
+                "min": -64,
+                "p10": -25.7,
+                "p25": -8.0,
+                "median": 8.0,
+                "p75": 21.0,
+                "p90": 35.4,
+                "max": 72
+              },
+              "absolute_error_p90_minutes": 43.8,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 98,
+                "equal": 2,
+                "underposted": 54
+              },
+              "within_absolute_error_counts": {
+                "5": 23,
+                "10": 56,
+                "15": 74
+              },
+              "date_balanced_signed_error_mean_minutes": 4.216,
+              "date_balanced_absolute_error_mean_minutes": 21.039,
+              "arithmetic_sums_minutes": {
+                "signed_error": 878,
+                "absolute_error": 3112
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 170,
+                "matched_with_reported_closure_during_wait": 1,
+                "prior_post_stale": 12,
+                "ambiguous_latest_post_timestamp": 4
+              }
+            }
+          },
+          "identical_actual_row_dedup_sensitivity": {
+            "pairs": 774,
+            "dates": 154,
+            "date_range": [
+              "2018-07-26",
+              "2019-01-06"
+            ],
+            "posted_mean_minutes": 48.902,
+            "actual_mean_minutes": 41.379,
+            "actual_range_minutes": [
+              0,
+              217
+            ],
+            "signed_error_mean_minutes": 7.523,
+            "absolute_error_mean_minutes": 14.479,
+            "signed_error_quantiles_minutes": {
+              "min": -67,
+              "p10": -12.7,
+              "p25": -1.0,
+              "median": 8.0,
+              "p75": 16.0,
+              "p90": 29.0,
+              "max": 73
+            },
+            "absolute_error_p90_minutes": 31.0,
+            "post_age_median_minutes": 1.0,
+            "sign_counts": {
+              "overposted": 544,
+              "equal": 23,
+              "underposted": 207
+            },
+            "within_absolute_error_counts": {
+              "5": 197,
+              "10": 385,
+              "15": 510
+            },
+            "date_balanced_signed_error_mean_minutes": 6.854,
+            "date_balanced_absolute_error_mean_minutes": 14.641,
+            "arithmetic_sums_minutes": {
+              "signed_error": 5823,
+              "absolute_error": 11207
+            }
+          },
+          "match_accounting": {
+            "eligible_actual_samples": 916,
+            "matched_with_reported_closure_during_wait": 10,
+            "prior_post_stale": 70,
+            "ambiguous_latest_post_timestamp": 21,
+            "fresh_prior_post_reports_closure": 5
+          },
+          "dates_with_at_least_one_matched_actual_for_every_ride": 4
+        },
+        "10": {
+          "pooled": {
+            "pairs": 887,
+            "dates": 156,
+            "date_range": [
+              "2018-07-26",
+              "2019-01-06"
+            ],
+            "posted_mean_minutes": 48.354,
+            "actual_mean_minutes": 40.818,
+            "actual_range_minutes": [
+              0,
+              217
+            ],
+            "signed_error_mean_minutes": 7.536,
+            "absolute_error_mean_minutes": 14.534,
+            "signed_error_quantiles_minutes": {
+              "min": -67,
+              "p10": -13.0,
+              "p25": -1.0,
+              "median": 8.0,
+              "p75": 16.0,
+              "p90": 29.0,
+              "max": 73
+            },
+            "absolute_error_p90_minutes": 31.0,
+            "post_age_median_minutes": 1.0,
+            "sign_counts": {
+              "overposted": 627,
+              "equal": 25,
+              "underposted": 235
+            },
+            "within_absolute_error_counts": {
+              "5": 221,
+              "10": 439,
+              "15": 581
+            },
+            "date_balanced_signed_error_mean_minutes": 6.927,
+            "date_balanced_absolute_error_mean_minutes": 14.642,
+            "arithmetic_sums_minutes": {
+              "signed_error": 6684,
+              "absolute_error": 12892
+            }
+          },
+          "by_ride": {
+            "AK07": {
+              "name": "Kilimanjaro Safaris",
+              "pairs": 130,
+              "dates": 87,
+              "date_range": [
+                "2018-07-27",
+                "2019-01-05"
+              ],
+              "posted_mean_minutes": 42.846,
+              "actual_mean_minutes": 31.792,
+              "actual_range_minutes": [
+                0,
+                109
+              ],
+              "signed_error_mean_minutes": 11.054,
+              "absolute_error_mean_minutes": 16.346,
+              "signed_error_quantiles_minutes": {
+                "min": -36,
+                "p10": -11.3,
+                "p25": 1.0,
+                "median": 9.0,
+                "p75": 22.75,
+                "p90": 35.1,
+                "max": 61
+              },
+              "absolute_error_p90_minutes": 36.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 99,
+                "equal": 3,
+                "underposted": 28
+              },
+              "within_absolute_error_counts": {
+                "5": 25,
+                "10": 54,
+                "15": 80
+              },
+              "date_balanced_signed_error_mean_minutes": 10.954,
+              "date_balanced_absolute_error_mean_minutes": 16.215,
+              "arithmetic_sums_minutes": {
+                "signed_error": 1437,
+                "absolute_error": 2125
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 130,
+                "matched_with_reported_closure_during_wait": 0
+              }
+            },
+            "AK11": {
+              "name": "Expedition Everest",
+              "pairs": 181,
+              "dates": 94,
+              "date_range": [
+                "2018-07-31",
+                "2019-01-05"
+              ],
+              "posted_mean_minutes": 32.707,
+              "actual_mean_minutes": 26.282,
+              "actual_range_minutes": [
+                0,
+                101
+              ],
+              "signed_error_mean_minutes": 6.425,
+              "absolute_error_mean_minutes": 10.934,
+              "signed_error_quantiles_minutes": {
+                "min": -50,
+                "p10": -8.0,
+                "p25": 0.0,
+                "median": 6.0,
+                "p75": 13.0,
+                "p90": 22.0,
+                "max": 66
+              },
+              "absolute_error_p90_minutes": 23.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 134,
+                "equal": 3,
+                "underposted": 44
+              },
+              "within_absolute_error_counts": {
+                "5": 62,
+                "10": 112,
+                "15": 139
+              },
+              "date_balanced_signed_error_mean_minutes": 6.136,
+              "date_balanced_absolute_error_mean_minutes": 11.334,
+              "arithmetic_sums_minutes": {
+                "signed_error": 1163,
+                "absolute_error": 1979
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 187,
+                "matched_with_reported_closure_during_wait": 0,
+                "ambiguous_latest_post_timestamp": 5,
+                "fresh_prior_post_reports_closure": 1
+              }
+            },
+            "AK14": {
+              "name": "Kali River Rapids",
+              "pairs": 78,
+              "dates": 48,
+              "date_range": [
+                "2018-07-26",
+                "2019-01-05"
+              ],
+              "posted_mean_minutes": 31.154,
+              "actual_mean_minutes": 25.808,
+              "actual_range_minutes": [
+                1,
+                82
+              ],
+              "signed_error_mean_minutes": 5.346,
+              "absolute_error_mean_minutes": 13.218,
+              "signed_error_quantiles_minutes": {
+                "min": -42,
+                "p10": -14.0,
+                "p25": -4.75,
+                "median": 6.0,
+                "p75": 18.0,
+                "p90": 24.0,
+                "max": 37
+              },
+              "absolute_error_p90_minutes": 27.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 51,
+                "equal": 2,
+                "underposted": 25
+              },
+              "within_absolute_error_counts": {
+                "5": 19,
+                "10": 40,
+                "15": 49
+              },
+              "date_balanced_signed_error_mean_minutes": 4.192,
+              "date_balanced_absolute_error_mean_minutes": 13.573,
+              "arithmetic_sums_minutes": {
+                "signed_error": 417,
+                "absolute_error": 1031
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 81,
+                "matched_with_reported_closure_during_wait": 1,
+                "fresh_prior_post_reports_closure": 2,
+                "ambiguous_latest_post_timestamp": 1
+              }
+            },
+            "AK18": {
+              "name": "Dinosaur",
+              "pairs": 254,
+              "dates": 115,
+              "date_range": [
+                "2018-07-26",
+                "2019-01-06"
+              ],
+              "posted_mean_minutes": 30.906,
+              "actual_mean_minutes": 24.453,
+              "actual_range_minutes": [
+                1,
+                71
+              ],
+              "signed_error_mean_minutes": 6.453,
+              "absolute_error_mean_minutes": 11.492,
+              "signed_error_quantiles_minutes": {
+                "min": -38,
+                "p10": -9.0,
+                "p25": 0.0,
+                "median": 8.0,
+                "p75": 14.0,
+                "p90": 19.0,
+                "max": 50
+              },
+              "absolute_error_p90_minutes": 22.7,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 181,
+                "equal": 10,
+                "underposted": 63
+              },
+              "within_absolute_error_counts": {
+                "5": 68,
+                "10": 140,
+                "15": 193
+              },
+              "date_balanced_signed_error_mean_minutes": 6.863,
+              "date_balanced_absolute_error_mean_minutes": 11.191,
+              "arithmetic_sums_minutes": {
+                "signed_error": 1639,
+                "absolute_error": 2919
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 269,
+                "matched_with_reported_closure_during_wait": 10,
+                "ambiguous_latest_post_timestamp": 10,
+                "fresh_prior_post_reports_closure": 3,
+                "prior_post_stale": 2
+              }
+            },
+            "AK85": {
+              "name": "Na'Vi River Journey",
+              "pairs": 78,
+              "dates": 58,
+              "date_range": [
+                "2018-07-27",
+                "2019-01-03"
+              ],
+              "posted_mean_minutes": 69.808,
+              "actual_mean_minutes": 56.936,
+              "actual_range_minutes": [
+                1,
+                107
+              ],
+              "signed_error_mean_minutes": 12.872,
+              "absolute_error_mean_minutes": 19.231,
+              "signed_error_quantiles_minutes": {
+                "min": -67,
+                "p10": -9.0,
+                "p25": 0.0,
+                "median": 8.0,
+                "p75": 27.25,
+                "p90": 42.5,
+                "max": 73
+              },
+              "absolute_error_p90_minutes": 46.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 54,
+                "equal": 5,
+                "underposted": 19
+              },
+              "within_absolute_error_counts": {
+                "5": 20,
+                "10": 33,
+                "15": 40
+              },
+              "date_balanced_signed_error_mean_minutes": 11.764,
+              "date_balanced_absolute_error_mean_minutes": 17.609,
+              "arithmetic_sums_minutes": {
+                "signed_error": 1004,
+                "absolute_error": 1500
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 79,
+                "matched_with_reported_closure_during_wait": 1,
+                "ambiguous_latest_post_timestamp": 1
+              }
+            },
+            "AK86": {
+              "name": "Avatar: Flight of Passage",
+              "pairs": 166,
+              "dates": 86,
+              "date_range": [
+                "2018-08-08",
+                "2019-01-01"
+              ],
+              "posted_mean_minutes": 94.428,
+              "actual_mean_minutes": 88.259,
+              "actual_range_minutes": [
+                17,
+                217
+              ],
+              "signed_error_mean_minutes": 6.169,
+              "absolute_error_mean_minutes": 20.108,
+              "signed_error_quantiles_minutes": {
+                "min": -64,
+                "p10": -25.0,
+                "p25": -8.0,
+                "median": 8.0,
+                "p75": 21.0,
+                "p90": 35.0,
+                "max": 72
+              },
+              "absolute_error_p90_minutes": 43.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 108,
+                "equal": 2,
+                "underposted": 56
+              },
+              "within_absolute_error_counts": {
+                "5": 27,
+                "10": 60,
+                "15": 80
+              },
+              "date_balanced_signed_error_mean_minutes": 5.06,
+              "date_balanced_absolute_error_mean_minutes": 21.545,
+              "arithmetic_sums_minutes": {
+                "signed_error": 1024,
+                "absolute_error": 3338
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 170,
+                "matched_with_reported_closure_during_wait": 1,
+                "ambiguous_latest_post_timestamp": 4
+              }
+            }
+          },
+          "identical_actual_row_dedup_sensitivity": {
+            "pairs": 836,
+            "dates": 156,
+            "date_range": [
+              "2018-07-26",
+              "2019-01-06"
+            ],
+            "posted_mean_minutes": 48.911,
+            "actual_mean_minutes": 41.311,
+            "actual_range_minutes": [
+              0,
+              217
+            ],
+            "signed_error_mean_minutes": 7.6,
+            "absolute_error_mean_minutes": 14.596,
+            "signed_error_quantiles_minutes": {
+              "min": -67,
+              "p10": -13.0,
+              "p25": -1.0,
+              "median": 8.0,
+              "p75": 16.0,
+              "p90": 29.0,
+              "max": 73
+            },
+            "absolute_error_p90_minutes": 31.0,
+            "post_age_median_minutes": 1.0,
+            "sign_counts": {
+              "overposted": 592,
+              "equal": 23,
+              "underposted": 221
+            },
+            "within_absolute_error_counts": {
+              "5": 209,
+              "10": 410,
+              "15": 546
+            },
+            "date_balanced_signed_error_mean_minutes": 6.975,
+            "date_balanced_absolute_error_mean_minutes": 14.633,
+            "arithmetic_sums_minutes": {
+              "signed_error": 6354,
+              "absolute_error": 12202
+            }
+          },
+          "match_accounting": {
+            "eligible_actual_samples": 916,
+            "matched_with_reported_closure_during_wait": 13,
+            "ambiguous_latest_post_timestamp": 21,
+            "fresh_prior_post_reports_closure": 6,
+            "prior_post_stale": 2
+          },
+          "dates_with_at_least_one_matched_actual_for_every_ride": 4
+        },
+        "15": {
+          "pooled": {
+            "pairs": 887,
+            "dates": 156,
+            "date_range": [
+              "2018-07-26",
+              "2019-01-06"
+            ],
+            "posted_mean_minutes": 48.354,
+            "actual_mean_minutes": 40.818,
+            "actual_range_minutes": [
+              0,
+              217
+            ],
+            "signed_error_mean_minutes": 7.536,
+            "absolute_error_mean_minutes": 14.534,
+            "signed_error_quantiles_minutes": {
+              "min": -67,
+              "p10": -13.0,
+              "p25": -1.0,
+              "median": 8.0,
+              "p75": 16.0,
+              "p90": 29.0,
+              "max": 73
+            },
+            "absolute_error_p90_minutes": 31.0,
+            "post_age_median_minutes": 1.0,
+            "sign_counts": {
+              "overposted": 627,
+              "equal": 25,
+              "underposted": 235
+            },
+            "within_absolute_error_counts": {
+              "5": 221,
+              "10": 439,
+              "15": 581
+            },
+            "date_balanced_signed_error_mean_minutes": 6.927,
+            "date_balanced_absolute_error_mean_minutes": 14.642,
+            "arithmetic_sums_minutes": {
+              "signed_error": 6684,
+              "absolute_error": 12892
+            }
+          },
+          "by_ride": {
+            "AK07": {
+              "name": "Kilimanjaro Safaris",
+              "pairs": 130,
+              "dates": 87,
+              "date_range": [
+                "2018-07-27",
+                "2019-01-05"
+              ],
+              "posted_mean_minutes": 42.846,
+              "actual_mean_minutes": 31.792,
+              "actual_range_minutes": [
+                0,
+                109
+              ],
+              "signed_error_mean_minutes": 11.054,
+              "absolute_error_mean_minutes": 16.346,
+              "signed_error_quantiles_minutes": {
+                "min": -36,
+                "p10": -11.3,
+                "p25": 1.0,
+                "median": 9.0,
+                "p75": 22.75,
+                "p90": 35.1,
+                "max": 61
+              },
+              "absolute_error_p90_minutes": 36.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 99,
+                "equal": 3,
+                "underposted": 28
+              },
+              "within_absolute_error_counts": {
+                "5": 25,
+                "10": 54,
+                "15": 80
+              },
+              "date_balanced_signed_error_mean_minutes": 10.954,
+              "date_balanced_absolute_error_mean_minutes": 16.215,
+              "arithmetic_sums_minutes": {
+                "signed_error": 1437,
+                "absolute_error": 2125
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 130,
+                "matched_with_reported_closure_during_wait": 0
+              }
+            },
+            "AK11": {
+              "name": "Expedition Everest",
+              "pairs": 181,
+              "dates": 94,
+              "date_range": [
+                "2018-07-31",
+                "2019-01-05"
+              ],
+              "posted_mean_minutes": 32.707,
+              "actual_mean_minutes": 26.282,
+              "actual_range_minutes": [
+                0,
+                101
+              ],
+              "signed_error_mean_minutes": 6.425,
+              "absolute_error_mean_minutes": 10.934,
+              "signed_error_quantiles_minutes": {
+                "min": -50,
+                "p10": -8.0,
+                "p25": 0.0,
+                "median": 6.0,
+                "p75": 13.0,
+                "p90": 22.0,
+                "max": 66
+              },
+              "absolute_error_p90_minutes": 23.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 134,
+                "equal": 3,
+                "underposted": 44
+              },
+              "within_absolute_error_counts": {
+                "5": 62,
+                "10": 112,
+                "15": 139
+              },
+              "date_balanced_signed_error_mean_minutes": 6.136,
+              "date_balanced_absolute_error_mean_minutes": 11.334,
+              "arithmetic_sums_minutes": {
+                "signed_error": 1163,
+                "absolute_error": 1979
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 187,
+                "matched_with_reported_closure_during_wait": 0,
+                "ambiguous_latest_post_timestamp": 5,
+                "fresh_prior_post_reports_closure": 1
+              }
+            },
+            "AK14": {
+              "name": "Kali River Rapids",
+              "pairs": 78,
+              "dates": 48,
+              "date_range": [
+                "2018-07-26",
+                "2019-01-05"
+              ],
+              "posted_mean_minutes": 31.154,
+              "actual_mean_minutes": 25.808,
+              "actual_range_minutes": [
+                1,
+                82
+              ],
+              "signed_error_mean_minutes": 5.346,
+              "absolute_error_mean_minutes": 13.218,
+              "signed_error_quantiles_minutes": {
+                "min": -42,
+                "p10": -14.0,
+                "p25": -4.75,
+                "median": 6.0,
+                "p75": 18.0,
+                "p90": 24.0,
+                "max": 37
+              },
+              "absolute_error_p90_minutes": 27.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 51,
+                "equal": 2,
+                "underposted": 25
+              },
+              "within_absolute_error_counts": {
+                "5": 19,
+                "10": 40,
+                "15": 49
+              },
+              "date_balanced_signed_error_mean_minutes": 4.192,
+              "date_balanced_absolute_error_mean_minutes": 13.573,
+              "arithmetic_sums_minutes": {
+                "signed_error": 417,
+                "absolute_error": 1031
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 81,
+                "matched_with_reported_closure_during_wait": 1,
+                "fresh_prior_post_reports_closure": 2,
+                "ambiguous_latest_post_timestamp": 1
+              }
+            },
+            "AK18": {
+              "name": "Dinosaur",
+              "pairs": 254,
+              "dates": 115,
+              "date_range": [
+                "2018-07-26",
+                "2019-01-06"
+              ],
+              "posted_mean_minutes": 30.906,
+              "actual_mean_minutes": 24.453,
+              "actual_range_minutes": [
+                1,
+                71
+              ],
+              "signed_error_mean_minutes": 6.453,
+              "absolute_error_mean_minutes": 11.492,
+              "signed_error_quantiles_minutes": {
+                "min": -38,
+                "p10": -9.0,
+                "p25": 0.0,
+                "median": 8.0,
+                "p75": 14.0,
+                "p90": 19.0,
+                "max": 50
+              },
+              "absolute_error_p90_minutes": 22.7,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 181,
+                "equal": 10,
+                "underposted": 63
+              },
+              "within_absolute_error_counts": {
+                "5": 68,
+                "10": 140,
+                "15": 193
+              },
+              "date_balanced_signed_error_mean_minutes": 6.863,
+              "date_balanced_absolute_error_mean_minutes": 11.191,
+              "arithmetic_sums_minutes": {
+                "signed_error": 1639,
+                "absolute_error": 2919
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 269,
+                "matched_with_reported_closure_during_wait": 10,
+                "ambiguous_latest_post_timestamp": 10,
+                "fresh_prior_post_reports_closure": 3,
+                "prior_post_stale": 2
+              }
+            },
+            "AK85": {
+              "name": "Na'Vi River Journey",
+              "pairs": 78,
+              "dates": 58,
+              "date_range": [
+                "2018-07-27",
+                "2019-01-03"
+              ],
+              "posted_mean_minutes": 69.808,
+              "actual_mean_minutes": 56.936,
+              "actual_range_minutes": [
+                1,
+                107
+              ],
+              "signed_error_mean_minutes": 12.872,
+              "absolute_error_mean_minutes": 19.231,
+              "signed_error_quantiles_minutes": {
+                "min": -67,
+                "p10": -9.0,
+                "p25": 0.0,
+                "median": 8.0,
+                "p75": 27.25,
+                "p90": 42.5,
+                "max": 73
+              },
+              "absolute_error_p90_minutes": 46.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 54,
+                "equal": 5,
+                "underposted": 19
+              },
+              "within_absolute_error_counts": {
+                "5": 20,
+                "10": 33,
+                "15": 40
+              },
+              "date_balanced_signed_error_mean_minutes": 11.764,
+              "date_balanced_absolute_error_mean_minutes": 17.609,
+              "arithmetic_sums_minutes": {
+                "signed_error": 1004,
+                "absolute_error": 1500
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 79,
+                "matched_with_reported_closure_during_wait": 1,
+                "ambiguous_latest_post_timestamp": 1
+              }
+            },
+            "AK86": {
+              "name": "Avatar: Flight of Passage",
+              "pairs": 166,
+              "dates": 86,
+              "date_range": [
+                "2018-08-08",
+                "2019-01-01"
+              ],
+              "posted_mean_minutes": 94.428,
+              "actual_mean_minutes": 88.259,
+              "actual_range_minutes": [
+                17,
+                217
+              ],
+              "signed_error_mean_minutes": 6.169,
+              "absolute_error_mean_minutes": 20.108,
+              "signed_error_quantiles_minutes": {
+                "min": -64,
+                "p10": -25.0,
+                "p25": -8.0,
+                "median": 8.0,
+                "p75": 21.0,
+                "p90": 35.0,
+                "max": 72
+              },
+              "absolute_error_p90_minutes": 43.0,
+              "post_age_median_minutes": 1.0,
+              "sign_counts": {
+                "overposted": 108,
+                "equal": 2,
+                "underposted": 56
+              },
+              "within_absolute_error_counts": {
+                "5": 27,
+                "10": 60,
+                "15": 80
+              },
+              "date_balanced_signed_error_mean_minutes": 5.06,
+              "date_balanced_absolute_error_mean_minutes": 21.545,
+              "arithmetic_sums_minutes": {
+                "signed_error": 1024,
+                "absolute_error": 3338
+              },
+              "match_accounting": {
+                "eligible_actual_samples": 170,
+                "matched_with_reported_closure_during_wait": 1,
+                "ambiguous_latest_post_timestamp": 4
+              }
+            }
+          },
+          "identical_actual_row_dedup_sensitivity": {
+            "pairs": 836,
+            "dates": 156,
+            "date_range": [
+              "2018-07-26",
+              "2019-01-06"
+            ],
+            "posted_mean_minutes": 48.911,
+            "actual_mean_minutes": 41.311,
+            "actual_range_minutes": [
+              0,
+              217
+            ],
+            "signed_error_mean_minutes": 7.6,
+            "absolute_error_mean_minutes": 14.596,
+            "signed_error_quantiles_minutes": {
+              "min": -67,
+              "p10": -13.0,
+              "p25": -1.0,
+              "median": 8.0,
+              "p75": 16.0,
+              "p90": 29.0,
+              "max": 73
+            },
+            "absolute_error_p90_minutes": 31.0,
+            "post_age_median_minutes": 1.0,
+            "sign_counts": {
+              "overposted": 592,
+              "equal": 23,
+              "underposted": 221
+            },
+            "within_absolute_error_counts": {
+              "5": 209,
+              "10": 410,
+              "15": 546
+            },
+            "date_balanced_signed_error_mean_minutes": 6.975,
+            "date_balanced_absolute_error_mean_minutes": 14.633,
+            "arithmetic_sums_minutes": {
+              "signed_error": 6354,
+              "absolute_error": 12202
+            }
+          },
+          "match_accounting": {
+            "eligible_actual_samples": 916,
+            "matched_with_reported_closure_during_wait": 13,
+            "ambiguous_latest_post_timestamp": 21,
+            "fresh_prior_post_reports_closure": 6,
+            "prior_post_stale": 2
+          },
+          "dates_with_at_least_one_matched_actual_for_every_ride": 4
+        }
+      }
+    }
+  },
+  "self_checks": {
+    "archive_sha256_matches": true,
+    "README_defines_actual_queue_entry_time": true,
+    "route_test_split_reproduced": true,
+    "no_future_posted_matches": true,
+    "ambiguous_latest_posted_timestamps_excluded": true,
+    "all_match_accounting_conserved": true,
+    "all_pooled_error_sums_equal_sum_of_rides": true,
+    "route_replay_not_modified": true
+  }
+}

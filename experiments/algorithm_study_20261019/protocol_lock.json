@@ -1,0 +1,11 @@
+{
+  "locked_at_utc": "2026-10-19T19:03:43.529578+00:00",
+  "stage": "before candidate validation",
+  "files": {
+    "PROTOCOL.md": "b991f76bd420be1ede75785c34ce4412e71ea2888b0523f5e1dd8f87e0418c8e",
+    "engine.py": "99c43797594d0ebd7ba1aa1e95e2bb8b8f2e4a5478e7c5017fed5547285fef8f",
+    "run.py": "a24d7ecd804ceb43f2e5bd774b53338f40f6c574b385e6fec370f868517b177f",
+    "inputs/splits.json": "5055929d66b1549a330c12d7d257ac352eb7d9d4ce48e5bd3a73ee094c96666f",
+    "inputs/validation_park_hours.csv": "eaf947ea4a8ac9b3e08778fdcca3f3bc6223312b1d803d0e8891e28686458f4f"
+  }
+}

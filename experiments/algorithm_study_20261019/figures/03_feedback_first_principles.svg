@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1152pt" height="648pt" viewBox="0 0 1152 648" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-19T15:07:39.903703</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.7, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 648 
+L 1152 648 
+L 1152 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 62.208 274.104 
+L 260.352 274.104 
+Q 274.176 274.104 274.176 266.328 
+L 274.176 167.832 
+Q 274.176 160.056 260.352 160.056 
+L 62.208 160.056 
+Q 48.384 160.056 48.384 167.832 
+L 48.384 266.328 
+Q 48.384 274.104 62.208 274.104 
+z
+" clip-path="url(#pdf3d407713)" style="fill: #edf2f5; stroke: #d7e0e7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 338.688 274.104 
+L 536.832 274.104 
+Q 550.656 274.104 550.656 266.328 
+L 550.656 167.832 
+Q 550.656 160.056 536.832 160.056 
+L 338.688 160.056 
+Q 324.864 160.056 324.864 167.832 
+L 324.864 266.328 
+Q 324.864 274.104 338.688 274.104 
+z
+" clip-path="url(#pdf3d407713)" style="fill: #edf2f5; stroke: #d7e0e7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 615.168 274.104 
+L 813.312 274.104 
+Q 827.136 274.104 827.136 266.328 
+L 827.136 167.832 
+Q 827.136 160.056 813.312 160.056 
+L 615.168 160.056 
+Q 601.344 160.056 601.344 167.832 
+L 601.344 266.328 
+Q 601.344 274.104 615.168 274.104 
+z
+" clip-path="url(#pdf3d407713)" style="fill: #edf2f5; stroke: #d7e0e7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 891.648 274.104 
+L 1089.792 274.104 
+Q 1103.616 274.104 1103.616 266.328 
+L 1103.616 167.832 
+Q 1103.616 160.056 1089.792 160.056 
+L 891.648 160.056 
+Q 877.824 160.056 877.824 167.832 
+L 877.824 266.328 
+Q 877.824 274.104 891.648 274.104 
+z
+" clip-path="url(#pdf3d407713)" style="fill: #edf2f5; stroke: #d7e0e7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 280.786219 217.08 
+Q 299.521356 217.08 316.244032 217.08 
+" clip-path="url(#pdf3d407713)" style="fill: none; stroke: #3078a8; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 310.244032 214.08 
+L 316.244032 217.08 
+L 310.244032 220.08 
+z
+" clip-path="url(#pdf3d407713)" style="fill: #3078a8; stroke: #3078a8; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 557.266219 217.08 
+Q 576.001356 217.08 592.724032 217.08 
+" clip-path="url(#pdf3d407713)" style="fill: none; stroke: #3078a8; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 586.724032 214.08 
+L 592.724032 217.08 
+L 586.724032 220.08 
+z
+" clip-path="url(#pdf3d407713)" style="fill: #3078a8; stroke: #3078a8; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 833.746219 217.08 
+Q 852.481356 217.08 869.204032 217.08 
+" clip-path="url(#pdf3d407713)" style="fill: none; stroke: #3078a8; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 863.204032 214.08 
+L 869.204032 217.08 
+L 863.204032 220.08 
+z
+" clip-path="url(#pdf3d407713)" style="fill: #3078a8; stroke: #3078a8; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 161.28 328.483318 
+Q 161.28 303.265784 161.28 279.948906 
+" clip-path="url(#pdf3d407713)" style="fill: none; stroke: #3078a8; stroke-width: 1.7; stroke-linecap: round"/>
+    <path d="M 158.28 285.948906 
+L 161.28 279.948906 
+L 164.28 285.948906 
+z
+" clip-path="url(#pdf3d407713)" style="fill: #3078a8; stroke: #3078a8; stroke-width: 1.7; stroke-linecap: round"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 59.904 536.544 
+L 550.656 536.544 
+Q 562.176 536.544 562.176 530.064 
+L 562.176 409.536 
+Q 562.176 403.056 550.656 403.056 
+L 59.904 403.056 
+Q 48.384 403.056 48.384 409.536 
+L 48.384 530.064 
+Q 48.384 536.544 59.904 536.544 
+z
+" clip-path="url(#pdf3d407713)" style="fill: #ffffff; stroke: #d7e0e7; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 612.864 536.544 
+L 1092.096 536.544 
+Q 1103.616 536.544 1103.616 530.064 
+L 1103.616 409.536 
+Q 1103.616 403.056 1092.096 403.056 
+L 612.864 403.056 
+Q 601.344 403.056 601.344 409.536 
+L 601.344 530.064 
+Q 601.344 536.544 612.864 536.544 
+z
+" clip-path="url(#pdf3d407713)" style="fill: #ffffff; stroke: #d7e0e7; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 990.72 276.048 
+L 990.72 330.48 
+L 161.28 330.48 
+" clip-path="url(#pdf3d407713)" style="fill: none; stroke: #3078a8; stroke-width: 1.7; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #16324f" x="161.28" y="197.987188" transform="rotate(-0 161.28 197.987188)">1  Current snapshot</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; fill: #5b6874" transform="translate(121.989336 228.851668)">Location + clock</text>
+    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; fill: #5b6874" transform="translate(86.719102 241.655145)">Remaining rides + visible waits</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #16324f" x="437.76" y="197.987188" transform="rotate(-0 437.76 197.987188)">2  Choose next ride</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; fill: #5b6874" transform="translate(364.440039 228.851668)">Compare remaining-time costs</text>
+    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; fill: #5b6874" transform="translate(370.075469 241.655145)">Commit only the next action</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #16324f" x="714.24" y="197.987188" transform="rotate(-0 714.24 197.987188)">3  Execute one visit</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; fill: #5b6874" transform="translate(664.773945 228.851668)">Walk → queue → ride</text>
+    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; fill: #5b6874" transform="translate(652.823984 241.655145)">Time and location change</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #16324f" x="990.72" y="197.987188" transform="rotate(-0 990.72 197.987188)">4  New snapshot</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; fill: #5b6874" transform="translate(907.695938 228.851668)">Observe information now available</text>
+    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; fill: #5b6874" transform="translate(928.705781 241.655145)">Never read the real future</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #16324f" x="576" y="362.904375" transform="rotate(-0 576 362.904375)">After every completed ride: re-evaluate. Replanning does not require changing the route.</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 11.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #16324f" x="74.88" y="437.4" transform="rotate(-0 74.88 437.4)">EXISTING D0: point-forecast replanning</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 10.2px; font-family: 'DejaVu Sans'; fill: #5b6874" transform="translate(74.88 470.277591)">Forecast complete remaining orders using current information.</text>
+    <text style="font-size: 10.2px; font-family: 'DejaVu Sans'; fill: #5b6874" transform="translate(74.88 485.574562)">Choose the lowest predicted total time; preserve the incumbent on ties.</text>
+    <text style="font-size: 10.2px; font-family: 'DejaVu Sans'; fill: #5b6874" transform="translate(74.88 500.871534)">Only the next ride is executed before the next replan.</text>
+   </g>
+   <g id="text_12">
+    <text style="font-weight: 700; font-size: 11.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #16324f" x="627.84" y="437.4" transform="rotate(-0 627.84 437.4)">ROLLOUT CANDIDATE: explicitly model later decisions</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 10.2px; font-family: 'DejaVu Sans'; fill: #5b6874" transform="translate(627.84 470.277591)">Try each next ride on the same training-day scenarios.</text>
+    <text style="font-size: 10.2px; font-family: 'DejaVu Sans'; fill: #5b6874" transform="translate(627.84 485.574562)">Within each scenario, D0 sees only simulated current information.</text>
+    <text style="font-size: 10.2px; font-family: 'DejaVu Sans'; fill: #5b6874" transform="translate(627.84 500.871534)">Compare mean completion time, including later replanning.</text>
+   </g>
+  </g>
+  <g id="text_14">
+   <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #3078a8" x="57.6" y="34.992" transform="rotate(-0 57.6 34.992)">PARKPLAN-S / FIRST PRINCIPLES</text>
+  </g>
+  <g id="text_15">
+   <text style="font-weight: 700; font-size: 25px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #16324f" x="57.6" y="72.576" transform="rotate(-0 57.6 72.576)">Plan with what is known. Execute one action. Learn again.</text>
+  </g>
+  <g id="text_16">
+   <text style="font-size: 11.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #5b6874" x="57.6" y="99.792" transform="rotate(-0 57.6 99.792)">Single objective: minimize total time to finish the same six rides = walking + queueing + service.</text>
+  </g>
+  <g id="text_17">
+   <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #16324f" x="57.6" y="576.072" transform="rotate(-0 57.6 576.072)">Research question: does modeling future feedback improve decisions enough to overcome forecast / scenario error?</text>
+  </g>
+  <g id="text_18">
+   <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #5b6874" x="57.6" y="600.048" transform="rotate(-0 57.6 600.048)">The richer model is a testable hypothesis, not a guarantee. Calibration changes the wait predictor; the shared-order SAA ablation omits adaptive tails.</text>
+  </g>
+  <g id="text_19">
+   <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #5b6874" x="57.6" y="625.32" transform="rotate(-0 57.6 625.32)">Conceptual decision diagram. No numerical result is claimed here. Dataset analyses credit TouringPlans.com; the executor uses synthetic geometry.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pdf3d407713">
+   <rect x="0" y="0" width="1152" height="648"/>
+  </clipPath>
+ </defs>
+</svg>

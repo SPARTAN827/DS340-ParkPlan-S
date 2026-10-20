@@ -1,0 +1,94 @@
+--- experiments/algorithm_study_20261019/verify_results.py (unchanged original)
++++ scripts/verify_public_results.py (public-scoped copy)
+@@ -1,5 +1,9 @@
+ #!/usr/bin/env python3
+-"""Independent read-only result audit; imports no experiment implementation.
++"""Public-scoped independent result audit; imports no experiment implementation.
++
++Derived from the unchanged original verifier; see PUBLIC-ADAPTER-PROVENANCE.md.
++Twenty included legacy hashes are verified; eleven historical meeting/archive
++files are intentionally absent. This never reissues the original31-file audit.
+ 
+ TouringPlans.com source attribution. Only derived audit outputs are written.
+ Existing completed phase triplets are checked; absent phases remain explicitly
+@@ -21,8 +25,10 @@
+ import statistics
+ import tarfile
+ 
+-HERE = Path(__file__).resolve().parent
+-ROOT = HERE.parents[1]
++from public_integrity import check_frozen_entrypoints, check_public_preservation
++
++ROOT = Path(__file__).resolve().parents[1]
++HERE = ROOT / "experiments/algorithm_study_20261019"
+ RIDES = ('AK07', 'AK11', 'AK14', 'AK18', 'AK85', 'AK86')
+ SOURCE_SHA = '23eca800b048aecd4b3a2469e78f63f24f64637eb785c8401386e219a177f812'
+ SOURCE_ROOT = 'TouringPlans-DisneyAnimalKingdomWaitTimes-933161b'
+@@ -240,6 +246,17 @@
+ def verify_phase(name, splits, asof, hours, current_hashes, selection):
+     folder = HERE / name
+     metadata = read_json(folder / 'metadata.json')
++    # Original outputs recorded31 local artifacts at their creation. Public
++    # verification checks20 included artifacts now, not those11 absent files.
++    public_scope = metadata.get('public_distribution')
++    if public_scope is None:
++        assert metadata['old_artifacts_unchanged'] == 31, (name, 'historical preservation count')
++    else:
++        assert metadata['old_artifacts_unchanged'] == 20, (name, 'public preservation count')
++        expected_scope = check_public_preservation(ROOT)
++        for field in ['included_legacy_artifacts_verified', 'historical_artifacts_intentionally_not_distributed',
++                      'included_paths', 'omitted_paths', 'historical_31_artifact_certificate_reissued']:
++            assert public_scope[field] == expected_scope[field], (name, 'public scope', field)
+     rows = typed(read_csv(folder / 'per_day.csv'))
+     trace_list = read_json(folder / 'traces.json')
+     traces = {(t['date'], t['policy']): t['events'] for t in trace_list}
+@@ -428,11 +445,11 @@
+         assert splits == {'fit': common[:270], 'validation': common[270:385], 'evaluation': common[385:]}
+         assert manifest['source_sha256'] == SOURCE_SHA
+         result['split_reconstruction'] = {'fit': 270, 'validation': 115, 'evaluation': 165, 'status': 'PASS'}
+-        old_manifest = read_json(ROOT / 'experiments/tie_preserving_pilot/preserved_artifacts_sha256.json')
+-        for path, expected in old_manifest.items():
+-            assert digest(ROOT / path) == expected, ('old artifact modified', path)
+-        result['preserved_old_artifacts'] = len(old_manifest)
+-        assert len(old_manifest) == 31
++        check_frozen_entrypoints(ROOT)
++        result['public_distribution'] = check_public_preservation(ROOT)
++        result['preserved_old_artifacts'] = result['public_distribution']['included_legacy_artifacts_verified']
++        result['historical_metadata_note'] = ('Frozen original metadata may record31 artifacts verified at original run time. '
++            'This public audit verifies only the20 distributed legacy artifacts;11 omitted historical files are not checked.')
+         lock = read_json(HERE / 'protocol_lock.json')
+         hashes = {name: digest(HERE / name) for name in lock['files']}
+         exceptions = []
+@@ -536,8 +553,8 @@
+         'The retrospective evaluation dates were previously examined; integrity checks do not make them an untouched confirmatory test.',
+         'Park-hour sources, synthetic geometry and posted-wait proxy limitations remain; no true visitor benefit or commercial superiority is validated.'
+     ]
+-    (HERE / 'verification.json').write_text(json.dumps(result, indent=2, allow_nan=False) + '\n')
+-    lines = ['# Independent result QA', '', '**Status: ' + result['status'] + '**', '', result['scope'], '',
++    (HERE / 'verification-public.json').write_text(json.dumps(result, indent=2, allow_nan=False) + '\n')
++    lines = ['# Public-distribution independent result QA', '', '**Status: ' + result['status'] + '**', '', result['scope'], '',
+              '## Completed phase checks', '', '| Phase | Policy-days | Raw visits | Decision snapshots | Scenario-ID checks |',
+              '|---|---:|---:|---:|---:|']
+     for name, out in result['phases'].items():
+@@ -557,16 +574,17 @@
+         '- Checked one common initial order per date/configuration, full attempted-day denominators, training-only scenario IDs, and scenario action choice against logged costs.',
+         '- Recomputed all reported policy completion/failure counts, paired means/medians/signs/discordances, common-success groups and planning-overhead adjustments without importing the experiment summarizer.',
+         '- Recomputed primary IID and block7 bootstrap intervals for all seven analyzed phase/configuration folders with independent frequency-weight resampling.',
+-        '- Reproduced validation-only decay selection and recommendation; confirmed 330 legacy reference outcomes, 31 preserved old-artifact hashes and 10 pre-evaluation locked-file hashes.',
++        '- Reproduced validation-only decay selection and recommendation; confirmed330 legacy reference outcomes,20 included legacy-artifact hashes and10 pre-evaluation locked-file hashes.',
++        '- Eleven historical meeting/archive artifacts are intentionally omitted, not verified. Original metadata values of31 are historical records, not a claim by this public audit.',
+         '- Verified the documented original-runner exception is exactly a one-line relocation of `flush=True` from `json.dumps` to `print`; no policy/data logic changed.']
+     if result['pending']:
+         lines += ['', '## Unverified / pending', ''] + ['- ' + x for x in result['pending']]
+     if result['errors']:
+         lines += ['', '## Errors', ''] + ['- `' + json.dumps(x) + '`' for x in result['errors']]
+     lines += ['', '## Limits', ''] + ['- ' + x for x in result['limits']]
+-    lines += ['', 'Reproduce: `python3 experiments/algorithm_study_20261019/verify_results.py --require-complete`.',
+-              '', 'The verifier writes only this report and `verification.json`; missing outputs are never silently treated as passed.', '']
+-    (HERE / 'QA.md').write_text('\n'.join(lines))
++    lines += ['', 'Reproduce: `python3 scripts/verify_public_results.py --require-complete`.',
++              '', 'The public verifier writes only `QA-public.md` and `verification-public.json`; original QA is unchanged. Unexpected missing outputs are never treated as passed.', '']
++    (HERE / 'QA-public.md').write_text('\n'.join(lines))
+     print(json.dumps({'status': result['status'], 'verified_phases': list(result['phases']),
+                       'errors': result['errors'], 'pending': result['pending']}, indent=2))
+     return 1 if result['errors'] or (require_complete and result['pending']) else 0

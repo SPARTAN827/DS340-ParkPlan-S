@@ -5,3 +5,17 @@ __pycache__/
 *.pyc
 .DS_Store
 Thumbs.db
+
+# Local environments and downloaded raw inputs; derived study CSVs remain tracked.
+/.venv/
+/.plot-venv/
+/.matplotlib-cache/
+/data/raw/
+*.tar.gz
+*.json.gz
+AK07.csv
+AK11.csv
+AK14.csv
+AK18.csv
+AK85.csv
+AK86.csv

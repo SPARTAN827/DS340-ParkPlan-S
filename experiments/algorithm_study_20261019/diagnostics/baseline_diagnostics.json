@@ -1,0 +1,284 @@
+{
+  "scope": "Baseline-only descriptive audit of already-examined 165 evaluation dates; no candidate tuning or evidence of new-policy superiority.",
+  "inputs_sha256": {
+    "experiments/hours_replay_pilot/per_day.csv": "d7d0c40b5882a4efcd85c86bd3ff958cb6589272cf152713b209d17b38a5009d",
+    "experiments/tie_preserving_pilot/per_day_new_policy.csv": "a4fc4a8e63f819082e6645c997b0ab4df97e1012fb8f3a575443052c5d081e48",
+    "experiments/tie_preserving_pilot/all_decision_traces.json": "d52a83e6aaa4690bd97941be2f0731c26e4025875a31e16735da1c3ccb9ea749",
+    "experiments/hours_replay_pilot/train_curves.json": "ef091212e5a36c0949aedd2d360a0997b81a5c193b6b598f7a17e525d7fbd0b4"
+  },
+  "source_sha256": "23eca800b048aecd4b3a2469e78f63f24f64637eb785c8401386e219a177f812",
+  "raw_source": {
+    "evaluation_source_rows": 126112,
+    "evaluation_posted_outside_read_window_rows": 17644,
+    "evaluation_posted_rows_in_read_window": 106329,
+    "evaluation_closure_rows_in_read_window": 12120,
+    "evaluation_nonposted_rows": 2139,
+    "unique_posted_timestamps": 105859,
+    "duplicate_timestamp_groups": 423,
+    "conflicting_timestamp_groups": 101,
+    "closure_open_conflicting_timestamp_groups": 11,
+    "first_vs_last_source_value_disagreements": 101
+  },
+  "paired_time_decomposition": {
+    "both_complete": 105,
+    "fixed_only": 15,
+    "dynamic_only": 21,
+    "neither": 24,
+    "fixed_mean_elapsed": 439.42857142857144,
+    "dynamic_mean_elapsed": 423.95238095238096,
+    "fixed_minus_dynamic_minutes": {
+      "n": 105,
+      "mean": 15.476190476190476,
+      "median": 10.0,
+      "min": -80.0,
+      "max": 95.0
+    },
+    "dynamic_faster_equal_slower_days": [
+      63,
+      9,
+      33
+    ],
+    "all_time_difference_is_posted_wait_proxy": true,
+    "all_success_walk_minutes": 60,
+    "all_success_service_minutes": 60
+  },
+  "failure_counts": {
+    "fixed": {
+      "closed_at_arrival": 43,
+      "no_fresh_posted_at_arrival": 1,
+      "completion_after_window": 1
+    },
+    "replan": {
+      "closed_at_arrival": 36,
+      "no_fresh_posted_at_arrival": 1,
+      "completion_after_window": 2
+    },
+    "threshold10": {
+      "closed_at_arrival": 35,
+      "no_fresh_posted_at_arrival": 1,
+      "completion_after_window": 1
+    }
+  },
+  "decision_audit": {
+    "post_ride_calls": 800,
+    "real_choice_calls": 645,
+    "suffix_only_changed": 87,
+    "next_ride_changed": 314,
+    "forced_last_ride_calls": 155,
+    "by_remaining_rides": {
+      "5": {
+        "calls": 164,
+        "suffix_only_changed": 46,
+        "next_ride_changed": 85
+      },
+      "4": {
+        "calls": 161,
+        "next_ride_changed": 102,
+        "suffix_only_changed": 23
+      },
+      "3": {
+        "calls": 160,
+        "next_ride_changed": 80,
+        "suffix_only_changed": 18
+      },
+      "2": {
+        "calls": 160,
+        "next_ride_changed": 47
+      },
+      "1": {
+        "calls": 155
+      }
+    },
+    "independently_exact_optimal_scores_verified": 800,
+    "full_completed_trip_postride_calls": 5,
+    "full_completed_trip_real_postride_choice_points": 4,
+    "initial_permutations": 720,
+    "complete_trip_postride_permutations": 153,
+    "limitation": "Exact enumeration minimizes a frozen point-forecast open-loop suffix, not a stochastic policy that conditions later decisions on newly observed states. Exact search does not establish optimality under real waits, spatial walking, closures, or uncertain forecasts."
+  },
+  "information_use_counts": {
+    "visits": 965,
+    "visit_arrival_conflicting_timestamp": 1,
+    "remaining_ride_state_reads": 3409,
+    "missing_or_stale_remaining_ride_reads": 0,
+    "closed_remaining_ride_reads": 174,
+    "conflicting_remaining_ride_state_reads": 2
+  },
+  "immediate_next_ride_forecast": {
+    "signed_error_forecast_minus_posted": {
+      "n": 928,
+      "mean": -0.5028566582688032,
+      "median": 1.0527741266407844,
+      "min": -99.41897843886733,
+      "max": 35.01065605894496
+    },
+    "absolute_error": {
+      "n": 928,
+      "mean": 6.552363060970218,
+      "median": 4.232408624453065,
+      "min": 0.0,
+      "max": 99.41897843886733
+    },
+    "horizon_minutes": 10,
+    "scope": "On-policy next-ride visits; available finite forecasts and fresh open posted targets; not actual visitor wait error."
+  },
+  "selected_plan_horizon_error": {
+    "0-15": {
+      "planned_targets": 965,
+      "eligible_targets": 928,
+      "signed_error": {
+        "n": 928,
+        "mean": -0.5028566582688032,
+        "median": 1.0527741266407844,
+        "min": -99.41897843886733,
+        "max": 35.01065605894496
+      },
+      "absolute_error": {
+        "n": 928,
+        "mean": 6.552363060970218,
+        "median": 4.232408624453065,
+        "min": 0.0,
+        "max": 99.41897843886733
+      }
+    },
+    "15-60": {
+      "planned_targets": 315,
+      "eligible_targets": 291,
+      "signed_error": {
+        "n": 291,
+        "mean": 3.4992005193444853,
+        "median": 5.0,
+        "min": -47.383315367785336,
+        "max": 46.899514804289794
+      },
+      "absolute_error": {
+        "n": 291,
+        "mean": 11.174372996253448,
+        "median": 8.554112939921652,
+        "min": 0.0,
+        "max": 47.383315367785336
+      }
+    },
+    "60-120": {
+      "planned_targets": 490,
+      "eligible_targets": 455,
+      "signed_error": {
+        "n": 455,
+        "mean": 1.7732259008858309,
+        "median": 2.919442094756846,
+        "min": -94.25918545337595,
+        "max": 82.39940944256603
+      },
+      "absolute_error": {
+        "n": 455,
+        "mean": 18.835290714006902,
+        "median": 15.574651309223029,
+        "min": 0.0,
+        "max": 94.25918545337595
+      }
+    },
+    "120+": {
+      "planned_targets": 1637,
+      "eligible_targets": 1556,
+      "signed_error": {
+        "n": 1556,
+        "mean": -4.7035645690011965,
+        "median": 0.0,
+        "min": -129.0720782493644,
+        "max": 83.74718651961706
+      },
+      "absolute_error": {
+        "n": 1556,
+        "mean": 24.404333104226797,
+        "median": 19.780452993939235,
+        "min": 0.0,
+        "max": 129.0720782493644
+      }
+    }
+  },
+  "selected_plan_horizon_error_note": "Retrospective target is posted wait at the suffix forecast arrival, not actual realized arrival; endogenous selected-route targets overlap and are correlated. Diagnostic only, not a held-out forecast benchmark or candidate score.",
+  "closure_failures": {
+    "count": 36,
+    "departure_information": {
+      "open": 8,
+      "closed": 28
+    },
+    "finite_immediate_forecast_despite_known_current_closure": 0,
+    "infinite_immediate_forecast_but_no_finite_alternative_or_forced": 28,
+    "arrival_timestamp_conflicts": 0,
+    "by_remaining_ride_count": {
+      "1": 27,
+      "2": 5,
+      "4": 1,
+      "5": 3
+    },
+    "by_ride": {
+      "AK07": 13,
+      "AK11": 11,
+      "AK14": 6,
+      "AK18": 5,
+      "AK85": 1
+    }
+  },
+  "diagnostic_examples": {
+    "selection_warning": "Selected after observing baseline outcomes solely to explain failures; not representative evidence or new-policy benefit.",
+    "largest_paired_dynamic_loss_tie_broken_earliest": {
+      "date": "2018-10-15",
+      "fixed_success": "True",
+      "dynamic_success": "True",
+      "fixed_failure": "",
+      "dynamic_failure": "",
+      "fixed_elapsed": "445.0",
+      "dynamic_elapsed": "525.0",
+      "paired_fixed_minus_dynamic": -80.0,
+      "paired_walk_difference": 0.0,
+      "paired_service_difference": 0.0,
+      "paired_wait_difference": -80.0
+    },
+    "earliest_paired_dynamic_loss": {
+      "date": "2018-07-27",
+      "fixed_success": "True",
+      "dynamic_success": "True",
+      "fixed_failure": "",
+      "dynamic_failure": "",
+      "fixed_elapsed": "440.0",
+      "dynamic_elapsed": "445.0",
+      "paired_fixed_minus_dynamic": -5.0,
+      "paired_walk_difference": 0.0,
+      "paired_service_difference": 0.0,
+      "paired_wait_difference": -5.0
+    },
+    "earliest_known_closure_failure": {
+      "date": "2018-07-28",
+      "ride": "AK11",
+      "depart": 1010.0,
+      "arrival": 1020.0,
+      "remaining_at_departure": 1,
+      "status": "closed_at_arrival",
+      "predicted_next_wait": "",
+      "realized_posted_wait": -999,
+      "predicted_minus_realized": "",
+      "departure_latest_state": "closed",
+      "departure_state_age": 5.0,
+      "arrival_timestamp_conflict": false
+    },
+    "largest_paired_loss_orders": {
+      "date": "2018-10-15",
+      "fixed": "AK14|AK85|AK11|AK86|AK07|AK18",
+      "dynamic": "AK14|AK85|AK86|AK07|AK11|AK18"
+    },
+    "earliest_paired_loss_orders": {
+      "date": "2018-07-27",
+      "fixed": "AK14|AK11|AK85|AK07|AK86|AK18",
+      "dynamic": "AK14|AK07|AK85|AK11|AK86|AK18"
+    }
+  },
+  "checks": {
+    "baseline_rows_unchanged": true,
+    "source_sha256_verified": true,
+    "all_dynamic_daily_fields_match_old_replan_except_label": true,
+    "decision_exact_optima_reconstructed": 800,
+    "candidate_policies_run": 0,
+    "training_or_tuning_performed": false
+  }
+}

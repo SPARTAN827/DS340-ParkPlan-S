@@ -1,0 +1,34 @@
+{
+  "credit": "TouringPlans.com — wait archive and published historical park-hours pages",
+  "source_archive_sha256": "23eca800b048aecd4b3a2469e78f63f24f64637eb785c8401386e219a177f812",
+  "hours_csv_sha256": "599b375a726567b63550826a236fac6877b1fb866375f145aa5bfa3ed36a8f27",
+  "spot_check_csv_sha256": "1cb78eaa35def2a367353a1aea9e9d8f8cf743edad0144cd158f13c54ad069e0",
+  "alternate_dates": [
+    "2018-07-26",
+    "2018-08-26",
+    "2018-12-24"
+  ],
+  "alternate_scope": "Only three known conflicting dates; not a bound on other schedule uncertainty",
+  "reused_policy_code_sha256": "7b925030c716121d6d7191d00c84167fa40ef3687dd1d99bcddb09bbb9c735b0",
+  "all_common_days": 550,
+  "train_days": 385,
+  "test_days": 165,
+  "train_range": [
+    "2017-05-26",
+    "2018-07-25"
+  ],
+  "test_range": [
+    "2018-07-26",
+    "2019-01-06"
+  ],
+  "train_grid_local": "10:00–24:00; train-only 15-minute medians",
+  "start_local": "10:00 US Eastern; every sourced public opening is at or before 10:00",
+  "deadline": "Finish all six rides by listed public park close (conservative modeling rule, not queue-entry policy)",
+  "attraction_hours": "Not independently verified for every date; park close is not each ride closing time",
+  "source_status": "TouringPlans-listed historical secondary-source schedule, not guaranteed actual hours; independent spot checks found conflicts",
+  "walk_per_leg_minutes": 10,
+  "service_per_ride_minutes": 10,
+  "remaining_assumptions": "Synthetic gate and uniform walk/service; closure/stale-data failure unchanged",
+  "control_note": "Control also uses extended training grid, so not identical to the original 17:00 pilot",
+  "status": "Exploratory historical-window sensitivity; these dates were examined in prior pilots, not a pristine final holdout"
+}

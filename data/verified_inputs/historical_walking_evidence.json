@@ -1,0 +1,24 @@
+{
+  "checked_date": "2026-10-14",
+  "status": "historical_panelist_estimates_not_measured_complete_matrix",
+  "edges": [
+    {
+      "from": "GATE",
+      "to": "AK86",
+      "minimum_estimate_minutes": 10,
+      "maximum_estimate_minutes": 15,
+      "source_date": "2018-12-23",
+      "source_url": "https://plandisney.disney.go.com/question/long-walk-ak-entrance-rope-drop-avatars-flight-passage-388936/",
+      "scope": "entrance turnstiles to attraction queue; time estimate, not measured distance"
+    },
+    {
+      "from": "AK85",
+      "to": "AK07",
+      "approximate_estimate_minutes": 10,
+      "source_date": "2018-02-21",
+      "source_url": "https://plandisney.disney.go.com/question/long-walk-navi-river-journey-kilimanjaro-safaris-ride-ak-362863/",
+      "scope": "average crowds, no stopping; panelist estimate"
+    }
+  ],
+  "unknown": "all remaining directed edges, crowd dependence, detailed entry/exit positions, distances, variability"
+}

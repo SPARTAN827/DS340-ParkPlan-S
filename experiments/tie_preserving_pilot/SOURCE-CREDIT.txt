@@ -1,0 +1,14 @@
+Data credit: TouringPlans.com — Disney Animal Kingdom attraction wait-time data and published historical park-hour listings.
+
+Wait-data source:
+https://github.com/TouringPlans/DisneyAnimalKingdomWaitTimes
+Pinned commit: 933161b8bebb7cd50e0d54bcb3578484875487fa
+Source archive SHA256: 23eca800b048aecd4b3a2469e78f63f24f64637eb785c8401386e219a177f812
+
+Source license terms (from the pinned README):
+You're free to use these data however you see fit, subject to the following:
+1) Any publications or redistributions credit TouringPlans.com clearly at the beginning of those publications or distributions
+2) Any redistributions include these license terms
+
+This supplement contains derived outputs and code, not the raw wait CSVs or full downloaded pages.
+Historical park hours: data/verified_inputs/historical_park_hours.csv in the existing workspace; each row includes its exact source URL. The listings are not fully independently verified operating logs.

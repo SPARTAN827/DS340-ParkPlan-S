@@ -1,0 +1,7 @@
+ride_id,ride_name,published_duration_minutes,separately_published_preshow_minutes,source_url,source_date_applicability,status,usable_as_final_historical_service
+AK07,Kilimanjaro Safaris,20,,https://touringplans.com/animal-kingdom/attractions/kilimanjaro-safaris,current_page_2026-10-14_not_archival_2018,source_label_verified_not_historical_total_service,False
+AK11,Expedition Everest,4,,https://touringplans.com/animal-kingdom/attractions/expedition-everest,current_page_2026-10-14_not_archival_2018,source_label_verified_not_historical_total_service,False
+AK14,Kali River Rapids,10,,https://touringplans.com/animal-kingdom/attractions/kali-river-rapids,current_page_2026-10-14_not_archival_2018,source_label_verified_not_historical_total_service,False
+AK18,DINOSAUR,4,4,https://touringplans.com/animal-kingdom/attractions/dinosaur,current_page_2026-10-14_not_archival_2018,source_label_verified_not_historical_total_service,False
+AK85,Na'vi River Journey,5,,https://touringplans.com/animal-kingdom/attractions/navi-river-journey,current_page_2026-10-14_not_archival_2018,source_label_verified_not_historical_total_service,False
+AK86,Avatar Flight of Passage,6,7,https://touringplans.com/animal-kingdom/attractions/avatar-flight-of-passage,current_page_2026-10-14_not_archival_2018,source_label_verified_not_historical_total_service,False

@@ -1,0 +1,27 @@
+{
+  "source_files_sha256": {
+    "selection.json": "aa08905677dbced1c0c3a1b12e94cd29b6fa4f3b50d87376ae091cc92950a6d4",
+    "evaluation/summary.json": "dc76d11f87e3b27b471e97c7dde5dc0b1cd1540f01120ce030dc1f97aa8f08a1",
+    "sensitivity/illustrative/summary.json": "c68ea3da6cb7711122ae0184d71c7941d17ae1a4db709b8d21cc1720fe505bbe",
+    "sensitivity/illustrative_fast/summary.json": "8751585242b844c330bb17908e6f0bb4f5839ad8312f7d08c69317a2f423c78a",
+    "sensitivity/illustrative_slow/summary.json": "e26c302de0dc80d9975ba36c678df695b9ca65561fdc79fce3d4658125b0a86c",
+    "sensitivity/uniform15/summary.json": "6e5179460764b6548ccfe62b2068091c4dbba17ee16577e274271db341f01d1e",
+    "sensitivity/uniform5/summary.json": "5aa34746341fd498bb58361d53fe388ac43c32b595300475b45ba631fc94764f"
+  },
+  "figure_script_sha256": "1fec904c9665b467b26b2c190e56db09a97ae7444d75f5621cdecd44d386f84b",
+  "figures": [
+    "01_candidate_comparison.pdf",
+    "01_candidate_comparison.png",
+    "01_candidate_comparison.svg",
+    "02_input_sensitivity.pdf",
+    "02_input_sensitivity.png",
+    "02_input_sensitivity.svg",
+    "03_feedback_first_principles.pdf",
+    "03_feedback_first_principles.png",
+    "03_feedback_first_principles.svg"
+  ],
+  "interpretation": "Exploratory conditional posted-wait-proxy differences, with all-attempt completion shown separately.",
+  "source_credit": "TouringPlans.com",
+  "geometry": "Synthetic; nonuniform graph is an illustrative sensitivity, not a measured park map",
+  "uncertainty": "Existing summary 95% seven-date block-bootstrap intervals; input/model uncertainty excluded"
+}

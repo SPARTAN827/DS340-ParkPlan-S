@@ -1,0 +1,24 @@
+{
+  "credit": "TouringPlans.com — wait archive and published historical park-hours pages",
+  "source_archive_sha256": "23eca800b048aecd4b3a2469e78f63f24f64637eb785c8401386e219a177f812",
+  "hours_csv_sha256": "599b375a726567b63550826a236fac6877b1fb866375f145aa5bfa3ed36a8f27",
+  "reused_curves_sha256": "ef091212e5a36c0949aedd2d360a0997b81a5c193b6b598f7a17e525d7fbd0b4",
+  "reused_baseline_csv_sha256": "d7d0c40b5882a4efcd85c86bd3ff958cb6589272cf152713b209d17b38a5009d",
+  "new_replay_code_sha256": "85d999aed75ef334e8221ba51abed9192573e4e23f012de0e206ee131abdd0dc",
+  "new_run_code_sha256": "b4a2a08163131189adda533f2bae3b3fa47f1ccaaf3e0ddf2c34f69d9c98ac8f",
+  "preserved_artifact_count": 31,
+  "change": "Only new policy replan_keep_ties: switch iff candidate differs and predicted finish is lower by >1e-9 minutes. Initial ordering unchanged.",
+  "test_range": [
+    "2018-07-26",
+    "2019-01-06"
+  ],
+  "train_range": [
+    "2017-05-26",
+    "2018-07-25"
+  ],
+  "existing_baseline_rows_reused": 495,
+  "new_replay_rows": 165,
+  "refitting": false,
+  "status": "Exploratory comparator correction, not an uncertainty-aware rule or measured visitor benefit.",
+  "unchanged_assumptions": "10:00 start; published park-close completion deadline; 10-minute uniform walk/service legs; posted-wait proxy; fail on closure/stale data."
+}

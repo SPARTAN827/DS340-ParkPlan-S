@@ -1,58 +1,95 @@
-# DS340-ParkPlan-S
+**Data credit: TouringPlans.com — historical Disney Animal Kingdom posted waits and published park-hour listings.**
 
-Group 9 DS340 project: ParkPlan-S. ADAPT parent-paper code, data, and reproduction instructions.
+# ParkPlan-S: time-efficient six-ride replanning
 
-Team: Jesse Zhang and Yongqi Sheng.
+DS340 project by **Jesse Zhang and Yongqi Sheng**.
 
-## First parent research paper
+## Current project
 
-Qiuchen Qian, Yanran Wang, and David Boyle. **Adaptive Probabilistic Planning for the Uncertain and Dynamic Orienteering Problem**. IEEE Internet of Things Journal, 12(10), 13988–14001, 2025.
+For one park and the same six required rides, compare a fixed initial order with replanning after every completed ride. The user objective is total elapsed walking + waiting + service time. Completing the same six rides is a comparison-validity condition, not a separate optimization objective.
 
-- Published paper: https://doi.org/10.1109/JIOT.2025.3525985
-- Open reading version: https://arxiv.org/abs/2409.05545
-- Author repository: https://github.com/sysal-bruce-publication/Uncertain-Dynamic-OP
-- Author commit: `e9967bf0d7a42c9051bdb1759bebeeac42d30681`
-- Original public data: https://github.com/sysal-bruce-publication/Uncertain-Dynamic-OP/tree/main/instances
-- Included source and license: [reproduction/ADAPT-upstream](reproduction/ADAPT-upstream/)
-- Included datasets: [instances](reproduction/ADAPT-upstream/instances/)
+The current Python implementation and experiments are in [`experiments/algorithm_study_20261019/`](experiments/algorithm_study_20261019/). The earlier ADAPT parent-paper reproduction remains in [`reproduction/`](reproduction/). It is preserved; it is not the current park planner.
 
-The public synthetic instances have 20, 30, or 40 sensor nodes for UAV charging-scheduling simulations. The California20 CSV contains 20 sensors plus two depot rows. Columns are lat, lon, alt, volt; the first three contain converted relative coordinates, not raw geographic coordinates. These are the parent paper's data, not theme-park waiting-time data.
+| Policy | Meaning |
+|---|---|
+| F | Keep the common initial order. |
+| D0 | Existing arrival-aware dynamic planner; replan after each completed ride. |
+| C | Validation-selected residual-decay calibration. |
+| R | Test each next action across eight historical scenarios, with later D0 feedback. |
+| S | Same-scenario shared-order control. |
 
-ADAPT supplies a methodological foundation for planning and replanning under uncertain costs and a limited budget. ParkPlan-S proposes a stable route-switching decision layer for theme-park itineraries. This repository does not demonstrate theme-park performance.
+All policies use the same start, information access, six rides and execution rules. Current implementations are research replay code, not a deployed visitor application.
 
-## Run on Ubuntu 24.04 / Windows WSL2 Ubuntu 24.04
+## Current finding
 
-Native Ubuntu 24.04 was verified. User-side Windows/WSL execution is pending. Windows users should run these commands inside Ubuntu, not PowerShell.
+- F minus D0: **+15.48 modeled minutes saved** on 105 jointly completed evaluation dates.
+- D0 minus R: **−6.36 modeled minutes saved** on a different set of 118 jointly completed dates; 95% seven-date block interval **[−13.73, +0.36]**.
+- All-attempt completions: F **120/165**, D0 **126/165**, R **128/165**.
+- **The new rollout has not established an improvement over D0.** QA PASS is an integrity result, not a performance win.
 
-Install prerequisites once:
+The evaluation dates had been inspected previously: this is retrospective, exploratory analysis, not an untouched final holdout. Posted waits are a proxy, not measured visitor journeys. Walking and service assumptions are synthetic; no real-world saving or superiority to proprietary TouringPlans software is claimed.
+
+Read the [study report](experiments/algorithm_study_20261019/REPORT.md), [frozen protocol](experiments/algorithm_study_20261019/PROTOCOL.md), and [action-value diagnostic](experiments/algorithm_study_20261019/diagnostics/rollout_error_audit.md).
+
+## Dataset
+
+- Public dataset: [TouringPlans / DisneyAnimalKingdomWaitTimes](https://github.com/TouringPlans/DisneyAnimalKingdomWaitTimes).
+- Pinned commit: `933161b8bebb7cd50e0d54bcb3578484875487fa`.
+- Six historical series: `AK07`, `AK11`, `AK14`, `AK18`, `AK85`, `AK86`.
+- Chronological split: 270 fit dates, 115 validation dates, 165 exploratory evaluation dates.
+- Raw wait CSVs and downloaded archives are not bundled. Download the pinned source as documented in [RUNNING.md](RUNNING.md).
+
+Attraction names reflect the historical dataset, not a claim about current park operations.
+
+## Code you can inspect and develop
+
+| File | Role |
+|---|---|
+| [`engine.py`](experiments/algorithm_study_20261019/engine.py) | Route scoring, policies and historical-scenario continuation logic. |
+| [`prepare.py`](experiments/algorithm_study_20261019/prepare.py) | Shared inputs and chronological splits. |
+| [`run.py`](experiments/algorithm_study_20261019/run.py) | Frozen original experiment runner. Use the public entry point below. |
+| [`analyze.py`](experiments/algorithm_study_20261019/analyze.py) | Paired summaries and uncertainty intervals. |
+| [`test_engine.py`](experiments/algorithm_study_20261019/test_engine.py) | Constructed engine checks, not evidence of superiority. |
+| [`scripts/run_public_study.py`](scripts/run_public_study.py) | Public-distribution runner; original scientific implementation retained. |
+| [`scripts/verify_public_results.py`](scripts/verify_public_results.py) | Public-scope independent verification of the included frozen evidence. |
+
+Core code uses Python's standard library; optional figure regeneration uses the study's `requirements-plot.txt`.
+
+### Quick engine check
+
+From the repository root with Python 3.10+:
 
 ```bash
-sudo apt update
-sudo apt install build-essential cmake python3 git libboost-dev
+python3 -m unittest discover -s experiments/algorithm_study_20261019 -p test_engine.py -v
 ```
 
-Clone into a new location and run:
+See [RUNNING.md](RUNNING.md) for source download, full included-results verification and replay commands. The recorded execution environment is Linux/Python 3.12; full native-Windows policy execution is not claimed tested. Windows users can use WSL for the Linux-oriented replay.
 
-```bash
-git clone https://github.com/SPARTAN827/DS340-ParkPlan-S.git
-cd DS340-ParkPlan-S
-python3 reproduction/setup_and_run.py
-```
+The reduced public snapshot was checked in a fresh Linux copy:12 engine tests and8 public-adapter tests passed; all6,200 policy-days,35,082 replay arrivals,23,268 decision snapshots and10,416 training-scenario-ID checks passed. See [public QA](experiments/algorithm_study_20261019/QA-public.md). This packaging check did not rerun policy simulations or establish a new performance result.
 
-C++20 and Boost >=1.78 are required. This lightweight repository does not bundle Boost or compiled binaries. The helper builds the original offline-planning, simulation, and online-planning modules and runs one complete California20 Bayesian mission. It uses only Python's standard library and does not require a paid solver.
+## Public package versus original preservation audit
 
-Each invocation creates a fresh `reproduction/runs/smoke-*` folder. Inspect that run's `summary.json`, `console.log`, `processes.json`, and `input/mission_log.csv`. Do not execute the upstream `main.sh` or cleanup scripts for this coursework workflow.
+The historical workspace audit checked 31 old artifacts, including 11 meeting-note/archival files that are not needed to explain the algorithms and are not distributed here. This public package strictly verifies the **20 included legacy artifacts**, explicitly records the **11 omissions**, and retains the original algorithm, runner, protocol and locks unchanged.
 
-## Provenance and limits
+Use the separately named public entry points, not the original workspace-only preservation command. Public verification writes `QA-public.md` and `verification-public.json`; it does not overwrite the historical certificate. No missing included file is silently ignored. Details and exact adapter scope are in [`scripts/`](scripts/).
 
-Original author source files are preserved unchanged and checked against `UPSTREAM_SNAPSHOT.json` before execution. Author code is MIT licensed: see [LICENSE.txt](reproduction/ADAPT-upstream/LICENSE.txt). Upstream authors retain credit; the team does not claim to have written ADAPT. The added CMake and Python build/run helpers were prepared with AI assistance.
+Original study reports/QA records describe their historical execution context. They are not claims that omitted meeting material is present in this repository.
 
-The previously verified portable package completed one full mission on native Ubuntu 24.04, with 9 sensor services, 9 Bayesian replans, and successful return. That prior check is not a claim that a team member has already run this public checkout or recorded it. Random outcomes may differ.
+## Earlier ADAPT work
 
-The Bayesian configuration selects average-power samples before edge generation. The original sliding-window script has a no-op subtraction bug; its behavior is preserved, so this run uses accumulated observations rather than a validated 900-second window. A successful smoke run is not a reproduction of all paper experiments or proof of ParkPlan-S effectiveness.
+The existing [`reproduction/`](reproduction/) directory and its third-party source/license are unchanged. [The previous README](README-2026-09-12.md) is preserved as a dated historical record. Its earlier route-stability proposal and coursework status are superseded by the current time-only scope above.
 
-The original simulator intentionally returns status 1 for successful return home. The helper accepts it only for a home-target step with additional checks, and finally exits 0 on success; it does not ignore arbitrary errors.
+ADAPT original code was exercised in a limited smoke test, not fully replicated statistically or transplanted into the park algorithm. KOWCPI and Shiri et al. contribute conceptual guidance; neither original system is claimed reproduced here.
 
-## Coursework status
+## Next research step
 
-This repository supports the first parent-paper assignment. A genuine code-download-and-run Kaltura recording and the final submission PDF remain separate deliverables. No recording link is fabricated here.
+Investigate better next-action value prediction using earlier chronological development data, then freeze the method and evaluate on genuinely unused dates. That improvement is a hypothesis, not an implemented or validated winner.
+
+## Data-use terms
+
+You're free to use these data however you see fit, subject to the following:
+
+1. Any publications or redistributions credit TouringPlans.com clearly at the beginning of those publications or distributions.
+2. Any redistributions include these license terms.
+
+See [SOURCES-AND-LICENSE.md](experiments/algorithm_study_20261019/SOURCES-AND-LICENSE.md). No blanket license is imposed on third-party materials.

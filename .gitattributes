@@ -1,1 +1,7 @@
 /reproduction/ADAPT-upstream/** -text
+
+# Retain frozen evidence bytes on Windows and Linux checkouts.
+/experiments/** -text
+/data/verified_inputs/** -text
+/scripts/** text eol=lf
+/*.md text eol=lf

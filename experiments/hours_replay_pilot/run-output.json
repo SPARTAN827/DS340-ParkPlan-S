@@ -1,0 +1,305 @@
+{
+  "control_17_completion": {
+    "attempted_days": 165,
+    "by_policy": {
+      "fixed": {
+        "success_days": 45,
+        "completion_rate": 0.2727272727272727,
+        "failures_by_reason": {
+          "arrival_after_window": 7,
+          "closed_at_arrival": 28,
+          "completion_after_window": 84,
+          "no_fresh_posted_at_arrival": 1
+        },
+        "mean_completed_rides_all_days": 4.381818181818182,
+        "mean_route_changes_all_days": 0
+      },
+      "replan": {
+        "success_days": 64,
+        "completion_rate": 0.3878787878787879,
+        "failures_by_reason": {
+          "arrival_after_window": 6,
+          "closed_at_arrival": 20,
+          "completion_after_window": 74,
+          "no_fresh_posted_at_arrival": 1
+        },
+        "mean_completed_rides_all_days": 4.9393939393939394,
+        "mean_route_changes_all_days": 2.3696969696969696
+      },
+      "threshold10": {
+        "success_days": 54,
+        "completion_rate": 0.32727272727272727,
+        "failures_by_reason": {
+          "arrival_after_window": 9,
+          "closed_at_arrival": 19,
+          "completion_after_window": 82,
+          "no_fresh_posted_at_arrival": 1
+        },
+        "mean_completed_rides_all_days": 4.842424242424243,
+        "mean_route_changes_all_days": 1.018181818181818
+      }
+    },
+    "paired": {
+      "replan": {
+        "paired_success_days": 39,
+        "fraction_of_attempted_days": 0.23636363636363636,
+        "fixed_only_success_days": 6,
+        "policy_only_success_days": 25,
+        "neither_success_days": 95,
+        "mean_proxy_minutes_saved": 4.358974358974359,
+        "mean_proxy_minutes_saved_bootstrap_95pct": [
+          -3.8461538461538463,
+          12.435897435897436
+        ],
+        "median_proxy_minutes_saved": 0.0,
+        "p25_proxy_minutes_saved": -10.0,
+        "p75_proxy_minutes_saved": 17.5,
+        "days_positive": 19,
+        "days_zero": 5,
+        "days_negative": 15,
+        "mean_wait_minutes_saved": 4.358974358974359,
+        "mean_route_changes_on_paired_days": 2.5641025641025643
+      },
+      "threshold10": {
+        "paired_success_days": 39,
+        "fraction_of_attempted_days": 0.23636363636363636,
+        "fixed_only_success_days": 6,
+        "policy_only_success_days": 15,
+        "neither_success_days": 105,
+        "mean_proxy_minutes_saved": 7.948717948717949,
+        "mean_proxy_minutes_saved_bootstrap_95pct": [
+          0.3814102564102594,
+          15.64102564102564
+        ],
+        "median_proxy_minutes_saved": 0.0,
+        "p25_proxy_minutes_saved": 0.0,
+        "p75_proxy_minutes_saved": 20.0,
+        "days_positive": 15,
+        "days_zero": 19,
+        "days_negative": 5,
+        "mean_wait_minutes_saved": 7.948717948717949,
+        "mean_route_changes_on_paired_days": 0.9487179487179487
+      }
+    },
+    "three_policy_common_success": {
+      "days": 35,
+      "by_policy": {
+        "fixed": {
+          "mean_elapsed_proxy_minutes": 367.7142857142857,
+          "mean_route_changes": 0,
+          "mean_fixed_minus_policy_minutes": 0.0
+        },
+        "replan": {
+          "mean_elapsed_proxy_minutes": 362.57142857142856,
+          "mean_route_changes": 2.5428571428571427,
+          "mean_fixed_minus_policy_minutes": 5.142857142857143
+        },
+        "threshold10": {
+          "mean_elapsed_proxy_minutes": 361.0,
+          "mean_route_changes": 1,
+          "mean_fixed_minus_policy_minutes": 6.714285714285714
+        }
+      }
+    }
+  },
+  "historical_park_close_completion": {
+    "attempted_days": 165,
+    "by_policy": {
+      "fixed": {
+        "success_days": 120,
+        "completion_rate": 0.7272727272727273,
+        "failures_by_reason": {
+          "closed_at_arrival": 43,
+          "completion_after_window": 1,
+          "no_fresh_posted_at_arrival": 1
+        },
+        "mean_completed_rides_all_days": 5.212121212121212,
+        "mean_route_changes_all_days": 0
+      },
+      "replan": {
+        "success_days": 126,
+        "completion_rate": 0.7636363636363637,
+        "failures_by_reason": {
+          "closed_at_arrival": 36,
+          "completion_after_window": 2,
+          "no_fresh_posted_at_arrival": 1
+        },
+        "mean_completed_rides_all_days": 5.612121212121212,
+        "mean_route_changes_all_days": 2.43030303030303
+      },
+      "threshold10": {
+        "success_days": 128,
+        "completion_rate": 0.7757575757575758,
+        "failures_by_reason": {
+          "closed_at_arrival": 35,
+          "completion_after_window": 1,
+          "no_fresh_posted_at_arrival": 1
+        },
+        "mean_completed_rides_all_days": 5.624242424242424,
+        "mean_route_changes_all_days": 1.0484848484848486
+      }
+    },
+    "paired": {
+      "replan": {
+        "paired_success_days": 105,
+        "fraction_of_attempted_days": 0.6363636363636364,
+        "fixed_only_success_days": 15,
+        "policy_only_success_days": 21,
+        "neither_success_days": 24,
+        "mean_proxy_minutes_saved": 15.476190476190476,
+        "mean_proxy_minutes_saved_bootstrap_95pct": [
+          9.095238095238095,
+          22.00119047619046
+        ],
+        "median_proxy_minutes_saved": 10.0,
+        "p25_proxy_minutes_saved": -5.0,
+        "p75_proxy_minutes_saved": 40.0,
+        "days_positive": 63,
+        "days_zero": 9,
+        "days_negative": 33,
+        "mean_wait_minutes_saved": 15.476190476190476,
+        "mean_route_changes_on_paired_days": 2.419047619047619
+      },
+      "threshold10": {
+        "paired_success_days": 109,
+        "fraction_of_attempted_days": 0.6606060606060606,
+        "fixed_only_success_days": 11,
+        "policy_only_success_days": 19,
+        "neither_success_days": 26,
+        "mean_proxy_minutes_saved": 9.036697247706423,
+        "mean_proxy_minutes_saved_bootstrap_95pct": [
+          3.532110091743119,
+          14.63417431192659
+        ],
+        "median_proxy_minutes_saved": 0.0,
+        "p25_proxy_minutes_saved": 0.0,
+        "p75_proxy_minutes_saved": 20.0,
+        "days_positive": 45,
+        "days_zero": 46,
+        "days_negative": 18,
+        "mean_wait_minutes_saved": 9.036697247706423,
+        "mean_route_changes_on_paired_days": 0.8256880733944955
+      }
+    },
+    "three_policy_common_success": {
+      "days": 101,
+      "by_policy": {
+        "fixed": {
+          "mean_elapsed_proxy_minutes": 440.4950495049505,
+          "mean_route_changes": 0,
+          "mean_fixed_minus_policy_minutes": 0.0
+        },
+        "replan": {
+          "mean_elapsed_proxy_minutes": 424.25742574257424,
+          "mean_route_changes": 2.386138613861386,
+          "mean_fixed_minus_policy_minutes": 16.237623762376238
+        },
+        "threshold10": {
+          "mean_elapsed_proxy_minutes": 431.33663366336634,
+          "mean_route_changes": 0.8613861386138614,
+          "mean_fixed_minus_policy_minutes": 9.158415841584159
+        }
+      }
+    }
+  },
+  "historical_close_known_alternates": {
+    "attempted_days": 165,
+    "by_policy": {
+      "fixed": {
+        "success_days": 120,
+        "completion_rate": 0.7272727272727273,
+        "failures_by_reason": {
+          "closed_at_arrival": 43,
+          "completion_after_window": 1,
+          "no_fresh_posted_at_arrival": 1
+        },
+        "mean_completed_rides_all_days": 5.212121212121212,
+        "mean_route_changes_all_days": 0
+      },
+      "replan": {
+        "success_days": 126,
+        "completion_rate": 0.7636363636363637,
+        "failures_by_reason": {
+          "closed_at_arrival": 36,
+          "completion_after_window": 2,
+          "no_fresh_posted_at_arrival": 1
+        },
+        "mean_completed_rides_all_days": 5.612121212121212,
+        "mean_route_changes_all_days": 2.43030303030303
+      },
+      "threshold10": {
+        "success_days": 128,
+        "completion_rate": 0.7757575757575758,
+        "failures_by_reason": {
+          "closed_at_arrival": 35,
+          "completion_after_window": 1,
+          "no_fresh_posted_at_arrival": 1
+        },
+        "mean_completed_rides_all_days": 5.624242424242424,
+        "mean_route_changes_all_days": 1.0484848484848486
+      }
+    },
+    "paired": {
+      "replan": {
+        "paired_success_days": 105,
+        "fraction_of_attempted_days": 0.6363636363636364,
+        "fixed_only_success_days": 15,
+        "policy_only_success_days": 21,
+        "neither_success_days": 24,
+        "mean_proxy_minutes_saved": 15.476190476190476,
+        "mean_proxy_minutes_saved_bootstrap_95pct": [
+          9.095238095238095,
+          22.00119047619046
+        ],
+        "median_proxy_minutes_saved": 10.0,
+        "p25_proxy_minutes_saved": -5.0,
+        "p75_proxy_minutes_saved": 40.0,
+        "days_positive": 63,
+        "days_zero": 9,
+        "days_negative": 33,
+        "mean_wait_minutes_saved": 15.476190476190476,
+        "mean_route_changes_on_paired_days": 2.419047619047619
+      },
+      "threshold10": {
+        "paired_success_days": 109,
+        "fraction_of_attempted_days": 0.6606060606060606,
+        "fixed_only_success_days": 11,
+        "policy_only_success_days": 19,
+        "neither_success_days": 26,
+        "mean_proxy_minutes_saved": 9.036697247706423,
+        "mean_proxy_minutes_saved_bootstrap_95pct": [
+          3.532110091743119,
+          14.63417431192659
+        ],
+        "median_proxy_minutes_saved": 0.0,
+        "p25_proxy_minutes_saved": 0.0,
+        "p75_proxy_minutes_saved": 20.0,
+        "days_positive": 45,
+        "days_zero": 46,
+        "days_negative": 18,
+        "mean_wait_minutes_saved": 9.036697247706423,
+        "mean_route_changes_on_paired_days": 0.8256880733944955
+      }
+    },
+    "three_policy_common_success": {
+      "days": 101,
+      "by_policy": {
+        "fixed": {
+          "mean_elapsed_proxy_minutes": 440.4950495049505,
+          "mean_route_changes": 0,
+          "mean_fixed_minus_policy_minutes": 0.0
+        },
+        "replan": {
+          "mean_elapsed_proxy_minutes": 424.25742574257424,
+          "mean_route_changes": 2.386138613861386,
+          "mean_fixed_minus_policy_minutes": 16.237623762376238
+        },
+        "threshold10": {
+          "mean_elapsed_proxy_minutes": 431.33663366336634,
+          "mean_route_changes": 0.8613861386138614,
+          "mean_fixed_minus_policy_minutes": 9.158415841584159
+        }
+      }
+    }
+  }
+}

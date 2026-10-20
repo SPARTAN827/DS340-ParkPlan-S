@@ -1,0 +1,13 @@
+{
+  "rows_matched": 330,
+  "all_fields_checked": [
+    "initial_order",
+    "completed_order",
+    "failure",
+    "success",
+    "completed",
+    "route_changes",
+    "elapsed_min"
+  ],
+  "old_artifact_hashes": 31
+}

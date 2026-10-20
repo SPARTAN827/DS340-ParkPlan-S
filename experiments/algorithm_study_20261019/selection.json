@@ -1,0 +1,78 @@
+{
+  "frozen_at_utc": "2026-10-19T19:05:08.174353+00:00",
+  "selected_decay": 30,
+  "decay_selection": {
+    "selected": "calibrated_30",
+    "shared_success_days": 94,
+    "success_counts": {
+      "dynamic": 95,
+      "calibrated_15": 95,
+      "calibrated_30": 95,
+      "calibrated_60": 95,
+      "calibrated_120": 99
+    },
+    "common_mean_minutes": {
+      "dynamic": 478.6170212765957,
+      "calibrated_15": 477.5,
+      "calibrated_30": 476.22340425531917,
+      "calibrated_60": 478.6170212765957,
+      "calibrated_120": 482.6063829787234
+    },
+    "completion_discordance": {
+      "dynamic": {
+        "baseline_only": 0,
+        "candidate_only": 0
+      },
+      "calibrated_15": {
+        "baseline_only": 1,
+        "candidate_only": 1
+      },
+      "calibrated_30": {
+        "baseline_only": 1,
+        "candidate_only": 1
+      },
+      "calibrated_60": {
+        "baseline_only": 0,
+        "candidate_only": 0
+      },
+      "calibrated_120": {
+        "baseline_only": 1,
+        "candidate_only": 5
+      }
+    }
+  },
+  "within_replay_recommendation": {
+    "selected": "calibrated_30",
+    "shared_success_days": 89,
+    "success_counts": {
+      "dynamic": 95,
+      "calibrated_30": 95,
+      "rollout": 93
+    },
+    "common_mean_minutes": {
+      "dynamic": 480.44943820224717,
+      "calibrated_30": 477.75280898876406,
+      "rollout": 483.08988764044943
+    },
+    "completion_discordance": {
+      "dynamic": {
+        "baseline_only": 0,
+        "candidate_only": 0
+      },
+      "calibrated_30": {
+        "baseline_only": 1,
+        "candidate_only": 1
+      },
+      "rollout": {
+        "baseline_only": 6,
+        "candidate_only": 4
+      }
+    }
+  },
+  "primary_hypothesis": "rollout vs dynamic regardless of validation recommendation",
+  "protocol_sha256": "b991f76bd420be1ede75785c34ce4412e71ea2888b0523f5e1dd8f87e0418c8e",
+  "validation_csv_sha256": "d9c549546ca3c14238ff2fabfea07d51459aeca638f906fda3ee5593d3540609",
+  "engine_sha256": "99c43797594d0ebd7ba1aa1e95e2bb8b8f2e4a5478e7c5017fed5547285fef8f",
+  "runner_sha256": "a8ed8bd340c66f6be7106d58f6098df01d112cc2407cc986bcce4059fed94cd0",
+  "status": "Frozen before new evaluation outcomes; old evaluation dates already examined"
+}

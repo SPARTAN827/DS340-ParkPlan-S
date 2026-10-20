@@ -1,0 +1,4288 @@
+{
+  "credit": "TouringPlans.com",
+  "diagnostic_type": "post-outcome explanation, no tuning or candidate search",
+  "estimand": "At real rollout-visited states, force R action versus D0 action, then D0 in both branches; conditional remaining-time difference only when both finish.",
+  "sign": "positive = chosen R action helpful; actual = D0-branch remaining time minus R-forced-branch remaining time",
+  "limitations": [
+    "States are selected by actual rollout policy, not by a neutral policy; not a trip-average policy effect.",
+    "Decisions from one date overlap and are dependent; no iid significance tests or bootstrap performed here.",
+    "Historical future outcomes are read only by this offline executor; none feed the original or future planner.",
+    "Both-success restriction excludes failed counterfactuals; all completion discordances disclosed separately.",
+    "One realized day is not the conditional expectation: discrepancy measures realized action-value prediction error, not a proof of bias at every state.",
+    "Query-weighted imputation is repeated model _template calls, not fraction of source records, unique times, or real visitor minutes.",
+    "After-midnight curve fallback is counted separately from missing/closure imputation.",
+    "Poor results diagnose this finite historical model/implementation; they do not prove future-replanning value is absent or isolate a causal source of error."
+  ],
+  "input_hashes": {
+    "evaluation/traces.json": "eed74342e837c7fa18a3b186343c3950469d675c442b62b83f4c3402bef8442e",
+    "evaluation/metadata.json": "0e3f1cb19d52677161678c057df3b8f39e348314be5383c37eced208e1af17a6",
+    "evaluation/per_day.csv": "6de0cc1a3c74f3b7c653e06da397e97a72850c5654fe572e17321baeb064c155",
+    "engine.py": "99c43797594d0ebd7ba1aa1e95e2bb8b8f2e4a5478e7c5017fed5547285fef8f",
+    "run.py": "a8ed8bd340c66f6be7106d58f6098df01d112cc2407cc986bcce4059fed94cd0"
+  },
+  "audit_code_sha256": "cd59326a7ccb324a47801ef45f14e89ba6b3146a5890b41b4441385a2c87807b",
+  "source_sha256": "23eca800b048aecd4b3a2469e78f63f24f64637eb785c8401386e219a177f812",
+  "all_recorded_rollout_replans": 805,
+  "excluded_singleton_replans": 154,
+  "reconstructed_choices_and_model_costs_verified": 651,
+  "immediate_visits_verified_against_original_trace": 651,
+  "two_remaining_suffixes_verified_against_original_trace": 161,
+  "all_choice_states": {
+    "decision_states": 651,
+    "distinct_dates": 164,
+    "completion_status": {
+      "both_failed": 125,
+      "both_success": 500,
+      "chosen_only_success": 14,
+      "base_only_success": 12
+    },
+    "chosen_failure_reasons": {
+      "closed_at_arrival": 129,
+      "completion_after_window": 8
+    },
+    "base_failure_reasons": {
+      "closed_at_arrival": 131,
+      "completion_after_window": 8
+    },
+    "both_success_actual_gain_minutes": {
+      "n": 500,
+      "mean": -1.29,
+      "median": 0.0,
+      "min": -105.0,
+      "max": 80.0
+    },
+    "both_success_sign_counts": {
+      "helpful": 71,
+      "tied": 344,
+      "harmful": 85
+    },
+    "finite_prediction_and_both_success_states": 500,
+    "predicted_gain_minutes_on_scored_states": {
+      "n": 500,
+      "mean": 3.051654859474182,
+      "median": 0.0,
+      "min": 0.0,
+      "max": 40.028664429198045
+    },
+    "actual_gain_minutes_on_scored_states": {
+      "n": 500,
+      "mean": -1.29,
+      "median": 0.0,
+      "min": -105.0,
+      "max": 80.0
+    },
+    "gain_error_predicted_minus_actual_minutes": {
+      "n": 500,
+      "mean": 4.341654859474183,
+      "median": 0.0,
+      "min": -72.75070926141427,
+      "max": 109.73256431914876
+    },
+    "gain_error_mean_absolute_minutes": 8.845830044415017,
+    "gain_pearson_correlation": -0.049137085612367425,
+    "chosen_cost_error_real_minus_model_minutes": {
+      "n": 500,
+      "mean": -2.8858848669295307,
+      "median": -4.583774244622532,
+      "min": -135.11623660753253,
+      "max": 104.37025642078612
+    },
+    "base_cost_error_real_minus_model_minutes": {
+      "n": 500,
+      "mean": -7.227539726403713,
+      "median": -8.934531359506082,
+      "min": -127.53006763530016,
+      "max": 104.37025642078612
+    },
+    "template_queries": 397144,
+    "imputation_queries": 17444,
+    "query_weighted_imputation_fraction": 0.04392361460830328,
+    "missing_curve_queries": 4927,
+    "historical_closure_curve_queries": 12517,
+    "after_midnight_curve_queries": 0,
+    "scenario_age_days": {
+      "n": 5208,
+      "mean": 294.51075268817203,
+      "median": 326.0,
+      "min": 2.0,
+      "max": 582.0
+    }
+  },
+  "changed_vs_D0_states": {
+    "decision_states": 230,
+    "distinct_dates": 134,
+    "completion_status": {
+      "both_success": 175,
+      "both_failed": 29,
+      "chosen_only_success": 14,
+      "base_only_success": 12
+    },
+    "chosen_failure_reasons": {
+      "closed_at_arrival": 36,
+      "completion_after_window": 5
+    },
+    "base_failure_reasons": {
+      "closed_at_arrival": 38,
+      "completion_after_window": 5
+    },
+    "both_success_actual_gain_minutes": {
+      "n": 175,
+      "mean": -3.6857142857142855,
+      "median": 0.0,
+      "min": -105.0,
+      "max": 80.0
+    },
+    "both_success_sign_counts": {
+      "helpful": 71,
+      "tied": 19,
+      "harmful": 85
+    },
+    "finite_prediction_and_both_success_states": 175,
+    "predicted_gain_minutes_on_scored_states": {
+      "n": 175,
+      "mean": 8.71901388421195,
+      "median": 7.413831027767628,
+      "min": 0.024831738094121647,
+      "max": 40.028664429198045
+    },
+    "actual_gain_minutes_on_scored_states": {
+      "n": 175,
+      "mean": -3.6857142857142855,
+      "median": 0.0,
+      "min": -105.0,
+      "max": 80.0
+    },
+    "gain_error_predicted_minus_actual_minutes": {
+      "n": 175,
+      "mean": 12.404728169926235,
+      "median": 10.600177738745487,
+      "min": -72.75070926141427,
+      "max": 109.73256431914876
+    },
+    "gain_error_mean_absolute_minutes": 25.27380012690005,
+    "gain_pearson_correlation": 0.02955656625641823,
+    "chosen_cost_error_real_minus_model_minutes": {
+      "n": 175,
+      "mean": -3.936255901427645,
+      "median": -4.044298886389697,
+      "min": -135.11623660753253,
+      "max": 89.59464399077456
+    },
+    "base_cost_error_real_minus_model_minutes": {
+      "n": 175,
+      "mean": -16.34098407135388,
+      "median": -16.778933393781188,
+      "min": -127.53006763530016,
+      "max": 90.3701189584072
+    },
+    "template_queries": 166080,
+    "imputation_queries": 7444,
+    "query_weighted_imputation_fraction": 0.04482177263969171,
+    "missing_curve_queries": 2468,
+    "historical_closure_curve_queries": 4976,
+    "after_midnight_curve_queries": 0,
+    "scenario_age_days": {
+      "n": 1840,
+      "mean": 292.7880434782609,
+      "median": 331.0,
+      "min": 2.0,
+      "max": 580.0
+    }
+  },
+  "unchanged_vs_D0_states": {
+    "decision_states": 421,
+    "distinct_dates": 163,
+    "completion_status": {
+      "both_failed": 96,
+      "both_success": 325
+    },
+    "chosen_failure_reasons": {
+      "closed_at_arrival": 93,
+      "completion_after_window": 3
+    },
+    "base_failure_reasons": {
+      "closed_at_arrival": 93,
+      "completion_after_window": 3
+    },
+    "both_success_actual_gain_minutes": {
+      "n": 325,
+      "mean": 0.0,
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "both_success_sign_counts": {
+      "helpful": 0,
+      "tied": 325,
+      "harmful": 0
+    },
+    "finite_prediction_and_both_success_states": 325,
+    "predicted_gain_minutes_on_scored_states": {
+      "n": 325,
+      "mean": 0.0,
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "actual_gain_minutes_on_scored_states": {
+      "n": 325,
+      "mean": 0.0,
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "gain_error_predicted_minus_actual_minutes": {
+      "n": 325,
+      "mean": 0.0,
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "gain_error_mean_absolute_minutes": 0.0,
+    "gain_pearson_correlation": null,
+    "chosen_cost_error_real_minus_model_minutes": {
+      "n": 325,
+      "mean": -2.3203004637382385,
+      "median": -4.702516218022424,
+      "min": -111.56068814736722,
+      "max": 104.37025642078612
+    },
+    "base_cost_error_real_minus_model_minutes": {
+      "n": 325,
+      "mean": -2.3203004637382385,
+      "median": -4.702516218022424,
+      "min": -111.56068814736722,
+      "max": 104.37025642078612
+    },
+    "template_queries": 231064,
+    "imputation_queries": 10000,
+    "query_weighted_imputation_fraction": 0.0432780528338469,
+    "missing_curve_queries": 2459,
+    "historical_closure_curve_queries": 7541,
+    "after_midnight_curve_queries": 0,
+    "scenario_age_days": {
+      "n": 3368,
+      "mean": 295.4519002375297,
+      "median": 323.0,
+      "min": 4.0,
+      "max": 582.0
+    }
+  },
+  "helpful_changed_states": {
+    "decision_states": 71,
+    "distinct_dates": 60,
+    "completion_status": {
+      "both_success": 71
+    },
+    "chosen_failure_reasons": {},
+    "base_failure_reasons": {},
+    "both_success_actual_gain_minutes": {
+      "n": 71,
+      "mean": 23.098591549295776,
+      "median": 15.0,
+      "min": 5.0,
+      "max": 80.0
+    },
+    "both_success_sign_counts": {
+      "helpful": 71,
+      "tied": 0,
+      "harmful": 0
+    },
+    "finite_prediction_and_both_success_states": 71,
+    "predicted_gain_minutes_on_scored_states": {
+      "n": 71,
+      "mean": 8.48046645624014,
+      "median": 7.276148421887484,
+      "min": 0.024831738094121647,
+      "max": 31.807795826779568
+    },
+    "actual_gain_minutes_on_scored_states": {
+      "n": 71,
+      "mean": 23.098591549295776,
+      "median": 15.0,
+      "min": 5.0,
+      "max": 80.0
+    },
+    "gain_error_predicted_minus_actual_minutes": {
+      "n": 71,
+      "mean": -14.618125093055633,
+      "median": -8.951818546204294,
+      "min": -72.75070926141427,
+      "max": 22.34197266276442
+    },
+    "gain_error_mean_absolute_minutes": 17.101418462865738,
+    "gain_pearson_correlation": 0.07872514044288176,
+    "chosen_cost_error_real_minus_model_minutes": {
+      "n": 71,
+      "mean": -17.255178838827057,
+      "median": -15.50631155463202,
+      "min": -135.11623660753253,
+      "max": 66.54234755758085
+    },
+    "base_cost_error_real_minus_model_minutes": {
+      "n": 71,
+      "mean": -2.637053745771422,
+      "median": -4.737790999111667,
+      "min": -127.53006763530016,
+      "max": 90.3701189584072
+    },
+    "template_queries": 50856,
+    "imputation_queries": 1904,
+    "query_weighted_imputation_fraction": 0.0374390435740129,
+    "missing_curve_queries": 282,
+    "historical_closure_curve_queries": 1622,
+    "after_midnight_curve_queries": 0,
+    "scenario_age_days": {
+      "n": 568,
+      "mean": 288.63732394366195,
+      "median": 331.0,
+      "min": 2.0,
+      "max": 547.0
+    }
+  },
+  "harmful_changed_states": {
+    "decision_states": 85,
+    "distinct_dates": 70,
+    "completion_status": {
+      "both_success": 85
+    },
+    "chosen_failure_reasons": {},
+    "base_failure_reasons": {},
+    "both_success_actual_gain_minutes": {
+      "n": 85,
+      "mean": -26.88235294117647,
+      "median": -20.0,
+      "min": -105.0,
+      "max": -5.0
+    },
+    "both_success_sign_counts": {
+      "helpful": 0,
+      "tied": 0,
+      "harmful": 85
+    },
+    "finite_prediction_and_both_success_states": 85,
+    "predicted_gain_minutes_on_scored_states": {
+      "n": 85,
+      "mean": 9.360466376780533,
+      "median": 8.126325286800807,
+      "min": 0.033936225880836446,
+      "max": 40.028664429198045
+    },
+    "actual_gain_minutes_on_scored_states": {
+      "n": 85,
+      "mean": -26.88235294117647,
+      "median": -20.0,
+      "min": -105.0,
+      "max": -5.0
+    },
+    "gain_error_predicted_minus_actual_minutes": {
+      "n": 85,
+      "mean": 36.242819317957,
+      "median": 29.941344760568597,
+      "min": 6.260482685517388,
+      "max": 109.73256431914876
+    },
+    "gain_error_mean_absolute_minutes": 36.242819317957,
+    "gain_pearson_correlation": 0.16657098347154012,
+    "chosen_cost_error_real_minus_model_minutes": {
+      "n": 85,
+      "mean": 7.983494295524275,
+      "median": 5.824619239667413,
+      "min": -76.98894635585697,
+      "max": 89.59464399077456
+    },
+    "base_cost_error_real_minus_model_minutes": {
+      "n": 85,
+      "mean": -28.25932502243273,
+      "median": -25.72397060126343,
+      "min": -104.1379080167248,
+      "max": 32.92105138082158
+    },
+    "template_queries": 61800,
+    "imputation_queries": 2999,
+    "query_weighted_imputation_fraction": 0.04852750809061489,
+    "missing_curve_queries": 1154,
+    "historical_closure_curve_queries": 1845,
+    "after_midnight_curve_queries": 0,
+    "scenario_age_days": {
+      "n": 680,
+      "mean": 295.1102941176471,
+      "median": 338.5,
+      "min": 9.0,
+      "max": 558.0
+    }
+  },
+  "changed_by_remaining_count": {
+    "2": {
+      "decision_states": 28,
+      "distinct_dates": 28,
+      "completion_status": {
+        "both_success": 23,
+        "base_only_success": 3,
+        "chosen_only_success": 2
+      },
+      "chosen_failure_reasons": {
+        "closed_at_arrival": 3
+      },
+      "base_failure_reasons": {
+        "closed_at_arrival": 2
+      },
+      "both_success_actual_gain_minutes": {
+        "n": 23,
+        "mean": -0.43478260869565216,
+        "median": -5.0,
+        "min": -60.0,
+        "max": 55.0
+      },
+      "both_success_sign_counts": {
+        "helpful": 9,
+        "tied": 2,
+        "harmful": 12
+      },
+      "finite_prediction_and_both_success_states": 23,
+      "predicted_gain_minutes_on_scored_states": {
+        "n": 23,
+        "mean": 7.8862930947038885,
+        "median": 6.048181453795706,
+        "min": 0.824644923127039,
+        "max": 31.807795826779568
+      },
+      "actual_gain_minutes_on_scored_states": {
+        "n": 23,
+        "mean": -0.43478260869565216,
+        "median": -5.0,
+        "min": -60.0,
+        "max": 55.0
+      },
+      "gain_error_predicted_minus_actual_minutes": {
+        "n": 23,
+        "mean": 8.32107570339954,
+        "median": 9.000891816482778,
+        "min": -36.243337419175475,
+        "max": 66.00510664247042
+      },
+      "gain_error_mean_absolute_minutes": 19.94981126134284,
+      "gain_pearson_correlation": 0.38594431729012824,
+      "chosen_cost_error_real_minus_model_minutes": {
+        "n": 23,
+        "mean": 4.6259787491577935,
+        "median": 3.5407899529688507,
+        "min": -17.19636364043376,
+        "max": 44.81146115589803
+      },
+      "base_cost_error_real_minus_model_minutes": {
+        "n": 23,
+        "mean": -3.695096954241747,
+        "median": -2.597660081390856,
+        "min": -47.56376074631655,
+        "max": 50.22832305994419
+      },
+      "template_queries": 4904,
+      "imputation_queries": 247,
+      "query_weighted_imputation_fraction": 0.050367047308319736,
+      "missing_curve_queries": 113,
+      "historical_closure_curve_queries": 134,
+      "after_midnight_curve_queries": 0,
+      "scenario_age_days": {
+        "n": 224,
+        "mean": 319.6830357142857,
+        "median": 363.5,
+        "min": 2.0,
+        "max": 558.0
+      }
+    },
+    "3": {
+      "decision_states": 54,
+      "distinct_dates": 54,
+      "completion_status": {
+        "both_success": 40,
+        "base_only_success": 3,
+        "both_failed": 9,
+        "chosen_only_success": 2
+      },
+      "chosen_failure_reasons": {
+        "closed_at_arrival": 10,
+        "completion_after_window": 2
+      },
+      "base_failure_reasons": {
+        "closed_at_arrival": 9,
+        "completion_after_window": 2
+      },
+      "both_success_actual_gain_minutes": {
+        "n": 40,
+        "mean": 0.25,
+        "median": 0.0,
+        "min": -35.0,
+        "max": 75.0
+      },
+      "both_success_sign_counts": {
+        "helpful": 16,
+        "tied": 7,
+        "harmful": 17
+      },
+      "finite_prediction_and_both_success_states": 40,
+      "predicted_gain_minutes_on_scored_states": {
+        "n": 40,
+        "mean": 7.549978381644056,
+        "median": 6.893345382658822,
+        "min": 0.7493603691784188,
+        "max": 35.77788124458084
+      },
+      "actual_gain_minutes_on_scored_states": {
+        "n": 40,
+        "mean": 0.25,
+        "median": 0.0,
+        "min": -35.0,
+        "max": 75.0
+      },
+      "gain_error_predicted_minus_actual_minutes": {
+        "n": 40,
+        "mean": 7.299978381644056,
+        "median": 7.758432872600835,
+        "min": -67.68986693381692,
+        "max": 56.23726672623101
+      },
+      "gain_error_mean_absolute_minutes": 19.127847285677582,
+      "gain_pearson_correlation": -0.21372317594409904,
+      "chosen_cost_error_real_minus_model_minutes": {
+        "n": 40,
+        "mean": 4.064164080285408,
+        "median": 5.728033606566399,
+        "min": -48.732582022248664,
+        "max": 70.6086761388309
+      },
+      "base_cost_error_real_minus_model_minutes": {
+        "n": 40,
+        "mean": -3.235814301358648,
+        "median": -8.75404436196726,
+        "min": -49.80548772256975,
+        "max": 52.183555379184895
+      },
+      "template_queries": 21728,
+      "imputation_queries": 1470,
+      "query_weighted_imputation_fraction": 0.06765463917525773,
+      "missing_curve_queries": 752,
+      "historical_closure_curve_queries": 718,
+      "after_midnight_curve_queries": 0,
+      "scenario_age_days": {
+        "n": 432,
+        "mean": 297.2453703703704,
+        "median": 341.0,
+        "min": 9.0,
+        "max": 574.0
+      }
+    },
+    "4": {
+      "decision_states": 74,
+      "distinct_dates": 74,
+      "completion_status": {
+        "chosen_only_success": 4,
+        "both_success": 59,
+        "both_failed": 10,
+        "base_only_success": 1
+      },
+      "chosen_failure_reasons": {
+        "closed_at_arrival": 10,
+        "completion_after_window": 1
+      },
+      "base_failure_reasons": {
+        "closed_at_arrival": 13,
+        "completion_after_window": 1
+      },
+      "both_success_actual_gain_minutes": {
+        "n": 59,
+        "mean": -4.322033898305085,
+        "median": 0.0,
+        "min": -75.0,
+        "max": 80.0
+      },
+      "both_success_sign_counts": {
+        "helpful": 24,
+        "tied": 6,
+        "harmful": 29
+      },
+      "finite_prediction_and_both_success_states": 59,
+      "predicted_gain_minutes_on_scored_states": {
+        "n": 59,
+        "mean": 9.380235408904143,
+        "median": 8.3846875013964,
+        "min": 0.024831738094121647,
+        "max": 40.028664429198045
+      },
+      "actual_gain_minutes_on_scored_states": {
+        "n": 59,
+        "mean": -4.322033898305085,
+        "median": 0.0,
+        "min": -75.0,
+        "max": 80.0
+      },
+      "gain_error_predicted_minus_actual_minutes": {
+        "n": 59,
+        "mean": 13.702269307209228,
+        "median": 10.600177738745487,
+        "min": -70.39095302704811,
+        "max": 86.09358872453987
+      },
+      "gain_error_mean_absolute_minutes": 26.937027099016973,
+      "gain_pearson_correlation": -0.07114837377927372,
+      "chosen_cost_error_real_minus_model_minutes": {
+        "n": 59,
+        "mean": -5.80317539321688,
+        "median": -8.343497279946519,
+        "min": -135.11623660753253,
+        "max": 80.35043768314858
+      },
+      "base_cost_error_real_minus_model_minutes": {
+        "n": 59,
+        "mean": -19.505444700426107,
+        "median": -18.68225287282354,
+        "min": -127.53006763530016,
+        "max": 76.52565253893249
+      },
+      "template_queries": 54152,
+      "imputation_queries": 1965,
+      "query_weighted_imputation_fraction": 0.03628674841187768,
+      "missing_curve_queries": 340,
+      "historical_closure_curve_queries": 1625,
+      "after_midnight_curve_queries": 0,
+      "scenario_age_days": {
+        "n": 592,
+        "mean": 289.6722972972973,
+        "median": 329.0,
+        "min": 9.0,
+        "max": 580.0
+      }
+    },
+    "5": {
+      "decision_states": 74,
+      "distinct_dates": 74,
+      "completion_status": {
+        "both_failed": 10,
+        "both_success": 53,
+        "chosen_only_success": 6,
+        "base_only_success": 5
+      },
+      "chosen_failure_reasons": {
+        "closed_at_arrival": 13,
+        "completion_after_window": 2
+      },
+      "base_failure_reasons": {
+        "closed_at_arrival": 14,
+        "completion_after_window": 2
+      },
+      "both_success_actual_gain_minutes": {
+        "n": 53,
+        "mean": -7.3584905660377355,
+        "median": -5.0,
+        "min": -105.0,
+        "max": 75.0
+      },
+      "both_success_sign_counts": {
+        "helpful": 22,
+        "tied": 4,
+        "harmful": 27
+      },
+      "finite_prediction_and_both_success_states": 53,
+      "predicted_gain_minutes_on_scored_states": {
+        "n": 53,
+        "mean": 9.226597437128207,
+        "median": 8.126325286800807,
+        "min": 0.3727330876430983,
+        "max": 28.784168122804715
+      },
+      "actual_gain_minutes_on_scored_states": {
+        "n": 53,
+        "mean": -7.3584905660377355,
+        "median": -5.0,
+        "min": -105.0,
+        "max": 75.0
+      },
+      "gain_error_predicted_minus_actual_minutes": {
+        "n": 53,
+        "mean": 16.585088003165943,
+        "median": 16.225699197233325,
+        "min": -72.75070926141427,
+        "max": 109.73256431914876
+      },
+      "gain_error_mean_absolute_minutes": 30.371148545802235,
+      "gain_pearson_correlation": 0.14143977573558425,
+      "chosen_cost_error_real_minus_model_minutes": {
+        "n": 53,
+        "mean": -11.611726584756369,
+        "median": -18.294859063604065,
+        "min": -78.25516945741941,
+        "max": 89.59464399077456
+      },
+      "base_cost_error_real_minus_model_minutes": {
+        "n": 53,
+        "mean": -28.19681458792231,
+        "median": -27.510051142959753,
+        "min": -104.1379080167248,
+        "max": 90.3701189584072
+      },
+      "template_queries": 85296,
+      "imputation_queries": 3762,
+      "query_weighted_imputation_fraction": 0.044105233539673605,
+      "missing_curve_queries": 1263,
+      "historical_closure_curve_queries": 2499,
+      "after_midnight_curve_queries": 0,
+      "scenario_age_days": {
+        "n": 592,
+        "mean": 282.4746621621622,
+        "median": 311.5,
+        "min": 12.0,
+        "max": 579.0
+      }
+    }
+  },
+  "changed_by_evaluation_month": {
+    "2018-07": {
+      "decision_states": 7,
+      "distinct_dates": 4,
+      "completion_status": {
+        "both_success": 4,
+        "both_failed": 1,
+        "chosen_only_success": 1,
+        "base_only_success": 1
+      },
+      "chosen_failure_reasons": {
+        "closed_at_arrival": 2
+      },
+      "base_failure_reasons": {
+        "closed_at_arrival": 2
+      },
+      "both_success_actual_gain_minutes": {
+        "n": 4,
+        "mean": 12.5,
+        "median": 17.5,
+        "min": -40.0,
+        "max": 55.0
+      },
+      "both_success_sign_counts": {
+        "helpful": 2,
+        "tied": 0,
+        "harmful": 2
+      },
+      "finite_prediction_and_both_success_states": 4,
+      "predicted_gain_minutes_on_scored_states": {
+        "n": 4,
+        "mean": 13.698341784912714,
+        "median": 11.118105471846434,
+        "min": 0.7493603691784188,
+        "max": 31.807795826779568
+      },
+      "actual_gain_minutes_on_scored_states": {
+        "n": 4,
+        "mean": 12.5,
+        "median": 17.5,
+        "min": -40.0,
+        "max": 55.0
+      },
+      "gain_error_predicted_minus_actual_minutes": {
+        "n": 4,
+        "mean": 1.1983417849127136,
+        "median": -6.221421902021007,
+        "min": -33.37522200652546,
+        "max": 50.61143295021833
+      },
+      "gain_error_mean_absolute_minutes": 29.48205487478566,
+      "gain_pearson_correlation": 0.6542280246640166,
+      "chosen_cost_error_real_minus_model_minutes": {
+        "n": 4,
+        "mean": 8.21756178873953,
+        "median": 10.262195263934643,
+        "min": -15.494880204173853,
+        "max": 27.84073683126269
+      },
+      "base_cost_error_real_minus_model_minutes": {
+        "n": 4,
+        "mean": 7.019220003826817,
+        "median": 12.394350215565424,
+        "min": -30.925304436342458,
+        "max": 34.21348402051888
+      },
+      "template_queries": 3880,
+      "imputation_queries": 449,
+      "query_weighted_imputation_fraction": 0.11572164948453609,
+      "missing_curve_queries": 282,
+      "historical_closure_curve_queries": 167,
+      "after_midnight_curve_queries": 0,
+      "scenario_age_days": {
+        "n": 56,
+        "mean": 189.14285714285714,
+        "median": 146.5,
+        "min": 2.0,
+        "max": 425.0
+      }
+    },
+    "2018-08": {
+      "decision_states": 51,
+      "distinct_dates": 29,
+      "completion_status": {
+        "both_success": 43,
+        "chosen_only_success": 4,
+        "both_failed": 2,
+        "base_only_success": 2
+      },
+      "chosen_failure_reasons": {
+        "closed_at_arrival": 4
+      },
+      "base_failure_reasons": {
+        "closed_at_arrival": 6
+      },
+      "both_success_actual_gain_minutes": {
+        "n": 43,
+        "mean": -0.5813953488372093,
+        "median": 0.0,
+        "min": -75.0,
+        "max": 75.0
+      },
+      "both_success_sign_counts": {
+        "helpful": 20,
+        "tied": 5,
+        "harmful": 18
+      },
+      "finite_prediction_and_both_success_states": 43,
+      "predicted_gain_minutes_on_scored_states": {
+        "n": 43,
+        "mean": 9.005534374804657,
+        "median": 8.275076245206435,
+        "min": 0.024831738094121647,
+        "max": 22.336218761602822
+      },
+      "actual_gain_minutes_on_scored_states": {
+        "n": 43,
+        "mean": -0.5813953488372093,
+        "median": 0.0,
+        "min": -75.0,
+        "max": 75.0
+      },
+      "gain_error_predicted_minus_actual_minutes": {
+        "n": 43,
+        "mean": 9.586929723641868,
+        "median": 9.849282308731404,
+        "min": -72.75070926141427,
+        "max": 86.09358872453987
+      },
+      "gain_error_mean_absolute_minutes": 25.34474617812379,
+      "gain_pearson_correlation": -0.14118635590527337,
+      "chosen_cost_error_real_minus_model_minutes": {
+        "n": 43,
+        "mean": -13.359388198885211,
+        "median": -12.309494166763386,
+        "min": -81.86772956876376,
+        "max": 72.58854450165666
+      },
+      "base_cost_error_real_minus_model_minutes": {
+        "n": 43,
+        "mean": -22.94631792252708,
+        "median": -21.308274534242628,
+        "min": -91.55695820697639,
+        "max": 52.183555379184895
+      },
+      "template_queries": 35664,
+      "imputation_queries": 2173,
+      "query_weighted_imputation_fraction": 0.060929789143113505,
+      "missing_curve_queries": 898,
+      "historical_closure_curve_queries": 1275,
+      "after_midnight_curve_queries": 0,
+      "scenario_age_days": {
+        "n": 408,
+        "mean": 229.2450980392157,
+        "median": 271.0,
+        "min": 17.0,
+        "max": 453.0
+      }
+    },
+    "2018-09": {
+      "decision_states": 49,
+      "distinct_dates": 25,
+      "completion_status": {
+        "both_success": 34,
+        "base_only_success": 6,
+        "chosen_only_success": 5,
+        "both_failed": 4
+      },
+      "chosen_failure_reasons": {
+        "closed_at_arrival": 10
+      },
+      "base_failure_reasons": {
+        "closed_at_arrival": 9
+      },
+      "both_success_actual_gain_minutes": {
+        "n": 34,
+        "mean": -2.0588235294117645,
+        "median": 0.0,
+        "min": -35.0,
+        "max": 35.0
+      },
+      "both_success_sign_counts": {
+        "helpful": 14,
+        "tied": 8,
+        "harmful": 12
+      },
+      "finite_prediction_and_both_success_states": 34,
+      "predicted_gain_minutes_on_scored_states": {
+        "n": 34,
+        "mean": 7.382850479612054,
+        "median": 6.602947471464134,
+        "min": 0.8198099462347272,
+        "max": 28.784168122804715
+      },
+      "actual_gain_minutes_on_scored_states": {
+        "n": 34,
+        "mean": -2.0588235294117645,
+        "median": 0.0,
+        "min": -35.0,
+        "max": 35.0
+      },
+      "gain_error_predicted_minus_actual_minutes": {
+        "n": 34,
+        "mean": 9.441674009023819,
+        "median": 6.997487373949511,
+        "min": -29.180190053765273,
+        "max": 63.784168122804715
+      },
+      "gain_error_mean_absolute_minutes": 16.03565968324828,
+      "gain_pearson_correlation": -0.23212050703551415,
+      "chosen_cost_error_real_minus_model_minutes": {
+        "n": 34,
+        "mean": -20.659364552859063,
+        "median": -15.619552693932178,
+        "min": -78.25516945741941,
+        "max": 56.752849210978184
+      },
+      "base_cost_error_real_minus_model_minutes": {
+        "n": 34,
+        "mean": -30.10103856188288,
+        "median": -29.22025037451982,
+        "min": -104.1379080167248,
+        "max": 49.731564251464334
+      },
+      "template_queries": 34752,
+      "imputation_queries": 830,
+      "query_weighted_imputation_fraction": 0.02388351749539595,
+      "missing_curve_queries": 14,
+      "historical_closure_curve_queries": 816,
+      "after_midnight_curve_queries": 0,
+      "scenario_age_days": {
+        "n": 392,
+        "mean": 299.11479591836735,
+        "median": 355.0,
+        "min": 44.0,
+        "max": 483.0
+      }
+    },
+    "2018-10": {
+      "decision_states": 36,
+      "distinct_dates": 22,
+      "completion_status": {
+        "both_success": 30,
+        "base_only_success": 2,
+        "both_failed": 3,
+        "chosen_only_success": 1
+      },
+      "chosen_failure_reasons": {
+        "closed_at_arrival": 5
+      },
+      "base_failure_reasons": {
+        "closed_at_arrival": 4
+      },
+      "both_success_actual_gain_minutes": {
+        "n": 30,
+        "mean": 1.8333333333333333,
+        "median": -5.0,
+        "min": -60.0,
+        "max": 80.0
+      },
+      "both_success_sign_counts": {
+        "helpful": 13,
+        "tied": 2,
+        "harmful": 15
+      },
+      "finite_prediction_and_both_success_states": 30,
+      "predicted_gain_minutes_on_scored_states": {
+        "n": 30,
+        "mean": 11.147301610537648,
+        "median": 8.960449728040956,
+        "min": 0.033936225880836446,
+        "max": 40.028664429198045
+      },
+      "actual_gain_minutes_on_scored_states": {
+        "n": 30,
+        "mean": 1.8333333333333333,
+        "median": -5.0,
+        "min": -60.0,
+        "max": 80.0
+      },
+      "gain_error_predicted_minus_actual_minutes": {
+        "n": 30,
+        "mean": 9.313968277204314,
+        "median": 19.82982357883705,
+        "min": -70.39095302704811,
+        "max": 61.38730080121303
+      },
+      "gain_error_mean_absolute_minutes": 27.685766703324468,
+      "gain_pearson_correlation": 0.035790963953133435,
+      "chosen_cost_error_real_minus_model_minutes": {
+        "n": 30,
+        "mean": -5.388669470909889,
+        "median": -2.3141648075612835,
+        "min": -72.93921371558133,
+        "max": 70.6086761388309
+      },
+      "base_cost_error_real_minus_model_minutes": {
+        "n": 30,
+        "mean": -14.702637748114203,
+        "median": -12.479903508542407,
+        "min": -76.89558631425746,
+        "max": 76.30730997710134
+      },
+      "template_queries": 27800,
+      "imputation_queries": 1030,
+      "query_weighted_imputation_fraction": 0.03705035971223022,
+      "missing_curve_queries": 220,
+      "historical_closure_curve_queries": 810,
+      "after_midnight_curve_queries": 0,
+      "scenario_age_days": {
+        "n": 288,
+        "mean": 294.1701388888889,
+        "median": 332.0,
+        "min": 82.0,
+        "max": 502.0
+      }
+    },
+    "2018-11": {
+      "decision_states": 45,
+      "distinct_dates": 27,
+      "completion_status": {
+        "both_success": 39,
+        "chosen_only_success": 2,
+        "base_only_success": 1,
+        "both_failed": 3
+      },
+      "chosen_failure_reasons": {
+        "closed_at_arrival": 4
+      },
+      "base_failure_reasons": {
+        "closed_at_arrival": 5
+      },
+      "both_success_actual_gain_minutes": {
+        "n": 39,
+        "mean": -11.41025641025641,
+        "median": -10.0,
+        "min": -105.0,
+        "max": 45.0
+      },
+      "both_success_sign_counts": {
+        "helpful": 13,
+        "tied": 1,
+        "harmful": 25
+      },
+      "finite_prediction_and_both_success_states": 39,
+      "predicted_gain_minutes_on_scored_states": {
+        "n": 39,
+        "mean": 7.810592887754315,
+        "median": 7.276148421887484,
+        "min": 0.3727330876430983,
+        "max": 20.272920248731054
+      },
+      "actual_gain_minutes_on_scored_states": {
+        "n": 39,
+        "mean": -11.41025641025641,
+        "median": -10.0,
+        "min": -105.0,
+        "max": 45.0
+      },
+      "gain_error_predicted_minus_actual_minutes": {
+        "n": 39,
+        "mean": 19.220849298010727,
+        "median": 15.19032370706725,
+        "min": -42.88469484653399,
+        "max": 109.73256431914876
+      },
+      "gain_error_mean_absolute_minutes": 29.63575726444203,
+      "gain_pearson_correlation": 0.049739675253557894,
+      "chosen_cost_error_real_minus_model_minutes": {
+        "n": 39,
+        "mean": 14.12731842068575,
+        "median": 8.530518315327072,
+        "min": -51.79974419094998,
+        "max": 89.59464399077456
+      },
+      "base_cost_error_real_minus_model_minutes": {
+        "n": 39,
+        "mean": -5.093530877324974,
+        "median": -9.374881077321447,
+        "min": -62.26304018769923,
+        "max": 76.0937721471501
+      },
+      "template_queries": 32184,
+      "imputation_queries": 1895,
+      "query_weighted_imputation_fraction": 0.05888018891374596,
+      "missing_curve_queries": 967,
+      "historical_closure_curve_queries": 928,
+      "after_midnight_curve_queries": 0,
+      "scenario_age_days": {
+        "n": 360,
+        "mean": 328.8361111111111,
+        "median": 347.5,
+        "min": 109.0,
+        "max": 542.0
+      }
+    },
+    "2018-12": {
+      "decision_states": 34,
+      "distinct_dates": 23,
+      "completion_status": {
+        "both_success": 23,
+        "both_failed": 11
+      },
+      "chosen_failure_reasons": {
+        "closed_at_arrival": 11
+      },
+      "base_failure_reasons": {
+        "closed_at_arrival": 11
+      },
+      "both_success_actual_gain_minutes": {
+        "n": 23,
+        "mean": -10.0,
+        "median": -10.0,
+        "min": -65.0,
+        "max": 50.0
+      },
+      "both_success_sign_counts": {
+        "helpful": 8,
+        "tied": 2,
+        "harmful": 13
+      },
+      "finite_prediction_and_both_success_states": 23,
+      "predicted_gain_minutes_on_scored_states": {
+        "n": 23,
+        "mean": 7.751469710032862,
+        "median": 6.765405805803795,
+        "min": 0.8215843189116185,
+        "max": 20.712820061299112
+      },
+      "actual_gain_minutes_on_scored_states": {
+        "n": 23,
+        "mean": -10.0,
+        "median": -10.0,
+        "min": -65.0,
+        "max": 50.0
+      },
+      "gain_error_predicted_minus_actual_minutes": {
+        "n": 23,
+        "mean": 17.75146971003286,
+        "median": 16.225699197233325,
+        "min": -48.18501857423905,
+        "max": 68.11375927074698
+      },
+      "gain_error_mean_absolute_minutes": 29.52154107539132,
+      "gain_pearson_correlation": -0.009888578873974688,
+      "chosen_cost_error_real_minus_model_minutes": {
+        "n": 23,
+        "mean": 4.114692666156954,
+        "median": 6.1727238024787425,
+        "min": -135.11623660753253,
+        "max": 79.07808470022923
+      },
+      "base_cost_error_real_minus_model_minutes": {
+        "n": 23,
+        "mean": -13.636777043875908,
+        "median": -11.548293980622816,
+        "min": -127.53006763530016,
+        "max": 90.3701189584072
+      },
+      "template_queries": 25104,
+      "imputation_queries": 863,
+      "query_weighted_imputation_fraction": 0.034376991714467814,
+      "missing_curve_queries": 80,
+      "historical_closure_curve_queries": 783,
+      "after_midnight_curve_queries": 0,
+      "scenario_age_days": {
+        "n": 272,
+        "mean": 339.5772058823529,
+        "median": 360.0,
+        "min": 138.0,
+        "max": 574.0
+      }
+    },
+    "2019-01": {
+      "decision_states": 8,
+      "distinct_dates": 4,
+      "completion_status": {
+        "both_success": 2,
+        "both_failed": 5,
+        "chosen_only_success": 1
+      },
+      "chosen_failure_reasons": {
+        "completion_after_window": 5
+      },
+      "base_failure_reasons": {
+        "completion_after_window": 5,
+        "closed_at_arrival": 1
+      },
+      "both_success_actual_gain_minutes": {
+        "n": 2,
+        "mean": 10.0,
+        "median": 10.0,
+        "min": 0.0,
+        "max": 20.0
+      },
+      "both_success_sign_counts": {
+        "helpful": 1,
+        "tied": 1,
+        "harmful": 0
+      },
+      "finite_prediction_and_both_success_states": 2,
+      "predicted_gain_minutes_on_scored_states": {
+        "n": 2,
+        "mean": 7.731596952363304,
+        "median": 7.731596952363304,
+        "min": 0.025251288177173592,
+        "max": 15.437942616549435
+      },
+      "actual_gain_minutes_on_scored_states": {
+        "n": 2,
+        "mean": 10.0,
+        "median": 10.0,
+        "min": 0.0,
+        "max": 20.0
+      },
+      "gain_error_predicted_minus_actual_minutes": {
+        "n": 2,
+        "mean": -2.2684030476366956,
+        "median": -2.2684030476366956,
+        "min": -4.562057383450565,
+        "max": 0.025251288177173592
+      },
+      "gain_error_mean_absolute_minutes": 2.2936543358138692,
+      "gain_pearson_correlation": 1.0,
+      "chosen_cost_error_real_minus_model_minutes": {
+        "n": 2,
+        "mean": 35.60689592170934,
+        "median": 35.60689592170934,
+        "min": -5.337111983690988,
+        "max": 76.55090382710966
+      },
+      "base_cost_error_real_minus_model_minutes": {
+        "n": 2,
+        "mean": 37.875298969346034,
+        "median": 37.875298969346034,
+        "min": -0.7750546002404235,
+        "max": 76.52565253893249
+      },
+      "template_queries": 6696,
+      "imputation_queries": 204,
+      "query_weighted_imputation_fraction": 0.03046594982078853,
+      "missing_curve_queries": 7,
+      "historical_closure_curve_queries": 197,
+      "after_midnight_curve_queries": 0,
+      "scenario_age_days": {
+        "n": 64,
+        "mean": 341.96875,
+        "median": 326.5,
+        "min": 165.0,
+        "max": 580.0
+      }
+    }
+  },
+  "largest_losses": [
+    {
+      "row": {
+        "date": "2018-11-29",
+        "event_index": 1,
+        "at": 625.0,
+        "location": "AK14",
+        "prefix_count": 1,
+        "remaining_count": 5,
+        "base_next": "AK18",
+        "chosen_next": "AK85",
+        "changed_next": true,
+        "predicted_gain_minutes": 4.732564319148764,
+        "actual_gain_minutes": -105.0,
+        "chosen_model_minutes": 422.0316176183216,
+        "base_model_minutes": 426.76418193747037,
+        "chosen_actual_minutes": 510.0,
+        "base_actual_minutes": 405.0,
+        "completion_status": "both_success",
+        "chosen_success": true,
+        "base_success": true,
+        "chosen_failure": "",
+        "base_failure": "",
+        "chosen_completed_suffix": "AK85|AK11|AK86|AK18|AK07",
+        "base_completed_suffix": "AK18|AK11|AK85|AK07|AK86",
+        "fallback": false,
+        "fallback_reason": null,
+        "scenario_ids": "2018-04-26|2017-11-30|2018-04-20|2018-04-17|2017-11-16|2017-10-17|2018-05-03|2017-11-12",
+        "mean_scenario_age_days": 301,
+        "template_queries": 1208,
+        "imputation_queries": 63,
+        "query_weighted_imputation_fraction": 0.052152317880794705,
+        "missing_queries": 0,
+        "closed_queries": 63,
+        "after_midnight_queries": 0
+      },
+      "completed_prefix": [
+        "AK14"
+      ],
+      "recorded_decision": {
+        "type": "decision",
+        "at": 625.0,
+        "location": "AK14",
+        "incumbent": [
+          "AK18",
+          "AK85",
+          "AK11",
+          "AK86",
+          "AK07"
+        ],
+        "selected": [
+          "AK85",
+          "AK18",
+          "AK11",
+          "AK86",
+          "AK07"
+        ],
+        "compute_seconds": 0.009124809999775607,
+        "snapshot": {
+          "AK07": {
+            "minute": 624.0,
+            "value": 75
+          },
+          "AK11": {
+            "minute": 624.0,
+            "value": 30
+          },
+          "AK14": {
+            "minute": 624.0,
+            "value": 5
+          },
+          "AK18": {
+            "minute": 624.0,
+            "value": 15
+          },
+          "AK85": {
+            "minute": 624.0,
+            "value": 85
+          },
+          "AK86": {
+            "minute": 624.0,
+            "value": 170
+          }
+        },
+        "policy": "rollout",
+        "predicted_costs": {
+          "AK18": 426.76418193747037,
+          "AK85": 422.0316176183216,
+          "AK11": 431.74095195644804,
+          "AK86": 470.34188820637814,
+          "AK07": 458.38138078784283
+        },
+        "scenario_ids": [
+          "2018-04-26",
+          "2017-11-30",
+          "2018-04-20",
+          "2018-04-17",
+          "2017-11-16",
+          "2017-10-17",
+          "2018-05-03",
+          "2017-11-12"
+        ],
+        "fallback": false,
+        "fallback_reason": null,
+        "predicted_cost_unit": "remaining_minutes",
+        "base_next": "AK18",
+        "chosen_next": "AK85",
+        "base_predicted_finish": 1052.6854921322865,
+        "scenario_distances": {
+          "2018-04-26": 0.01944233632541615,
+          "2017-11-30": 0.024176537558560095,
+          "2018-04-20": 0.027041882929642446,
+          "2018-04-17": 0.034149553634997935,
+          "2017-11-16": 0.03873254321699631,
+          "2017-10-17": 0.0445662203016646,
+          "2018-05-03": 0.04626795627928004,
+          "2017-11-12": 0.048810047462158425
+        },
+        "scenario_model": {
+          "template": "whole_training_day_all_rides",
+          "historical_missing_and_future_closures": "training_curve_imputation",
+          "forecast_future_closures": false,
+          "snapshot_grid_minutes": 5.0,
+          "current_closure_expiry": "original_observation_plus_15_minutes",
+          "beyond_midnight": "training_curve_tail",
+          "closing_deadline_in_model": null,
+          "aggregation": "uniform_mean_no_failed_sample_dropping"
+        },
+        "scenario_query_audit": {
+          "2018-04-26": {
+            "historical_closure_curve_imputation_queries": 36
+          },
+          "2017-11-30": {},
+          "2018-04-20": {},
+          "2018-04-17": {
+            "historical_closure_curve_imputation_queries": 17
+          },
+          "2017-11-16": {},
+          "2017-10-17": {
+            "historical_closure_curve_imputation_queries": 1
+          },
+          "2018-05-03": {
+            "historical_closure_curve_imputation_queries": 7
+          },
+          "2017-11-12": {
+            "historical_closure_curve_imputation_queries": 2
+          }
+        }
+      },
+      "chosen_action_then_D0": {
+        "success": true,
+        "failure": "",
+        "completed_suffix": [
+          "AK85",
+          "AK11",
+          "AK86",
+          "AK18",
+          "AK07"
+        ],
+        "elapsed_minutes": 510.0,
+        "visits": [
+          {
+            "ride": "AK85",
+            "from": "AK14",
+            "depart": 625.0,
+            "arrival": 635.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 630.0,
+            "posted_wait": 90,
+            "status": "completed",
+            "finish": 735.0
+          },
+          {
+            "ride": "AK11",
+            "from": "AK85",
+            "depart": 735.0,
+            "arrival": 745.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 744.0,
+            "posted_wait": 35,
+            "status": "completed",
+            "finish": 790.0
+          },
+          {
+            "ride": "AK86",
+            "from": "AK11",
+            "depart": 790.0,
+            "arrival": 800.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 797.0,
+            "posted_wait": 145,
+            "status": "completed",
+            "finish": 955.0
+          },
+          {
+            "ride": "AK18",
+            "from": "AK86",
+            "depart": 955.0,
+            "arrival": 965.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 963.0,
+            "posted_wait": 55,
+            "status": "completed",
+            "finish": 1030.0
+          },
+          {
+            "ride": "AK07",
+            "from": "AK18",
+            "depart": 1030.0,
+            "arrival": 1040.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 1037.0,
+            "posted_wait": 85,
+            "status": "completed",
+            "finish": 1135.0
+          }
+        ],
+        "decisions": [
+          {
+            "at": 735.0,
+            "location": "AK85",
+            "incumbent": [
+              "AK18",
+              "AK11",
+              "AK86",
+              "AK07"
+            ],
+            "selected": [
+              "AK11",
+              "AK86",
+              "AK07",
+              "AK18"
+            ],
+            "predicted_finish": 1056.0215104626977,
+            "snapshot": {
+              "AK07": {
+                "minute": 730.0,
+                "value": 95
+              },
+              "AK11": {
+                "minute": 730.0,
+                "value": 25
+              },
+              "AK14": {
+                "minute": 730.0,
+                "value": 5
+              },
+              "AK18": {
+                "minute": 730.0,
+                "value": 50
+              },
+              "AK85": {
+                "minute": 730.0,
+                "value": 80
+              },
+              "AK86": {
+                "minute": 730.0,
+                "value": 150
+              }
+            }
+          },
+          {
+            "at": 790.0,
+            "location": "AK11",
+            "incumbent": [
+              "AK86",
+              "AK07",
+              "AK18"
+            ],
+            "selected": [
+              "AK86",
+              "AK07",
+              "AK18"
+            ],
+            "predicted_finish": 1066.3218458450704,
+            "snapshot": {
+              "AK07": {
+                "minute": 790.0,
+                "value": 75
+              },
+              "AK11": {
+                "minute": 790.0,
+                "value": 45
+              },
+              "AK14": {
+                "minute": 790.0,
+                "value": 10
+              },
+              "AK18": {
+                "minute": 790.0,
+                "value": -999
+              },
+              "AK85": {
+                "minute": 790.0,
+                "value": 85
+              },
+              "AK86": {
+                "minute": 790.0,
+                "value": 145
+              }
+            }
+          },
+          {
+            "at": 955.0,
+            "location": "AK86",
+            "incumbent": [
+              "AK07",
+              "AK18"
+            ],
+            "selected": [
+              "AK18",
+              "AK07"
+            ],
+            "predicted_finish": 1105.5576750193266,
+            "snapshot": {
+              "AK07": {
+                "minute": 952.0,
+                "value": 115
+              },
+              "AK11": {
+                "minute": 952.0,
+                "value": 35
+              },
+              "AK14": {
+                "minute": 952.0,
+                "value": 5
+              },
+              "AK18": {
+                "minute": 952.0,
+                "value": 55
+              },
+              "AK85": {
+                "minute": 952.0,
+                "value": 95
+              },
+              "AK86": {
+                "minute": 952.0,
+                "value": 105
+              }
+            }
+          },
+          {
+            "at": 1030.0,
+            "location": "AK18",
+            "incumbent": [
+              "AK07"
+            ],
+            "selected": [
+              "AK07"
+            ],
+            "predicted_finish": 1128.4754733078512,
+            "snapshot": {
+              "AK07": {
+                "minute": 1030.0,
+                "value": 85
+              },
+              "AK11": {
+                "minute": 1030.0,
+                "value": 40
+              },
+              "AK14": {
+                "minute": 1030.0,
+                "value": 5
+              },
+              "AK18": {
+                "minute": 1030.0,
+                "value": 40
+              },
+              "AK85": {
+                "minute": 1030.0,
+                "value": 95
+              },
+              "AK86": {
+                "minute": 1030.0,
+                "value": 105
+              }
+            }
+          }
+        ]
+      },
+      "base_action_then_D0": {
+        "success": true,
+        "failure": "",
+        "completed_suffix": [
+          "AK18",
+          "AK11",
+          "AK85",
+          "AK07",
+          "AK86"
+        ],
+        "elapsed_minutes": 405.0,
+        "visits": [
+          {
+            "ride": "AK18",
+            "from": "AK14",
+            "depart": 625.0,
+            "arrival": 635.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 630.0,
+            "posted_wait": 20,
+            "status": "completed",
+            "finish": 665.0
+          },
+          {
+            "ride": "AK11",
+            "from": "AK18",
+            "depart": 665.0,
+            "arrival": 675.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 670.0,
+            "posted_wait": 40,
+            "status": "completed",
+            "finish": 725.0
+          },
+          {
+            "ride": "AK85",
+            "from": "AK11",
+            "depart": 725.0,
+            "arrival": 735.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 730.0,
+            "posted_wait": 80,
+            "status": "completed",
+            "finish": 825.0
+          },
+          {
+            "ride": "AK07",
+            "from": "AK85",
+            "depart": 825.0,
+            "arrival": 835.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 832.0,
+            "posted_wait": 45,
+            "status": "completed",
+            "finish": 890.0
+          },
+          {
+            "ride": "AK86",
+            "from": "AK07",
+            "depart": 890.0,
+            "arrival": 900.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 899.0,
+            "posted_wait": 120,
+            "status": "completed",
+            "finish": 1030.0
+          }
+        ],
+        "decisions": [
+          {
+            "at": 665.0,
+            "location": "AK18",
+            "incumbent": [
+              "AK85",
+              "AK11",
+              "AK86",
+              "AK07"
+            ],
+            "selected": [
+              "AK11",
+              "AK85",
+              "AK86",
+              "AK07"
+            ],
+            "predicted_finish": 1039.6182515529786,
+            "snapshot": {
+              "AK07": {
+                "minute": 663.0,
+                "value": 95
+              },
+              "AK11": {
+                "minute": 663.0,
+                "value": 30
+              },
+              "AK14": {
+                "minute": 663.0,
+                "value": 10
+              },
+              "AK18": {
+                "minute": 663.0,
+                "value": 25
+              },
+              "AK85": {
+                "minute": 663.0,
+                "value": 85
+              },
+              "AK86": {
+                "minute": 663.0,
+                "value": 140
+              }
+            }
+          },
+          {
+            "at": 725.0,
+            "location": "AK11",
+            "incumbent": [
+              "AK85",
+              "AK86",
+              "AK07"
+            ],
+            "selected": [
+              "AK85",
+              "AK86",
+              "AK07"
+            ],
+            "predicted_finish": 1042.516592481568,
+            "snapshot": {
+              "AK07": {
+                "minute": 723.0,
+                "value": 95
+              },
+              "AK11": {
+                "minute": 723.0,
+                "value": 25
+              },
+              "AK14": {
+                "minute": 723.0,
+                "value": 5
+              },
+              "AK18": {
+                "minute": 723.0,
+                "value": 50
+              },
+              "AK85": {
+                "minute": 723.0,
+                "value": 85
+              },
+              "AK86": {
+                "minute": 723.0,
+                "value": 150
+              }
+            }
+          },
+          {
+            "at": 825.0,
+            "location": "AK85",
+            "incumbent": [
+              "AK86",
+              "AK07"
+            ],
+            "selected": [
+              "AK07",
+              "AK86"
+            ],
+            "predicted_finish": 1039.783062047737,
+            "snapshot": {
+              "AK07": {
+                "minute": 825.0,
+                "value": 35
+              },
+              "AK11": {
+                "minute": 825.0,
+                "value": 55
+              },
+              "AK14": {
+                "minute": 825.0,
+                "value": 5
+              },
+              "AK18": {
+                "minute": 825.0,
+                "value": 25
+              },
+              "AK85": {
+                "minute": 825.0,
+                "value": 90
+              },
+              "AK86": {
+                "minute": 825.0,
+                "value": 150
+              }
+            }
+          },
+          {
+            "at": 890.0,
+            "location": "AK07",
+            "incumbent": [
+              "AK86"
+            ],
+            "selected": [
+              "AK86"
+            ],
+            "predicted_finish": 1036.5351827510938,
+            "snapshot": {
+              "AK07": {
+                "minute": 885.0,
+                "value": 85
+              },
+              "AK11": {
+                "minute": 885.0,
+                "value": 60
+              },
+              "AK14": {
+                "minute": 885.0,
+                "value": 5
+              },
+              "AK18": {
+                "minute": 885.0,
+                "value": 50
+              },
+              "AK85": {
+                "minute": 885.0,
+                "value": 105
+              },
+              "AK86": {
+                "minute": 885.0,
+                "value": 120
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "row": {
+        "date": "2018-08-02",
+        "event_index": 3,
+        "at": 725.0,
+        "location": "AK85",
+        "prefix_count": 2,
+        "remaining_count": 4,
+        "base_next": "AK18",
+        "chosen_next": "AK86",
+        "changed_next": true,
+        "predicted_gain_minutes": 11.09358872453987,
+        "actual_gain_minutes": -75.0,
+        "chosen_model_minutes": 330.4286585386897,
+        "base_model_minutes": 341.5222472632296,
+        "chosen_actual_minutes": 355.0,
+        "base_actual_minutes": 280.0,
+        "completion_status": "both_success",
+        "chosen_success": true,
+        "base_success": true,
+        "chosen_failure": "",
+        "base_failure": "",
+        "chosen_completed_suffix": "AK86|AK14|AK11|AK18",
+        "base_completed_suffix": "AK18|AK14|AK86|AK11",
+        "fallback": false,
+        "fallback_reason": null,
+        "scenario_ids": "2017-07-11|2017-07-13|2018-05-26|2018-04-01|2017-08-14|2018-06-25|2017-09-23|2018-05-03",
+        "mean_scenario_age_days": 219.75,
+        "template_queries": 752,
+        "imputation_queries": 27,
+        "query_weighted_imputation_fraction": 0.03590425531914894,
+        "missing_queries": 0,
+        "closed_queries": 27,
+        "after_midnight_queries": 0
+      },
+      "completed_prefix": [
+        "AK07",
+        "AK85"
+      ],
+      "recorded_decision": {
+        "type": "decision",
+        "at": 725.0,
+        "location": "AK85",
+        "incumbent": [
+          "AK11",
+          "AK86",
+          "AK18",
+          "AK14"
+        ],
+        "selected": [
+          "AK86",
+          "AK18",
+          "AK11",
+          "AK14"
+        ],
+        "compute_seconds": 0.004601546000230883,
+        "snapshot": {
+          "AK07": {
+            "minute": 723.0,
+            "value": 65
+          },
+          "AK11": {
+            "minute": 723.0,
+            "value": 65
+          },
+          "AK14": {
+            "minute": 723.0,
+            "value": 55
+          },
+          "AK18": {
+            "minute": 723.0,
+            "value": 30
+          },
+          "AK85": {
+            "minute": 723.0,
+            "value": 90
+          },
+          "AK86": {
+            "minute": 723.0,
+            "value": 120
+          }
+        },
+        "policy": "rollout",
+        "predicted_costs": {
+          "AK18": 341.5222472632296,
+          "AK86": 330.4286585386897,
+          "AK11": 361.18757384082517,
+          "AK14": 340.57190178208145
+        },
+        "scenario_ids": [
+          "2017-07-11",
+          "2017-07-13",
+          "2018-05-26",
+          "2018-04-01",
+          "2017-08-14",
+          "2018-06-25",
+          "2017-09-23",
+          "2018-05-03"
+        ],
+        "fallback": false,
+        "fallback_reason": null,
+        "predicted_cost_unit": "remaining_minutes",
+        "base_next": "AK18",
+        "chosen_next": "AK86",
+        "base_predicted_finish": 1045.3151145207107,
+        "scenario_distances": {
+          "2017-07-11": 0.021252185554219316,
+          "2017-07-13": 0.0253059919244189,
+          "2018-05-26": 0.02649481967748535,
+          "2018-04-01": 0.02712453401515273,
+          "2017-08-14": 0.028629834905286523,
+          "2018-06-25": 0.02948394512662808,
+          "2017-09-23": 0.0310988003894993,
+          "2018-05-03": 0.037998359228116306
+        },
+        "scenario_model": {
+          "template": "whole_training_day_all_rides",
+          "historical_missing_and_future_closures": "training_curve_imputation",
+          "forecast_future_closures": false,
+          "snapshot_grid_minutes": 5.0,
+          "current_closure_expiry": "original_observation_plus_15_minutes",
+          "beyond_midnight": "training_curve_tail",
+          "closing_deadline_in_model": null,
+          "aggregation": "uniform_mean_no_failed_sample_dropping"
+        },
+        "scenario_query_audit": {
+          "2017-07-11": {
+            "historical_closure_curve_imputation_queries": 1
+          },
+          "2017-07-13": {
+            "historical_closure_curve_imputation_queries": 13
+          },
+          "2018-05-26": {},
+          "2018-04-01": {
+            "historical_closure_curve_imputation_queries": 6
+          },
+          "2017-08-14": {},
+          "2018-06-25": {
+            "historical_closure_curve_imputation_queries": 3
+          },
+          "2017-09-23": {},
+          "2018-05-03": {
+            "historical_closure_curve_imputation_queries": 4
+          }
+        }
+      },
+      "chosen_action_then_D0": {
+        "success": true,
+        "failure": "",
+        "completed_suffix": [
+          "AK86",
+          "AK14",
+          "AK11",
+          "AK18"
+        ],
+        "elapsed_minutes": 355.0,
+        "visits": [
+          {
+            "ride": "AK86",
+            "from": "AK85",
+            "depart": 725.0,
+            "arrival": 735.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 730.0,
+            "posted_wait": 120,
+            "status": "completed",
+            "finish": 865.0
+          },
+          {
+            "ride": "AK14",
+            "from": "AK86",
+            "depart": 865.0,
+            "arrival": 875.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 870.0,
+            "posted_wait": 75,
+            "status": "completed",
+            "finish": 960.0
+          },
+          {
+            "ride": "AK11",
+            "from": "AK14",
+            "depart": 960.0,
+            "arrival": 970.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 970.0,
+            "posted_wait": 50,
+            "status": "completed",
+            "finish": 1030.0
+          },
+          {
+            "ride": "AK18",
+            "from": "AK11",
+            "depart": 1030.0,
+            "arrival": 1040.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 1037.0,
+            "posted_wait": 30,
+            "status": "completed",
+            "finish": 1080.0
+          }
+        ],
+        "decisions": [
+          {
+            "at": 865.0,
+            "location": "AK86",
+            "incumbent": [
+              "AK18",
+              "AK11",
+              "AK14"
+            ],
+            "selected": [
+              "AK14",
+              "AK11",
+              "AK18"
+            ],
+            "predicted_finish": 1035.2456124190167,
+            "snapshot": {
+              "AK07": {
+                "minute": 864.0,
+                "value": 35
+              },
+              "AK11": {
+                "minute": 864.0,
+                "value": 40
+              },
+              "AK14": {
+                "minute": 864.0,
+                "value": 35
+              },
+              "AK18": {
+                "minute": 864.0,
+                "value": 40
+              },
+              "AK85": {
+                "minute": 864.0,
+                "value": 80
+              },
+              "AK86": {
+                "minute": 864.0,
+                "value": 95
+              }
+            }
+          },
+          {
+            "at": 960.0,
+            "location": "AK14",
+            "incumbent": [
+              "AK11",
+              "AK18"
+            ],
+            "selected": [
+              "AK11",
+              "AK18"
+            ],
+            "predicted_finish": 1065.767591375547,
+            "snapshot": {
+              "AK07": {
+                "minute": 959.0,
+                "value": 45
+              },
+              "AK11": {
+                "minute": 959.0,
+                "value": 35
+              },
+              "AK14": {
+                "minute": 959.0,
+                "value": 65
+              },
+              "AK18": {
+                "minute": 959.0,
+                "value": 35
+              },
+              "AK85": {
+                "minute": 959.0,
+                "value": 80
+              },
+              "AK86": {
+                "minute": 959.0,
+                "value": 90
+              }
+            }
+          },
+          {
+            "at": 1030.0,
+            "location": "AK11",
+            "incumbent": [
+              "AK18"
+            ],
+            "selected": [
+              "AK18"
+            ],
+            "predicted_finish": 1079.6162043122265,
+            "snapshot": {
+              "AK07": {
+                "minute": 1030.0,
+                "value": 45
+              },
+              "AK11": {
+                "minute": 1030.0,
+                "value": 35
+              },
+              "AK14": {
+                "minute": 1030.0,
+                "value": 70
+              },
+              "AK18": {
+                "minute": 1030.0,
+                "value": 30
+              },
+              "AK85": {
+                "minute": 1030.0,
+                "value": 35
+              },
+              "AK86": {
+                "minute": 1030.0,
+                "value": 85
+              }
+            }
+          }
+        ]
+      },
+      "base_action_then_D0": {
+        "success": true,
+        "failure": "",
+        "completed_suffix": [
+          "AK18",
+          "AK14",
+          "AK86",
+          "AK11"
+        ],
+        "elapsed_minutes": 280.0,
+        "visits": [
+          {
+            "ride": "AK18",
+            "from": "AK85",
+            "depart": 725.0,
+            "arrival": 735.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 730.0,
+            "posted_wait": 30,
+            "status": "completed",
+            "finish": 775.0
+          },
+          {
+            "ride": "AK14",
+            "from": "AK18",
+            "depart": 775.0,
+            "arrival": 785.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 783.0,
+            "posted_wait": 30,
+            "status": "completed",
+            "finish": 825.0
+          },
+          {
+            "ride": "AK86",
+            "from": "AK14",
+            "depart": 825.0,
+            "arrival": 835.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 832.0,
+            "posted_wait": 95,
+            "status": "completed",
+            "finish": 940.0
+          },
+          {
+            "ride": "AK11",
+            "from": "AK86",
+            "depart": 940.0,
+            "arrival": 950.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 945.0,
+            "posted_wait": 45,
+            "status": "completed",
+            "finish": 1005.0
+          }
+        ],
+        "decisions": [
+          {
+            "at": 775.0,
+            "location": "AK18",
+            "incumbent": [
+              "AK86",
+              "AK11",
+              "AK14"
+            ],
+            "selected": [
+              "AK14",
+              "AK86",
+              "AK11"
+            ],
+            "predicted_finish": 1038.3573848926776,
+            "snapshot": {
+              "AK07": {
+                "minute": 772.0,
+                "value": 45
+              },
+              "AK11": {
+                "minute": 772.0,
+                "value": 40
+              },
+              "AK14": {
+                "minute": 772.0,
+                "value": 40
+              },
+              "AK18": {
+                "minute": 772.0,
+                "value": 40
+              },
+              "AK85": {
+                "minute": 772.0,
+                "value": 80
+              },
+              "AK86": {
+                "minute": 772.0,
+                "value": 120
+              }
+            }
+          },
+          {
+            "at": 825.0,
+            "location": "AK14",
+            "incumbent": [
+              "AK86",
+              "AK11"
+            ],
+            "selected": [
+              "AK86",
+              "AK11"
+            ],
+            "predicted_finish": 1005.1821205398553,
+            "snapshot": {
+              "AK07": {
+                "minute": 825.0,
+                "value": 25
+              },
+              "AK11": {
+                "minute": 825.0,
+                "value": 50
+              },
+              "AK14": {
+                "minute": 825.0,
+                "value": 45
+              },
+              "AK18": {
+                "minute": 825.0,
+                "value": 40
+              },
+              "AK85": {
+                "minute": 825.0,
+                "value": 80
+              },
+              "AK86": {
+                "minute": 825.0,
+                "value": 95
+              }
+            }
+          },
+          {
+            "at": 940.0,
+            "location": "AK86",
+            "incumbent": [
+              "AK11"
+            ],
+            "selected": [
+              "AK11"
+            ],
+            "predicted_finish": 1002.1162043122265,
+            "snapshot": {
+              "AK07": {
+                "minute": 938.0,
+                "value": 45
+              },
+              "AK11": {
+                "minute": 938.0,
+                "value": 45
+              },
+              "AK14": {
+                "minute": 938.0,
+                "value": 65
+              },
+              "AK18": {
+                "minute": 938.0,
+                "value": 40
+              },
+              "AK85": {
+                "minute": 938.0,
+                "value": 80
+              },
+              "AK86": {
+                "minute": 938.0,
+                "value": 95
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "row": {
+        "date": "2018-08-10",
+        "event_index": 1,
+        "at": 635.0,
+        "location": "AK07",
+        "prefix_count": 1,
+        "remaining_count": 5,
+        "base_next": "AK14",
+        "chosen_next": "AK85",
+        "changed_next": true,
+        "predicted_gain_minutes": 8.275076245206435,
+        "actual_gain_minutes": -75.0,
+        "chosen_model_minutes": 392.41145549834334,
+        "base_model_minutes": 400.6865317435498,
+        "chosen_actual_minutes": 465.0,
+        "base_actual_minutes": 390.0,
+        "completion_status": "both_success",
+        "chosen_success": true,
+        "base_success": true,
+        "chosen_failure": "",
+        "base_failure": "",
+        "chosen_completed_suffix": "AK85|AK86|AK18|AK11|AK14",
+        "base_completed_suffix": "AK14|AK85|AK11|AK86|AK18",
+        "fallback": false,
+        "fallback_reason": null,
+        "scenario_ids": "2018-06-03|2017-09-26|2018-05-15|2017-06-23|2017-09-24|2017-08-04|2017-08-20|2017-09-18",
+        "mean_scenario_age_days": 282.25,
+        "template_queries": 1208,
+        "imputation_queries": 27,
+        "query_weighted_imputation_fraction": 0.022350993377483443,
+        "missing_queries": 0,
+        "closed_queries": 27,
+        "after_midnight_queries": 0
+      },
+      "completed_prefix": [
+        "AK07"
+      ],
+      "recorded_decision": {
+        "type": "decision",
+        "at": 635.0,
+        "location": "AK07",
+        "incumbent": [
+          "AK11",
+          "AK14",
+          "AK86",
+          "AK85",
+          "AK18"
+        ],
+        "selected": [
+          "AK85",
+          "AK14",
+          "AK86",
+          "AK11",
+          "AK18"
+        ],
+        "compute_seconds": 0.009930582000379218,
+        "snapshot": {
+          "AK07": {
+            "minute": 630.0,
+            "value": 45
+          },
+          "AK11": {
+            "minute": 630.0,
+            "value": 30
+          },
+          "AK14": {
+            "minute": 630.0,
+            "value": 25
+          },
+          "AK18": {
+            "minute": 632.0,
+            "value": 20
+          },
+          "AK85": {
+            "minute": 630.0,
+            "value": 60
+          },
+          "AK86": {
+            "minute": 630.0,
+            "value": 150
+          }
+        },
+        "policy": "rollout",
+        "predicted_costs": {
+          "AK14": 400.6865317435498,
+          "AK85": 392.41145549834334,
+          "AK86": 425.8655243195716,
+          "AK11": 394.6189471900703,
+          "AK18": 410.95577969783193
+        },
+        "scenario_ids": [
+          "2018-06-03",
+          "2017-09-26",
+          "2018-05-15",
+          "2017-06-23",
+          "2017-09-24",
+          "2017-08-04",
+          "2017-08-20",
+          "2017-09-18"
+        ],
+        "fallback": false,
+        "fallback_reason": null,
+        "predicted_cost_unit": "remaining_minutes",
+        "base_next": "AK14",
+        "chosen_next": "AK85",
+        "base_predicted_finish": 1049.7897180392933,
+        "scenario_distances": {
+          "2018-06-03": 0.014780475206611571,
+          "2017-09-26": 0.015357176475354362,
+          "2018-05-15": 0.015893886966551328,
+          "2017-06-23": 0.021738086944927435,
+          "2017-09-24": 0.022273644752018457,
+          "2017-08-04": 0.022596922154860973,
+          "2017-08-20": 0.02343270958953435,
+          "2017-09-18": 0.02343270958953435
+        },
+        "scenario_model": {
+          "template": "whole_training_day_all_rides",
+          "historical_missing_and_future_closures": "training_curve_imputation",
+          "forecast_future_closures": false,
+          "snapshot_grid_minutes": 5.0,
+          "current_closure_expiry": "original_observation_plus_15_minutes",
+          "beyond_midnight": "training_curve_tail",
+          "closing_deadline_in_model": null,
+          "aggregation": "uniform_mean_no_failed_sample_dropping"
+        },
+        "scenario_query_audit": {
+          "2018-06-03": {
+            "historical_closure_curve_imputation_queries": 10
+          },
+          "2017-09-26": {},
+          "2018-05-15": {
+            "historical_closure_curve_imputation_queries": 14
+          },
+          "2017-06-23": {
+            "historical_closure_curve_imputation_queries": 1
+          },
+          "2017-09-24": {},
+          "2017-08-04": {},
+          "2017-08-20": {},
+          "2017-09-18": {
+            "historical_closure_curve_imputation_queries": 2
+          }
+        }
+      },
+      "chosen_action_then_D0": {
+        "success": true,
+        "failure": "",
+        "completed_suffix": [
+          "AK85",
+          "AK86",
+          "AK18",
+          "AK11",
+          "AK14"
+        ],
+        "elapsed_minutes": 465.0,
+        "visits": [
+          {
+            "ride": "AK85",
+            "from": "AK07",
+            "depart": 635.0,
+            "arrival": 645.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 645.0,
+            "posted_wait": 75,
+            "status": "completed",
+            "finish": 730.0
+          },
+          {
+            "ride": "AK86",
+            "from": "AK85",
+            "depart": 730.0,
+            "arrival": 740.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 737.0,
+            "posted_wait": 135,
+            "status": "completed",
+            "finish": 885.0
+          },
+          {
+            "ride": "AK18",
+            "from": "AK86",
+            "depart": 885.0,
+            "arrival": 895.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 892.0,
+            "posted_wait": 60,
+            "status": "completed",
+            "finish": 965.0
+          },
+          {
+            "ride": "AK11",
+            "from": "AK18",
+            "depart": 965.0,
+            "arrival": 975.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 970.0,
+            "posted_wait": 40,
+            "status": "completed",
+            "finish": 1025.0
+          },
+          {
+            "ride": "AK14",
+            "from": "AK11",
+            "depart": 1025.0,
+            "arrival": 1035.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 1030.0,
+            "posted_wait": 55,
+            "status": "completed",
+            "finish": 1100.0
+          }
+        ],
+        "decisions": [
+          {
+            "at": 730.0,
+            "location": "AK85",
+            "incumbent": [
+              "AK14",
+              "AK86",
+              "AK11",
+              "AK18"
+            ],
+            "selected": [
+              "AK86",
+              "AK11",
+              "AK18",
+              "AK14"
+            ],
+            "predicted_finish": 1060.5937380432858,
+            "snapshot": {
+              "AK07": {
+                "minute": 730.0,
+                "value": 95
+              },
+              "AK11": {
+                "minute": 730.0,
+                "value": -999
+              },
+              "AK14": {
+                "minute": 730.0,
+                "value": -999
+              },
+              "AK18": {
+                "minute": 730.0,
+                "value": 45
+              },
+              "AK85": {
+                "minute": 730.0,
+                "value": 90
+              },
+              "AK86": {
+                "minute": 730.0,
+                "value": 135
+              }
+            }
+          },
+          {
+            "at": 885.0,
+            "location": "AK86",
+            "incumbent": [
+              "AK11",
+              "AK18",
+              "AK14"
+            ],
+            "selected": [
+              "AK18",
+              "AK11",
+              "AK14"
+            ],
+            "predicted_finish": 1092.9483240126565,
+            "snapshot": {
+              "AK07": {
+                "minute": 885.0,
+                "value": 55
+              },
+              "AK11": {
+                "minute": 885.0,
+                "value": 120
+              },
+              "AK14": {
+                "minute": 885.0,
+                "value": 80
+              },
+              "AK18": {
+                "minute": 885.0,
+                "value": 50
+              },
+              "AK85": {
+                "minute": 885.0,
+                "value": 80
+              },
+              "AK86": {
+                "minute": 885.0,
+                "value": 130
+              }
+            }
+          },
+          {
+            "at": 965.0,
+            "location": "AK18",
+            "incumbent": [
+              "AK11",
+              "AK14"
+            ],
+            "selected": [
+              "AK11",
+              "AK14"
+            ],
+            "predicted_finish": 1087.7225320589514,
+            "snapshot": {
+              "AK07": {
+                "minute": 963.0,
+                "value": 55
+              },
+              "AK11": {
+                "minute": 963.0,
+                "value": 40
+              },
+              "AK14": {
+                "minute": 963.0,
+                "value": 65
+              },
+              "AK18": {
+                "minute": 963.0,
+                "value": 45
+              },
+              "AK85": {
+                "minute": 963.0,
+                "value": 90
+              },
+              "AK86": {
+                "minute": 963.0,
+                "value": 95
+              }
+            }
+          },
+          {
+            "at": 1025.0,
+            "location": "AK11",
+            "incumbent": [
+              "AK14"
+            ],
+            "selected": [
+              "AK14"
+            ],
+            "predicted_finish": 1105.3944517467185,
+            "snapshot": {
+              "AK07": {
+                "minute": 1023.0,
+                "value": 55
+              },
+              "AK11": {
+                "minute": 1023.0,
+                "value": 35
+              },
+              "AK14": {
+                "minute": 1023.0,
+                "value": 70
+              },
+              "AK18": {
+                "minute": 1023.0,
+                "value": 40
+              },
+              "AK85": {
+                "minute": 1023.0,
+                "value": 70
+              },
+              "AK86": {
+                "minute": 1023.0,
+                "value": 125
+              }
+            }
+          }
+        ]
+      },
+      "base_action_then_D0": {
+        "success": true,
+        "failure": "",
+        "completed_suffix": [
+          "AK14",
+          "AK85",
+          "AK11",
+          "AK86",
+          "AK18"
+        ],
+        "elapsed_minutes": 390.0,
+        "visits": [
+          {
+            "ride": "AK14",
+            "from": "AK07",
+            "depart": 635.0,
+            "arrival": 645.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 645.0,
+            "posted_wait": 40,
+            "status": "completed",
+            "finish": 695.0
+          },
+          {
+            "ride": "AK85",
+            "from": "AK14",
+            "depart": 695.0,
+            "arrival": 705.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 705.0,
+            "posted_wait": 75,
+            "status": "completed",
+            "finish": 790.0
+          },
+          {
+            "ride": "AK11",
+            "from": "AK85",
+            "depart": 790.0,
+            "arrival": 800.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 797.0,
+            "posted_wait": 25,
+            "status": "completed",
+            "finish": 835.0
+          },
+          {
+            "ride": "AK86",
+            "from": "AK11",
+            "depart": 835.0,
+            "arrival": 845.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 843.0,
+            "posted_wait": 120,
+            "status": "completed",
+            "finish": 975.0
+          },
+          {
+            "ride": "AK18",
+            "from": "AK86",
+            "depart": 975.0,
+            "arrival": 985.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 984.0,
+            "posted_wait": 30,
+            "status": "completed",
+            "finish": 1025.0
+          }
+        ],
+        "decisions": [
+          {
+            "at": 695.0,
+            "location": "AK14",
+            "incumbent": [
+              "AK85",
+              "AK86",
+              "AK11",
+              "AK18"
+            ],
+            "selected": [
+              "AK85",
+              "AK11",
+              "AK86",
+              "AK18"
+            ],
+            "predicted_finish": 1052.2448397712108,
+            "snapshot": {
+              "AK07": {
+                "minute": 690.0,
+                "value": 65
+              },
+              "AK11": {
+                "minute": 690.0,
+                "value": 40
+              },
+              "AK14": {
+                "minute": 690.0,
+                "value": 45
+              },
+              "AK18": {
+                "minute": 690.0,
+                "value": 40
+              },
+              "AK85": {
+                "minute": 690.0,
+                "value": 75
+              },
+              "AK86": {
+                "minute": 690.0,
+                "value": 150
+              }
+            }
+          },
+          {
+            "at": 790.0,
+            "location": "AK85",
+            "incumbent": [
+              "AK11",
+              "AK86",
+              "AK18"
+            ],
+            "selected": [
+              "AK11",
+              "AK86",
+              "AK18"
+            ],
+            "predicted_finish": 1047.8395337693044,
+            "snapshot": {
+              "AK07": {
+                "minute": 790.0,
+                "value": 70
+              },
+              "AK11": {
+                "minute": 790.0,
+                "value": 40
+              },
+              "AK14": {
+                "minute": 790.0,
+                "value": -999
+              },
+              "AK18": {
+                "minute": 790.0,
+                "value": 60
+              },
+              "AK85": {
+                "minute": 790.0,
+                "value": 80
+              },
+              "AK86": {
+                "minute": 790.0,
+                "value": 135
+              }
+            }
+          },
+          {
+            "at": 835.0,
+            "location": "AK11",
+            "incumbent": [
+              "AK86",
+              "AK18"
+            ],
+            "selected": [
+              "AK86",
+              "AK18"
+            ],
+            "predicted_finish": 1026.5780069592424,
+            "snapshot": {
+              "AK07": {
+                "minute": 832.0,
+                "value": 55
+              },
+              "AK11": {
+                "minute": 832.0,
+                "value": 35
+              },
+              "AK14": {
+                "minute": 832.0,
+                "value": 30
+              },
+              "AK18": {
+                "minute": 832.0,
+                "value": 50
+              },
+              "AK85": {
+                "minute": 832.0,
+                "value": 75
+              },
+              "AK86": {
+                "minute": 832.0,
+                "value": 120
+              }
+            }
+          },
+          {
+            "at": 975.0,
+            "location": "AK86",
+            "incumbent": [
+              "AK18"
+            ],
+            "selected": [
+              "AK18"
+            ],
+            "predicted_finish": 1035.5810215611327,
+            "snapshot": {
+              "AK07": {
+                "minute": 970.0,
+                "value": 55
+              },
+              "AK11": {
+                "minute": 970.0,
+                "value": 40
+              },
+              "AK14": {
+                "minute": 970.0,
+                "value": 80
+              },
+              "AK18": {
+                "minute": 970.0,
+                "value": 45
+              },
+              "AK85": {
+                "minute": 970.0,
+                "value": 70
+              },
+              "AK86": {
+                "minute": 970.0,
+                "value": 90
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "row": {
+        "date": "2018-11-15",
+        "event_index": 1,
+        "at": 645.0,
+        "location": "AK18",
+        "prefix_count": 1,
+        "remaining_count": 5,
+        "base_next": "AK07",
+        "chosen_next": "AK11",
+        "changed_next": true,
+        "predicted_gain_minutes": 0.453499885193537,
+        "actual_gain_minutes": -75.0,
+        "chosen_model_minutes": 450.63565183561684,
+        "base_model_minutes": 451.0891517208104,
+        "chosen_actual_minutes": 500.0,
+        "base_actual_minutes": 425.0,
+        "completion_status": "both_success",
+        "chosen_success": true,
+        "base_success": true,
+        "chosen_failure": "",
+        "base_failure": "",
+        "chosen_completed_suffix": "AK11|AK14|AK85|AK86|AK07",
+        "base_completed_suffix": "AK07|AK85|AK14|AK86|AK11",
+        "fallback": false,
+        "fallback_reason": null,
+        "scenario_ids": "2017-12-03|2017-08-08|2017-11-17|2017-07-28|2017-12-01|2017-10-22|2017-07-19|2017-09-30",
+        "mean_scenario_age_days": 410.25,
+        "template_queries": 968,
+        "imputation_queries": 33,
+        "query_weighted_imputation_fraction": 0.03409090909090909,
+        "missing_queries": 0,
+        "closed_queries": 33,
+        "after_midnight_queries": 0
+      },
+      "completed_prefix": [
+        "AK18"
+      ],
+      "recorded_decision": {
+        "type": "decision",
+        "at": 645.0,
+        "location": "AK18",
+        "incumbent": [
+          "AK14",
+          "AK11",
+          "AK86",
+          "AK85",
+          "AK07"
+        ],
+        "selected": [
+          "AK11",
+          "AK07",
+          "AK85",
+          "AK86",
+          "AK14"
+        ],
+        "compute_seconds": 0.007448388999364397,
+        "snapshot": {
+          "AK07": {
+            "minute": 645.0,
+            "value": 45
+          },
+          "AK11": {
+            "minute": 645.0,
+            "value": 45
+          },
+          "AK14": {
+            "minute": 645.0,
+            "value": -999
+          },
+          "AK18": {
+            "minute": 645.0,
+            "value": 25
+          },
+          "AK85": {
+            "minute": 645.0,
+            "value": 105
+          },
+          "AK86": {
+            "minute": 645.0,
+            "value": 210
+          }
+        },
+        "policy": "rollout",
+        "predicted_costs": {
+          "AK07": 451.0891517208104,
+          "AK85": 473.5551005848614,
+          "AK86": 502.60044384953846,
+          "AK11": 450.63565183561684,
+          "AK14": null
+        },
+        "scenario_ids": [
+          "2017-12-03",
+          "2017-08-08",
+          "2017-11-17",
+          "2017-07-28",
+          "2017-12-01",
+          "2017-10-22",
+          "2017-07-19",
+          "2017-09-30"
+        ],
+        "fallback": false,
+        "fallback_reason": null,
+        "predicted_cost_unit": "remaining_minutes",
+        "base_next": "AK07",
+        "chosen_next": "AK11",
+        "base_predicted_finish": 1092.6396413310524,
+        "scenario_distances": {
+          "2017-12-03": 0.017724452900995107,
+          "2017-08-08": 0.02266272450593338,
+          "2017-11-17": 0.02266272450593338,
+          "2017-07-28": 0.023280008456550663,
+          "2017-12-01": 0.023519363457810426,
+          "2017-10-22": 0.02384500385802469,
+          "2017-07-19": 0.024932484567901238,
+          "2017-09-30": 0.025086805555555557
+        },
+        "scenario_model": {
+          "template": "whole_training_day_all_rides",
+          "historical_missing_and_future_closures": "training_curve_imputation",
+          "forecast_future_closures": false,
+          "snapshot_grid_minutes": 5.0,
+          "current_closure_expiry": "original_observation_plus_15_minutes",
+          "beyond_midnight": "training_curve_tail",
+          "closing_deadline_in_model": null,
+          "aggregation": "uniform_mean_no_failed_sample_dropping"
+        },
+        "scenario_query_audit": {
+          "2017-12-03": {},
+          "2017-08-08": {
+            "historical_closure_curve_imputation_queries": 4
+          },
+          "2017-11-17": {
+            "historical_closure_curve_imputation_queries": 1
+          },
+          "2017-07-28": {
+            "historical_closure_curve_imputation_queries": 15
+          },
+          "2017-12-01": {
+            "historical_closure_curve_imputation_queries": 2
+          },
+          "2017-10-22": {
+            "historical_closure_curve_imputation_queries": 2
+          },
+          "2017-07-19": {
+            "historical_closure_curve_imputation_queries": 5
+          },
+          "2017-09-30": {
+            "historical_closure_curve_imputation_queries": 4
+          }
+        }
+      },
+      "chosen_action_then_D0": {
+        "success": true,
+        "failure": "",
+        "completed_suffix": [
+          "AK11",
+          "AK14",
+          "AK85",
+          "AK86",
+          "AK07"
+        ],
+        "elapsed_minutes": 500.0,
+        "visits": [
+          {
+            "ride": "AK11",
+            "from": "AK18",
+            "depart": 645.0,
+            "arrival": 655.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 652.0,
+            "posted_wait": 30,
+            "status": "completed",
+            "finish": 695.0
+          },
+          {
+            "ride": "AK14",
+            "from": "AK11",
+            "depart": 695.0,
+            "arrival": 705.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 705.0,
+            "posted_wait": 70,
+            "status": "completed",
+            "finish": 785.0
+          },
+          {
+            "ride": "AK85",
+            "from": "AK14",
+            "depart": 785.0,
+            "arrival": 795.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 790.0,
+            "posted_wait": 55,
+            "status": "completed",
+            "finish": 860.0
+          },
+          {
+            "ride": "AK86",
+            "from": "AK85",
+            "depart": 860.0,
+            "arrival": 870.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 870.0,
+            "posted_wait": 180,
+            "status": "completed",
+            "finish": 1060.0
+          },
+          {
+            "ride": "AK07",
+            "from": "AK86",
+            "depart": 1060.0,
+            "arrival": 1070.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 1065.0,
+            "posted_wait": 65,
+            "status": "completed",
+            "finish": 1145.0
+          }
+        ],
+        "decisions": [
+          {
+            "at": 695.0,
+            "location": "AK11",
+            "incumbent": [
+              "AK07",
+              "AK85",
+              "AK86",
+              "AK14"
+            ],
+            "selected": [
+              "AK14",
+              "AK07",
+              "AK86",
+              "AK85"
+            ],
+            "predicted_finish": 1070.8757077861164,
+            "snapshot": {
+              "AK07": {
+                "minute": 690.0,
+                "value": 45
+              },
+              "AK11": {
+                "minute": 690.0,
+                "value": 35
+              },
+              "AK14": {
+                "minute": 690.0,
+                "value": 30
+              },
+              "AK18": {
+                "minute": 690.0,
+                "value": 40
+              },
+              "AK85": {
+                "minute": 690.0,
+                "value": 95
+              },
+              "AK86": {
+                "minute": 690.0,
+                "value": 180
+              }
+            }
+          },
+          {
+            "at": 785.0,
+            "location": "AK14",
+            "incumbent": [
+              "AK07",
+              "AK86",
+              "AK85"
+            ],
+            "selected": [
+              "AK85",
+              "AK86",
+              "AK07"
+            ],
+            "predicted_finish": 1080.3451240857244,
+            "snapshot": {
+              "AK07": {
+                "minute": 783.0,
+                "value": 45
+              },
+              "AK11": {
+                "minute": 783.0,
+                "value": 50
+              },
+              "AK14": {
+                "minute": 783.0,
+                "value": 40
+              },
+              "AK18": {
+                "minute": 783.0,
+                "value": 10
+              },
+              "AK85": {
+                "minute": 783.0,
+                "value": 55
+              },
+              "AK86": {
+                "minute": 783.0,
+                "value": 150
+              }
+            }
+          },
+          {
+            "at": 860.0,
+            "location": "AK85",
+            "incumbent": [
+              "AK86",
+              "AK07"
+            ],
+            "selected": [
+              "AK86",
+              "AK07"
+            ],
+            "predicted_finish": 1083.2834604088703,
+            "snapshot": {
+              "AK07": {
+                "minute": 857.0,
+                "value": 55
+              },
+              "AK11": {
+                "minute": 857.0,
+                "value": 45
+              },
+              "AK14": {
+                "minute": 857.0,
+                "value": 10
+              },
+              "AK18": {
+                "minute": 857.0,
+                "value": 55
+              },
+              "AK85": {
+                "minute": 857.0,
+                "value": 85
+              },
+              "AK86": {
+                "minute": 857.0,
+                "value": 140
+              }
+            }
+          },
+          {
+            "at": 1060.0,
+            "location": "AK86",
+            "incumbent": [
+              "AK07"
+            ],
+            "selected": [
+              "AK07"
+            ],
+            "predicted_finish": 1141.1620431222655,
+            "snapshot": {
+              "AK07": {
+                "minute": 1058.0,
+                "value": 65
+              },
+              "AK11": {
+                "minute": 1058.0,
+                "value": 35
+              },
+              "AK14": {
+                "minute": 1058.0,
+                "value": 5
+              },
+              "AK18": {
+                "minute": 1058.0,
+                "value": 25
+              },
+              "AK85": {
+                "minute": 1058.0,
+                "value": 55
+              },
+              "AK86": {
+                "minute": 1058.0,
+                "value": 170
+              }
+            }
+          }
+        ]
+      },
+      "base_action_then_D0": {
+        "success": true,
+        "failure": "",
+        "completed_suffix": [
+          "AK07",
+          "AK85",
+          "AK14",
+          "AK86",
+          "AK11"
+        ],
+        "elapsed_minutes": 425.0,
+        "visits": [
+          {
+            "ride": "AK07",
+            "from": "AK18",
+            "depart": 645.0,
+            "arrival": 655.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 652.0,
+            "posted_wait": 45,
+            "status": "completed",
+            "finish": 710.0
+          },
+          {
+            "ride": "AK85",
+            "from": "AK07",
+            "depart": 710.0,
+            "arrival": 720.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 719.0,
+            "posted_wait": 85,
+            "status": "completed",
+            "finish": 815.0
+          },
+          {
+            "ride": "AK14",
+            "from": "AK85",
+            "depart": 815.0,
+            "arrival": 825.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 825.0,
+            "posted_wait": 10,
+            "status": "completed",
+            "finish": 845.0
+          },
+          {
+            "ride": "AK86",
+            "from": "AK14",
+            "depart": 845.0,
+            "arrival": 855.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 850.0,
+            "posted_wait": 140,
+            "status": "completed",
+            "finish": 1005.0
+          },
+          {
+            "ride": "AK11",
+            "from": "AK86",
+            "depart": 1005.0,
+            "arrival": 1015.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 1012.0,
+            "posted_wait": 45,
+            "status": "completed",
+            "finish": 1070.0
+          }
+        ],
+        "decisions": [
+          {
+            "at": 710.0,
+            "location": "AK07",
+            "incumbent": [
+              "AK85",
+              "AK86",
+              "AK11",
+              "AK14"
+            ],
+            "selected": [
+              "AK85",
+              "AK86",
+              "AK11",
+              "AK14"
+            ],
+            "predicted_finish": 1080.8866822022967,
+            "snapshot": {
+              "AK07": {
+                "minute": 705.0,
+                "value": 45
+              },
+              "AK11": {
+                "minute": 705.0,
+                "value": 40
+              },
+              "AK14": {
+                "minute": 705.0,
+                "value": 70
+              },
+              "AK18": {
+                "minute": 705.0,
+                "value": 45
+              },
+              "AK85": {
+                "minute": 705.0,
+                "value": 85
+              },
+              "AK86": {
+                "minute": 705.0,
+                "value": 180
+              }
+            }
+          },
+          {
+            "at": 815.0,
+            "location": "AK85",
+            "incumbent": [
+              "AK86",
+              "AK11",
+              "AK14"
+            ],
+            "selected": [
+              "AK14",
+              "AK86",
+              "AK11"
+            ],
+            "predicted_finish": 1060.5872991640488,
+            "snapshot": {
+              "AK07": {
+                "minute": 810.0,
+                "value": 45
+              },
+              "AK11": {
+                "minute": 810.0,
+                "value": 50
+              },
+              "AK14": {
+                "minute": 810.0,
+                "value": 10
+              },
+              "AK18": {
+                "minute": 810.0,
+                "value": 25
+              },
+              "AK85": {
+                "minute": 810.0,
+                "value": 80
+              },
+              "AK86": {
+                "minute": 810.0,
+                "value": 150
+              }
+            }
+          },
+          {
+            "at": 845.0,
+            "location": "AK14",
+            "incumbent": [
+              "AK86",
+              "AK11"
+            ],
+            "selected": [
+              "AK86",
+              "AK11"
+            ],
+            "predicted_finish": 1057.0860488726466,
+            "snapshot": {
+              "AK07": {
+                "minute": 843.0,
+                "value": 55
+              },
+              "AK11": {
+                "minute": 843.0,
+                "value": 35
+              },
+              "AK14": {
+                "minute": 843.0,
+                "value": 10
+              },
+              "AK18": {
+                "minute": 843.0,
+                "value": 45
+              },
+              "AK85": {
+                "minute": 843.0,
+                "value": 85
+              },
+              "AK86": {
+                "minute": 843.0,
+                "value": 140
+              }
+            }
+          },
+          {
+            "at": 1005.0,
+            "location": "AK86",
+            "incumbent": [
+              "AK11"
+            ],
+            "selected": [
+              "AK11"
+            ],
+            "predicted_finish": 1064.232408624453,
+            "snapshot": {
+              "AK07": {
+                "minute": 1005.0,
+                "value": 65
+              },
+              "AK11": {
+                "minute": 1005.0,
+                "value": 40
+              },
+              "AK14": {
+                "minute": 1005.0,
+                "value": 5
+              },
+              "AK18": {
+                "minute": 1005.0,
+                "value": 60
+              },
+              "AK85": {
+                "minute": 1005.0,
+                "value": 75
+              },
+              "AK86": {
+                "minute": 1005.0,
+                "value": 170
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "row": {
+        "date": "2018-11-27",
+        "event_index": 1,
+        "at": 625.0,
+        "location": "AK14",
+        "prefix_count": 1,
+        "remaining_count": 5,
+        "base_next": "AK18",
+        "chosen_next": "AK85",
+        "changed_next": true,
+        "predicted_gain_minutes": 6.402342882805215,
+        "actual_gain_minutes": -75.0,
+        "chosen_model_minutes": 422.21050631981564,
+        "base_model_minutes": 428.61284920262085,
+        "chosen_actual_minutes": 505.0,
+        "base_actual_minutes": 430.0,
+        "completion_status": "both_success",
+        "chosen_success": true,
+        "base_success": true,
+        "chosen_failure": "",
+        "base_failure": "",
+        "chosen_completed_suffix": "AK85|AK86|AK18|AK11|AK07",
+        "base_completed_suffix": "AK18|AK11|AK86|AK07|AK85",
+        "fallback": false,
+        "fallback_reason": null,
+        "scenario_ids": "2018-04-26|2017-11-16|2018-05-03|2018-04-20|2017-11-30|2017-09-21|2018-03-17|2017-11-12",
+        "mean_scenario_age_days": 306.125,
+        "template_queries": 1208,
+        "imputation_queries": 48,
+        "query_weighted_imputation_fraction": 0.039735099337748346,
+        "missing_queries": 0,
+        "closed_queries": 48,
+        "after_midnight_queries": 0
+      },
+      "completed_prefix": [
+        "AK14"
+      ],
+      "recorded_decision": {
+        "type": "decision",
+        "at": 625.0,
+        "location": "AK14",
+        "incumbent": [
+          "AK18",
+          "AK85",
+          "AK86",
+          "AK07",
+          "AK11"
+        ],
+        "selected": [
+          "AK85",
+          "AK18",
+          "AK86",
+          "AK07",
+          "AK11"
+        ],
+        "compute_seconds": 0.009039889000632684,
+        "snapshot": {
+          "AK07": {
+            "minute": 624.0,
+            "value": 85
+          },
+          "AK11": {
+            "minute": 624.0,
+            "value": 30
+          },
+          "AK14": {
+            "minute": 624.0,
+            "value": 5
+          },
+          "AK18": {
+            "minute": 624.0,
+            "value": 15
+          },
+          "AK85": {
+            "minute": 624.0,
+            "value": 95
+          },
+          "AK86": {
+            "minute": 624.0,
+            "value": 120
+          }
+        },
+        "policy": "rollout",
+        "predicted_costs": {
+          "AK18": 428.61284920262085,
+          "AK86": 431.35495699161015,
+          "AK07": 472.7531950198657,
+          "AK85": 422.21050631981564,
+          "AK11": 432.79227318381265
+        },
+        "scenario_ids": [
+          "2018-04-26",
+          "2017-11-16",
+          "2018-05-03",
+          "2018-04-20",
+          "2017-11-30",
+          "2017-09-21",
+          "2018-03-17",
+          "2017-11-12"
+        ],
+        "fallback": false,
+        "fallback_reason": null,
+        "predicted_cost_unit": "remaining_minutes",
+        "base_next": "AK18",
+        "chosen_next": "AK85",
+        "base_predicted_finish": 1046.357594634684,
+        "scenario_distances": {
+          "2018-04-26": 0.027954242358708192,
+          "2017-11-16": 0.03338348320446552,
+          "2018-05-03": 0.04789126355425976,
+          "2018-04-20": 0.07191989904167913,
+          "2017-11-30": 0.08346997170781893,
+          "2017-09-21": 0.08665893281786208,
+          "2018-03-17": 0.09176828467861364,
+          "2017-11-12": 0.09368594989284747
+        },
+        "scenario_model": {
+          "template": "whole_training_day_all_rides",
+          "historical_missing_and_future_closures": "training_curve_imputation",
+          "forecast_future_closures": false,
+          "snapshot_grid_minutes": 5.0,
+          "current_closure_expiry": "original_observation_plus_15_minutes",
+          "beyond_midnight": "training_curve_tail",
+          "closing_deadline_in_model": null,
+          "aggregation": "uniform_mean_no_failed_sample_dropping"
+        },
+        "scenario_query_audit": {
+          "2018-04-26": {
+            "historical_closure_curve_imputation_queries": 35
+          },
+          "2017-11-16": {},
+          "2018-05-03": {
+            "historical_closure_curve_imputation_queries": 7
+          },
+          "2018-04-20": {
+            "historical_closure_curve_imputation_queries": 1
+          },
+          "2017-11-30": {
+            "historical_closure_curve_imputation_queries": 1
+          },
+          "2017-09-21": {
+            "historical_closure_curve_imputation_queries": 2
+          },
+          "2018-03-17": {},
+          "2017-11-12": {
+            "historical_closure_curve_imputation_queries": 2
+          }
+        }
+      },
+      "chosen_action_then_D0": {
+        "success": true,
+        "failure": "",
+        "completed_suffix": [
+          "AK85",
+          "AK86",
+          "AK18",
+          "AK11",
+          "AK07"
+        ],
+        "elapsed_minutes": 505.0,
+        "visits": [
+          {
+            "ride": "AK85",
+            "from": "AK14",
+            "depart": 625.0,
+            "arrival": 635.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 630.0,
+            "posted_wait": 95,
+            "status": "completed",
+            "finish": 740.0
+          },
+          {
+            "ride": "AK86",
+            "from": "AK85",
+            "depart": 740.0,
+            "arrival": 750.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 750.0,
+            "posted_wait": 115,
+            "status": "completed",
+            "finish": 875.0
+          },
+          {
+            "ride": "AK18",
+            "from": "AK86",
+            "depart": 875.0,
+            "arrival": 885.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 885.0,
+            "posted_wait": 45,
+            "status": "completed",
+            "finish": 940.0
+          },
+          {
+            "ride": "AK11",
+            "from": "AK18",
+            "depart": 940.0,
+            "arrival": 950.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 945.0,
+            "posted_wait": 45,
+            "status": "completed",
+            "finish": 1005.0
+          },
+          {
+            "ride": "AK07",
+            "from": "AK11",
+            "depart": 1005.0,
+            "arrival": 1015.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 1012.0,
+            "posted_wait": 105,
+            "status": "completed",
+            "finish": 1130.0
+          }
+        ],
+        "decisions": [
+          {
+            "at": 740.0,
+            "location": "AK85",
+            "incumbent": [
+              "AK18",
+              "AK86",
+              "AK07",
+              "AK11"
+            ],
+            "selected": [
+              "AK86",
+              "AK07",
+              "AK18",
+              "AK11"
+            ],
+            "predicted_finish": 1051.0396936315312,
+            "snapshot": {
+              "AK07": {
+                "minute": 737.0,
+                "value": 95
+              },
+              "AK11": {
+                "minute": 737.0,
+                "value": 50
+              },
+              "AK14": {
+                "minute": 737.0,
+                "value": 5
+              },
+              "AK18": {
+                "minute": 737.0,
+                "value": 40
+              },
+              "AK85": {
+                "minute": 737.0,
+                "value": 120
+              },
+              "AK86": {
+                "minute": 737.0,
+                "value": 110
+              }
+            }
+          },
+          {
+            "at": 875.0,
+            "location": "AK86",
+            "incumbent": [
+              "AK07",
+              "AK18",
+              "AK11"
+            ],
+            "selected": [
+              "AK18",
+              "AK11",
+              "AK07"
+            ],
+            "predicted_finish": 1049.1609895200113,
+            "snapshot": {
+              "AK07": {
+                "minute": 870.0,
+                "value": 85
+              },
+              "AK11": {
+                "minute": 870.0,
+                "value": 40
+              },
+              "AK14": {
+                "minute": 870.0,
+                "value": 5
+              },
+              "AK18": {
+                "minute": 870.0,
+                "value": 20
+              },
+              "AK85": {
+                "minute": 870.0,
+                "value": 125
+              },
+              "AK86": {
+                "minute": 870.0,
+                "value": 105
+              }
+            }
+          },
+          {
+            "at": 940.0,
+            "location": "AK18",
+            "incumbent": [
+              "AK11",
+              "AK07"
+            ],
+            "selected": [
+              "AK11",
+              "AK07"
+            ],
+            "predicted_finish": 1077.6901438835646,
+            "snapshot": {
+              "AK07": {
+                "minute": 938.0,
+                "value": 105
+              },
+              "AK11": {
+                "minute": 938.0,
+                "value": 35
+              },
+              "AK14": {
+                "minute": 938.0,
+                "value": 5
+              },
+              "AK18": {
+                "minute": 938.0,
+                "value": 75
+              },
+              "AK85": {
+                "minute": 938.0,
+                "value": 65
+              },
+              "AK86": {
+                "minute": 938.0,
+                "value": 170
+              }
+            }
+          },
+          {
+            "at": 1005.0,
+            "location": "AK11",
+            "incumbent": [
+              "AK07"
+            ],
+            "selected": [
+              "AK07"
+            ],
+            "predicted_finish": 1120.788903493437,
+            "snapshot": {
+              "AK07": {
+                "minute": 1005.0,
+                "value": 105
+              },
+              "AK11": {
+                "minute": 1005.0,
+                "value": 30
+              },
+              "AK14": {
+                "minute": 1005.0,
+                "value": 5
+              },
+              "AK18": {
+                "minute": 1005.0,
+                "value": 10
+              },
+              "AK85": {
+                "minute": 1005.0,
+                "value": 90
+              },
+              "AK86": {
+                "minute": 1005.0,
+                "value": -999
+              }
+            }
+          }
+        ]
+      },
+      "base_action_then_D0": {
+        "success": true,
+        "failure": "",
+        "completed_suffix": [
+          "AK18",
+          "AK11",
+          "AK86",
+          "AK07",
+          "AK85"
+        ],
+        "elapsed_minutes": 430.0,
+        "visits": [
+          {
+            "ride": "AK18",
+            "from": "AK14",
+            "depart": 625.0,
+            "arrival": 635.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 630.0,
+            "posted_wait": 15,
+            "status": "completed",
+            "finish": 660.0
+          },
+          {
+            "ride": "AK11",
+            "from": "AK18",
+            "depart": 660.0,
+            "arrival": 670.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 670.0,
+            "posted_wait": 40,
+            "status": "completed",
+            "finish": 720.0
+          },
+          {
+            "ride": "AK86",
+            "from": "AK11",
+            "depart": 720.0,
+            "arrival": 730.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 730.0,
+            "posted_wait": 115,
+            "status": "completed",
+            "finish": 855.0
+          },
+          {
+            "ride": "AK07",
+            "from": "AK86",
+            "depart": 855.0,
+            "arrival": 865.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 864.0,
+            "posted_wait": 85,
+            "status": "completed",
+            "finish": 960.0
+          },
+          {
+            "ride": "AK85",
+            "from": "AK07",
+            "depart": 960.0,
+            "arrival": 970.0,
+            "walk": 10.0,
+            "service": 10.0,
+            "posted_observed_at": 970.0,
+            "posted_wait": 75,
+            "status": "completed",
+            "finish": 1055.0
+          }
+        ],
+        "decisions": [
+          {
+            "at": 660.0,
+            "location": "AK18",
+            "incumbent": [
+              "AK86",
+              "AK07",
+              "AK85",
+              "AK11"
+            ],
+            "selected": [
+              "AK11",
+              "AK86",
+              "AK85",
+              "AK07"
+            ],
+            "predicted_finish": 1043.421434123883,
+            "snapshot": {
+              "AK07": {
+                "minute": 659.0,
+                "value": 95
+              },
+              "AK11": {
+                "minute": 659.0,
+                "value": 35
+              },
+              "AK14": {
+                "minute": 659.0,
+                "value": 10
+              },
+              "AK18": {
+                "minute": 659.0,
+                "value": 20
+              },
+              "AK85": {
+                "minute": 659.0,
+                "value": 105
+              },
+              "AK86": {
+                "minute": 659.0,
+                "value": 130
+              }
+            }
+          },
+          {
+            "at": 720.0,
+            "location": "AK11",
+            "incumbent": [
+              "AK86",
+              "AK85",
+              "AK07"
+            ],
+            "selected": [
+              "AK86",
+              "AK07",
+              "AK85"
+            ],
+            "predicted_finish": 1032.4318236129716,
+            "snapshot": {
+              "AK07": {
+                "minute": 719.0,
+                "value": 95
+              },
+              "AK11": {
+                "minute": 719.0,
+                "value": 55
+              },
+              "AK14": {
+                "minute": 719.0,
+                "value": 15
+              },
+              "AK18": {
+                "minute": 719.0,
+                "value": 30
+              },
+              "AK85": {
+                "minute": 719.0,
+                "value": 120
+              },
+              "AK86": {
+                "minute": 719.0,
+                "value": 115
+              }
+            }
+          },
+          {
+            "at": 855.0,
+            "location": "AK86",
+            "incumbent": [
+              "AK07",
+              "AK85"
+            ],
+            "selected": [
+              "AK07",
+              "AK85"
+            ],
+            "predicted_finish": 1050.5723677303747,
+            "snapshot": {
+              "AK07": {
+                "minute": 850.0,
+                "value": 65
+              },
+              "AK11": {
+                "minute": 850.0,
+                "value": 40
+              },
+              "AK14": {
+                "minute": 850.0,
+                "value": 10
+              },
+              "AK18": {
+                "minute": 850.0,
+                "value": 30
+              },
+              "AK85": {
+                "minute": 850.0,
+                "value": 130
+              },
+              "AK86": {
+                "minute": 850.0,
+                "value": 95
+              }
+            }
+          },
+          {
+            "at": 960.0,
+            "location": "AK07",
+            "incumbent": [
+              "AK85"
+            ],
+            "selected": [
+              "AK85"
+            ],
+            "predicted_finish": 1056.5351827510938,
+            "snapshot": {
+              "AK07": {
+                "minute": 959.0,
+                "value": 105
+              },
+              "AK11": {
+                "minute": 959.0,
+                "value": 30
+              },
+              "AK14": {
+                "minute": 959.0,
+                "value": 10
+              },
+              "AK18": {
+                "minute": 959.0,
+                "value": 60
+              },
+              "AK85": {
+                "minute": 959.0,
+                "value": 75
+              },
+              "AK86": {
+                "minute": 959.0,
+                "value": 170
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

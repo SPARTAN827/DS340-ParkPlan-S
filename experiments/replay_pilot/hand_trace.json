@@ -1,0 +1,241 @@
+{
+  "selection": "first held-out paired-success day with a replan route change and nonzero difference; post-hoc illustration only",
+  "date": "2018-08-17",
+  "policies": [
+    {
+      "date": "2018-08-17",
+      "policy": "fixed",
+      "walk_per_leg": 10,
+      "service_per_ride": 10,
+      "initial_order": "AK14|AK85|AK11|AK86|AK07|AK18",
+      "initial_predicted_finish": 1050.363,
+      "success": true,
+      "failure": "",
+      "completed": 6,
+      "elapsed_min": 415.0,
+      "total_posted_wait_min": 295,
+      "total_walk_min": 60,
+      "total_service_min": 60,
+      "route_changes": 0,
+      "replans": 0,
+      "finish_clock": "16:55.00",
+      "completed_order": "AK14|AK85|AK11|AK86|AK07|AK18",
+      "trace": [
+        {
+          "type": "visit",
+          "ride": "AK14",
+          "depart": 600.0,
+          "arrival": 610.0,
+          "posted_observed_at": 610.0,
+          "posted_wait": 10,
+          "status": "completed"
+        },
+        {
+          "type": "visit",
+          "ride": "AK85",
+          "depart": 630.0,
+          "arrival": 640.0,
+          "posted_observed_at": 638.0,
+          "posted_wait": 80,
+          "status": "completed"
+        },
+        {
+          "type": "visit",
+          "ride": "AK11",
+          "depart": 730.0,
+          "arrival": 740.0,
+          "posted_observed_at": 737.0,
+          "posted_wait": 35,
+          "status": "completed"
+        },
+        {
+          "type": "visit",
+          "ride": "AK86",
+          "depart": 785.0,
+          "arrival": 795.0,
+          "posted_observed_at": 790.0,
+          "posted_wait": 95,
+          "status": "completed"
+        },
+        {
+          "type": "visit",
+          "ride": "AK07",
+          "depart": 900.0,
+          "arrival": 910.0,
+          "posted_observed_at": 910.0,
+          "posted_wait": 45,
+          "status": "completed"
+        },
+        {
+          "type": "visit",
+          "ride": "AK18",
+          "depart": 965.0,
+          "arrival": 975.0,
+          "posted_observed_at": 970.0,
+          "posted_wait": 30,
+          "status": "completed"
+        }
+      ]
+    },
+    {
+      "date": "2018-08-17",
+      "policy": "replan",
+      "walk_per_leg": 10,
+      "service_per_ride": 10,
+      "initial_order": "AK14|AK85|AK11|AK86|AK07|AK18",
+      "initial_predicted_finish": 1050.363,
+      "success": true,
+      "failure": "",
+      "completed": 6,
+      "elapsed_min": 405.0,
+      "total_posted_wait_min": 285,
+      "total_walk_min": 60,
+      "total_service_min": 60,
+      "route_changes": 3,
+      "replans": 5,
+      "finish_clock": "16:45.00",
+      "completed_order": "AK14|AK18|AK85|AK86|AK11|AK07",
+      "trace": [
+        {
+          "type": "visit",
+          "ride": "AK14",
+          "depart": 600.0,
+          "arrival": 610.0,
+          "posted_observed_at": 610.0,
+          "posted_wait": 10,
+          "status": "completed"
+        },
+        {
+          "type": "decision",
+          "at": 630.0,
+          "incumbent": [
+            "AK85",
+            "AK11",
+            "AK86",
+            "AK07",
+            "AK18"
+          ],
+          "incumbent_pred_finish": 1064.068,
+          "proposed": [
+            "AK18",
+            "AK85",
+            "AK86",
+            "AK07",
+            "AK11"
+          ],
+          "proposed_pred_finish": 1057.395,
+          "switched": true
+        },
+        {
+          "type": "visit",
+          "ride": "AK18",
+          "depart": 630.0,
+          "arrival": 640.0,
+          "posted_observed_at": 638.0,
+          "posted_wait": 20,
+          "status": "completed"
+        },
+        {
+          "type": "decision",
+          "at": 670.0,
+          "incumbent": [
+            "AK85",
+            "AK86",
+            "AK07",
+            "AK11"
+          ],
+          "incumbent_pred_finish": 1054.899,
+          "proposed": [
+            "AK85",
+            "AK07",
+            "AK86",
+            "AK11"
+          ],
+          "proposed_pred_finish": 1053.967,
+          "switched": true
+        },
+        {
+          "type": "visit",
+          "ride": "AK85",
+          "depart": 670.0,
+          "arrival": 680.0,
+          "posted_observed_at": 677.0,
+          "posted_wait": 90,
+          "status": "completed"
+        },
+        {
+          "type": "decision",
+          "at": 780.0,
+          "incumbent": [
+            "AK07",
+            "AK86",
+            "AK11"
+          ],
+          "incumbent_pred_finish": 1046.761,
+          "proposed": [
+            "AK86",
+            "AK11",
+            "AK07"
+          ],
+          "proposed_pred_finish": 1036.164,
+          "switched": true
+        },
+        {
+          "type": "visit",
+          "ride": "AK86",
+          "depart": 780.0,
+          "arrival": 790.0,
+          "posted_observed_at": 790.0,
+          "posted_wait": 95,
+          "status": "completed"
+        },
+        {
+          "type": "decision",
+          "at": 895.0,
+          "incumbent": [
+            "AK11",
+            "AK07"
+          ],
+          "incumbent_pred_finish": 1024.284,
+          "proposed": [
+            "AK11",
+            "AK07"
+          ],
+          "proposed_pred_finish": 1024.284,
+          "switched": false
+        },
+        {
+          "type": "visit",
+          "ride": "AK11",
+          "depart": 895.0,
+          "arrival": 905.0,
+          "posted_observed_at": 903.0,
+          "posted_wait": 35,
+          "status": "completed"
+        },
+        {
+          "type": "decision",
+          "at": 950.0,
+          "incumbent": [
+            "AK07"
+          ],
+          "incumbent_pred_finish": 1006.535,
+          "proposed": [
+            "AK07"
+          ],
+          "proposed_pred_finish": 1006.535,
+          "switched": false
+        },
+        {
+          "type": "visit",
+          "ride": "AK07",
+          "depart": 950.0,
+          "arrival": 960.0,
+          "posted_observed_at": 959.0,
+          "posted_wait": 35,
+          "status": "completed"
+        }
+      ]
+    }
+  ]
+}

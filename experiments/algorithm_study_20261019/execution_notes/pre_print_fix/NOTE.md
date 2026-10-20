@@ -1,0 +1,1 @@
+First validation/reference runs completed calculation and wrote outputs but crashed in the final console summary because flush=True was passed to json.dumps. No outcome was inspected for candidate selection. Only print-call syntax is corrected; official runs will repeat. Archived original script and outputs preserve provenance. No algorithm/model/protocol change.

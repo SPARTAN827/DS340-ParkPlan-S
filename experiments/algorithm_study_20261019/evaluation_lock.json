@@ -1,0 +1,17 @@
+{
+  "created_at_utc": "2026-10-19T19:05:08.260969+00:00",
+  "stage": "validation complete; before any new165-date evaluation",
+  "files": {
+    "experiments/algorithm_study_20261019/PROTOCOL.md": "b991f76bd420be1ede75785c34ce4412e71ea2888b0523f5e1dd8f87e0418c8e",
+    "experiments/algorithm_study_20261019/engine.py": "99c43797594d0ebd7ba1aa1e95e2bb8b8f2e4a5478e7c5017fed5547285fef8f",
+    "experiments/algorithm_study_20261019/run.py": "a8ed8bd340c66f6be7106d58f6098df01d112cc2407cc986bcce4059fed94cd0",
+    "experiments/algorithm_study_20261019/prepare.py": "60f78a664350a7db6e73b49c79cbda364612cdd0bd7ca9438e3f420ef637590d",
+    "experiments/algorithm_study_20261019/analyze.py": "8a1c9f4e4784b445677ba1b9980189ec6f4a4e6a91d1d84b87131306adb217c0",
+    "experiments/algorithm_study_20261019/selection.json": "aa08905677dbced1c0c3a1b12e94cd29b6fa4f3b50d87376ae091cc92950a6d4",
+    "experiments/algorithm_study_20261019/inputs/splits.json": "5055929d66b1549a330c12d7d257ac352eb7d9d4ce48e5bd3a73ee094c96666f",
+    "experiments/algorithm_study_20261019/inputs/validation_park_hours.csv": "eaf947ea4a8ac9b3e08778fdcca3f3bc6223312b1d803d0e8891e28686458f4f",
+    "experiments/tie_preserving_pilot/replay.py": "85d999aed75ef334e8221ba51abed9192573e4e23f012de0e206ee131abdd0dc",
+    "data/verified_inputs/historical_park_hours.csv": "599b375a726567b63550826a236fac6877b1fb866375f145aa5bfa3ed36a8f27"
+  },
+  "note": "Earlier runner change fixed final-print syntax only; failed-run artifacts preserved. No source changes during official runs. Online planning_seconds exclude common initial planning and measure wall-clock under parallel runs."
+}

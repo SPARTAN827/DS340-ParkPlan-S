@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "new_policy_dates": 165,
+  "legacy_rows_reused": 495,
+  "all_nonpolicy_csv_fields_identical_to_old_replan": true,
+  "common_success_days": 101,
+  "raw_csv_verified_visits": 965,
+  "decisions_verified": 800,
+  "switches": 401,
+  "tied_different_orders": 0,
+  "preserved_artifacts_unchanged": 31,
+  "scope": "Separate arithmetic and raw-data audit script in this session; not an external independent reviewer or a real-visitor validation."
+}

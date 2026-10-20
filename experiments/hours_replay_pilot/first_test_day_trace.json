@@ -1,0 +1,524 @@
+[
+  {
+    "date": "2018-07-26",
+    "policy": "fixed",
+    "walk_per_leg": 10.0,
+    "service_per_ride": 10.0,
+    "initial_order": "AK07|AK14|AK85|AK86|AK11|AK18",
+    "initial_predicted_finish": 1047.893,
+    "success": false,
+    "failure": "closed_at_arrival",
+    "completed": 1,
+    "elapsed_min": "",
+    "total_posted_wait_min": 15,
+    "total_walk_min": 20.0,
+    "total_service_min": 10.0,
+    "route_changes": 0,
+    "replans": 0,
+    "finish_clock": "",
+    "completed_order": "AK07",
+    "trace": [
+      {
+        "type": "visit",
+        "ride": "AK07",
+        "depart": 600.0,
+        "arrival": 610.0,
+        "posted_observed_at": 610.0,
+        "posted_wait": 15,
+        "status": "completed"
+      },
+      {
+        "type": "visit",
+        "ride": "AK14",
+        "depart": 635.0,
+        "arrival": 645.0,
+        "posted_observed_at": 645.0,
+        "posted_wait": -999,
+        "status": "closed_at_arrival"
+      }
+    ],
+    "scenario": "control_17_completion",
+    "deadline_minutes": 1020.0,
+    "deadline_source": "artificial 17:00",
+    "public_open": "09:00",
+    "public_close": "22:30"
+  },
+  {
+    "date": "2018-07-26",
+    "policy": "replan",
+    "walk_per_leg": 10.0,
+    "service_per_ride": 10.0,
+    "initial_order": "AK07|AK14|AK85|AK86|AK11|AK18",
+    "initial_predicted_finish": 1047.893,
+    "success": false,
+    "failure": "closed_at_arrival",
+    "completed": 1,
+    "elapsed_min": "",
+    "total_posted_wait_min": 15,
+    "total_walk_min": 20.0,
+    "total_service_min": 10.0,
+    "route_changes": 1,
+    "replans": 1,
+    "finish_clock": "",
+    "completed_order": "AK07",
+    "trace": [
+      {
+        "type": "visit",
+        "ride": "AK07",
+        "depart": 600.0,
+        "arrival": 610.0,
+        "posted_observed_at": 610.0,
+        "posted_wait": 15,
+        "status": "completed"
+      },
+      {
+        "type": "decision",
+        "at": 635.0,
+        "incumbent": [
+          "AK14",
+          "AK85",
+          "AK86",
+          "AK11",
+          "AK18"
+        ],
+        "incumbent_pred_finish": 1057.171,
+        "proposed": [
+          "AK14",
+          "AK18",
+          "AK85",
+          "AK86",
+          "AK11"
+        ],
+        "proposed_pred_finish": 1056.144,
+        "switched": true
+      },
+      {
+        "type": "visit",
+        "ride": "AK14",
+        "depart": 635.0,
+        "arrival": 645.0,
+        "posted_observed_at": 645.0,
+        "posted_wait": -999,
+        "status": "closed_at_arrival"
+      }
+    ],
+    "scenario": "control_17_completion",
+    "deadline_minutes": 1020.0,
+    "deadline_source": "artificial 17:00",
+    "public_open": "09:00",
+    "public_close": "22:30"
+  },
+  {
+    "date": "2018-07-26",
+    "policy": "threshold10",
+    "walk_per_leg": 10.0,
+    "service_per_ride": 10.0,
+    "initial_order": "AK07|AK14|AK85|AK86|AK11|AK18",
+    "initial_predicted_finish": 1047.893,
+    "success": false,
+    "failure": "closed_at_arrival",
+    "completed": 1,
+    "elapsed_min": "",
+    "total_posted_wait_min": 15,
+    "total_walk_min": 20.0,
+    "total_service_min": 10.0,
+    "route_changes": 0,
+    "replans": 1,
+    "finish_clock": "",
+    "completed_order": "AK07",
+    "trace": [
+      {
+        "type": "visit",
+        "ride": "AK07",
+        "depart": 600.0,
+        "arrival": 610.0,
+        "posted_observed_at": 610.0,
+        "posted_wait": 15,
+        "status": "completed"
+      },
+      {
+        "type": "decision",
+        "at": 635.0,
+        "incumbent": [
+          "AK14",
+          "AK85",
+          "AK86",
+          "AK11",
+          "AK18"
+        ],
+        "incumbent_pred_finish": 1057.171,
+        "proposed": [
+          "AK14",
+          "AK18",
+          "AK85",
+          "AK86",
+          "AK11"
+        ],
+        "proposed_pred_finish": 1056.144,
+        "switched": false
+      },
+      {
+        "type": "visit",
+        "ride": "AK14",
+        "depart": 635.0,
+        "arrival": 645.0,
+        "posted_observed_at": 645.0,
+        "posted_wait": -999,
+        "status": "closed_at_arrival"
+      }
+    ],
+    "scenario": "control_17_completion",
+    "deadline_minutes": 1020.0,
+    "deadline_source": "artificial 17:00",
+    "public_open": "09:00",
+    "public_close": "22:30"
+  },
+  {
+    "date": "2018-07-26",
+    "policy": "fixed",
+    "walk_per_leg": 10.0,
+    "service_per_ride": 10.0,
+    "initial_order": "AK07|AK14|AK85|AK86|AK11|AK18",
+    "initial_predicted_finish": 1047.893,
+    "success": false,
+    "failure": "closed_at_arrival",
+    "completed": 1,
+    "elapsed_min": "",
+    "total_posted_wait_min": 15,
+    "total_walk_min": 20.0,
+    "total_service_min": 10.0,
+    "route_changes": 0,
+    "replans": 0,
+    "finish_clock": "",
+    "completed_order": "AK07",
+    "trace": [
+      {
+        "type": "visit",
+        "ride": "AK07",
+        "depart": 600.0,
+        "arrival": 610.0,
+        "posted_observed_at": 610.0,
+        "posted_wait": 15,
+        "status": "completed"
+      },
+      {
+        "type": "visit",
+        "ride": "AK14",
+        "depart": 635.0,
+        "arrival": 645.0,
+        "posted_observed_at": 645.0,
+        "posted_wait": -999,
+        "status": "closed_at_arrival"
+      }
+    ],
+    "scenario": "historical_park_close_completion",
+    "deadline_minutes": 1350.0,
+    "deadline_source": "https://touringplans.com/animal-kingdom/wait-times/date/2018-07-26",
+    "public_open": "09:00",
+    "public_close": "22:30"
+  },
+  {
+    "date": "2018-07-26",
+    "policy": "replan",
+    "walk_per_leg": 10.0,
+    "service_per_ride": 10.0,
+    "initial_order": "AK07|AK14|AK85|AK86|AK11|AK18",
+    "initial_predicted_finish": 1047.893,
+    "success": false,
+    "failure": "closed_at_arrival",
+    "completed": 1,
+    "elapsed_min": "",
+    "total_posted_wait_min": 15,
+    "total_walk_min": 20.0,
+    "total_service_min": 10.0,
+    "route_changes": 1,
+    "replans": 1,
+    "finish_clock": "",
+    "completed_order": "AK07",
+    "trace": [
+      {
+        "type": "visit",
+        "ride": "AK07",
+        "depart": 600.0,
+        "arrival": 610.0,
+        "posted_observed_at": 610.0,
+        "posted_wait": 15,
+        "status": "completed"
+      },
+      {
+        "type": "decision",
+        "at": 635.0,
+        "incumbent": [
+          "AK14",
+          "AK85",
+          "AK86",
+          "AK11",
+          "AK18"
+        ],
+        "incumbent_pred_finish": 1057.171,
+        "proposed": [
+          "AK14",
+          "AK18",
+          "AK85",
+          "AK86",
+          "AK11"
+        ],
+        "proposed_pred_finish": 1056.144,
+        "switched": true
+      },
+      {
+        "type": "visit",
+        "ride": "AK14",
+        "depart": 635.0,
+        "arrival": 645.0,
+        "posted_observed_at": 645.0,
+        "posted_wait": -999,
+        "status": "closed_at_arrival"
+      }
+    ],
+    "scenario": "historical_park_close_completion",
+    "deadline_minutes": 1350.0,
+    "deadline_source": "https://touringplans.com/animal-kingdom/wait-times/date/2018-07-26",
+    "public_open": "09:00",
+    "public_close": "22:30"
+  },
+  {
+    "date": "2018-07-26",
+    "policy": "threshold10",
+    "walk_per_leg": 10.0,
+    "service_per_ride": 10.0,
+    "initial_order": "AK07|AK14|AK85|AK86|AK11|AK18",
+    "initial_predicted_finish": 1047.893,
+    "success": false,
+    "failure": "closed_at_arrival",
+    "completed": 1,
+    "elapsed_min": "",
+    "total_posted_wait_min": 15,
+    "total_walk_min": 20.0,
+    "total_service_min": 10.0,
+    "route_changes": 0,
+    "replans": 1,
+    "finish_clock": "",
+    "completed_order": "AK07",
+    "trace": [
+      {
+        "type": "visit",
+        "ride": "AK07",
+        "depart": 600.0,
+        "arrival": 610.0,
+        "posted_observed_at": 610.0,
+        "posted_wait": 15,
+        "status": "completed"
+      },
+      {
+        "type": "decision",
+        "at": 635.0,
+        "incumbent": [
+          "AK14",
+          "AK85",
+          "AK86",
+          "AK11",
+          "AK18"
+        ],
+        "incumbent_pred_finish": 1057.171,
+        "proposed": [
+          "AK14",
+          "AK18",
+          "AK85",
+          "AK86",
+          "AK11"
+        ],
+        "proposed_pred_finish": 1056.144,
+        "switched": false
+      },
+      {
+        "type": "visit",
+        "ride": "AK14",
+        "depart": 635.0,
+        "arrival": 645.0,
+        "posted_observed_at": 645.0,
+        "posted_wait": -999,
+        "status": "closed_at_arrival"
+      }
+    ],
+    "scenario": "historical_park_close_completion",
+    "deadline_minutes": 1350.0,
+    "deadline_source": "https://touringplans.com/animal-kingdom/wait-times/date/2018-07-26",
+    "public_open": "09:00",
+    "public_close": "22:30"
+  },
+  {
+    "date": "2018-07-26",
+    "policy": "fixed",
+    "walk_per_leg": 10.0,
+    "service_per_ride": 10.0,
+    "initial_order": "AK07|AK14|AK85|AK86|AK11|AK18",
+    "initial_predicted_finish": 1047.893,
+    "success": false,
+    "failure": "closed_at_arrival",
+    "completed": 1,
+    "elapsed_min": "",
+    "total_posted_wait_min": 15,
+    "total_walk_min": 20.0,
+    "total_service_min": 10.0,
+    "route_changes": 0,
+    "replans": 0,
+    "finish_clock": "",
+    "completed_order": "AK07",
+    "trace": [
+      {
+        "type": "visit",
+        "ride": "AK07",
+        "depart": 600.0,
+        "arrival": 610.0,
+        "posted_observed_at": 610.0,
+        "posted_wait": 15,
+        "status": "completed"
+      },
+      {
+        "type": "visit",
+        "ride": "AK14",
+        "depart": 635.0,
+        "arrival": 645.0,
+        "posted_observed_at": 645.0,
+        "posted_wait": -999,
+        "status": "closed_at_arrival"
+      }
+    ],
+    "scenario": "historical_close_known_alternates",
+    "deadline_minutes": 1260.0,
+    "deadline_source": "https://www.wdwinfo.com/wdwinfo/hours/july18.cfm",
+    "public_open": "09:00",
+    "public_close": "22:30"
+  },
+  {
+    "date": "2018-07-26",
+    "policy": "replan",
+    "walk_per_leg": 10.0,
+    "service_per_ride": 10.0,
+    "initial_order": "AK07|AK14|AK85|AK86|AK11|AK18",
+    "initial_predicted_finish": 1047.893,
+    "success": false,
+    "failure": "closed_at_arrival",
+    "completed": 1,
+    "elapsed_min": "",
+    "total_posted_wait_min": 15,
+    "total_walk_min": 20.0,
+    "total_service_min": 10.0,
+    "route_changes": 1,
+    "replans": 1,
+    "finish_clock": "",
+    "completed_order": "AK07",
+    "trace": [
+      {
+        "type": "visit",
+        "ride": "AK07",
+        "depart": 600.0,
+        "arrival": 610.0,
+        "posted_observed_at": 610.0,
+        "posted_wait": 15,
+        "status": "completed"
+      },
+      {
+        "type": "decision",
+        "at": 635.0,
+        "incumbent": [
+          "AK14",
+          "AK85",
+          "AK86",
+          "AK11",
+          "AK18"
+        ],
+        "incumbent_pred_finish": 1057.171,
+        "proposed": [
+          "AK14",
+          "AK18",
+          "AK85",
+          "AK86",
+          "AK11"
+        ],
+        "proposed_pred_finish": 1056.144,
+        "switched": true
+      },
+      {
+        "type": "visit",
+        "ride": "AK14",
+        "depart": 635.0,
+        "arrival": 645.0,
+        "posted_observed_at": 645.0,
+        "posted_wait": -999,
+        "status": "closed_at_arrival"
+      }
+    ],
+    "scenario": "historical_close_known_alternates",
+    "deadline_minutes": 1260.0,
+    "deadline_source": "https://www.wdwinfo.com/wdwinfo/hours/july18.cfm",
+    "public_open": "09:00",
+    "public_close": "22:30"
+  },
+  {
+    "date": "2018-07-26",
+    "policy": "threshold10",
+    "walk_per_leg": 10.0,
+    "service_per_ride": 10.0,
+    "initial_order": "AK07|AK14|AK85|AK86|AK11|AK18",
+    "initial_predicted_finish": 1047.893,
+    "success": false,
+    "failure": "closed_at_arrival",
+    "completed": 1,
+    "elapsed_min": "",
+    "total_posted_wait_min": 15,
+    "total_walk_min": 20.0,
+    "total_service_min": 10.0,
+    "route_changes": 0,
+    "replans": 1,
+    "finish_clock": "",
+    "completed_order": "AK07",
+    "trace": [
+      {
+        "type": "visit",
+        "ride": "AK07",
+        "depart": 600.0,
+        "arrival": 610.0,
+        "posted_observed_at": 610.0,
+        "posted_wait": 15,
+        "status": "completed"
+      },
+      {
+        "type": "decision",
+        "at": 635.0,
+        "incumbent": [
+          "AK14",
+          "AK85",
+          "AK86",
+          "AK11",
+          "AK18"
+        ],
+        "incumbent_pred_finish": 1057.171,
+        "proposed": [
+          "AK14",
+          "AK18",
+          "AK85",
+          "AK86",
+          "AK11"
+        ],
+        "proposed_pred_finish": 1056.144,
+        "switched": false
+      },
+      {
+        "type": "visit",
+        "ride": "AK14",
+        "depart": 635.0,
+        "arrival": 645.0,
+        "posted_observed_at": 645.0,
+        "posted_wait": -999,
+        "status": "closed_at_arrival"
+      }
+    ],
+    "scenario": "historical_close_known_alternates",
+    "deadline_minutes": 1260.0,
+    "deadline_source": "https://www.wdwinfo.com/wdwinfo/hours/july18.cfm",
+    "public_open": "09:00",
+    "public_close": "22:30"
+  }
+]
