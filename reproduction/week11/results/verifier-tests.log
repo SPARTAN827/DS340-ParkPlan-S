@@ -1,0 +1,15 @@
+test_bad_sensor_state_rejected (test_verify_results.IndependentAuditTests.test_bad_sensor_state_rejected) ... ok
+test_depot_label_without_depot_rejected (test_verify_results.IndependentAuditTests.test_depot_label_without_depot_rejected) ... ok
+test_forged_charge_rejected (test_verify_results.IndependentAuditTests.test_forged_charge_rejected) ... ok
+test_local_serialization_tolerance_not_percent_tolerance (test_verify_results.IndependentAuditTests.test_local_serialization_tolerance_not_percent_tolerance) ... ok
+test_missing_command_rejected (test_verify_results.IndependentAuditTests.test_missing_command_rejected) ... ok
+test_nonfinite_mission_rejected (test_verify_results.IndependentAuditTests.test_nonfinite_mission_rejected) ... ok
+test_reading_nan_csv_is_rejected (test_verify_results.IndependentAuditTests.test_reading_nan_csv_is_rejected) ... ok
+test_service_failure_actual_code_255 (test_verify_results.IndependentAuditTests.test_service_failure_actual_code_255) ... ok
+test_success_recomputed_from_raw_rows (test_verify_results.IndependentAuditTests.test_success_recomputed_from_raw_rows) ... ok
+test_visit_and_return_failures_are_not_success (test_verify_results.IndependentAuditTests.test_visit_and_return_failures_are_not_success) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.002s
+
+OK

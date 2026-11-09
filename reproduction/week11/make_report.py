@@ -9,8 +9,10 @@ import csv
 import hashlib
 import json
 import math
+import os
 from pathlib import Path
 import statistics
+import tempfile
 
 ORDER = ('Offline', 'DoNothing', 'WeightedAvg', 'Bayesian')
 LABELS = dict(zip(ORDER, ('Offline', 'ROMP', 'WeightedErr', 'ADAPT')))
@@ -26,7 +28,10 @@ def wilson(k, n):
     p = k / n
     center = (p + z*z/(2*n)) / (1 + z*z/n)
     half = z * math.sqrt(p*(1-p)/n + z*z/(4*n*n)) / (1+z*z/n)
-    return max(0., center-half), min(1., center+half)
+    # Exact endpoint handling prevents a -1e-14 plotting error bar at 0/50 or
+    # 50/50 without changing the Wilson interval's statistical definition.
+    return (0. if k == 0 else max(0., center-half),
+            1. if k == n else min(1., center+half))
 
 
 def mean(values):
@@ -93,6 +98,7 @@ def paired(results):
 
 
 def plots(rows, output):
+    os.environ.setdefault('MPLCONFIGDIR', str(Path(tempfile.gettempdir())/'adapt-week11-mpl-cache'))
     import matplotlib
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt

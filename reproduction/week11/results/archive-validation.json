@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "formal": {
+    "archive": "week11-formal-20261108-raw.zip",
+    "sha256": "1589fc60646ba7da7d4fdf7a9a4d8b7beaa8b17f886c822e4644091a5a83ac30",
+    "files": 30122,
+    "size_bytes": 19040102,
+    "verified_missions": 400,
+    "audit_log": "archive-verification.log"
+  },
+  "preflight": {
+    "archive": "week11-preflight-20261108-raw.zip",
+    "sha256": "e323cfb94bb3c28beb845e0073d9652518a2c56f4b7a428cb74990cb133b342d",
+    "files": 608,
+    "size_bytes": 393799,
+    "verified_missions": 8,
+    "excluded_from_formal_400": true,
+    "audit_report": "preflight-archive-verification.json"
+  },
+  "source_snapshot_files_verified": 69,
+  "binary_identity_verified_by_archive_audit": false,
+  "scope": "Both ZIPs checked for exact inventory, size, SHA256, CRC, safe member names, no symlinks and byte equality against all original raw files. Extracted artifacts independently audited without rerunning experiments. The archive audit checks the 69-file pinned upstream source snapshot, not local binary identity. Local binaries were checked separately in independent-verification.json."
+}

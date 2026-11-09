@@ -1,0 +1,68 @@
+[
+  {
+    "scenario": "mean90_std110",
+    "baseline": "Offline",
+    "paired_attempts": 50,
+    "both_successful": 50,
+    "only_ADAPT_successful": 0,
+    "only_baseline_successful": 0,
+    "neither_successful": 0,
+    "mean_ADAPT_minus_baseline_prize_kJ_both_successful": 3.2955609999999997,
+    "note": "Same trial environment; algorithm RNG is not paired. Conditional differences use only joint successes."
+  },
+  {
+    "scenario": "mean90_std110",
+    "baseline": "DoNothing",
+    "paired_attempts": 50,
+    "both_successful": 50,
+    "only_ADAPT_successful": 0,
+    "only_baseline_successful": 0,
+    "neither_successful": 0,
+    "mean_ADAPT_minus_baseline_prize_kJ_both_successful": 1.6258396600000018,
+    "note": "Same trial environment; algorithm RNG is not paired. Conditional differences use only joint successes."
+  },
+  {
+    "scenario": "mean90_std110",
+    "baseline": "WeightedAvg",
+    "paired_attempts": 50,
+    "both_successful": 50,
+    "only_ADAPT_successful": 0,
+    "only_baseline_successful": 0,
+    "neither_successful": 0,
+    "mean_ADAPT_minus_baseline_prize_kJ_both_successful": -0.5570871999999985,
+    "note": "Same trial environment; algorithm RNG is not paired. Conditional differences use only joint successes."
+  },
+  {
+    "scenario": "mean110_std110",
+    "baseline": "Offline",
+    "paired_attempts": 50,
+    "both_successful": 0,
+    "only_ADAPT_successful": 50,
+    "only_baseline_successful": 0,
+    "neither_successful": 0,
+    "mean_ADAPT_minus_baseline_prize_kJ_both_successful": null,
+    "note": "Same trial environment; algorithm RNG is not paired. Conditional differences use only joint successes."
+  },
+  {
+    "scenario": "mean110_std110",
+    "baseline": "DoNothing",
+    "paired_attempts": 50,
+    "both_successful": 8,
+    "only_ADAPT_successful": 42,
+    "only_baseline_successful": 0,
+    "neither_successful": 0,
+    "mean_ADAPT_minus_baseline_prize_kJ_both_successful": -0.9775418750000009,
+    "note": "Same trial environment; algorithm RNG is not paired. Conditional differences use only joint successes."
+  },
+  {
+    "scenario": "mean110_std110",
+    "baseline": "WeightedAvg",
+    "paired_attempts": 50,
+    "both_successful": 25,
+    "only_ADAPT_successful": 25,
+    "only_baseline_successful": 0,
+    "neither_successful": 0,
+    "mean_ADAPT_minus_baseline_prize_kJ_both_successful": -0.13266219999999976,
+    "note": "Same trial environment; algorithm RNG is not paired. Conditional differences use only joint successes."
+  }
+]

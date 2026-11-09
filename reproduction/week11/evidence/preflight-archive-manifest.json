@@ -1,0 +1,20 @@
+{
+  "archive": "week11-preflight-20261108-raw.zip",
+  "size_bytes": 393799,
+  "sha256": "e323cfb94bb3c28beb845e0073d9652518a2c56f4b7a428cb74990cb133b342d",
+  "files": 608,
+  "uncompressed_bytes": 688128,
+  "archive_root": "week11-preflight-20261108",
+  "formal_missions": 0,
+  "archived_missions": 8,
+  "excluded_from_formal_benchmark": true,
+  "preservation": "Every raw regular file included byte-for-byte; no mission rerun, filtering or result changes.",
+  "package_screening": {
+    "symlinks": 0,
+    "binary_files": 0,
+    "unexpected_extensions": 0,
+    "credential_pattern_matches": 0,
+    "scope": "Only generated raw run evidence from the dedicated preflight directory; original public-source configurations and instances included."
+  },
+  "validation_scope": "ZIP inventory, SHA256, CRC, safe members, byte-for-byte original file comparison. Independent archive audit checks pinned 69-file upstream source and scientific consistency, not local binary identity."
+}

@@ -1,0 +1,401 @@
+{
+  "status": "PASS",
+  "planned_attempts": 8,
+  "independently_verified_attempts": 8,
+  "unverified_attempts": 0,
+  "source_snapshot_files_verified": 69,
+  "binary_hashes_verified": false,
+  "shared_trial_environments": 2,
+  "errors": [],
+  "independent_aggregates": [
+    {
+      "scenario": "mean110_std110",
+      "strategy": "Bayesian",
+      "attempted": 1,
+      "successful": 1,
+      "mission_failures": 0,
+      "harness_errors": 0,
+      "failure_counts": {},
+      "MSR_all_attempts": 1.0,
+      "P_star_success_conditioned_kJ": {
+        "n": 1,
+        "mean": 44.7401,
+        "sample_std": null,
+        "min": 44.7401,
+        "max": 44.7401
+      },
+      "C_star_success_conditioned_kJ": {
+        "n": 1,
+        "mean": 348.2828,
+        "sample_std": null,
+        "min": 348.2828,
+        "max": 348.2828
+      },
+      "remaining_energy_success_conditioned_kJ": {
+        "n": 1,
+        "mean": 11.3572,
+        "sample_std": null,
+        "min": 11.3572,
+        "max": 11.3572
+      },
+      "charged_energy_all_attempted_kJ": {
+        "attempted": 1,
+        "observed": 1,
+        "unobserved": 0,
+        "sum_observed": 44.7401,
+        "mean": 44.7401
+      },
+      "online_algorithm_seconds_success_conditioned": {
+        "n": 1,
+        "mean": 0.032,
+        "sample_std": null,
+        "min": 0.032,
+        "max": 0.032
+      }
+    },
+    {
+      "scenario": "mean110_std110",
+      "strategy": "DoNothing",
+      "attempted": 1,
+      "successful": 0,
+      "mission_failures": 1,
+      "harness_errors": 0,
+      "failure_counts": {
+        "return_home_failed": 1
+      },
+      "MSR_all_attempts": 0.0,
+      "P_star_success_conditioned_kJ": {
+        "n": 0,
+        "mean": null,
+        "sample_std": null,
+        "min": null,
+        "max": null
+      },
+      "C_star_success_conditioned_kJ": {
+        "n": 0,
+        "mean": null,
+        "sample_std": null,
+        "min": null,
+        "max": null
+      },
+      "remaining_energy_success_conditioned_kJ": {
+        "n": 0,
+        "mean": null,
+        "sample_std": null,
+        "min": null,
+        "max": null
+      },
+      "charged_energy_all_attempted_kJ": {
+        "attempted": 1,
+        "observed": 1,
+        "unobserved": 0,
+        "sum_observed": 46.54752999999999,
+        "mean": 46.54752999999999
+      },
+      "online_algorithm_seconds_success_conditioned": {
+        "n": 0,
+        "mean": null,
+        "sample_std": null,
+        "min": null,
+        "max": null
+      }
+    },
+    {
+      "scenario": "mean110_std110",
+      "strategy": "Offline",
+      "attempted": 1,
+      "successful": 0,
+      "mission_failures": 1,
+      "harness_errors": 0,
+      "failure_counts": {
+        "return_home_failed": 1
+      },
+      "MSR_all_attempts": 0.0,
+      "P_star_success_conditioned_kJ": {
+        "n": 0,
+        "mean": null,
+        "sample_std": null,
+        "min": null,
+        "max": null
+      },
+      "C_star_success_conditioned_kJ": {
+        "n": 0,
+        "mean": null,
+        "sample_std": null,
+        "min": null,
+        "max": null
+      },
+      "remaining_energy_success_conditioned_kJ": {
+        "n": 0,
+        "mean": null,
+        "sample_std": null,
+        "min": null,
+        "max": null
+      },
+      "charged_energy_all_attempted_kJ": {
+        "attempted": 1,
+        "observed": 1,
+        "unobserved": 0,
+        "sum_observed": 47.07395000000001,
+        "mean": 47.07395000000001
+      },
+      "online_algorithm_seconds_success_conditioned": {
+        "n": 0,
+        "mean": null,
+        "sample_std": null,
+        "min": null,
+        "max": null
+      }
+    },
+    {
+      "scenario": "mean110_std110",
+      "strategy": "WeightedAvg",
+      "attempted": 1,
+      "successful": 1,
+      "mission_failures": 0,
+      "harness_errors": 0,
+      "failure_counts": {},
+      "MSR_all_attempts": 1.0,
+      "P_star_success_conditioned_kJ": {
+        "n": 1,
+        "mean": 45.51957999999999,
+        "sample_std": null,
+        "min": 45.51957999999999,
+        "max": 45.51957999999999
+      },
+      "C_star_success_conditioned_kJ": {
+        "n": 1,
+        "mean": 358.2278,
+        "sample_std": null,
+        "min": 358.2278,
+        "max": 358.2278
+      },
+      "remaining_energy_success_conditioned_kJ": {
+        "n": 1,
+        "mean": 1.4122,
+        "sample_std": null,
+        "min": 1.4122,
+        "max": 1.4122
+      },
+      "charged_energy_all_attempted_kJ": {
+        "attempted": 1,
+        "observed": 1,
+        "unobserved": 0,
+        "sum_observed": 45.51957999999999,
+        "mean": 45.51957999999999
+      },
+      "online_algorithm_seconds_success_conditioned": {
+        "n": 1,
+        "mean": 0.03,
+        "sample_std": null,
+        "min": 0.03,
+        "max": 0.03
+      }
+    },
+    {
+      "scenario": "mean90_std110",
+      "strategy": "Bayesian",
+      "attempted": 1,
+      "successful": 1,
+      "mission_failures": 0,
+      "harness_errors": 0,
+      "failure_counts": {},
+      "MSR_all_attempts": 1.0,
+      "P_star_success_conditioned_kJ": {
+        "n": 1,
+        "mean": 50.36325000000001,
+        "sample_std": null,
+        "min": 50.36325000000001,
+        "max": 50.36325000000001
+      },
+      "C_star_success_conditioned_kJ": {
+        "n": 1,
+        "mean": 348.1251,
+        "sample_std": null,
+        "min": 348.1251,
+        "max": 348.1251
+      },
+      "remaining_energy_success_conditioned_kJ": {
+        "n": 1,
+        "mean": 11.5149,
+        "sample_std": null,
+        "min": 11.5149,
+        "max": 11.5149
+      },
+      "charged_energy_all_attempted_kJ": {
+        "attempted": 1,
+        "observed": 1,
+        "unobserved": 0,
+        "sum_observed": 50.36325000000001,
+        "mean": 50.36325000000001
+      },
+      "online_algorithm_seconds_success_conditioned": {
+        "n": 1,
+        "mean": 0.04,
+        "sample_std": null,
+        "min": 0.04,
+        "max": 0.04
+      }
+    },
+    {
+      "scenario": "mean90_std110",
+      "strategy": "DoNothing",
+      "attempted": 1,
+      "successful": 1,
+      "mission_failures": 0,
+      "harness_errors": 0,
+      "failure_counts": {},
+      "MSR_all_attempts": 1.0,
+      "P_star_success_conditioned_kJ": {
+        "n": 1,
+        "mean": 48.876478000000006,
+        "sample_std": null,
+        "min": 48.876478000000006,
+        "max": 48.876478000000006
+      },
+      "C_star_success_conditioned_kJ": {
+        "n": 1,
+        "mean": 343.477,
+        "sample_std": null,
+        "min": 343.477,
+        "max": 343.477
+      },
+      "remaining_energy_success_conditioned_kJ": {
+        "n": 1,
+        "mean": 16.163,
+        "sample_std": null,
+        "min": 16.163,
+        "max": 16.163
+      },
+      "charged_energy_all_attempted_kJ": {
+        "attempted": 1,
+        "observed": 1,
+        "unobserved": 0,
+        "sum_observed": 48.876478000000006,
+        "mean": 48.876478000000006
+      },
+      "online_algorithm_seconds_success_conditioned": {
+        "n": 1,
+        "mean": 0.034,
+        "sample_std": null,
+        "min": 0.034,
+        "max": 0.034
+      }
+    },
+    {
+      "scenario": "mean90_std110",
+      "strategy": "Offline",
+      "attempted": 1,
+      "successful": 1,
+      "mission_failures": 0,
+      "harness_errors": 0,
+      "failure_counts": {},
+      "MSR_all_attempts": 1.0,
+      "P_star_success_conditioned_kJ": {
+        "n": 1,
+        "mean": 47.07479,
+        "sample_std": null,
+        "min": 47.07479,
+        "max": 47.07479
+      },
+      "C_star_success_conditioned_kJ": {
+        "n": 1,
+        "mean": 321.9715,
+        "sample_std": null,
+        "min": 321.9715,
+        "max": 321.9715
+      },
+      "remaining_energy_success_conditioned_kJ": {
+        "n": 1,
+        "mean": 37.6685,
+        "sample_std": null,
+        "min": 37.6685,
+        "max": 37.6685
+      },
+      "charged_energy_all_attempted_kJ": {
+        "attempted": 1,
+        "observed": 1,
+        "unobserved": 0,
+        "sum_observed": 47.07479,
+        "mean": 47.07479
+      },
+      "online_algorithm_seconds_success_conditioned": {
+        "n": 1,
+        "mean": 0,
+        "sample_std": null,
+        "min": 0,
+        "max": 0
+      }
+    },
+    {
+      "scenario": "mean90_std110",
+      "strategy": "WeightedAvg",
+      "attempted": 1,
+      "successful": 1,
+      "mission_failures": 0,
+      "harness_errors": 0,
+      "failure_counts": {},
+      "MSR_all_attempts": 1.0,
+      "P_star_success_conditioned_kJ": {
+        "n": 1,
+        "mean": 50.52994,
+        "sample_std": null,
+        "min": 50.52994,
+        "max": 50.52994
+      },
+      "C_star_success_conditioned_kJ": {
+        "n": 1,
+        "mean": 341.5913,
+        "sample_std": null,
+        "min": 341.5913,
+        "max": 341.5913
+      },
+      "remaining_energy_success_conditioned_kJ": {
+        "n": 1,
+        "mean": 18.0487,
+        "sample_std": null,
+        "min": 18.0487,
+        "max": 18.0487
+      },
+      "charged_energy_all_attempted_kJ": {
+        "attempted": 1,
+        "observed": 1,
+        "unobserved": 0,
+        "sum_observed": 50.52994,
+        "mean": 50.52994
+      },
+      "online_algorithm_seconds_success_conditioned": {
+        "n": 1,
+        "mean": 0.038,
+        "sample_std": null,
+        "min": 0.038,
+        "max": 0.038
+      }
+    }
+  ],
+  "checks": [
+    "pinned upstream snapshot SHA256",
+    "exact allowed configuration changes",
+    "planned-attempt denominator",
+    "shared realization/plan/initial-state hashes",
+    "complete raw process schedule and return codes",
+    "every edge geometry and average-power energy identity",
+    "every mission energy/time/charging transition",
+    "every sensor state update",
+    "Bayesian observation provenance",
+    "summary/CSV/group statistics recomputed"
+  ],
+  "numeric_policy": "Per-field six-significant-digit C++ serialization bounds, plus rounded power-term bounds; summary comparisons only 1e-11 relative/1e-10 absolute floating-point tolerance.",
+  "source_quirks_preserved": [
+    "255 service/254 visit labels follow actual return branches",
+    "double flight decay for other sensors",
+    "terminal service failure stores post-service values in arrival fields",
+    "overlapping whole-cruise average sample",
+    "no-op upstream window script"
+  ],
+  "limitations": [
+    "Read-only consistency audit, not authentication of execution authorship",
+    "No seeded RNG or exact recovery of authors' paper experiments",
+    "When errors exist, independent aggregate rows cover verified attempts only; planned and unverified denominators remain explicit."
+  ]
+}

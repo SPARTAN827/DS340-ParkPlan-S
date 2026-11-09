@@ -1,0 +1,20 @@
+{
+  "archive": "week11-formal-20261108-raw.zip",
+  "size_bytes": 19040102,
+  "sha256": "1589fc60646ba7da7d4fdf7a9a4d8b7beaa8b17f886c822e4644091a5a83ac30",
+  "files": 30122,
+  "uncompressed_bytes": 32842202,
+  "archive_root": "week11-formal-20261108",
+  "formal_missions": 400,
+  "archived_missions": 400,
+  "excluded_from_formal_benchmark": false,
+  "preservation": "Every raw regular file included byte-for-byte; no mission rerun, filtering or result changes.",
+  "package_screening": {
+    "symlinks": 0,
+    "binary_files": 0,
+    "unexpected_extensions": 0,
+    "credential_pattern_matches": 0,
+    "scope": "Only generated raw run evidence from the dedicated formal directory; original public-source configurations and instances included."
+  },
+  "validation_scope": "ZIP inventory, SHA256, CRC, safe members, byte-for-byte original file comparison. Independent archive audit checks pinned 69-file upstream source and scientific consistency, not local binary identity."
+}

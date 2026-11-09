@@ -4,6 +4,14 @@
 
 DS340 project by **Jesse Zhang and Yongqi Sheng**.
 
+## Week 11: original ADAPT running results (November 8, 2026)
+
+[Start here: build, live demo and saved evidence](reproduction/week11/README.md) · [Results compared with the paper](reproduction/week11/results/REPORT.md)
+
+A new, bounded author-code rerun covers California20, two power settings, four methods and 50 trials per method/setting: **400 missions, all independently audited**, including 117 simulated return-home failures. Under power mean +10% / SD +10%, success counts are Offline **0/50**, ROMP **8/50**, WeightedErr **25/50**, ADAPT **50/50**; the paper reports 0%, 12%, 48% and 100%. This recovers the selected reliability pattern, not exact numerical replication or universal ADAPT superiority. The lower-mean setting has 50/50 successes for all four methods.
+
+The original ADAPT source snapshot is unchanged. New code provides experiment orchestration, full evidence capture, verification and reporting. Two selected settings are not a full-paper replication, and these UAV results are separate from the park study below.
+
 ## Current project
 
 For one park and the same six required rides, compare a fixed initial order with replanning after every completed ride. The user objective is total elapsed walking + waiting + service time. Completing the same six rides is a comparison-validity condition, not a separate optimization objective.
@@ -77,9 +85,9 @@ Original study reports/QA records describe their historical execution context. T
 
 ## Earlier ADAPT work
 
-The existing [`reproduction/`](reproduction/) directory and its third-party source/license are unchanged. [The previous README](README-2026-09-12.md) is preserved as a dated historical record. Its earlier route-stability proposal and coursework status are superseded by the current time-only scope above.
+The original third-party ADAPT source/license and earlier evidence in [`reproduction/`](reproduction/) are unchanged; the November 8 work adds the separately named `week11/` experiment package. [The previous README](README-2026-09-12.md) is preserved as a dated historical record. Its earlier route-stability proposal and coursework status are superseded by the current time-only scope above.
 
-ADAPT original code was exercised in a limited smoke test, not fully replicated statistically or transplanted into the park algorithm. KOWCPI and Shiri et al. contribute conceptual guidance; neither original system is claimed reproduced here.
+ADAPT original code was first exercised in a limited smoke test and now has the bounded 400-mission comparison linked above. It has not been fully replicated across the paper or transplanted into the park algorithm. KOWCPI and Shiri et al. contribute conceptual guidance; neither original system is claimed reproduced here.
 
 ## Next research step
 

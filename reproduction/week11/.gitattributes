@@ -1,0 +1,7 @@
+# Generated artifacts: PDF is binary even when its header looks like text.
+*.pdf binary
+*.png binary
+*.zip binary
+# Matplotlib path syntax preserves spaces before newlines; CSV uses CRLF.
+*.svg whitespace=-blank-at-eol
+*.csv whitespace=cr-at-eol
