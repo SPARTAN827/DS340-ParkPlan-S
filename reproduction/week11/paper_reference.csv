@@ -1,0 +1,9 @@
+scenario,strategy,paper_label,paper_trials,paper_successes,paper_msr_pct,paper_P_success_kJ,paper_C_success_kJ,msr_source,metric_source
+mean90_std110,Offline,Offline,50,50,100,47.073,322.524,arXiv_v2_p7_Fig5,arXiv_v2_p15_TableVII
+mean90_std110,DoNothing,ROMP,50,50,100,48.747,341.920,arXiv_v2_p7_Fig5,arXiv_v2_p15_TableVII
+mean90_std110,WeightedAvg,WeightedErr,50,50,100,50.993,348.541,arXiv_v2_p7_Fig5,arXiv_v2_p15_TableVII
+mean90_std110,Bayesian,ADAPT,50,50,100,50.422,351.075,arXiv_v2_p7_Fig5,arXiv_v2_p15_TableVII
+mean110_std110,Offline,Offline,50,0,0,,,arXiv_v2_p7_Fig5,arXiv_v2_p15_TableVII
+mean110_std110,DoNothing,ROMP,50,6,12,45.836,358.480,arXiv_v2_p7_Fig5,arXiv_v2_p15_TableVII
+mean110_std110,WeightedAvg,WeightedErr,50,24,48,43.957,354.046,arXiv_v2_p7_Fig5,arXiv_v2_p15_TableVII
+mean110_std110,Bayesian,ADAPT,50,50,100,44.400,349.981,arXiv_v2_p7_Fig5,arXiv_v2_p15_TableVII

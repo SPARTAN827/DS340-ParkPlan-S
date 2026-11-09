@@ -1,0 +1,12 @@
+{
+  "frozen_at_utc": "2026-11-09T02:26:01.946141+00:00",
+  "stage": "before any new benchmark or engineering preflight",
+  "sha256": {
+    "PROTOCOL.md": "6e866739fb8caf05cc945e4d03968f5f4d21e3dbc7ef925459f84a007f7967a8",
+    "paper_reference.csv": "6e907188ad2be87183534e51e38407b4b1dfdaddd490f65a9c2723911cea0314"
+  },
+  "planned_missions": 400,
+  "settings": 2,
+  "trials_per_setting": 50,
+  "strategies": 4
+}

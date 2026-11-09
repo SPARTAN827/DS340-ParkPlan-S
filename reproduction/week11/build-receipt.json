@@ -1,0 +1,19 @@
+{
+  "checked_at_utc": "2026-11-09T02:26:31.442341+00:00",
+  "upstream_commit": "e9967bf0d7a42c9051bdb1759bebeeac42d30681",
+  "checked_files": 69,
+  "mismatches": [],
+  "build_commands": [
+    "cmake -S reproduction -B reproduction/build -DCMAKE_BUILD_TYPE=Release -DBOOST_HEADERS=<existing local Boost 1.83 headers>",
+    "cmake --build reproduction/build -j 2"
+  ],
+  "compiler": "c++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "cmake": "cmake version 3.28.3",
+  "python": "Python 3.12.3",
+  "binary_sha256": {
+    "offline-planning": "8f7e9d48b2cbf8eee282f98adc843e710bd9823d832130b68242ec021f0814ad",
+    "online-planning": "08591cdadafab9639c7b1ce2d0c8dcccede429b25d8579cf7df1512fa8029915",
+    "simulation": "fc671d61d90911383190d3292a886ff122783f57e0f94b91c698f150227347a4"
+  },
+  "all_three_modules_built": true
+}
