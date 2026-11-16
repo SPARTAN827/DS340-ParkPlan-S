@@ -24,3 +24,7 @@ The source ZIP includes its template provenance record. Build verification used 
 ## Interpretation
 
 The separate ADAPT reproduction is a UAV experiment, not evidence of park time savings. The park results remain exploratory and use assumed walking/service inputs. The six sensitivity settings reuse the same wait records; they are not comparisons across independent datasets.
+
+## PDF properties correction
+
+The PDF title now preserves the space before “for Six Theme-Park Rides,” and the subject identifies this as a DS 340W course project instead of the template’s ICML proceedings default. Jesse Zhang and Yongqi Sheng remain the named authors. All eight pages have identical text and rendered pixels to the preceding PDF; a fresh source-package build also matches.
