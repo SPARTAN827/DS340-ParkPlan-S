@@ -1,10 +1,10 @@
 # Week 12: Modified Implementation
 
-Prepared for a real two-person recording; not evidence that recording or team agreement occurred.
+Team recording outline — Jesse Zhang and Yongqi Sheng.
 
 About 5-6 minutes including a live run. This is a rehearsal estimate; the assignment states no video-length limit.
 
-Roles below are suggested. Both students must understand, rehearse and perform their own parts. Read only spoken paragraphs. Screen notes are not spoken.
+Speaking order and screen cues are listed below. Read the spoken paragraphs; headings and screen notes are not spoken.
 
 ## Jesse Zhang | 0:00-0:40 | Our question and parent-paper connection
 

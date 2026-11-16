@@ -2,18 +2,30 @@ Data credit: TouringPlans.com — historical Animal Kingdom waits and published 
 
 # Week 12: modified implementation
 
-- [Eight-page revised paper](ParkPlan-S-Week12-Revised-Paper.pdf)
-- [Editable Overleaf source](ParkPlan-S-Week12-Overleaf.zip)
-- [Fresh five-policy demo](../../experiments/week12_demo_20261115/README.md)
-- [Recording and submission instructions](DEMO-AND-SUBMISSION.md)
-- [Jesse speaker PDF](Jesse-speaker.pdf) and [Yongqi speaker PDF](Yongqi-speaker.pdf)
-- [Screen cues and complete script](recording-script.md)
-- [Paper QA](PAPER-QA.md) and [evidence/rubric audit](EVIDENCE-AND-RUBRIC-AUDIT.md)
+Jesse Zhang and Yongqi Sheng | DS 340W
 
-The October algorithms and saved comparison are preserved. This update adds a genuine execution wrapper and tests, plus a revised Contribution and Evaluation. It does not claim a newly improved algorithm or a new full experiment. Prepared scripts do not establish actual student recording, Kaltura access or Canvas submission.
+Our revised paper explains the C, R and S modifications and compares them with fixed planning and the existing dynamic baseline. The experiments did not establish an improvement over D0. The Evaluation section discusses the comparison, failed trips, ablation and input sensitivities.
 
-The original studies are in `experiments/algorithm_study_20261019/` and `reproduction/week11/`; their results concern different domains and metrics.
+## Files
 
-Core demo: Python 3.10+, standard library. Optional speaker PDF regeneration: Python plus ReportLab; run `python3 coursework/week12/build_recording.py`. Rebuilding paper source uses TeX/Overleaf, independently of the core code. Native Windows and actual Overleaf UI builds were not verified here.
+- [Paper PDF](ParkPlan-S-Week12-Revised-Paper.pdf) — eight pages including references
+- [Overleaf source](ParkPlan-S-Week12-Overleaf.zip)
+- [Code demonstration](../../experiments/week12_demo_20261115/README.md)
+- [Recording outline and screen cues](recording-script.md)
+- [Jesse's speaking notes](Jesse-speaker.pdf) and [Yongqi's speaking notes](Yongqi-speaker.pdf)
+- [Demo and submission checklist](DEMO-AND-SUBMISSION.md)
+- [Paper build notes](PAPER-QA.md) and [comparison checks](EVIDENCE-AND-RUBRIC-AUDIT.md)
 
-TouringPlans data terms: use is permitted subject to crediting TouringPlans.com clearly at the beginning of publications/redistributions and including these terms in redistributions. Raw source data are not included.
+The methods and full results come from the October study. This update adds the one-date demo and extends the paper's Contribution and Evaluation sections. The ADAPT UAV experiment in `reproduction/week11/` is a separate parent-paper reproduction.
+
+## Rebuild the documents
+
+Upload the source ZIP to Overleaf with `main.tex` as the main file. The local build used Tectonic; a fresh extracted source build matched the PDF's text and rendered pages. The Overleaf web interface was not tested.
+
+The core demo needs Python 3.10+ with no extra packages. Regenerating the speaker PDFs needs ReportLab:
+
+```bash
+python3 coursework/week12/build_recording.py
+```
+
+TouringPlans data terms: clearly credit TouringPlans.com at the beginning of publications or redistributions, and include these terms in redistributions. Raw source data are not included.

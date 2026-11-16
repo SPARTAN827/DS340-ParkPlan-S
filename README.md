@@ -1,105 +1,81 @@
-**Data credit: TouringPlans.com — historical Disney Animal Kingdom posted waits and published park-hour listings.**
+Data credit: TouringPlans.com — historical Disney Animal Kingdom posted waits and published park-hour listings.
 
-# ParkPlan-S: time-efficient six-ride replanning
+# ParkPlan-S
 
-DS340 project by **Jesse Zhang and Yongqi Sheng**.
+A DS 340W project by **Jesse Zhang and Yongqi Sheng**.
 
-## Week 12: modified implementation (November 15, 2026)
+We study a simple question: if a visitor wants to finish the same six rides, does changing the remaining order after each ride save time? ParkPlan-S compares a fixed plan with several replanning methods using historical Animal Kingdom wait data. The goal is to reduce total walking, waiting, and ride-service time.
 
-[Revised paper and recording preparation](coursework/week12/README.md) · [Fresh five-policy demo](experiments/week12_demo_20261115/README.md)
+## Paper and code
 
-The revised paper adds an explicit **Contribution** subsection and comparative **Evaluation** for C (decay calibration), R (historical-scenario rollout), and S (shared-order ablation), against fixed and existing dynamic controls. These methods and the full benchmark are the preserved October study; the new Week 12 code is a tested, source-verified live-demo wrapper, not a newly tuned algorithm. **No candidate has established superiority over D0.**
+- [Week 12 paper and presentation notes](coursework/week12/README.md)
+- [Run the five-method demo](experiments/week12_demo_20261115/README.md)
+- [Full experiment report](experiments/algorithm_study_20261019/REPORT.md)
+- [Setup and reproduction commands](RUNNING.md)
+- [Week 11 ADAPT reproduction](reproduction/week11/README.md)
 
-The demo executes all five unchanged methods on the chronologically first evaluation date and writes fresh records with integrity/parity checks. That date yields five closed-at-arrival failures; these are retained, not filtered away. Use the full 165-date tables for conclusions. The paper is eight pages including references. Prepared speaker scripts do not establish that a student recording, Kaltura upload, or course submission has occurred.
+## Methods
 
-## Week 11: original ADAPT running results (November 8, 2026)
-
-[Start here: build, live demo and saved evidence](reproduction/week11/README.md) · [Results compared with the paper](reproduction/week11/results/REPORT.md)
-
-A new, bounded author-code rerun covers California20, two power settings, four methods and 50 trials per method/setting: **400 missions, all independently audited**, including 117 simulated return-home failures. Under power mean +10% / SD +10%, success counts are Offline **0/50**, ROMP **8/50**, WeightedErr **25/50**, ADAPT **50/50**; the paper reports 0%, 12%, 48% and 100%. This recovers the selected reliability pattern, not exact numerical replication or universal ADAPT superiority. The lower-mean setting has 50/50 successes for all four methods.
-
-The original ADAPT source snapshot is unchanged. New code provides experiment orchestration, full evidence capture, verification and reporting. Two selected settings are not a full-paper replication, and these UAV results are separate from the park study below.
-
-## Current project
-
-For one park and the same six required rides, compare a fixed initial order with replanning after every completed ride. The user objective is total elapsed walking + waiting + service time. Completing the same six rides is a comparison-validity condition, not a separate optimization objective.
-
-The current Python implementation and experiments are in [`experiments/algorithm_study_20261019/`](experiments/algorithm_study_20261019/). The earlier ADAPT parent-paper reproduction remains in [`reproduction/`](reproduction/). It is preserved; it is not the current park planner.
-
-| Policy | Meaning |
+| Method | How it chooses the remaining route |
 |---|---|
-| F | Keep the common initial order. |
-| D0 | Existing arrival-aware dynamic planner; replan after each completed ride. |
-| C | Validation-selected residual-decay calibration. |
-| R | Test each next action across eight historical scenarios, with later D0 feedback. |
-| S | Same-scenario shared-order control. |
+| F: fixed | Keeps the order chosen at the start. |
+| D0: dynamic baseline | Uses arrival-time wait estimates and searches all remaining orders after each ride. |
+| C: calibrated | Changes how quickly a current wait observation loses influence; the decay is selected on validation dates. |
+| R: rollout | Tests each next ride across eight historical-day scenarios and lets D0 make later decisions within each scenario. |
+| S: shared-order control | Uses the same scenarios as R but scores one shared remaining order, then replans after the next real ride. |
 
-All policies use the same start, information access, six rides and execution rules. Current implementations are research replay code, not a deployed visitor application.
+Every method starts with the same order and first ride and uses the same observation and execution rules. C, R, and S were evaluated in the October study. The Week 12 update adds a short execution demo and expands the paper's Contribution and Evaluation sections.
 
-## Current finding
+## Results
 
-- F minus D0: **+15.48 modeled minutes saved** on 105 jointly completed evaluation dates.
-- D0 minus R: **−6.36 modeled minutes saved** on a different set of 118 jointly completed dates; 95% seven-date block interval **[−13.73, +0.36]**.
-- All-attempt completions: F **120/165**, D0 **126/165**, R **128/165**.
-- **The new rollout has not established an improvement over D0.** QA PASS is an integrity result, not a performance win.
+Ordinary replanning helped relative to the fixed plan, but the modifications did not establish an advantage over D0.
 
-The evaluation dates had been inspected previously: this is retrospective, exploratory analysis, not an untouched final holdout. Posted waits are a proxy, not measured visitor journeys. Walking and service assumptions are synthetic; no real-world saving or superiority to proprietary TouringPlans software is claimed.
+| Comparison | Dates when both finished | Mean time saved | 95% seven-date block interval |
+|---|---:|---:|---:|
+| F minus D0 | 105 | 15.48 min | [6.89, 23.38] |
+| D0 minus R | 118 | -6.36 min | [-13.73, 0.36] |
 
-Read the [study report](experiments/algorithm_study_20261019/REPORT.md), [frozen protocol](experiments/algorithm_study_20261019/PROTOCOL.md), and [action-value diagnostic](experiments/algorithm_study_20261019/diagnostics/rollout_error_audit.md).
+Positive values favor the second method. Across all 165 attempted dates, F completed 120, D0 completed 126, and R completed 128. The successful dates differ, so the paired time comparisons use different subsets. We keep D0 as the working comparator.
 
-## Dataset
+These are simulated trips using posted waits and assumed walking and service times. The evaluation dates had already been examined in earlier work, so the analysis is exploratory. We have not measured visitor time savings or compared against proprietary TouringPlans software. The [report](experiments/algorithm_study_20261019/REPORT.md) includes failed attempts, calibration and ablation results, and all six input settings.
 
-- Public dataset: [TouringPlans / DisneyAnimalKingdomWaitTimes](https://github.com/TouringPlans/DisneyAnimalKingdomWaitTimes).
-- Pinned commit: `933161b8bebb7cd50e0d54bcb3578484875487fa`.
-- Six historical series: `AK07`, `AK11`, `AK14`, `AK18`, `AK85`, `AK86`.
-- Chronological split: 270 fit dates, 115 validation dates, 165 exploratory evaluation dates.
-- Raw wait CSVs and downloaded archives are not bundled. Download the pinned source as documented in [RUNNING.md](RUNNING.md).
+## Run a short example
 
-Attraction names reflect the historical dataset, not a claim about current park operations.
-
-## Code you can inspect and develop
-
-| File | Role |
-|---|---|
-| [`engine.py`](experiments/algorithm_study_20261019/engine.py) | Route scoring, policies and historical-scenario continuation logic. |
-| [`prepare.py`](experiments/algorithm_study_20261019/prepare.py) | Shared inputs and chronological splits. |
-| [`run.py`](experiments/algorithm_study_20261019/run.py) | Frozen original experiment runner. Use the public entry point below. |
-| [`analyze.py`](experiments/algorithm_study_20261019/analyze.py) | Paired summaries and uncertainty intervals. |
-| [`test_engine.py`](experiments/algorithm_study_20261019/test_engine.py) | Constructed engine checks, not evidence of superiority. |
-| [`scripts/run_public_study.py`](scripts/run_public_study.py) | Public-distribution runner; original scientific implementation retained. |
-| [`scripts/verify_public_results.py`](scripts/verify_public_results.py) | Public-scope independent verification of the included frozen evidence. |
-
-Core code uses Python's standard library; optional figure regeneration uses the study's `requirements-plot.txt`.
-
-### Quick engine check
-
-From the repository root with Python 3.10+:
+The core code uses Python 3.10+ and the standard library. Start with the [demo instructions](experiments/week12_demo_20261115/README.md) to download the pinned data, then run from the repository root:
 
 ```bash
-python3 -m unittest discover -s experiments/algorithm_study_20261019 -p test_engine.py -v
+python3 experiments/week12_demo_20261115/run_demo.py --archive /tmp/parkplan-ak-933161b.tar.gz
 ```
 
-See [RUNNING.md](RUNNING.md) for source download, full included-results verification and replay commands. The recorded execution environment is Linux/Python 3.12; full native-Windows policy execution is not claimed tested. Windows users can use WSL for the Linux-oriented replay.
+The demo runs all five methods on July 26, 2018, the first evaluation date, and saves a new result folder. All five encounter a closed attraction on that date. Those failures are part of the output; the full 165-date study provides the performance comparison.
 
-The reduced public snapshot was checked in a fresh Linux copy:12 engine tests and8 public-adapter tests passed; all6,200 policy-days,35,082 replay arrivals,23,268 decision snapshots and10,416 training-scenario-ID checks passed. See [public QA](experiments/algorithm_study_20261019/QA-public.md). This packaging check did not rerun policy simulations or establish a new performance result.
+The recorded environment is Linux/Python 3.12. WSL can run the Linux commands; native Windows execution has not been tested. For the full study, use the public entry points in [RUNNING.md](RUNNING.md). The original workspace runner expects additional archived files that are not included here.
 
-## Public package versus original preservation audit
+## Repository layout
 
-The historical workspace audit checked 31 old artifacts, including 11 meeting-note/archival files that are not needed to explain the algorithms and are not distributed here. This public package strictly verifies the **20 included legacy artifacts**, explicitly records the **11 omissions**, and retains the original algorithm, runner, protocol and locks unchanged.
+| Location | Contents |
+|---|---|
+| `experiments/algorithm_study_20261019/` | Planner, data preparation, saved comparisons, diagnostics and tests |
+| `experiments/week12_demo_20261115/` | One-date demo, tests and example output |
+| `scripts/run_public_study.py` | Full-study runner for this repository |
+| `scripts/verify_public_results.py` | Checks the included experiment records and source hashes |
+| `data/verified_inputs/` | Input assumptions and source information |
+| `coursework/week12/` | Paper, editable source and presentation notes |
+| `reproduction/week11/` | Separate ADAPT author-code experiment |
 
-Use the separately named public entry points, not the original workspace-only preservation command. Public verification writes `QA-public.md` and `verification-public.json`; it does not overwrite the historical certificate. No missing included file is silently ignored. Details and exact adapter scope are in [`scripts/`](scripts/).
+The [public verification record](experiments/algorithm_study_20261019/QA-public.md) covers 6,200 policy-day records and the 20 included legacy artifacts. Eleven older meeting/archive files are outside this repository's verification scope. Original scientific code, results and hash locks remain unchanged.
 
-Original study reports/QA records describe their historical execution context. They are not claims that omitted meeting material is present in this repository.
+## Data and parent papers
 
-## Earlier ADAPT work
+The dataset is [TouringPlans/DisneyAnimalKingdomWaitTimes](https://github.com/TouringPlans/DisneyAnimalKingdomWaitTimes), pinned to commit `933161b8bebb7cd50e0d54bcb3578484875487fa`. We use six historical series: AK07, AK11, AK14, AK18, AK85 and AK86, with 270 fit dates, 115 validation dates and 165 evaluation dates. Raw CSVs are downloaded separately. Attraction names refer to the historical dataset.
 
-The original third-party ADAPT source/license and earlier evidence in [`reproduction/`](reproduction/) are unchanged; the November 8 work adds the separately named `week11/` experiment package. [The previous README](README-2026-09-12.md) is preserved as a dated historical record. Its earlier route-stability proposal and coursework status are superseded by the current time-only scope above.
+ADAPT motivates updating a route after new observations. Our separate [400-mission reproduction](reproduction/week11/results/REPORT.md) uses the authors' UAV code on California20 under two power settings. In the higher-mean setting, Offline, ROMP, WeightedErr and ADAPT return-home counts are 0, 8, 25 and 50 out of 50; in the lower-mean setting, all four complete 50/50. This recovers the selected reliability pattern with numerical differences from the paper. It is a partial reproduction, and its drone results do not measure park performance. The original author source remains unchanged.
 
-ADAPT original code was first exercised in a limited smoke test and now has the bounded 400-mission comparison linked above. It has not been fully replicated across the paper or transplanted into the park algorithm. KOWCPI and Shiri et al. contribute conceptual guidance; neither original system is claimed reproduced here.
+KOWCPI and Shiri et al. inform the research framing; their original systems are not implemented in this park planner. The [September README](README-2026-09-12.md) records the earlier project direction. Our next research question is whether better next-action value estimates, developed on earlier dates, can improve performance on genuinely unused dates.
 
-## Next research step
+## Project development
 
-Investigate better next-action value prediction using earlier chronological development data, then freeze the method and evaluate on genuinely unused dates. That improvement is a hypothesis, not an implemented or validated winner.
+Jesse Zhang and Yongqi Sheng are the project and paper authors. AI tools assisted with code, documentation editing, and checks during development. The experiment records and source references document the basis for the reported results.
 
 ## Data-use terms
 
@@ -108,4 +84,4 @@ You're free to use these data however you see fit, subject to the following:
 1. Any publications or redistributions credit TouringPlans.com clearly at the beginning of those publications or distributions.
 2. Any redistributions include these license terms.
 
-See [SOURCES-AND-LICENSE.md](experiments/algorithm_study_20261019/SOURCES-AND-LICENSE.md). No blanket license is imposed on third-party materials.
+See [SOURCES-AND-LICENSE.md](experiments/algorithm_study_20261019/SOURCES-AND-LICENSE.md). Third-party materials retain their original licenses.

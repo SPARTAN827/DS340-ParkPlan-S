@@ -46,7 +46,7 @@ Exit code 0 means execution and evidence checks completed, even when a modeled t
 4. Open the newly printed output directory. `comparison.csv` has completion, trip time, failure reason and route; `traces.json` has timestamped visits/decisions. `verification.json` records source/code hashes, the input split and checks.
 5. Explain the full-study comparison from `experiments/algorithm_study_20261019/REPORT.md`, including its successful-trip denominator, all attempted dates and failures. Do not present a single demonstration date as the 165-date experiment.
 
-Both team members must actually participate and explain their parts. These files are recording preparation, not evidence that a student recording or upload has happened. The assignment does not specify a video duration.
+The team recording follows this walkthrough, then explains the full-study comparison. The assignment does not specify a video duration.
 
 ## 3. Check the new wrapper and existing engine
 
@@ -69,7 +69,7 @@ On Windows, use `py -3` and the explicit `$env:TEMP` archive path. This audits t
 
 ## 5. Rerun the complete frozen study
 
-Use a **separate copy** on Linux / WSL, because the published phase runners replace generated results in that copy. Keep the delivered evidence intact. Use the archive at `/tmp/parkplan-ak-933161b.tar.gz`:
+Use a **separate copy** on Linux / WSL, because the published phase runners replace generated results in that copy. Keep the saved study results intact. Use the archive at `/tmp/parkplan-ak-933161b.tar.gz`:
 
 ```bash
 python3 experiments/algorithm_study_20261019/prepare.py
@@ -84,7 +84,7 @@ python3 experiments/algorithm_study_20261019/analyze.py experiments/algorithm_st
 
 New timings/timestamps will differ. A new `select` changes the selection-record hash, so the delivered `evaluation_lock.json` no longer certifies that new run. Preserve the original lock and create a separately named new provenance record before a formal new evaluation; do not silently rewrite it. The Week 12 demo deliberately rejects altered dependencies. Compare scientific outcomes separately from runtimes and timestamps. Full-study reruns are not needed merely to record this demonstration.
 
-## Scientific conclusion to preserve
+## Study conclusion
 
 On 118 dates where D0 and R both completed, D0 minus R is **−6.356 modeled minutes**: R is slower on that conditional mean. The 95% seven-date block interval is [−13.730, +0.357], so an improvement is not established. D0 and R complete 126/165 and 128/165 attempted dates, respectively; their successful dates differ. C and S also fail to establish an advantage over D0. The original F versus D0 conditional advantage is a separate comparator result, not evidence that R improves D0. The same-wait-data input sensitivities are not new-dataset replications.
 
