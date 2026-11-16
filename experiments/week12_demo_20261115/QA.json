@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "fresh_public_copy_run": "demo-20261116T021024Z-q7p9bahm",
+  "workspace_run": "demo-20261116T020900Z-h1ikgt9m",
+  "source_archive_sha256": "23eca800b048aecd4b3a2469e78f63f24f64637eb785c8401386e219a177f812",
+  "policy_count": 5,
+  "completions": [
+    1,
+    1,
+    1,
+    1,
+    5
+  ],
+  "all_failures_retained": "closed_at_arrival",
+  "all_failed_trip_times_blank": true,
+  "cross_copy_complete_trace_parity_excluding_runtime": true,
+  "both_output_manifests_verified": true,
+  "wrapper_tests_passed": 7,
+  "engine_tests_passed": 12,
+  "tracked_changes_at_check": [],
+  "native_windows_execution": "not tested",
+  "raw_archive_redistributed": false
+}

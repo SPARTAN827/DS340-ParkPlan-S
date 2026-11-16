@@ -4,6 +4,14 @@
 
 DS340 project by **Jesse Zhang and Yongqi Sheng**.
 
+## Week 12: modified implementation (November 15, 2026)
+
+[Revised paper and recording preparation](coursework/week12/README.md) · [Fresh five-policy demo](experiments/week12_demo_20261115/README.md)
+
+The revised paper adds an explicit **Contribution** subsection and comparative **Evaluation** for C (decay calibration), R (historical-scenario rollout), and S (shared-order ablation), against fixed and existing dynamic controls. These methods and the full benchmark are the preserved October study; the new Week 12 code is a tested, source-verified live-demo wrapper, not a newly tuned algorithm. **No candidate has established superiority over D0.**
+
+The demo executes all five unchanged methods on the chronologically first evaluation date and writes fresh records with integrity/parity checks. That date yields five closed-at-arrival failures; these are retained, not filtered away. Use the full 165-date tables for conclusions. The paper is eight pages including references. Prepared speaker scripts do not establish that a student recording, Kaltura upload, or course submission has occurred.
+
 ## Week 11: original ADAPT running results (November 8, 2026)
 
 [Start here: build, live demo and saved evidence](reproduction/week11/README.md) · [Results compared with the paper](reproduction/week11/results/REPORT.md)

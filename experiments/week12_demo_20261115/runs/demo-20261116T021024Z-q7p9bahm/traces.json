@@ -1,0 +1,1046 @@
+[
+  {
+    "date": "2018-07-26",
+    "policy": "fixed",
+    "configuration": "reference",
+    "decay": 60,
+    "initial_order": "AK07|AK14|AK85|AK86|AK11|AK18",
+    "initial_predicted_finish": 1047.8927760136287,
+    "deadline": 1350,
+    "deadline_source": "https://touringplans.com/animal-kingdom/wait-times/date/2018-07-26",
+    "success": false,
+    "failure": "closed_at_arrival",
+    "completed": 1,
+    "elapsed_min": null,
+    "total_walk_min": 20.0,
+    "total_posted_wait_min": 15.0,
+    "total_service_min": 10.0,
+    "replans": 0,
+    "route_changes": 0,
+    "next_changes": 0,
+    "planning_seconds": 0.0,
+    "completed_order": "AK07",
+    "events": [
+      {
+        "type": "visit",
+        "ride": "AK07",
+        "from": "GATE",
+        "depart": 600.0,
+        "arrival": 610.0,
+        "walk": 10.0,
+        "posted_observed_at": 610.0,
+        "posted_wait": 15,
+        "service": 10.0,
+        "status": "completed",
+        "finish": 635.0
+      },
+      {
+        "type": "visit",
+        "ride": "AK14",
+        "from": "AK07",
+        "depart": 635.0,
+        "arrival": 645.0,
+        "walk": 10.0,
+        "posted_observed_at": 645.0,
+        "posted_wait": -999,
+        "service": 10.0,
+        "status": "closed_at_arrival"
+      }
+    ]
+  },
+  {
+    "date": "2018-07-26",
+    "policy": "dynamic",
+    "configuration": "reference",
+    "decay": 60,
+    "initial_order": "AK07|AK14|AK85|AK86|AK11|AK18",
+    "initial_predicted_finish": 1047.8927760136287,
+    "deadline": 1350,
+    "deadline_source": "https://touringplans.com/animal-kingdom/wait-times/date/2018-07-26",
+    "success": false,
+    "failure": "closed_at_arrival",
+    "completed": 1,
+    "elapsed_min": null,
+    "total_walk_min": 20.0,
+    "total_posted_wait_min": 15.0,
+    "total_service_min": 10.0,
+    "replans": 1,
+    "route_changes": 1,
+    "next_changes": 0,
+    "planning_seconds": 0.0004505009999320464,
+    "completed_order": "AK07",
+    "events": [
+      {
+        "type": "visit",
+        "ride": "AK07",
+        "from": "GATE",
+        "depart": 600.0,
+        "arrival": 610.0,
+        "walk": 10.0,
+        "posted_observed_at": 610.0,
+        "posted_wait": 15,
+        "service": 10.0,
+        "status": "completed",
+        "finish": 635.0
+      },
+      {
+        "type": "decision",
+        "at": 635.0,
+        "location": "AK07",
+        "incumbent": [
+          "AK14",
+          "AK85",
+          "AK86",
+          "AK11",
+          "AK18"
+        ],
+        "selected": [
+          "AK14",
+          "AK18",
+          "AK85",
+          "AK86",
+          "AK11"
+        ],
+        "compute_seconds": 0.0004505009999320464,
+        "snapshot": {
+          "AK07": {
+            "minute": 630.0,
+            "value": 35
+          },
+          "AK11": {
+            "minute": 630.0,
+            "value": 40
+          },
+          "AK14": {
+            "minute": 630.0,
+            "value": 25
+          },
+          "AK18": {
+            "minute": 630.0,
+            "value": 20
+          },
+          "AK85": {
+            "minute": 630.0,
+            "value": 75
+          },
+          "AK86": {
+            "minute": 630.0,
+            "value": 180
+          }
+        },
+        "policy": "dynamic",
+        "predicted_costs": {},
+        "scenario_ids": [],
+        "fallback": false,
+        "fallback_reason": null,
+        "predicted_cost_unit": "remaining_minutes",
+        "base_next": "AK14",
+        "chosen_next": "AK14",
+        "base_predicted_finish": 1056.1439988791285
+      },
+      {
+        "type": "visit",
+        "ride": "AK14",
+        "from": "AK07",
+        "depart": 635.0,
+        "arrival": 645.0,
+        "walk": 10.0,
+        "posted_observed_at": 645.0,
+        "posted_wait": -999,
+        "service": 10.0,
+        "status": "closed_at_arrival"
+      }
+    ]
+  },
+  {
+    "date": "2018-07-26",
+    "policy": "calibrated",
+    "configuration": "reference",
+    "decay": 30,
+    "initial_order": "AK07|AK14|AK85|AK86|AK11|AK18",
+    "initial_predicted_finish": 1047.8927760136287,
+    "deadline": 1350,
+    "deadline_source": "https://touringplans.com/animal-kingdom/wait-times/date/2018-07-26",
+    "success": false,
+    "failure": "closed_at_arrival",
+    "completed": 1,
+    "elapsed_min": null,
+    "total_walk_min": 20.0,
+    "total_posted_wait_min": 15.0,
+    "total_service_min": 10.0,
+    "replans": 1,
+    "route_changes": 1,
+    "next_changes": 0,
+    "planning_seconds": 0.00044929600016985205,
+    "completed_order": "AK07",
+    "events": [
+      {
+        "type": "visit",
+        "ride": "AK07",
+        "from": "GATE",
+        "depart": 600.0,
+        "arrival": 610.0,
+        "walk": 10.0,
+        "posted_observed_at": 610.0,
+        "posted_wait": 15,
+        "service": 10.0,
+        "status": "completed",
+        "finish": 635.0
+      },
+      {
+        "type": "decision",
+        "at": 635.0,
+        "location": "AK07",
+        "incumbent": [
+          "AK14",
+          "AK85",
+          "AK86",
+          "AK11",
+          "AK18"
+        ],
+        "selected": [
+          "AK14",
+          "AK11",
+          "AK86",
+          "AK85",
+          "AK18"
+        ],
+        "compute_seconds": 0.00044929600016985205,
+        "snapshot": {
+          "AK07": {
+            "minute": 630.0,
+            "value": 35
+          },
+          "AK11": {
+            "minute": 630.0,
+            "value": 40
+          },
+          "AK14": {
+            "minute": 630.0,
+            "value": 25
+          },
+          "AK18": {
+            "minute": 630.0,
+            "value": 20
+          },
+          "AK85": {
+            "minute": 630.0,
+            "value": 75
+          },
+          "AK86": {
+            "minute": 630.0,
+            "value": 180
+          }
+        },
+        "policy": "dynamic",
+        "predicted_costs": {},
+        "scenario_ids": [],
+        "fallback": false,
+        "fallback_reason": null,
+        "predicted_cost_unit": "remaining_minutes",
+        "base_next": "AK14",
+        "chosen_next": "AK14",
+        "base_predicted_finish": 1057.7316604894822
+      },
+      {
+        "type": "visit",
+        "ride": "AK14",
+        "from": "AK07",
+        "depart": 635.0,
+        "arrival": 645.0,
+        "walk": 10.0,
+        "posted_observed_at": 645.0,
+        "posted_wait": -999,
+        "service": 10.0,
+        "status": "closed_at_arrival"
+      }
+    ]
+  },
+  {
+    "date": "2018-07-26",
+    "policy": "rollout",
+    "configuration": "reference",
+    "decay": 60,
+    "initial_order": "AK07|AK14|AK85|AK86|AK11|AK18",
+    "initial_predicted_finish": 1047.8927760136287,
+    "deadline": 1350,
+    "deadline_source": "https://touringplans.com/animal-kingdom/wait-times/date/2018-07-26",
+    "success": false,
+    "failure": "closed_at_arrival",
+    "completed": 1,
+    "elapsed_min": null,
+    "total_walk_min": 20.0,
+    "total_posted_wait_min": 15.0,
+    "total_service_min": 10.0,
+    "replans": 1,
+    "route_changes": 1,
+    "next_changes": 0,
+    "planning_seconds": 0.008713252000006833,
+    "completed_order": "AK07",
+    "events": [
+      {
+        "type": "visit",
+        "ride": "AK07",
+        "from": "GATE",
+        "depart": 600.0,
+        "arrival": 610.0,
+        "walk": 10.0,
+        "posted_observed_at": 610.0,
+        "posted_wait": 15,
+        "service": 10.0,
+        "status": "completed",
+        "finish": 635.0
+      },
+      {
+        "type": "decision",
+        "at": 635.0,
+        "location": "AK07",
+        "incumbent": [
+          "AK14",
+          "AK85",
+          "AK86",
+          "AK11",
+          "AK18"
+        ],
+        "selected": [
+          "AK14",
+          "AK18",
+          "AK85",
+          "AK86",
+          "AK11"
+        ],
+        "compute_seconds": 0.008713252000006833,
+        "snapshot": {
+          "AK07": {
+            "minute": 630.0,
+            "value": 35
+          },
+          "AK11": {
+            "minute": 630.0,
+            "value": 40
+          },
+          "AK14": {
+            "minute": 630.0,
+            "value": 25
+          },
+          "AK18": {
+            "minute": 630.0,
+            "value": 20
+          },
+          "AK85": {
+            "minute": 630.0,
+            "value": 75
+          },
+          "AK86": {
+            "minute": 630.0,
+            "value": 180
+          }
+        },
+        "policy": "rollout",
+        "predicted_costs": {
+          "AK14": 426.06585793449426,
+          "AK18": 444.92052016427306,
+          "AK85": 440.74655011325535,
+          "AK86": 483.2258097859198,
+          "AK11": 444.5857225742674
+        },
+        "scenario_ids": [
+          "2017-07-19",
+          "2018-05-12",
+          "2018-07-07",
+          "2017-10-30",
+          "2017-09-24",
+          "2018-04-11",
+          "2017-07-20",
+          "2017-06-22"
+        ],
+        "fallback": false,
+        "fallback_reason": null,
+        "predicted_cost_unit": "remaining_minutes",
+        "base_next": "AK14",
+        "chosen_next": "AK14",
+        "base_predicted_finish": 1056.1439988791285,
+        "scenario_distances": {
+          "2017-07-19": 0.007243367935409459,
+          "2018-05-12": 0.009193857416568961,
+          "2018-07-07": 0.012913151194956299,
+          "2017-10-30": 0.013705130771046443,
+          "2017-09-24": 0.018521737847896524,
+          "2018-04-11": 0.018862079306415865,
+          "2017-07-20": 0.01895297728561793,
+          "2017-06-22": 0.019495084752760784
+        },
+        "scenario_model": {
+          "template": "whole_training_day_all_rides",
+          "historical_missing_and_future_closures": "training_curve_imputation",
+          "forecast_future_closures": false,
+          "snapshot_grid_minutes": 5.0,
+          "current_closure_expiry": "original_observation_plus_15_minutes",
+          "beyond_midnight": "training_curve_tail",
+          "closing_deadline_in_model": null,
+          "aggregation": "uniform_mean_no_failed_sample_dropping"
+        },
+        "scenario_query_audit": {
+          "2017-07-19": {
+            "historical_closure_curve_imputation_queries": 1
+          },
+          "2018-05-12": {
+            "missing_curve_imputation_queries": 134
+          },
+          "2018-07-07": {
+            "historical_closure_curve_imputation_queries": 17
+          },
+          "2017-10-30": {
+            "historical_closure_curve_imputation_queries": 1
+          },
+          "2017-09-24": {},
+          "2018-04-11": {
+            "historical_closure_curve_imputation_queries": 19
+          },
+          "2017-07-20": {
+            "historical_closure_curve_imputation_queries": 15
+          },
+          "2017-06-22": {
+            "historical_closure_curve_imputation_queries": 7
+          }
+        }
+      },
+      {
+        "type": "visit",
+        "ride": "AK14",
+        "from": "AK07",
+        "depart": 635.0,
+        "arrival": 645.0,
+        "walk": 10.0,
+        "posted_observed_at": 645.0,
+        "posted_wait": -999,
+        "service": 10.0,
+        "status": "closed_at_arrival"
+      }
+    ]
+  },
+  {
+    "date": "2018-07-26",
+    "policy": "scenario_open_loop",
+    "configuration": "reference",
+    "decay": 60,
+    "initial_order": "AK07|AK14|AK85|AK86|AK11|AK18",
+    "initial_predicted_finish": 1047.8927760136287,
+    "deadline": 1350,
+    "deadline_source": "https://touringplans.com/animal-kingdom/wait-times/date/2018-07-26",
+    "success": false,
+    "failure": "closed_at_arrival",
+    "completed": 5,
+    "elapsed_min": null,
+    "total_walk_min": 60.0,
+    "total_posted_wait_min": 280.0,
+    "total_service_min": 50.0,
+    "replans": 5,
+    "route_changes": 4,
+    "next_changes": 4,
+    "planning_seconds": 0.014401902000145128,
+    "completed_order": "AK07|AK85|AK86|AK18|AK14",
+    "events": [
+      {
+        "type": "visit",
+        "ride": "AK07",
+        "from": "GATE",
+        "depart": 600.0,
+        "arrival": 610.0,
+        "walk": 10.0,
+        "posted_observed_at": 610.0,
+        "posted_wait": 15,
+        "service": 10.0,
+        "status": "completed",
+        "finish": 635.0
+      },
+      {
+        "type": "decision",
+        "at": 635.0,
+        "location": "AK07",
+        "incumbent": [
+          "AK14",
+          "AK85",
+          "AK86",
+          "AK11",
+          "AK18"
+        ],
+        "selected": [
+          "AK85",
+          "AK14",
+          "AK18",
+          "AK86",
+          "AK11"
+        ],
+        "compute_seconds": 0.006120407000025807,
+        "snapshot": {
+          "AK07": {
+            "minute": 630.0,
+            "value": 35
+          },
+          "AK11": {
+            "minute": 630.0,
+            "value": 40
+          },
+          "AK14": {
+            "minute": 630.0,
+            "value": 25
+          },
+          "AK18": {
+            "minute": 630.0,
+            "value": 20
+          },
+          "AK85": {
+            "minute": 630.0,
+            "value": 75
+          },
+          "AK86": {
+            "minute": 630.0,
+            "value": 180
+          }
+        },
+        "policy": "scenario_open_loop",
+        "predicted_costs": {
+          "AK14": 441.0297752936131,
+          "AK18": 442.76028045139117,
+          "AK85": 439.1865646058087,
+          "AK86": 475.39985034358574,
+          "AK11": 450.3434241226193
+        },
+        "scenario_ids": [
+          "2017-07-19",
+          "2018-05-12",
+          "2018-07-07",
+          "2017-10-30",
+          "2017-09-24",
+          "2018-04-11",
+          "2017-07-20",
+          "2017-06-22"
+        ],
+        "fallback": false,
+        "fallback_reason": null,
+        "predicted_cost_unit": "remaining_minutes",
+        "base_next": "AK14",
+        "chosen_next": "AK85",
+        "base_predicted_finish": 1056.1439988791285,
+        "scenario_distances": {
+          "2017-07-19": 0.007243367935409459,
+          "2018-05-12": 0.009193857416568961,
+          "2018-07-07": 0.012913151194956299,
+          "2017-10-30": 0.013705130771046443,
+          "2017-09-24": 0.018521737847896524,
+          "2018-04-11": 0.018862079306415865,
+          "2017-07-20": 0.01895297728561793,
+          "2017-06-22": 0.019495084752760784
+        },
+        "scenario_model": {
+          "template": "whole_training_day_all_rides",
+          "historical_missing_and_future_closures": "training_curve_imputation",
+          "forecast_future_closures": false,
+          "snapshot_grid_minutes": 5.0,
+          "current_closure_expiry": "original_observation_plus_15_minutes",
+          "beyond_midnight": "training_curve_tail",
+          "closing_deadline_in_model": null,
+          "aggregation": "uniform_mean_no_failed_sample_dropping"
+        },
+        "scenario_query_audit": {
+          "2017-07-19": {
+            "historical_closure_curve_imputation_queries": 29
+          },
+          "2018-05-12": {
+            "missing_curve_imputation_queries": 552,
+            "historical_closure_curve_imputation_queries": 5
+          },
+          "2018-07-07": {
+            "historical_closure_curve_imputation_queries": 88
+          },
+          "2017-10-30": {
+            "historical_closure_curve_imputation_queries": 9
+          },
+          "2017-09-24": {
+            "historical_closure_curve_imputation_queries": 3
+          },
+          "2018-04-11": {
+            "historical_closure_curve_imputation_queries": 82
+          },
+          "2017-07-20": {
+            "historical_closure_curve_imputation_queries": 113
+          },
+          "2017-06-22": {
+            "historical_closure_curve_imputation_queries": 53
+          }
+        },
+        "shared_best_order": [
+          "AK85",
+          "AK14",
+          "AK86",
+          "AK18",
+          "AK11"
+        ]
+      },
+      {
+        "type": "visit",
+        "ride": "AK85",
+        "from": "AK07",
+        "depart": 635.0,
+        "arrival": 645.0,
+        "walk": 10.0,
+        "posted_observed_at": 645.0,
+        "posted_wait": 75,
+        "service": 10.0,
+        "status": "completed",
+        "finish": 730.0
+      },
+      {
+        "type": "decision",
+        "at": 730.0,
+        "location": "AK85",
+        "incumbent": [
+          "AK14",
+          "AK18",
+          "AK86",
+          "AK11"
+        ],
+        "selected": [
+          "AK86",
+          "AK14",
+          "AK11",
+          "AK18"
+        ],
+        "compute_seconds": 0.002765597000006892,
+        "snapshot": {
+          "AK07": {
+            "minute": 730.0,
+            "value": 75
+          },
+          "AK11": {
+            "minute": 730.0,
+            "value": 70
+          },
+          "AK14": {
+            "minute": 730.0,
+            "value": -999
+          },
+          "AK18": {
+            "minute": 730.0,
+            "value": 60
+          },
+          "AK85": {
+            "minute": 730.0,
+            "value": 95
+          },
+          "AK86": {
+            "minute": 730.0,
+            "value": 105
+          }
+        },
+        "policy": "scenario_open_loop",
+        "predicted_costs": {
+          "AK86": 330.83137645210263,
+          "AK14": null,
+          "AK11": 359.97954916327194,
+          "AK18": 358.5225885311761
+        },
+        "scenario_ids": [
+          "2018-02-19",
+          "2018-06-25",
+          "2018-02-10",
+          "2018-05-04",
+          "2018-03-09",
+          "2018-03-22",
+          "2018-03-03",
+          "2017-10-10"
+        ],
+        "fallback": false,
+        "fallback_reason": null,
+        "predicted_cost_unit": "remaining_minutes",
+        "base_next": "AK86",
+        "chosen_next": "AK86",
+        "base_predicted_finish": 1043.4715611930003,
+        "scenario_distances": {
+          "2018-02-19": 0.019780091138142136,
+          "2018-06-25": 0.02013500803564906,
+          "2018-02-10": 0.02235107451764352,
+          "2018-05-04": 0.026287934850332744,
+          "2018-03-09": 0.030333798656300252,
+          "2018-03-22": 0.033611303477993223,
+          "2018-03-03": 0.036712224102131055,
+          "2017-10-10": 0.041339501316239716
+        },
+        "scenario_model": {
+          "template": "whole_training_day_all_rides",
+          "historical_missing_and_future_closures": "training_curve_imputation",
+          "forecast_future_closures": false,
+          "snapshot_grid_minutes": 5.0,
+          "current_closure_expiry": "original_observation_plus_15_minutes",
+          "beyond_midnight": "training_curve_tail",
+          "closing_deadline_in_model": null,
+          "aggregation": "uniform_mean_no_failed_sample_dropping"
+        },
+        "scenario_query_audit": {
+          "2018-02-19": {
+            "historical_closure_curve_imputation_queries": 2
+          },
+          "2018-06-25": {
+            "historical_closure_curve_imputation_queries": 1
+          },
+          "2018-02-10": {
+            "historical_closure_curve_imputation_queries": 2
+          },
+          "2018-05-04": {
+            "historical_closure_curve_imputation_queries": 2
+          },
+          "2018-03-09": {
+            "historical_closure_curve_imputation_queries": 5
+          },
+          "2018-03-22": {},
+          "2018-03-03": {},
+          "2017-10-10": {}
+        },
+        "shared_best_order": [
+          "AK86",
+          "AK14",
+          "AK11",
+          "AK18"
+        ]
+      },
+      {
+        "type": "visit",
+        "ride": "AK86",
+        "from": "AK85",
+        "depart": 730.0,
+        "arrival": 740.0,
+        "walk": 10.0,
+        "posted_observed_at": 737.0,
+        "posted_wait": 105,
+        "service": 10.0,
+        "status": "completed",
+        "finish": 855.0
+      },
+      {
+        "type": "decision",
+        "at": 855.0,
+        "location": "AK86",
+        "incumbent": [
+          "AK14",
+          "AK11",
+          "AK18"
+        ],
+        "selected": [
+          "AK18",
+          "AK11",
+          "AK14"
+        ],
+        "compute_seconds": 0.0017595070000879787,
+        "snapshot": {
+          "AK07": {
+            "minute": 850.0,
+            "value": 65
+          },
+          "AK11": {
+            "minute": 850.0,
+            "value": -999
+          },
+          "AK14": {
+            "minute": 850.0,
+            "value": -999
+          },
+          "AK18": {
+            "minute": 850.0,
+            "value": 15
+          },
+          "AK85": {
+            "minute": 850.0,
+            "value": 105
+          },
+          "AK86": {
+            "minute": 850.0,
+            "value": 115
+          }
+        },
+        "policy": "scenario_open_loop",
+        "predicted_costs": {
+          "AK18": 151.39259137554697,
+          "AK11": null,
+          "AK14": null
+        },
+        "scenario_ids": [
+          "2017-10-04",
+          "2017-11-29",
+          "2017-11-14",
+          "2018-02-26",
+          "2018-04-29",
+          "2017-11-16",
+          "2018-06-10",
+          "2017-12-10"
+        ],
+        "fallback": false,
+        "fallback_reason": null,
+        "predicted_cost_unit": "remaining_minutes",
+        "base_next": "AK18",
+        "chosen_next": "AK18",
+        "base_predicted_finish": 1030.9541611899613,
+        "scenario_distances": {
+          "2017-10-04": 0.0209383487654321,
+          "2017-11-29": 0.024796373456790123,
+          "2017-11-14": 0.025772839506172842,
+          "2018-02-26": 0.02871141975308642,
+          "2018-04-29": 0.031457098765432095,
+          "2017-11-16": 0.03319637345679012,
+          "2018-06-10": 0.03984266975308642,
+          "2017-12-10": 0.054515123456790125
+        },
+        "scenario_model": {
+          "template": "whole_training_day_all_rides",
+          "historical_missing_and_future_closures": "training_curve_imputation",
+          "forecast_future_closures": false,
+          "snapshot_grid_minutes": 5.0,
+          "current_closure_expiry": "original_observation_plus_15_minutes",
+          "beyond_midnight": "training_curve_tail",
+          "closing_deadline_in_model": null,
+          "aggregation": "uniform_mean_no_failed_sample_dropping"
+        },
+        "scenario_query_audit": {
+          "2017-10-04": {},
+          "2017-11-29": {},
+          "2017-11-14": {},
+          "2018-02-26": {},
+          "2018-04-29": {},
+          "2017-11-16": {},
+          "2018-06-10": {},
+          "2017-12-10": {}
+        },
+        "shared_best_order": [
+          "AK18",
+          "AK14",
+          "AK11"
+        ]
+      },
+      {
+        "type": "visit",
+        "ride": "AK18",
+        "from": "AK86",
+        "depart": 855.0,
+        "arrival": 865.0,
+        "walk": 10.0,
+        "posted_observed_at": 864.0,
+        "posted_wait": 45,
+        "service": 10.0,
+        "status": "completed",
+        "finish": 920.0
+      },
+      {
+        "type": "decision",
+        "at": 920.0,
+        "location": "AK18",
+        "incumbent": [
+          "AK11",
+          "AK14"
+        ],
+        "selected": [
+          "AK14",
+          "AK11"
+        ],
+        "compute_seconds": 0.0025369090001277073,
+        "snapshot": {
+          "AK07": {
+            "minute": 917.0,
+            "value": 45
+          },
+          "AK11": {
+            "minute": 917.0,
+            "value": 55
+          },
+          "AK14": {
+            "minute": 917.0,
+            "value": 35
+          },
+          "AK18": {
+            "minute": 917.0,
+            "value": 65
+          },
+          "AK85": {
+            "minute": 917.0,
+            "value": 65
+          },
+          "AK86": {
+            "minute": 917.0,
+            "value": 145
+          }
+        },
+        "policy": "scenario_open_loop",
+        "predicted_costs": {
+          "AK14": 125.65105082776851,
+          "AK11": 136.92267674360264
+        },
+        "scenario_ids": [
+          "2017-08-26",
+          "2018-07-09",
+          "2018-07-22",
+          "2018-05-06",
+          "2018-04-12",
+          "2017-10-31",
+          "2018-03-08",
+          "2018-04-30"
+        ],
+        "fallback": false,
+        "fallback_reason": null,
+        "predicted_cost_unit": "remaining_minutes",
+        "base_next": "AK14",
+        "chosen_next": "AK14",
+        "base_predicted_finish": 1042.090126922164,
+        "scenario_distances": {
+          "2017-08-26": 0.04348258552290413,
+          "2018-07-09": 0.04820650462334508,
+          "2018-07-22": 0.04928109132076914,
+          "2018-05-06": 0.04980078187482876,
+          "2018-04-12": 0.0516048749847716,
+          "2017-10-31": 0.05247991457009745,
+          "2018-03-08": 0.053873532024961736,
+          "2018-04-30": 0.057404421288785895
+        },
+        "scenario_model": {
+          "template": "whole_training_day_all_rides",
+          "historical_missing_and_future_closures": "training_curve_imputation",
+          "forecast_future_closures": false,
+          "snapshot_grid_minutes": 5.0,
+          "current_closure_expiry": "original_observation_plus_15_minutes",
+          "beyond_midnight": "training_curve_tail",
+          "closing_deadline_in_model": null,
+          "aggregation": "uniform_mean_no_failed_sample_dropping"
+        },
+        "scenario_query_audit": {
+          "2017-08-26": {},
+          "2018-07-09": {},
+          "2018-07-22": {
+            "historical_closure_curve_imputation_queries": 2
+          },
+          "2018-05-06": {},
+          "2018-04-12": {},
+          "2017-10-31": {},
+          "2018-03-08": {},
+          "2018-04-30": {
+            "historical_closure_curve_imputation_queries": 1
+          }
+        },
+        "shared_best_order": [
+          "AK14",
+          "AK11"
+        ]
+      },
+      {
+        "type": "visit",
+        "ride": "AK14",
+        "from": "AK18",
+        "depart": 920.0,
+        "arrival": 930.0,
+        "walk": 10.0,
+        "posted_observed_at": 930.0,
+        "posted_wait": 40,
+        "service": 10.0,
+        "status": "completed",
+        "finish": 980.0
+      },
+      {
+        "type": "decision",
+        "at": 980.0,
+        "location": "AK14",
+        "incumbent": [
+          "AK11"
+        ],
+        "selected": [
+          "AK11"
+        ],
+        "compute_seconds": 0.0012194819998967432,
+        "snapshot": {
+          "AK07": {
+            "minute": 977.0,
+            "value": 45
+          },
+          "AK11": {
+            "minute": 977.0,
+            "value": -999
+          },
+          "AK14": {
+            "minute": 977.0,
+            "value": -999
+          },
+          "AK18": {
+            "minute": 977.0,
+            "value": -999
+          },
+          "AK85": {
+            "minute": 977.0,
+            "value": 70
+          },
+          "AK86": {
+            "minute": 977.0,
+            "value": 135
+          }
+        },
+        "policy": "scenario_open_loop",
+        "predicted_costs": {
+          "AK11": null
+        },
+        "scenario_ids": [
+          "2017-11-17",
+          "2018-06-29",
+          "2018-07-16",
+          "2017-08-03",
+          "2018-05-31",
+          "2017-10-03",
+          "2017-06-20",
+          "2017-07-27"
+        ],
+        "fallback": true,
+        "fallback_reason": "all_actions_unsupported",
+        "predicted_cost_unit": "remaining_minutes",
+        "base_next": "AK11",
+        "chosen_next": "AK11",
+        "base_predicted_finish": null,
+        "scenario_distances": {
+          "2017-11-17": 0.005591272359970791,
+          "2018-06-29": 0.005591272359970791,
+          "2018-07-16": 0.006585996737713533,
+          "2017-08-03": 0.007241015462705345,
+          "2018-05-31": 0.007889546351084813,
+          "2017-10-03": 0.009051479972427537,
+          "2017-06-20": 0.00970649869741935,
+          "2017-07-27": 0.010380622837370243
+        },
+        "scenario_model": {
+          "template": "whole_training_day_all_rides",
+          "historical_missing_and_future_closures": "training_curve_imputation",
+          "forecast_future_closures": false,
+          "snapshot_grid_minutes": 5.0,
+          "current_closure_expiry": "original_observation_plus_15_minutes",
+          "beyond_midnight": "training_curve_tail",
+          "closing_deadline_in_model": null,
+          "aggregation": "uniform_mean_no_failed_sample_dropping"
+        },
+        "scenario_query_audit": {
+          "2017-11-17": {},
+          "2018-06-29": {},
+          "2018-07-16": {},
+          "2017-08-03": {},
+          "2018-05-31": {},
+          "2017-10-03": {},
+          "2017-06-20": {},
+          "2017-07-27": {}
+        }
+      },
+      {
+        "type": "visit",
+        "ride": "AK11",
+        "from": "AK14",
+        "depart": 980.0,
+        "arrival": 990.0,
+        "walk": 10.0,
+        "posted_observed_at": 990.0,
+        "posted_wait": -999,
+        "service": 10.0,
+        "status": "closed_at_arrival"
+      }
+    ]
+  }
+]

@@ -1,0 +1,2 @@
+runs/** -text
+runs/**/*.csv whitespace=cr-at-eol
