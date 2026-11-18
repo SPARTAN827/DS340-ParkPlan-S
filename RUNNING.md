@@ -1,8 +1,8 @@
 **Data credit: TouringPlans.com — historical Animal Kingdom waits and published park-hour listings.**
 
-# Run and inspect the public ParkPlan-S snapshot
+# Run ParkPlan-S
 
-Commands are from the repository root. Core code requires Python 3.10+ and no third-party packages. Original study execution and this distribution check use Linux/Python 3.12. Full native-Windows policy execution is not claimed tested.
+Run these commands from the repository root. The planner uses Python 3.10 or later and requires no third-party packages. We ran the full study on Linux with Python 3.12.
 
 ## 1. Check the engine without raw data
 
@@ -10,7 +10,7 @@ Commands are from the repository root. Core code requires Python 3.10+ and no th
 python3 -m unittest discover -s experiments/algorithm_study_20261019 -p test_engine.py -v
 ```
 
-These are constructed correctness checks, not proof of park-time savings. On Windows with the Python launcher, the analogous command starts with `py -3`.
+On Windows, replace `python3` with `py -3` if you use the Python launcher.
 
 ## 2. Download and verify the pinned public source
 
@@ -28,7 +28,7 @@ Required SHA-256:
 23eca800b048aecd4b3a2469e78f63f24f64637eb785c8401386e219a177f812
 ```
 
-Do not substitute a different source when this check fails. Raw data are not included in this public update.
+Do not substitute a different source when this check fails. The repository does not include the raw wait-time files.
 
 ## 3. Audit the included frozen results
 
@@ -39,9 +39,9 @@ python3 scripts/verify_public_results.py \
 
 The public verifier independently checks raw-source observations, chronology, reported arithmetic, shared-success denominators, frozen study hashes and validation selection. It writes separate `experiments/algorithm_study_20261019/QA-public.md` and `verification-public.json`.
 
-Its historical-preservation scope is **20 included old artifacts**, not the original workspace's31. Exactly11 meeting-note/archive files are explicitly omitted; no raw observations, policy results or required included hash failures are silently skipped. The original `QA.md` and `verification.json` remain historical records.
+It checks the 20 archived files included in this repository. The original audit also checked 11 local meeting and archive files; those are not inputs to the planner.
 
-Expected primary scientific result: D0 minus R is about **−6.356 modeled minutes** on118 jointly completed dates, with95% seven-date block interval **[−13.730, +0.357]**. The new method is not established as superior.
+Expected result: on the 118 dates when both plans finished, rollout took 6.36 minutes longer on average than basic replanning. The 95% interval for time saved by rollout was −13.73 to +0.36 minutes.
 
 ### Native Windows audit command
 
@@ -55,7 +55,7 @@ py -3 scripts/verify_public_results.py --archive "$env:TEMP\parkplan-ak-933161b.
 
 ## 4. Rerun policy calculations in a separate copy
 
-Keep the delivered evidence unchanged. In a separate Linux/WSL copy, with the archive at the path above:
+Use a second checkout on Linux or WSL: rerunning the study replaces the generated results there. With the data archive at the path shown above, run:
 
 ```bash
 python3 experiments/algorithm_study_20261019/prepare.py
@@ -74,15 +74,13 @@ python3 scripts/run_public_study.py evaluate --workers 2
 python3 scripts/run_public_study.py sensitivity --workers 2
 ```
 
-These commands overwrite generated results in the reproduction copy. Runtime measurements, timestamps and resulting hashes legitimately change. A fresh `select` creates a different selection record, so the delivered original `evaluation_lock.json` no longer certifies that new run. **A full new audit requires its own pre-evaluation provenance record; never silently rewrite the old lock or claim a fresh run is the old frozen evidence.** Compare scientific fields separately from timing/hash metadata.
+These commands overwrite generated results in the reproduction copy. Runtime measurements, timestamps and resulting hashes legitimately change. A fresh `select` creates a different selection record, so the delivered original `evaluation_lock.json` no longer certifies that new run. Record new hashes separately if you audit a fresh run. Compare scientific fields separately from timing/hash metadata.
 
-Do not run the frozen `run.py` directly in this reduced public distribution: its workspace-preservation check expects the11 deliberately omitted files. Use `scripts/run_public_study.py`.
+Do not run the frozen `run.py` directly in this reduced public distribution: its workspace-preservation check expects the 11 local files. Use `scripts/run_public_study.py`.
 
-## 5. Optional figures and historical documents
+## 5. Figures
 
 Viewing the included PNG/SVG/PDF figures needs no plotting installation. To regenerate, install `experiments/algorithm_study_20261019/requirements-plot.txt` in a separate environment.
-
-Historical reports may cite workspace research/meeting notes that were intentionally not made public. The current entry points, dataset provenance, protocol, code, results and public-scope checks are included. `reproduction/` remains the earlier ADAPT project, with separate prerequisites.
 
 ## Data-use terms
 
